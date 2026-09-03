@@ -2,6 +2,7 @@
 namespace App\Support;
 
 use App\Models\Article;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 
@@ -11,18 +12,48 @@ class SearchService
     {
         $q = trim(preg_replace('/\s+/', ' ', $q) ?? '');
         if (mb_strlen($q) < 2) { return collect(); }
+
+        // Strip fulltext operator characters up front so both the MySQL boolean-mode
+        // path and the LIKE fallback tokenize the query the same way, and drop any
+        // word that becomes empty (e.g. a lone "+") so it can't produce a bare "+*"
+        // boolean-mode term (MySQL syntax error) or a no-op LIKE clause.
+        $words = collect(explode(' ', $q))
+            ->map(fn ($w) => preg_replace('/[+\-<>()~*"@]/', '', $w))
+            ->filter(fn ($w) => $w !== '')
+            ->values();
+        if ($words->isEmpty()) { return collect(); }
+
         $query = Article::published()->with('category');
-        if (DB::connection()->getDriverName() === 'mysql') {
-            $boolean = collect(explode(' ', $q))->map(fn ($w) => '+'.preg_replace('/[+\-<>()~*"@]/', '', $w).'*')->implode(' ');
+
+        // InnoDB's default innodb_ft_min_token_size is 3, so MATCH...AGAINST silently
+        // ignores any shorter word — it wouldn't just skip that word, it would make the
+        // whole boolean-mode query fail to find rows containing it. Fall back to LIKE
+        // (which has no such minimum) whenever any word is too short for fulltext.
+        if (DB::connection()->getDriverName() === 'mysql' && $words->every(fn ($w) => mb_strlen($w) >= 3)) {
+            $boolean = $words->map(fn ($w) => '+'.$w.'*')->implode(' ');
             $query->whereRaw('MATCH(title, excerpt, body_text) AGAINST(? IN BOOLEAN MODE)', [$boolean])
                   ->orderByRaw('MATCH(title, excerpt, body_text) AGAINST(? IN BOOLEAN MODE) DESC', [$boolean]);
         } else {
-            foreach (explode(' ', $q) as $word) {
-                $query->where(fn ($x) => $x->where('title', 'like', "%$word%")->orWhere('excerpt', 'like', "%$word%")->orWhere('body_text', 'like', "%$word%"));
-            }
-            $query->orderByRaw("CASE WHEN title LIKE ? THEN 0 ELSE 1 END, title", ["%$q%"]);
+            $this->applyLike($query, $words, $q);
         }
+
         return $query->limit($limit)->get();
+    }
+
+    /** Shared by the non-MySQL driver and the MySQL short-word fallback. */
+    private function applyLike(Builder $query, Collection $words, string $q): void
+    {
+        foreach ($words as $word) {
+            $like = '%'.$this->escapeLike($word).'%';
+            $query->where(fn ($x) => $x->where('title', 'like', $like)->orWhere('excerpt', 'like', $like)->orWhere('body_text', 'like', $like));
+        }
+        $query->orderByRaw('CASE WHEN title LIKE ? THEN 0 ELSE 1 END, title', ['%'.$this->escapeLike($q).'%']);
+    }
+
+    /** Escape LIKE wildcards so user input can't turn "%" or "_" into a pattern. */
+    private function escapeLike(string $value): string
+    {
+        return str_replace(['\\', '%', '_'], ['\\\\', '\\%', '\\_'], $value);
     }
 
     public function snippet(Article $a, string $q, int $len = 160): string

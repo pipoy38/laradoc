@@ -26,3 +26,16 @@ it('renders tag pages', function () {
     $this->get('/tags/hardware')->assertOk()->assertSee('Hardware')->assertSee('Configure printers');
     $this->get('/tags/nope')->assertNotFound();
 });
+
+it('treats % as a literal character instead of a like wildcard', function () {
+    $this->getJson('/api/search?q=%25%25')->assertOk()->assertJsonCount(0);
+});
+
+it('drops operator-only words instead of matching everything', function () {
+    $this->getJson('/api/search?q=printer+%2B')->assertOk()->assertJsonCount(1)->assertJsonPath('0.title', 'Configure printers');
+});
+
+it('matches a 2-letter query word', function () {
+    Article::factory()->create(['title' => 'Backups', 'slug' => 'backups', 'body_text' => 'db backup instructions', 'category_id' => $this->a->category_id]);
+    $this->getJson('/api/search?q=db')->assertOk()->assertJsonCount(1)->assertJsonPath('0.title', 'Backups');
+});
