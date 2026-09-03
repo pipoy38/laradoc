@@ -2,9 +2,12 @@
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\MediaController;
+use App\Http\Controllers\Admin\MenuItemController;
 use App\Http\Controllers\Admin\PasswordResetController;
+use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\RevisionController;
 use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
@@ -29,5 +32,14 @@ Route::middleware('auth')->group(function () {
     Route::post('media/upload', [MediaController::class, 'upload'])->name('media.upload');
     Route::patch('media/{media}', [MediaController::class, 'update'])->name('media.update');
     Route::delete('media/{media}', [MediaController::class, 'destroy'])->name('media.destroy');
-    Route::get('users', fn () => 'users')->name('users.index')->middleware('role:admin'); // replaced in Task 8
+    Route::get('profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::put('profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::middleware('role:admin')->group(function () {
+        Route::get('menu', [MenuItemController::class, 'index'])->name('menu.index');
+        Route::post('menu', [MenuItemController::class, 'store'])->name('menu.store');
+        Route::put('menu/{menu}', [MenuItemController::class, 'update'])->name('menu.update');
+        Route::delete('menu/{menu}', [MenuItemController::class, 'destroy'])->name('menu.destroy');
+        Route::post('menu/{menu}/move', [MenuItemController::class, 'move'])->name('menu.move');
+        Route::resource('users', UserController::class)->except('show');
+    });
 });
