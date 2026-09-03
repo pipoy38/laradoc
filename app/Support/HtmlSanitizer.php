@@ -66,9 +66,12 @@ class HtmlSanitizer
      * checking the raw attribute value against the allowlist lets a malicious candidate hide
      * behind a leading benign one (e.g. "a/b.jpg 1x, javascript:alert(1) 2x" starts with "/"
      * before any ":", so the whole-value check would pass it). Every candidate's URL portion
-     * must individually pass the allowlist, or the whole attribute is dropped. data:image is
-     * allowed here regardless of the owning element's tag, since srcset only exists on
-     * <img>/<source>, both raster-image contexts.
+     * must individually pass the allowlist, or the whole attribute is dropped.
+     *
+     * srcset candidates are comma-separated and a data: URI contains its own comma, so data:
+     * candidates are not supported here and cause the whole attribute to be dropped; use src for
+     * data: images. We deliberately don't write a srcset parser to work around this — TinyMCE
+     * never emits srcset, so failing safe (drop the attribute) is the correct behaviour.
      */
     private static function srcsetAllowed(string $value): bool
     {
@@ -76,7 +79,7 @@ class HtmlSanitizer
             $candidate = trim($candidate);
             if ($candidate === '') { continue; }
             $url = preg_split('/\s+/', $candidate, 2)[0] ?? '';
-            if (! self::urlValueAllowed($url, true)) { return false; }
+            if (! self::urlValueAllowed($url, false)) { return false; }
         }
 
         return true;

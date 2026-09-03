@@ -58,3 +58,8 @@ it('keeps a srcset verbatim when every candidate url is safe', function () {
     $out = HtmlSanitizer::clean('<img srcset="/img/a.jpg 1x, https://cdn.example/a@2x.jpg 2x">');
     expect($out)->toContain('srcset="/img/a.jpg 1x, https://cdn.example/a@2x.jpg 2x"');
 });
+
+it('keeps src but drops srcset when srcset contains a data: image (unsupported due to its own comma)', function () {
+    $out = HtmlSanitizer::clean('<img src="data:image/png;base64,iVBORw0KGgo=" srcset="data:image/png;base64,iVBORw0KGgo= 1x">');
+    expect($out)->toContain('src="data:image/png;base64,iVBORw0KGgo="')->not->toContain('srcset');
+});
