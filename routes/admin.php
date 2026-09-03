@@ -14,6 +14,8 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
-    Route::get('/', fn () => view('admin.dashboard'))->name('dashboard');           // replaced in Task 5
+    Route::get('/', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('categories', \App\Http\Controllers\Admin\CategoryController::class)->except('show');
+    Route::post('categories/{category}/move', [\App\Http\Controllers\Admin\CategoryController::class, 'move'])->name('categories.move');
     Route::get('users', fn () => 'users')->name('users.index')->middleware('role:admin'); // replaced in Task 8
 });
