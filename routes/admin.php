@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\MenuItemController;
 use App\Http\Controllers\Admin\PasswordResetController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\RevisionController;
+use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
@@ -41,5 +42,8 @@ Route::middleware('auth')->group(function () {
         Route::delete('menu/{menu}', [MenuItemController::class, 'destroy'])->name('menu.destroy');
         Route::post('menu/{menu}/move', [MenuItemController::class, 'move'])->name('menu.move');
         Route::resource('users', UserController::class)->except('show');
+        Route::get('settings', [SettingsController::class, 'edit'])->name('settings.edit');
+        Route::put('settings', [SettingsController::class, 'update'])->name('settings.update');
+        Route::post('settings/test-mail', [SettingsController::class, 'testMail'])->name('settings.test_mail');
     });
 });

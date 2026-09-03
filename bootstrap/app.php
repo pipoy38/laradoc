@@ -18,5 +18,6 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias(['role' => \App\Http\Middleware\EnsureRole::class]);
         $middleware->redirectGuestsTo(fn () => route('admin.login'));
         $middleware->redirectUsersTo(fn () => route('admin.dashboard'));
+        $middleware->web(append: [\App\Http\Middleware\ApplyMailSettings::class]);
     })
     ->withExceptions(function (Exceptions $exceptions) {})->create();

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Support\MailConfig;
 use App\Support\Settings;
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Support\Facades\Blade;
@@ -25,5 +26,12 @@ class AppServiceProvider extends ServiceProvider
         Blade::anonymousComponentPath(resource_path('views'));
 
         ResetPassword::createUrlUsing(fn ($user, string $token) => route('admin.password.reset', ['token' => $token, 'email' => $user->email]));
+
+        // Web requests get the mail config applied fresh on every request via the
+        // ApplyMailSettings middleware (see bootstrap/app.php); this callback covers
+        // console/queue contexts, which never run the web middleware group.
+        $this->app->booted(function () {
+            MailConfig::apply($this->app->make(Settings::class));
+        });
     }
 }
