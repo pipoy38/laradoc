@@ -43,11 +43,20 @@ class SearchService
     /** Shared by the non-MySQL driver and the MySQL short-word fallback. */
     private function applyLike(Builder $query, Collection $words, string $q): void
     {
+        // escapeLike() only turns "%"/"_" in the pattern into literal-escaped sequences;
+        // that's inert unless the SQL itself declares "\" as the escape character, and
+        // MySQL's default LIKE escape ("\") is not universal — SQLite has none by default,
+        // so a plain `where('title', 'like', $pattern)` would treat the escaped "\%" as a
+        // literal backslash followed by a wildcard "%" there. whereRaw(... ESCAPE ?) makes
+        // the escape character explicit on every driver.
         foreach ($words as $word) {
             $like = '%'.$this->escapeLike($word).'%';
-            $query->where(fn ($x) => $x->where('title', 'like', $like)->orWhere('excerpt', 'like', $like)->orWhere('body_text', 'like', $like));
+            $query->where(fn ($x) => $x->whereRaw('title LIKE ? ESCAPE ?', [$like, '\\'])
+                ->orWhereRaw('excerpt LIKE ? ESCAPE ?', [$like, '\\'])
+                ->orWhereRaw('body_text LIKE ? ESCAPE ?', [$like, '\\']));
         }
-        $query->orderByRaw('CASE WHEN title LIKE ? THEN 0 ELSE 1 END, title', ['%'.$this->escapeLike($q).'%']);
+        $like = '%'.$this->escapeLike($q).'%';
+        $query->orderByRaw('CASE WHEN title LIKE ? ESCAPE ? THEN 0 ELSE 1 END, title', [$like, '\\']);
     }
 
     /** Escape LIKE wildcards so user input can't turn "%" or "_" into a pattern. */

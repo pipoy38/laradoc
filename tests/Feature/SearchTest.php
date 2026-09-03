@@ -28,6 +28,15 @@ it('renders tag pages', function () {
 });
 
 it('treats % as a literal character instead of a like wildcard', function () {
+    Article::factory()->create(['title' => '100% uptime', 'slug' => 'uptime-percent', 'body_text' => 'reliability', 'category_id' => $this->a->category_id]);
+    Article::factory()->create(['title' => '100 percent uptime', 'slug' => 'uptime-words', 'body_text' => 'reliability', 'category_id' => $this->a->category_id]);
+
+    // "100%" must be matched literally: only the title that actually contains "100%" should
+    // come back, not every row (which is what an unescaped "%" wildcard would return).
+    $this->getJson('/api/search?q=100%25')->assertOk()->assertJsonCount(1)->assertJsonPath('0.title', '100% uptime');
+
+    // "%%" as the whole query must be treated as a literal (and harmless) two-character
+    // string, not a wildcard that matches every row.
     $this->getJson('/api/search?q=%25%25')->assertOk()->assertJsonCount(0);
 });
 
