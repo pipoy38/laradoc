@@ -106,7 +106,7 @@ Front (public):
 - Route resolution order: reserved prefixes (`search`, `tags`, `api`,
   `sitemap.xml`, `robots.txt`, `storage`, the admin prefix) first, then
   category/article path match, then `path_redirects`, then 404.
-- Draft articles and their categories' hidden status are 404 to the public.
+- Draft articles are 404 to the public. A category with no published articles still renders, showing only its child categories.
 
 Admin (prefix `{p}`, read from settings at boot, default `admin`):
 
