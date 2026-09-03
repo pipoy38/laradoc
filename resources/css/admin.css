@@ -1,0 +1,13 @@
+@import "./app.css";
+@layer components {
+  .admin-nav a { @apply flex items-center gap-2 rounded-md px-3 py-2 text-sm; color: var(--ink-2); }
+  .admin-nav a:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); color: var(--ink); }
+  .admin-nav a.active { background: color-mix(in srgb, var(--brand) 16%, transparent); color: var(--brand-deep); font-weight: 600; }
+  .tabs { @apply flex gap-1 border-b mb-4; border-color: var(--rule-2); }
+  .tabs button { @apply px-3 py-2 text-sm border-b-2 -mb-px; border-color: transparent; color: var(--ink-2); }
+  .tabs button.active { border-color: var(--brand-deep); color: var(--ink); font-weight: 600; }
+  .flash { @apply rounded-[var(--radius-ctrl)] px-4 py-2 text-sm mb-4 border; }
+  .flash-ok { border-color: var(--good); color: var(--good); background: color-mix(in srgb, var(--good) 10%, transparent); }
+  .flash-err { border-color: var(--bad); color: var(--bad); background: color-mix(in srgb, var(--bad) 10%, transparent); }
+}
+.tox-tinymce { border-radius: var(--radius-ctrl) !important; border-color: var(--rule-2) !important; }

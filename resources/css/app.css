@@ -1,11 +1,86 @@
-@import 'tailwindcss';
-
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+@import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --color-brand: #4fb9d4;
+  --color-brand-deep: #1c7f9b;
+  --color-lime: #c2ec42;
+  --radius-panel: 16px;
+  --radius-ctrl: 11px;
+}
+
+:root {
+  --paper: #eef2f8; --sheet: #ffffff; --ink: #0b1228; --ink-2: #4a5468; --ink-3: #5f6b85;
+  --rule: #eaeef5; --rule-2: #dfe5ee; --brand: #4fb9d4; --brand-deep: #1c7f9b;
+  --good: #0c7a54; --bad: #cb3327; --attn: #a35f05;
+  --lift: 0 1px 2px rgba(19,26,43,.04), 0 10px 28px -14px rgba(19,26,43,.22);
+  color-scheme: light;
+}
+[data-theme=dark] {
+  --paper: #0a0f1c; --sheet: #111828; --ink: #eef1f7; --ink-2: #a7b1c5; --ink-3: #8792a9;
+  --rule: #1e2739; --rule-2: #2c3852; --brand: #62c8e0; --brand-deep: #8fd9ea;
+  --good: #3fc48d; --bad: #f0705f; --attn: #e8a851;
+  --lift: 0 1px 2px rgba(0,0,0,.4), 0 10px 28px -14px rgba(0,0,0,.6);
+  color-scheme: dark;
+}
+
+@layer base {
+  html { background: var(--paper); color: var(--ink); font-family: var(--font-sans); }
+  body { margin: 0; min-height: 100dvh; -webkit-font-smoothing: antialiased; }
+  a { color: var(--brand-deep); }
+  :focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+}
+
+@layer components {
+  .btn { @apply inline-flex items-center gap-2 rounded-[var(--radius-ctrl)] px-4 py-2 text-sm font-medium border transition-colors; border-color: var(--rule-2); background: var(--sheet); color: var(--ink); }
+  .btn:hover { border-color: var(--brand); }
+  .btn-primary { background: var(--brand-deep); border-color: var(--brand-deep); color: #fff; }
+  .btn-primary:hover { filter: brightness(1.08); }
+  .btn-danger { background: var(--bad); border-color: var(--bad); color: #fff; }
+  .btn-ghost { background: transparent; border-color: transparent; }
+  .field { @apply block mb-4; }
+  .field > label, .label { @apply block text-sm font-medium mb-1; color: var(--ink-2); }
+  .input { @apply w-full rounded-[var(--radius-ctrl)] px-3 py-2 text-sm border; background: var(--sheet); color: var(--ink); border-color: var(--rule-2); }
+  .input:focus { border-color: var(--brand); outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 30%, transparent); }
+  .hint { @apply text-xs mt-1; color: var(--ink-3); }
+  .error { @apply text-xs mt-1; color: var(--bad); }
+  .card { background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--radius-panel); box-shadow: var(--lift); }
+  .badge { @apply inline-block rounded-full px-2 py-0.5 text-xs font-medium; background: var(--rule); color: var(--ink-2); }
+  .badge-published { background: color-mix(in srgb, var(--good) 15%, transparent); color: var(--good); }
+  .badge-draft { background: color-mix(in srgb, var(--attn) 15%, transparent); color: var(--attn); }
+  .table { @apply w-full text-sm; }
+  .table th { @apply text-left font-medium py-2 px-3 border-b; color: var(--ink-2); border-color: var(--rule-2); }
+  .table td { @apply py-2 px-3 border-b align-top; border-color: var(--rule); }
+  .table tr:hover td { background: color-mix(in srgb, var(--brand) 6%, transparent); }
+
+  /* Article body */
+  .prose-doc { line-height: 1.7; font-size: 1rem; }
+  .prose-doc > * + * { margin-top: 1em; }
+  .prose-doc h2 { @apply text-2xl font-semibold mt-10 mb-3 pb-1 border-b; border-color: var(--rule-2); scroll-margin-top: 5rem; }
+  .prose-doc h3 { @apply text-xl font-semibold mt-8 mb-2; scroll-margin-top: 5rem; }
+  .prose-doc h4 { @apply text-lg font-semibold mt-6 mb-2; }
+  .prose-doc p, .prose-doc li { color: var(--ink); }
+  .prose-doc ul { @apply list-disc pl-6; } .prose-doc ol { @apply list-decimal pl-6; }
+  .prose-doc blockquote { @apply pl-4 border-l-4 italic; border-color: var(--brand); color: var(--ink-2); }
+  .prose-doc code { font-family: var(--font-mono); font-size: .9em; background: color-mix(in srgb, var(--ink) 8%, transparent); padding: .1em .35em; border-radius: 4px; }
+  .prose-doc pre { position: relative; background: #0d1424; color: #eef1f7; padding: 1rem 1.25rem; border-radius: var(--radius-ctrl); overflow-x: auto; }
+  .prose-doc pre code { background: none; padding: 0; font-size: .875rem; }
+  .prose-doc .copy-btn { position: absolute; top: .5rem; right: .5rem; font-size: .75rem; padding: .2rem .5rem; border-radius: 6px; background: rgba(255,255,255,.12); color: #fff; }
+  .prose-doc img { max-width: 100%; height: auto; border-radius: var(--radius-ctrl); }
+  .prose-doc .table-wrap { overflow-x: auto; }
+  .prose-doc table { @apply w-full text-sm border-collapse; }
+  .prose-doc th, .prose-doc td { @apply border px-3 py-2; border-color: var(--rule-2); }
+  .prose-doc th { background: var(--rule); }
+  .prose-doc hr { border-color: var(--rule-2); }
+
+  /* Sidebar tree */
+  .tree a { @apply block rounded-md px-2 py-1.5 text-sm; color: var(--ink-2); }
+  .tree a:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); color: var(--ink); }
+  .tree a.active { background: color-mix(in srgb, var(--brand) 16%, transparent); color: var(--brand-deep); font-weight: 600; }
+  .tree summary { @apply cursor-pointer select-none rounded-md px-2 py-1.5 text-sm font-semibold list-none flex items-center gap-1; color: var(--ink); }
+  .tree summary::before { content: "▸"; font-size: .7em; color: var(--ink-3); transition: transform .15s; }
+  .tree details[open] > summary::before { transform: rotate(90deg); }
+  .tree details > div { @apply pl-3 border-l ml-2; border-color: var(--rule-2); }
 }
