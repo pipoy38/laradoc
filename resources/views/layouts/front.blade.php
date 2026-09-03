@@ -21,7 +21,7 @@
       <span>{{ setting('site_name', 'Laradoc') }}</span>
     </a>
     <nav class="hidden items-center gap-1 md:flex" aria-label="Site menu">
-      @foreach((\Illuminate\Support\Facades\Schema::hasTable('menu_items') ? \App\Models\MenuItem::orderBy('sort_order')->get() : []) as $item)
+      @foreach(\App\Models\MenuItem::orderBy('sort_order')->get() as $item)
         <a href="{{ $item->url }}" class="btn btn-ghost" @if($item->new_tab) target="_blank" rel="noopener" @endif>{{ $item->label }}</a>
       @endforeach
     </nav>
