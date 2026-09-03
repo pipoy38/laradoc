@@ -6,6 +6,7 @@ use Illuminate\Support\Str;
 class HtmlSanitizer
 {
     private const IFRAME_HOSTS = ['www.youtube.com', 'youtube.com', 'www.youtube-nocookie.com', 'player.vimeo.com', 'vimeo.com'];
+    private const URL_ATTRS = ['href', 'src', 'xlink:href', 'action', 'formaction', 'poster', 'data', 'srcset'];
 
     public static function clean(string $html): string
     {
@@ -22,8 +23,8 @@ class HtmlSanitizer
         }
         foreach ($xpath->query('//@*') as $attr) {
             $name = strtolower($attr->nodeName); $value = trim($attr->nodeValue ?? '');
-            $isUrlAttr = in_array($name, ['href', 'src', 'xlink:href', 'action', 'formaction', 'poster', 'data'], true);
-            if (str_starts_with($name, 'on') || ($isUrlAttr && preg_match('/^\s*(javascript|vbscript|data:text\/html)/i', $value))) {
+            $isUrlAttr = in_array($name, self::URL_ATTRS, true);
+            if (str_starts_with($name, 'on') || ($isUrlAttr && ! self::urlAllowed($attr->ownerElement, $name, $value))) {
                 $attr->ownerElement?->removeAttribute($attr->nodeName);
             }
         }
@@ -44,6 +45,38 @@ class HtmlSanitizer
         $end = '…';
         $budget = max(0, $len - (strlen($end) - 1));
         return Str::limit(self::toText($html), $budget, $end);
+    }
+
+    /**
+     * Scheme allowlist for URL-bearing attributes. A denylist (e.g. matching "javascript:")
+     * is bypassable via control characters or HTML entities inside the scheme (browsers ignore
+     * both), so instead: decode entities, strip control chars, then only accept normal relative/
+     * fragment/query paths, http(s)/mailto/tel, schemeless paths, or (for <img src> only) small
+     * inline data:image URIs.
+     */
+    private static function urlAllowed(?\DOMElement $el, string $attrName, string $value): bool
+    {
+        $normalized = strtolower(preg_replace('/[\x00-\x20\x7f]+/', '', html_entity_decode($value, ENT_QUOTES | ENT_HTML5, 'UTF-8')));
+
+        if ($normalized === '') { return true; }
+        if (preg_match('~^(/|#|\?|\./|\.\./)~', $normalized)) { return true; }
+        if (preg_match('~^(https?:|mailto:|tel:)~', $normalized)) { return true; }
+
+        if ($attrName === 'src' && $el instanceof \DOMElement && strtolower($el->nodeName) === 'img'
+            && preg_match('~^data:image/(png|jpeg|gif|webp);base64,~', $normalized)) {
+            return true;
+        }
+
+        // No scheme at all: no ":" appears before the first "/", "?" or "#".
+        $colonPos = strpos($normalized, ':');
+        $stopPos = false;
+        foreach (['/', '?', '#'] as $delim) {
+            $p = strpos($normalized, $delim);
+            if ($p !== false && ($stopPos === false || $p < $stopPos)) { $stopPos = $p; }
+        }
+        if ($colonPos === false || ($stopPos !== false && $colonPos > $stopPos)) { return true; }
+
+        return false;
     }
 
     private static function load(string $html): \DOMDocument

@@ -17,3 +17,34 @@ it('extracts text and excerpts', function () {
     expect(HtmlSanitizer::toText('<h2>Title</h2><p>Body &amp; more</p>'))->toBe('Title Body & more')
         ->and(strlen(HtmlSanitizer::excerpt('<p>'.str_repeat('word ', 100).'</p>', 50)))->toBeLessThanOrEqual(51);
 });
+
+it('blocks a tab-entity-obfuscated javascript url', function () {
+    $out = HtmlSanitizer::clean('<a href="java&#09;script:alert(1)">x</a>');
+    expect($out)->not->toContain('href');
+});
+
+it('blocks a javascript url with mixed case and leading whitespace', function () {
+    $out = HtmlSanitizer::clean('<a href=" JaVaScRiPt:alert(1)">x</a>');
+    expect($out)->not->toContain('href');
+});
+
+it('keeps safe relative, fragment, query and scheme-allowlisted urls verbatim', function () {
+    expect(HtmlSanitizer::clean('<a href="guides/install">x</a>'))->toContain('href="guides/install"');
+    expect(HtmlSanitizer::clean('<a href="../up">x</a>'))->toContain('href="../up"');
+    expect(HtmlSanitizer::clean('<a href="#toc">x</a>'))->toContain('href="#toc"');
+    expect(HtmlSanitizer::clean('<a href="mailto:a@b.c">x</a>'))->toContain('href="mailto:a@b.c"');
+    expect(HtmlSanitizer::clean('<a href="https://example.com/x?y=1">x</a>'))->toContain('href="https://example.com/x?y=1"');
+});
+
+it('allows small inline data:image uris only on img src', function () {
+    expect(HtmlSanitizer::clean('<img src="data:image/png;base64,iVBORw0KGgo=">'))->toContain('src="data:image/png;base64,iVBORw0KGgo="');
+    $out = HtmlSanitizer::clean('<a href="data:text/html;base64,PHNjcmlwdD4=">x</a>');
+    expect($out)->not->toContain('href');
+    $out = HtmlSanitizer::clean('<img src="data:text/html,x">');
+    expect($out)->not->toContain('src');
+});
+
+it('strips javascript urls from xlink:href inside svg', function () {
+    $out = HtmlSanitizer::clean('<svg><a xlink:href="javascript:alert(1)"><text>x</text></a></svg>');
+    expect($out)->not->toContain('xlink:href');
+});
