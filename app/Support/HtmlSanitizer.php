@@ -23,10 +23,10 @@ class HtmlSanitizer
         }
         foreach ($xpath->query('//@*') as $attr) {
             $name = strtolower($attr->nodeName); $value = trim($attr->nodeValue ?? '');
-            $isUrlAttr = in_array($name, self::URL_ATTRS, true);
-            if (str_starts_with($name, 'on') || ($isUrlAttr && ! self::urlAllowed($attr->ownerElement, $name, $value))) {
-                $attr->ownerElement?->removeAttribute($attr->nodeName);
-            }
+            if (str_starts_with($name, 'on')) { $attr->ownerElement?->removeAttribute($attr->nodeName); continue; }
+            if (! in_array($name, self::URL_ATTRS, true)) { continue; }
+            $allowed = $name === 'srcset' ? self::srcsetAllowed($value) : self::urlAllowed($attr->ownerElement, $name, $value);
+            if (! $allowed) { $attr->ownerElement?->removeAttribute($attr->nodeName); }
         }
         return self::innerHtml($doc, $xpath);
     }
@@ -56,14 +56,43 @@ class HtmlSanitizer
      */
     private static function urlAllowed(?\DOMElement $el, string $attrName, string $value): bool
     {
+        $allowDataImage = $attrName === 'src' && $el instanceof \DOMElement && strtolower($el->nodeName) === 'img';
+
+        return self::urlValueAllowed($value, $allowDataImage);
+    }
+
+    /**
+     * `srcset` is a comma-separated list of "URL [descriptor]" candidates, not a single URL —
+     * checking the raw attribute value against the allowlist lets a malicious candidate hide
+     * behind a leading benign one (e.g. "a/b.jpg 1x, javascript:alert(1) 2x" starts with "/"
+     * before any ":", so the whole-value check would pass it). Every candidate's URL portion
+     * must individually pass the allowlist, or the whole attribute is dropped. data:image is
+     * allowed here regardless of the owning element's tag, since srcset only exists on
+     * <img>/<source>, both raster-image contexts.
+     */
+    private static function srcsetAllowed(string $value): bool
+    {
+        foreach (explode(',', $value) as $candidate) {
+            $candidate = trim($candidate);
+            if ($candidate === '') { continue; }
+            $url = preg_split('/\s+/', $candidate, 2)[0] ?? '';
+            if (! self::urlValueAllowed($url, true)) { return false; }
+        }
+
+        return true;
+    }
+
+    private static function urlValueAllowed(string $value, bool $allowDataImage): bool
+    {
         $normalized = strtolower(preg_replace('/[\x00-\x20\x7f]+/', '', html_entity_decode($value, ENT_QUOTES | ENT_HTML5, 'UTF-8')));
 
         if ($normalized === '') { return true; }
+        // Also matches protocol-relative URLs ("//host/path"), which are intentionally allowed —
+        // they carry the same risk class as an absolute https: link.
         if (preg_match('~^(/|#|\?|\./|\.\./)~', $normalized)) { return true; }
         if (preg_match('~^(https?:|mailto:|tel:)~', $normalized)) { return true; }
 
-        if ($attrName === 'src' && $el instanceof \DOMElement && strtolower($el->nodeName) === 'img'
-            && preg_match('~^data:image/(png|jpeg|gif|webp);base64,~', $normalized)) {
+        if ($allowDataImage && preg_match('~^data:image/(png|jpeg|gif|webp);base64,~', $normalized)) {
             return true;
         }
 

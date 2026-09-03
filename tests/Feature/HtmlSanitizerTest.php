@@ -48,3 +48,13 @@ it('strips javascript urls from xlink:href inside svg', function () {
     $out = HtmlSanitizer::clean('<svg><a xlink:href="javascript:alert(1)"><text>x</text></a></svg>');
     expect($out)->not->toContain('xlink:href');
 });
+
+it('drops the whole srcset when any candidate url is unsafe', function () {
+    $out = HtmlSanitizer::clean('<img srcset="a/b.jpg 1x, javascript:alert(1) 2x">');
+    expect($out)->not->toContain('srcset');
+});
+
+it('keeps a srcset verbatim when every candidate url is safe', function () {
+    $out = HtmlSanitizer::clean('<img srcset="/img/a.jpg 1x, https://cdn.example/a@2x.jpg 2x">');
+    expect($out)->toContain('srcset="/img/a.jpg 1x, https://cdn.example/a@2x.jpg 2x"');
+});
