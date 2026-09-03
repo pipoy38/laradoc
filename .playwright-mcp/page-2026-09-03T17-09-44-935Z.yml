@@ -1,0 +1,75 @@
+- generic [active] [ref=f28e1]:
+  - link "Skip to content" [ref=f28e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f28e4]:
+    - banner [ref=f28e5]:
+      - button "Open navigation" [ref=f28e6]
+      - generic [ref=f28e11]:
+        - generic [ref=f28e12]: Warehousing
+        - generic [ref=f28e13]: /
+        - generic [ref=f28e14]: Locations
+      - button "Search. Opens the command palette." [ref=f28e15] [cursor=pointer]:
+        - generic [ref=f28e19]: Search products, orders, SKUs
+        - generic [ref=f28e20]: Ctrl K
+      - generic [ref=f28e21]:
+        - generic [ref=f28e22]:
+          - button "Light theme" [ref=f28e23]
+          - button "Dark theme" [ref=f28e27]
+          - button "Match system theme" [ref=f28e30]
+        - button "DO Docs Screenshots (temporary)" [ref=f28e35]:
+          - generic [ref=f28e36]: DO
+          - generic [ref=f28e37]: Docs Screenshots (temporary)
+    - main [ref=f28e38]:
+      - generic [ref=f28e39]:
+        - generic [ref=f28e40]:
+          - heading "Locations" [level=1] [ref=f28e41]
+          - paragraph [ref=f28e42]: 4 locations
+        - link "New location" [ref=f28e43] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/warehousing/locations/create
+      - table [ref=f28e45]:
+        - rowgroup [ref=f28e46]:
+          - row [ref=f28e47]:
+            - columnheader "Name" [ref=f28e48]
+            - columnheader "Code" [ref=f28e49]
+            - columnheader "Role" [ref=f28e50]
+            - columnheader "Order" [ref=f28e51]
+            - columnheader "Actions" [ref=f28e52]
+        - rowgroup [ref=f28e54]:
+          - row [ref=f28e55]:
+            - cell "Novaliches Default for new stock" [ref=f28e56]:
+              - generic [ref=f28e57]:
+                - link "Novaliches" [ref=f28e59] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/warehousing/locations/1/edit
+                - generic [ref=f28e60]: Default for new stock
+            - cell "STORE" [ref=f28e61]
+            - cell "Sold from" [ref=f28e62]
+            - cell "1" [ref=f28e66]
+            - cell [ref=f28e67]:
+              - button "Novaliches actions" [ref=f28e69]
+          - row [ref=f28e74]:
+            - cell [ref=f28e75]:
+              - link "StorageMart Commonwealth" [ref=f28e78] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/warehousing/locations/2/edit
+            - cell "SM-01" [ref=f28e79]
+            - cell "Sold from" [ref=f28e80]
+            - cell "2" [ref=f28e84]
+            - cell [ref=f28e85]:
+              - button "StorageMart Commonwealth actions" [ref=f28e87]
+          - row [ref=f28e92]:
+            - cell [ref=f28e93]:
+              - link "Ningbo Joinaudio Warehouse" [ref=f28e96] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/warehousing/locations/3/edit
+            - cell "JOIN" [ref=f28e97]
+            - cell "Not sold from" [ref=f28e98]
+            - cell "3" [ref=f28e102]
+            - cell [ref=f28e103]:
+              - button "Ningbo Joinaudio Warehouse actions" [ref=f28e105]
+          - row [ref=f28e110]:
+            - cell [ref=f28e111]:
+              - link "Dongguan Zhuoyang Technology Co., Ltd" [ref=f28e114] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/warehousing/locations/4/edit
+            - cell "HYSON" [ref=f28e115]
+            - cell "Not sold from" [ref=f28e116]
+            - cell "4" [ref=f28e120]
+            - cell [ref=f28e121]:
+              - button "Dongguan Zhuoyang Technology Co., Ltd actions" [ref=f28e123]

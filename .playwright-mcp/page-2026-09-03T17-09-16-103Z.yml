@@ -1,0 +1,190 @@
+- generic [active] [ref=f21e1]:
+  - link "Skip to content" [ref=f21e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f21e4]:
+    - banner [ref=f21e5]:
+      - button "Open navigation" [ref=f21e6]
+      - generic [ref=f21e11]:
+        - generic [ref=f21e12]: Sales
+        - generic [ref=f21e13]: /
+        - link "Orders" [ref=f21e14] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/sales/orders
+        - generic [ref=f21e15]: /
+        - generic [ref=f21e16]: "1000082"
+      - button "Search. Opens the command palette." [ref=f21e17] [cursor=pointer]:
+        - generic [ref=f21e21]: Search products, orders, SKUs
+        - generic [ref=f21e22]: Ctrl K
+      - generic [ref=f21e23]:
+        - generic [ref=f21e24]:
+          - button "Light theme" [ref=f21e25]
+          - button "Dark theme" [ref=f21e29]
+          - button "Match system theme" [ref=f21e32]
+        - button "DO Docs Screenshots (temporary)" [ref=f21e37]:
+          - generic [ref=f21e38]: DO
+          - generic [ref=f21e39]: Docs Screenshots (temporary)
+    - main [ref=f21e40]:
+      - generic [ref=f21e41]:
+        - status
+        - link "Orders" [ref=f21e42] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/sales/orders
+        - generic [ref=f21e45]:
+          - generic [ref=f21e46]:
+            - heading "#1000082" [level=1] [ref=f21e47]
+            - group [ref=f21e48]:
+              - generic "Change the order status" [ref=f21e49] [cursor=pointer]:
+                - generic [ref=f21e50]: Processing
+                - generic [ref=f21e53]: Change status
+              - option "Pending"
+              - option "Unpaid"
+              - option "For Verification"
+              - option "Processing" [selected]
+              - option "Return in Progress"
+              - option "To Confirm Receive"
+              - option "Shipped"
+              - option "Complete"
+              - option "Delivered"
+              - option "Completed"
+              - option "Canceled"
+              - option "Denied"
+              - option "Reversed"
+              - option "Failed"
+              - option "Returned"
+              - option "Refunded"
+            - generic [ref=f21e56]: Shopee
+          - link "Edit order" [ref=f21e59] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/sales/orders/1000082/edit
+        - generic [ref=f21e60]:
+          - generic [ref=f21e61]:
+            - generic [ref=f21e62]: Created
+            - generic [ref=f21e63]: 2026-08-20 01:00:09
+          - generic [ref=f21e64]:
+            - generic [ref=f21e65]: Marketplace order
+            - link "260820RY2NAYQ7" [ref=f21e66] [cursor=pointer]:
+              - /url: https://seller.shopee.ph/portal/sale/260820RY2NAYQ7
+        - generic [ref=f21e71]:
+          - generic [ref=f21e72]:
+            - heading "Customer" [level=2] [ref=f21e74]
+            - generic [ref=f21e76]:
+              - generic [ref=f21e77]: local_regress.ph
+              - generic [ref=f21e78]: "******98"
+          - generic [ref=f21e79]:
+            - heading "Shipping" [level=2] [ref=f21e81]
+            - generic [ref=f21e82]:
+              - generic [ref=f21e83]:
+                - generic [ref=f21e84]: Method
+                - generic [ref=f21e85]: Instant Delivery
+              - generic [ref=f21e86]:
+                - generic [ref=f21e87]: Delivery address
+                - generic [ref=f21e88]:
+                  - generic [ref=f21e89]: ziqi.zhang
+                  - generic [ref=f21e90]: Pa******
+                  - generic [ref=f21e91]: Metro Manila 1000
+                  - generic [ref=f21e92]: Metro Manila
+          - generic [ref=f21e93]:
+            - heading "Billing" [level=2] [ref=f21e95]
+            - generic [ref=f21e96]:
+              - generic [ref=f21e97]:
+                - generic [ref=f21e98]: Method
+                - generic [ref=f21e99]: Online / Offline Payment
+              - generic [ref=f21e100]:
+                - generic [ref=f21e101]: Billing address
+                - generic [ref=f21e102]: local_regress.ph
+        - generic [ref=f21e105]:
+          - generic [ref=f21e106]:
+            - heading "Items 2" [level=2] [ref=f21e108]
+            - generic [ref=f21e109]:
+              - generic [aria-hidden] [ref=f21e110]:
+                - generic [ref=f21e111]: Product
+                - generic [ref=f21e112]: Qty
+                - generic [ref=f21e113]: Unit price
+                - generic [ref=f21e114]: Line total
+              - generic [ref=f21e115]:
+                - generic [ref=f21e117]:
+                  - link "Mosky Audio G-III Blue M-series Distortion Guitar Effect Pedal" [ref=f21e118] [cursor=pointer]:
+                    - /url: http://127.0.0.1:8000/catalog/products/1844/edit
+                  - generic [ref=f21e119]: MOS-g-III
+                - generic [ref=f21e121]:
+                  - generic [ref=f21e122]: "1"
+                  - generic [ref=f21e123]: ₱2,758.00
+                  - generic [ref=f21e125]: ₱2,758.00
+                - generic [ref=f21e127]:
+                  - generic [ref=f21e128]:
+                    - generic [ref=f21e129]: Unit cost
+                    - button "Edit unit cost, currently ₱879.38" [ref=f21e130] [cursor=pointer]: ₱879.38
+                  - generic [ref=f21e131]:
+                    - generic [ref=f21e132]: COGS
+                    - generic [ref=f21e133]: ₱879.38
+                  - generic [ref=f21e134]:
+                    - generic [ref=f21e135]: Profit
+                    - generic [ref=f21e136]: ₱1,878.62
+                  - generic [ref=f21e137]:
+                    - generic [ref=f21e138]: Margin
+                    - generic [ref=f21e139]: 68.1%
+                  - generic [ref=f21e140]:
+                    - generic [ref=f21e141]: Markup
+                    - generic [ref=f21e142]: 213.6%
+              - generic [ref=f21e143]:
+                - generic [ref=f21e145]:
+                  - link "DemonFX MT-500 Strobe Tuner Guitar Bass Pedal High Sensitivity Precision Guitar Bass" [ref=f21e146] [cursor=pointer]:
+                    - /url: http://127.0.0.1:8000/catalog/products/2708/edit
+                  - generic [ref=f21e147]: demon-mt500
+                - generic [ref=f21e149]:
+                  - generic [ref=f21e150]: "1"
+                  - generic [ref=f21e151]: ₱2,530.00
+                  - generic [ref=f21e153]: ₱2,530.00
+                - generic [ref=f21e155]:
+                  - generic [ref=f21e156]:
+                    - generic [ref=f21e157]: Unit cost
+                    - button "Edit unit cost, currently ₱1,014.75" [ref=f21e158] [cursor=pointer]: ₱1,014.75
+                  - generic [ref=f21e159]:
+                    - generic [ref=f21e160]: COGS
+                    - generic [ref=f21e161]: ₱1,014.75
+                  - generic [ref=f21e162]:
+                    - generic [ref=f21e163]: Profit
+                    - generic [ref=f21e164]: ₱1,515.25
+                  - generic [ref=f21e165]:
+                    - generic [ref=f21e166]: Margin
+                    - generic [ref=f21e167]: 59.9%
+                  - generic [ref=f21e168]:
+                    - generic [ref=f21e169]: Markup
+                    - generic [ref=f21e170]: 149.3%
+          - generic [ref=f21e172]:
+            - heading "Totals" [level=2] [ref=f21e174]
+            - generic [ref=f21e175]:
+              - generic [ref=f21e176]:
+                - generic [ref=f21e177]: Sub-Total
+                - generic [ref=f21e178]: ₱5,288.00
+              - generic [ref=f21e180]:
+                - generic [ref=f21e181]: Total
+                - generic [ref=f21e182]: ₱5,288.00
+              - separator [ref=f21e184]
+              - generic [ref=f21e185]:
+                - generic [ref=f21e186]: COGS
+                - generic [ref=f21e187]: "-₱1,894.13"
+              - generic [ref=f21e189]:
+                - generic [ref=f21e190]: Shipping cost
+                - button "₱0.00" [ref=f21e192] [cursor=pointer]
+              - group [ref=f21e193]:
+                - generic "Add fee" [ref=f21e194] [cursor=pointer]
+              - generic [ref=f21e197]:
+                - generic [ref=f21e198]:
+                  - text: Gross profit
+                  - generic [ref=f21e199]:
+                    - generic [ref=f21e200]: 64.2% margin
+                    - generic [ref=f21e201]: 179.2% markup
+                - generic [ref=f21e202]: ₱3,393.87
+        - generic [ref=f21e203]:
+          - heading "Order history 2" [level=2] [ref=f21e205]
+          - generic [ref=f21e206]:
+            - generic [ref=f21e207]:
+              - generic [ref=f21e208]: 2026-08-20 01:15:40
+              - generic [ref=f21e209]:
+                - generic [ref=f21e210]: Processing
+                - generic [ref=f21e211]: by Shopee Sync
+                - generic [ref=f21e212]: "Synced from Shopee (status: PROCESSED)"
+            - generic [ref=f21e213]:
+              - generic [ref=f21e214]: 2026-08-20 01:01:00
+              - generic [ref=f21e215]:
+                - generic [ref=f21e216]: Pending
+                - generic [ref=f21e217]: by Shopee Sync
+                - generic [ref=f21e218]: "Synced from Shopee (status: READY_TO_SHIP)"

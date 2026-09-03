@@ -1,0 +1,86 @@
+- generic [active] [ref=f23e1]:
+  - link "Skip to content" [ref=f23e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f23e4]:
+    - banner [ref=f23e5]:
+      - button "Open navigation" [ref=f23e6]
+      - generic [ref=f23e9]: Fulfilment
+      - button "Search. Opens the command palette." [ref=f23e13] [cursor=pointer]:
+        - generic [ref=f23e17]: Search products, orders, SKUs
+        - generic [ref=f23e18]: Ctrl K
+      - generic [ref=f23e19]:
+        - generic [ref=f23e20]:
+          - button "Light theme" [ref=f23e21]
+          - button "Dark theme" [ref=f23e25]
+          - button "Match system theme" [ref=f23e28]
+        - button "DO Docs Screenshots (temporary)" [ref=f23e33]:
+          - generic [ref=f23e34]: DO
+          - generic [ref=f23e35]: Docs Screenshots (temporary)
+    - main [ref=f23e36]:
+      - generic [ref=f23e37]:
+        - generic [ref=f23e38]:
+          - heading "Fulfilment" [level=1] [ref=f23e39]
+          - paragraph [ref=f23e40]:
+            - generic [ref=f23e41]: 69 orders waiting
+            - generic [aria-hidden] [ref=f23e42]: ·
+            - generic [ref=f23e43]: Lazada, Shopee and 2 more are not syncing
+        - navigation "Fulfilment surfaces" [ref=f23e44]:
+          - link "Lazada to pack 34 to handover 26 7 to arrange not syncing" [ref=f23e45] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/channels/fulfilment?channel=lazada&tab=TO_SHIP
+            - generic [ref=f23e46]: Lazada
+            - generic [ref=f23e48]:
+              - generic [ref=f23e49]:
+                - generic [ref=f23e50]: to pack
+                - generic [ref=f23e51]: "34"
+              - generic [ref=f23e52]:
+                - generic [ref=f23e53]: to handover
+                - generic [ref=f23e54]: "26"
+            - generic [ref=f23e55]:
+              - generic [ref=f23e56]: "7"
+              - text: to arrange
+            - generic [ref=f23e57]: not syncing
+          - link "Shopee nothing to pack 0 to handover 1 not connected · last known" [ref=f23e58] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/channels/fulfilment?channel=shopee%3A1
+            - generic [ref=f23e59]: Shopee
+            - generic [ref=f23e61]:
+              - generic [ref=f23e62]:
+                - generic [ref=f23e63]: nothing to pack
+                - generic [ref=f23e64]: "0"
+              - generic [ref=f23e65]:
+                - generic [ref=f23e66]: to handover
+                - generic [ref=f23e67]: "1"
+            - generic [ref=f23e68]: not connected · last known
+          - link "TikTok nothing to pack 0 to handover 0 not syncing" [ref=f23e69] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/channels/fulfilment?channel=tiktok
+            - generic [ref=f23e70]: TikTok
+            - generic [ref=f23e72]:
+              - generic [ref=f23e73]:
+                - generic [ref=f23e74]: nothing to pack
+                - generic [ref=f23e75]: "0"
+              - generic [ref=f23e76]:
+                - generic [ref=f23e77]: to handover
+                - generic [ref=f23e78]: "0"
+            - generic [ref=f23e79]: not syncing
+          - link "New Gear Day nothing to pack 0 to handover 1 not syncing" [ref=f23e80] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/channels/fulfilment?channel=venta%3A2
+            - generic [ref=f23e81]: New Gear Day
+            - generic [ref=f23e83]:
+              - generic [ref=f23e84]:
+                - generic [ref=f23e85]: nothing to pack
+                - generic [ref=f23e86]: "0"
+              - generic [ref=f23e87]:
+                - generic [ref=f23e88]: to handover
+                - generic [ref=f23e89]: "1"
+            - generic [ref=f23e90]: not syncing
+        - generic [ref=f23e91]:
+          - generic [ref=f23e92]: Today
+          - generic [ref=f23e93]: No orders yet
+          - generic [aria-hidden] [ref=f23e94]: ·
+          - generic [ref=f23e95]: last order 2 weeks ago
+        - generic [ref=f23e96]:
+          - generic [ref=f23e97]:
+            - heading "Today's orders" [level=2] [ref=f23e99]
+            - paragraph [ref=f23e100]: Nothing has come in yet today.
+          - generic [ref=f23e101]:
+            - heading "Top products today" [level=2] [ref=f23e103]
+            - paragraph [ref=f23e104]: Nothing sold yet today.

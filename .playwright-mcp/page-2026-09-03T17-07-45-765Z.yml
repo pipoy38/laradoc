@@ -1,0 +1,137 @@
+- generic [active] [ref=f13e1]:
+  - link "Skip to content" [ref=f13e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f13e4]:
+    - banner [ref=f13e5]:
+      - button "Open navigation" [ref=f13e6]
+      - generic [ref=f13e11]:
+        - generic [ref=f13e12]: Channels
+        - generic [ref=f13e13]: /
+        - generic [ref=f13e14]: Shopee
+        - generic [ref=f13e15]: /
+        - generic [ref=f13e16]: Main store
+        - generic [ref=f13e17]: /
+        - generic [ref=f13e18]: Settings
+      - button "Search. Opens the command palette." [ref=f13e19] [cursor=pointer]:
+        - generic: Search products, orders, SKUs
+        - generic [ref=f13e22]: Ctrl K
+      - generic [ref=f13e23]:
+        - generic [ref=f13e24]:
+          - button "Light theme" [ref=f13e25]
+          - button "Dark theme" [ref=f13e29]
+          - button "Match system theme" [ref=f13e32]
+        - button "DO Docs Screenshots (temporary)" [ref=f13e37]:
+          - generic [ref=f13e38]: DO
+          - generic [ref=f13e39]: Docs Screenshots (temporary)
+    - navigation "Shopee navigation" [ref=f13e41]:
+      - link "Overview" [ref=f13e42] [cursor=pointer]:
+        - /url: http://127.0.0.1:8000/channels/shopee/1
+      - button "Sell" [ref=f13e44] [cursor=pointer]
+      - button "Catalog" [ref=f13e48] [cursor=pointer]
+      - button "Settings" [ref=f13e52] [cursor=pointer]
+    - main [ref=f13e55]:
+      - status [ref=f13e56]:
+        - generic [ref=f13e60]: Switched to Production mode.
+        - button "Close" [ref=f13e61] [cursor=pointer]: ×
+      - generic [ref=f13e62]:
+        - generic [ref=f13e64]:
+          - heading "Settings" [level=1] [ref=f13e65]
+          - paragraph [ref=f13e66]: Credentials, status mapping and the API record for this Shopee shop.
+        - generic [ref=f13e67]:
+          - generic [ref=f13e68]:
+            - heading "Environment" [level=2] [ref=f13e70]
+            - generic [ref=f13e71]:
+              - tablist "Shopee environment" [ref=f13e73]:
+                - tab "Production" [selected] [ref=f13e74] [cursor=pointer]
+                - tab "Sandbox" [ref=f13e75] [cursor=pointer]
+              - paragraph [ref=f13e76]: Every sync, push and order fetch uses the credentials of the environment selected here. Production and sandbox keep separate credentials and separate tokens.
+          - generic [ref=f13e77]:
+            - generic [ref=f13e78]:
+              - heading "Production credentials" [level=2] [ref=f13e80]
+              - generic [ref=f13e81]:
+                - generic [ref=f13e82]:
+                  - generic [ref=f13e83]:
+                    - generic [ref=f13e84]: Store name
+                    - textbox "Store name" [ref=f13e85]: Main store
+                    - generic [ref=f13e86]: How this store is named across the ERP - the sidebar, the fulfilment tabs, the channels board.
+                  - generic [ref=f13e87]:
+                    - generic [ref=f13e88]: Store is active
+                    - generic [ref=f13e89]:
+                      - checkbox "Store is active Active" [checked] [ref=f13e90]
+                      - text: Active
+                    - generic [ref=f13e91]: An active store syncs on the crons and shows its tabs. Switch off to pause the store without losing anything.
+                  - generic [ref=f13e92]:
+                    - generic [ref=f13e93]: Partner ID
+                    - textbox "Partner ID" [ref=f13e94]: "843898"
+                    - generic [ref=f13e95]: The numeric app identifier from your Shopee Open Platform app. Not a secret, so it is shown in full.
+                  - generic [ref=f13e96]:
+                    - generic [ref=f13e97]: Partner Key
+                    - textbox "Partner Key" [ref=f13e100]
+                    - generic [ref=f13e101]: Stored encrypted. Read-only until you choose to edit it.
+                  - generic [ref=f13e102]:
+                    - generic [ref=f13e103]: Shop ID
+                    - textbox "Shop ID" [ref=f13e104]: "169484445"
+                  - generic [ref=f13e105]:
+                    - generic [ref=f13e106]: Access Token
+                    - textbox "Access Token" [ref=f13e109]
+                    - generic [ref=f13e110]: Stored encrypted. Normally filled in for you by the authorisation steps beside this.
+                  - generic [ref=f13e111]:
+                    - generic [ref=f13e112]: Redirect URI
+                    - textbox "Redirect URI" [ref=f13e113]: https://127.0.0.1:8000/shopee
+                    - generic [ref=f13e114]: Register this exact URL in your Shopee Open Platform production app. To change it, edit APP_URL in the environment file.
+                  - generic [ref=f13e115]:
+                    - generic [ref=f13e116]: Region
+                    - combobox "Region" [ref=f13e118]:
+                      - option "Not set"
+                      - option "Singapore (SG)"
+                      - option "Malaysia (MY)"
+                      - option "Thailand (TH)"
+                      - option "Vietnam (VN)"
+                      - option "Indonesia (ID)"
+                      - option "Philippines (PH)" [selected]
+                      - option "Taiwan (TW)"
+                      - option "Brazil (BR)"
+                      - option "Mexico (MX)"
+                      - option "Colombia (CO)"
+                      - option "Chile (CL)"
+                      - option "Poland (PL)"
+                - generic [ref=f13e119]:
+                  - button "Save production settings" [ref=f13e120] [cursor=pointer]
+                  - generic [ref=f13e121]: Leave a masked field untouched to keep what is already stored.
+            - generic [ref=f13e122]:
+              - heading "Production authorisation" [level=2] [ref=f13e124]
+              - generic [ref=f13e125]:
+                - generic [ref=f13e126]: No token
+                - generic [ref=f13e129]: Work through the three steps below.
+              - generic [ref=f13e130]:
+                - generic [ref=f13e131]:
+                  - generic [ref=f13e132]: "1"
+                  - generic [ref=f13e133]:
+                    - generic [ref=f13e134]: Authorise with Shopee
+                    - link "Open Shopee authorisation" [ref=f13e136] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/shopee/authorize?store=1
+                    - paragraph [ref=f13e137]: Opens Shopee sign-in in a new tab. After you grant access Shopee sends you back here with an auth code, and the code is exchanged for a token automatically.
+                - generic [ref=f13e138]:
+                  - generic [ref=f13e139]: "2"
+                  - generic [ref=f13e140]:
+                    - generic [ref=f13e141]: Exchange an auth code by hand
+                    - generic [ref=f13e142]:
+                      - generic [ref=f13e143]:
+                        - generic [ref=f13e144]: Auth code
+                        - textbox "Auth code" [ref=f13e145]:
+                          - /placeholder: Paste the code= value here
+                      - button "Exchange" [ref=f13e146] [cursor=pointer]
+                    - paragraph [ref=f13e147]: Only needed when the automatic exchange did not run, for example if you copied the redirect URL out of the address bar.
+                - generic [ref=f13e148]:
+                  - generic [ref=f13e149]: "3"
+                  - generic [ref=f13e150]:
+                    - generic [ref=f13e151]: Refresh an expired token
+                    - button "Refresh access token" [ref=f13e153] [cursor=pointer]
+                    - paragraph [ref=f13e154]: Shopee access tokens last about four hours. The scheduled job renews them every two hours, so this is here for when that job has not run.
+          - generic [ref=f13e155]:
+            - heading "Couriers" [level=2] [ref=f13e157]
+            - paragraph [ref=f13e158]: Reads the courier list Shopee has switched on for this shop and caches it. The full list, with weight and size limits, is on the Logistics page.
+            - generic [ref=f13e159]:
+              - button "Fetch couriers" [ref=f13e161] [cursor=pointer]
+              - link "Open Logistics" [ref=f13e162] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/channels/shopee/1/logistics

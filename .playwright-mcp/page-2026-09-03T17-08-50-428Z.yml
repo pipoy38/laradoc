@@ -1,0 +1,130 @@
+- generic [active] [ref=f19e1]:
+  - link "Skip to content" [ref=f19e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f19e4]:
+    - banner [ref=f19e5]:
+      - button "Open navigation" [ref=f19e6]
+      - generic [ref=f19e11]:
+        - generic [ref=f19e12]: Channels
+        - generic [ref=f19e13]: /
+        - generic [ref=f19e14]: TikTok Shop
+        - generic [ref=f19e15]: /
+        - generic [ref=f19e16]: Settings
+      - button "Search. Opens the command palette." [ref=f19e17] [cursor=pointer]:
+        - generic [ref=f19e21]: Search products, orders, SKUs
+        - generic [ref=f19e22]: Ctrl K
+      - generic [ref=f19e23]:
+        - generic [ref=f19e24]:
+          - button "Light theme" [ref=f19e25]
+          - button "Dark theme" [ref=f19e29]
+          - button "Match system theme" [ref=f19e32]
+        - button "DO Docs Screenshots (temporary)" [ref=f19e37]:
+          - generic [ref=f19e38]: DO
+          - generic [ref=f19e39]: Docs Screenshots (temporary)
+    - navigation "TikTok Shop navigation" [ref=f19e41]:
+      - link "Overview" [ref=f19e42] [cursor=pointer]:
+        - /url: http://127.0.0.1:8000/channels/tiktok
+      - button "Sell" [ref=f19e44] [cursor=pointer]
+      - button "Catalog" [ref=f19e48] [cursor=pointer]
+      - button "Settings" [ref=f19e52] [cursor=pointer]
+    - main [ref=f19e55]:
+      - status [ref=f19e56]:
+        - generic [ref=f19e60]: Switched to Production mode.
+        - button "Close" [ref=f19e61] [cursor=pointer]: ×
+      - generic [ref=f19e62]:
+        - generic [ref=f19e64]:
+          - heading "Settings" [level=1] [ref=f19e65]
+          - paragraph [ref=f19e66]: Credentials, status mapping and the API record for this TikTok Shop.
+        - generic [ref=f19e67]:
+          - generic [ref=f19e68]:
+            - heading "Environment" [level=2] [ref=f19e70]
+            - generic [ref=f19e71]:
+              - tablist "TikTok environment" [ref=f19e73]:
+                - tab "Production" [selected] [ref=f19e74] [cursor=pointer]
+                - tab "Sandbox" [ref=f19e75] [cursor=pointer]
+              - paragraph [ref=f19e76]: Every sync, push and order fetch uses the credentials of the environment selected here. It is also what the Authorise button sends, so switch first and authorise second.
+          - generic [ref=f19e77]:
+            - generic [ref=f19e78]:
+              - generic [ref=f19e79]:
+                - heading "Production credentials" [level=2] [ref=f19e80]
+                - generic [ref=f19e81]: Configured
+              - generic [ref=f19e85]:
+                - generic [ref=f19e86]:
+                  - generic [ref=f19e87]:
+                    - generic [ref=f19e88]: App Key
+                    - textbox "App Key" [ref=f19e89]: 6jbsrq10a6plv
+                    - generic [ref=f19e90]: The app identifier from TikTok Shop Partner Center. Not a secret, so it is shown in full.
+                  - generic [ref=f19e91]:
+                    - generic [ref=f19e92]: App Secret
+                    - textbox "App Secret" [ref=f19e95]
+                    - generic [ref=f19e96]: Stored encrypted. Read-only until you choose to edit it.
+                  - generic [ref=f19e97]:
+                    - generic [ref=f19e98]: Redirect URI
+                    - textbox "Redirect URI" [ref=f19e99]: https://127.0.0.1:8000/tiktok/callback
+                    - generic [ref=f19e100]: Register this exact URL in your TikTok Shop app. It is always https. To change it, edit APP_URL in the environment file.
+                - generic [ref=f19e101]:
+                  - button "Save production settings" [ref=f19e102] [cursor=pointer]
+                  - generic [ref=f19e103]: Leave a masked field untouched to keep what is already stored. Saving also switches the shop to production.
+            - generic [ref=f19e104]:
+              - heading "Production authorisation" [level=2] [ref=f19e106]
+              - generic [ref=f19e107]:
+                - generic [ref=f19e108]: Token expired
+                - generic [ref=f19e111]: Use step 4 to renew it without authorising again.
+              - generic [ref=f19e112]:
+                - generic [ref=f19e113]:
+                  - generic [ref=f19e114]: "1"
+                  - generic [ref=f19e115]:
+                    - generic [ref=f19e116]: Authorise with TikTok Shop
+                    - link "Open TikTok Shop authorisation" [ref=f19e118] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/tiktok/authorize
+                    - paragraph [ref=f19e119]: Opens TikTok Shop sign-in in a new tab, using whichever environment is selected above. After you grant access TikTok sends you back to the callback URL with an auth code, and the code is exchanged for a token automatically.
+                - generic [ref=f19e120]:
+                  - generic [ref=f19e121]: "2"
+                  - generic [ref=f19e122]:
+                    - generic [ref=f19e123]: Exchange an auth code by hand
+                    - generic [ref=f19e124]:
+                      - generic [ref=f19e125]:
+                        - generic [ref=f19e126]: Auth code
+                        - textbox "Auth code" [ref=f19e127]:
+                          - /placeholder: Fills in after the callback, or paste it here
+                      - button "Exchange" [ref=f19e128] [cursor=pointer]
+                    - paragraph [ref=f19e129]: Only needed when the automatic exchange did not run, for example if you copied the redirect URL out of the address bar.
+                - generic [ref=f19e130]:
+                  - generic [ref=f19e131]: "3"
+                  - generic [ref=f19e132]:
+                    - generic [ref=f19e133]: Fetch the authorised shop
+                    - button "Fetch shop" [ref=f19e135] [cursor=pointer]
+                    - paragraph [ref=f19e136]: Saves the shop cipher, which nearly every TikTok API call needs. Without it products and orders will not sync even with a valid token.
+                    - generic [ref=f19e137]:
+                      - generic [ref=f19e138]:
+                        - term [ref=f19e139]: Shop
+                        - definition [ref=f19e140]: Gearshipper
+                      - generic [ref=f19e141]:
+                        - term [ref=f19e142]: Shop ID
+                        - definition [ref=f19e143]: "7494435023251408509"
+                      - generic [ref=f19e144]:
+                        - term [ref=f19e145]: Shop code
+                        - definition [ref=f19e146]: PHPHLCHBLT9E
+                      - generic [ref=f19e147]:
+                        - term [ref=f19e148]: Shop cipher
+                        - definition [ref=f19e149]: ROW_I1YskwAAAAAi3d479fmdGLPs2Ef3QPrB
+                      - generic [ref=f19e150]:
+                        - term [ref=f19e151]: Region
+                        - definition [ref=f19e152]: PH
+                      - generic [ref=f19e153]:
+                        - term [ref=f19e154]: Warehouse
+                        - definition [ref=f19e155]: "7607649557370291989"
+                - generic [ref=f19e156]:
+                  - generic [ref=f19e157]: "4"
+                  - generic [ref=f19e158]:
+                    - generic [ref=f19e159]: Refresh an expired token
+                    - button "Refresh access token" [ref=f19e161] [cursor=pointer]
+                    - paragraph [ref=f19e162]: TikTok access tokens last about seven days. The scheduled job renews them, so this is here for when that job has not run.
+          - generic [ref=f19e163]:
+            - heading "Setting this up for the first time" [level=2] [ref=f19e165]
+            - list [ref=f19e166]:
+              - listitem [ref=f19e167]: Register a developer account at partner.tiktokshop.com. This is the seller side. developers.tiktok.com is a different platform and will not sync shops, orders or products.
+              - listitem [ref=f19e168]: Create an app in the Partner Center. It gives you an App Key and an App Secret.
+              - listitem [ref=f19e169]: Paste the Redirect URI shown above into that app's settings, exactly as it appears.
+              - listitem [ref=f19e170]: Put the App Key and App Secret in the fields above and save.
+              - listitem [ref=f19e171]: Authorise the shop, then fetch the shop so the shop cipher is stored.

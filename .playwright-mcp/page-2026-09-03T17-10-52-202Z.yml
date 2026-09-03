@@ -1,0 +1,603 @@
+- generic [active] [ref=f37e1]:
+  - link "Skip to content" [ref=f37e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f37e4]:
+    - banner [ref=f37e5]:
+      - button "Open navigation" [ref=f37e6]
+      - generic [ref=f37e11]:
+        - generic [ref=f37e12]: Warehousing
+        - generic [ref=f37e13]: /
+        - generic [ref=f37e14]: Inventory
+      - button "Search. Opens the command palette." [ref=f37e15] [cursor=pointer]:
+        - generic [ref=f37e19]: Search products, orders, SKUs
+        - generic [ref=f37e20]: Ctrl K
+      - generic [ref=f37e21]:
+        - generic [ref=f37e22]:
+          - button "Light theme" [ref=f37e23]
+          - button "Dark theme" [ref=f37e27]
+          - button "Match system theme" [ref=f37e30]
+        - button "DO Docs Screenshots (temporary)" [ref=f37e35]:
+          - generic [ref=f37e36]: DO
+          - generic [ref=f37e37]: Docs Screenshots (temporary)
+    - main [ref=f37e38]:
+      - generic [ref=f37e39]:
+        - generic [ref=f37e40]:
+          - heading "Stock by location" [level=1] [ref=f37e41]
+          - paragraph [ref=f37e42]: 2,290 shelf labels across 4 locations
+        - link "Adjust stock" [ref=f37e43] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/warehousing/adjust
+      - generic [ref=f37e44]:
+        - generic [ref=f37e45]: Search
+        - searchbox "Search" [ref=f37e46]
+        - generic [ref=f37e47]:
+          - generic [ref=f37e48]: Location
+          - combobox "Location" [ref=f37e49]:
+            - option "Any location" [selected]
+            - option "Novaliches"
+            - option "StorageMart Commonwealth"
+            - option "Ningbo Joinaudio Warehouse"
+            - option "Dongguan Zhuoyang Technology Co., Ltd"
+        - generic [ref=f37e50]:
+          - generic [ref=f37e51]: Category
+          - combobox "Category" [ref=f37e52]:
+            - option "Any category" [selected]
+            - option "Accessories"
+            - option "Accessories"
+            - option "Audio Recorders"
+            - option "Bass Bridges"
+            - option "Bass Guitars"
+            - option "Bass Hardware &amp; Parts"
+            - option "Bass Knobs"
+            - option "Bass Pickups"
+            - option "Bass Retainers"
+            - option "Bass Tuners"
+            - option "Buffer Pedals"
+            - option "Cabinet Simulator"
+            - option "Cables"
+            - option "Cables"
+            - option "Cables and Plugs"
+            - option "Capacitors"
+            - option "Capo"
+            - option "Delay | Reverb"
+            - option "Delay Pedals"
+            - option "Diodes"
+            - option "Direct Box"
+            - option "Drum Machine"
+            - option "Earphones"
+            - option "Effects Pedals"
+            - option "Effects Pedals"
+            - option "Electric Guitars"
+            - option "Electronic Components"
+            - option "Enclosures"
+            - option "EQ | Comp | Gate"
+            - option "Foot Controllers"
+            - option "Guitar Bridges"
+            - option "Guitar Hardware &amp; Parts"
+            - option "Guitar Misc Hardware"
+            - option "Guitar Pickups"
+            - option "Guitar Straps"
+            - option "Guitar Strings"
+            - option "Guitar Tuners"
+            - option "Guitars"
+            - option "Headless System"
+            - option "Headphones"
+            - option "Headphones"
+            - option "Headphones"
+            - option "Inductor"
+            - option "Instrument Cables"
+            - option "Integrated Circuits"
+            - option "Keys &amp; Synths"
+            - option "Knobs"
+            - option "Knobs"
+            - option "Looper Pedals"
+            - option "Merch"
+            - option "Modulations"
+            - option "Multi Effects Processor"
+            - option "Overdrive | Distortion | Fuzz"
+            - option "Patch Cables"
+            - option "Pedalboards"
+            - option "Plugs"
+            - option "Potentiometers"
+            - option "Power Supplies"
+            - option "Power Supplies"
+            - option "Pre-Amp and Speakers"
+            - option "Pre-Order"
+            - option "Recording"
+            - option "Reverb Pedals"
+            - option "Strap Lock"
+            - option "Strings"
+            - option "Switches"
+            - option "Tap Tempo Pedals"
+            - option "test"
+            - option "Transistors"
+            - option "True Bypass Loopers"
+            - option "Tuners"
+            - option "Used Gear"
+            - option "Voice"
+            - option "Volume Pedals"
+            - option "Wah | Volume"
+            - option "Wah Pedals"
+        - button "Search" [ref=f37e53] [cursor=pointer]
+      - paragraph [ref=f37e54]: Stock in Ningbo Joinaudio Warehouse and Dongguan Zhuoyang Technology Co., Ltd does not count toward the quantity sent to marketplaces. It is still counted in the total below.
+      - table [ref=f37e56]:
+        - rowgroup [ref=f37e57]:
+          - row [ref=f37e58]:
+            - columnheader "Product" [ref=f37e59]
+            - columnheader "SKU" [ref=f37e60]
+            - columnheader "Novaliches" [ref=f37e61]
+            - columnheader "StorageMart Commonwealth" [ref=f37e62]
+            - columnheader "Ningbo Joinaudio Warehouse" [ref=f37e63]
+            - columnheader "Dongguan Zhuoyang Technology Co., Ltd" [ref=f37e64]
+            - columnheader "Total" [ref=f37e65]
+        - rowgroup [ref=f37e66]:
+          - row [ref=f37e67]:
+            - cell "1032L Aluminum Enclosure" [ref=f37e68]
+            - cell "1032L" [ref=f37e71]
+            - cell "0" [ref=f37e72]
+            - cell "0" [ref=f37e73]
+            - cell "0" [ref=f37e74]
+            - cell "0" [ref=f37e75]
+            - cell "0" [ref=f37e76]
+          - row [ref=f37e77]:
+            - cell "125B Aluminum Enclosure" [ref=f37e78]
+            - cell "125B" [ref=f37e81]
+            - cell "0" [ref=f37e82]
+            - cell "0" [ref=f37e83]
+            - cell "0" [ref=f37e84]
+            - cell "0" [ref=f37e85]
+            - cell "0" [ref=f37e86]
+          - row [ref=f37e87]:
+            - cell "1590A Aluminum Enclosure" [ref=f37e88]
+            - cell "1590A" [ref=f37e91]
+            - cell "16" [ref=f37e92]
+            - cell "0" [ref=f37e93]
+            - cell "0" [ref=f37e94]
+            - cell "0" [ref=f37e95]
+            - cell "16" [ref=f37e96]
+          - row [ref=f37e97]:
+            - cell "1590B Aluminum Enclosure Hammond Style" [ref=f37e98]
+            - cell "1590b-hammond" [ref=f37e101]
+            - cell "0" [ref=f37e102]
+            - cell "0" [ref=f37e103]
+            - cell "0" [ref=f37e104]
+            - cell "0" [ref=f37e105]
+            - cell "0" [ref=f37e106]
+          - row [ref=f37e107]:
+            - cell "1590B-DS Aluminum Enclosure" [ref=f37e108]
+            - cell "1590B-DS" [ref=f37e111]
+            - cell "0" [ref=f37e112]
+            - cell "0" [ref=f37e113]
+            - cell "0" [ref=f37e114]
+            - cell "0" [ref=f37e115]
+            - cell "0" [ref=f37e116]
+          - row [ref=f37e117]:
+            - cell "1590BB Aluminum Enclosure" [ref=f37e118]
+            - cell "1590BB" [ref=f37e121]
+            - cell "70" [ref=f37e122]
+            - cell "0" [ref=f37e123]
+            - cell "0" [ref=f37e124]
+            - cell "0" [ref=f37e125]
+            - cell "70" [ref=f37e126]
+          - row [ref=f37e127]:
+            - cell "1590BBS Aluminum Enclosure" [ref=f37e128]
+            - cell "1590BBS" [ref=f37e131]
+            - cell "21" [ref=f37e132]
+            - cell "0" [ref=f37e133]
+            - cell "0" [ref=f37e134]
+            - cell "0" [ref=f37e135]
+            - cell "21" [ref=f37e136]
+          - row [ref=f37e137]:
+            - cell "1590DD Aluminum Enclosure" [ref=f37e138]
+            - cell "1590DD" [ref=f37e141]
+            - cell "34" [ref=f37e142]
+            - cell "0" [ref=f37e143]
+            - cell "0" [ref=f37e144]
+            - cell "0" [ref=f37e145]
+            - cell "34" [ref=f37e146]
+          - row [ref=f37e147]:
+            - cell "1590GB Aluminum Enclosure" [ref=f37e148]
+            - cell "1590GB" [ref=f37e151]
+            - cell "0" [ref=f37e152]
+            - cell "0" [ref=f37e153]
+            - cell "0" [ref=f37e154]
+            - cell "0" [ref=f37e155]
+            - cell "0" [ref=f37e156]
+          - row [ref=f37e157]:
+            - cell "1590LB Aluminum Enclosure" [ref=f37e158]
+            - cell "1590LB" [ref=f37e161]
+            - cell "0" [ref=f37e162]
+            - cell "0" [ref=f37e163]
+            - cell "0" [ref=f37e164]
+            - cell "0" [ref=f37e165]
+            - cell "0" [ref=f37e166]
+          - row [ref=f37e167]:
+            - cell "1590XX / 1790NS Aluminum Enclosure" [ref=f37e168]
+            - cell "1590XX" [ref=f37e171]
+            - cell "17" [ref=f37e172]
+            - cell "0" [ref=f37e173]
+            - cell "0" [ref=f37e174]
+            - cell "0" [ref=f37e175]
+            - cell "17" [ref=f37e176]
+          - row [ref=f37e177]:
+            - cell "1N34A Germanium Diode" [ref=f37e178]
+            - cell "1N34A" [ref=f37e181]
+            - cell "0" [ref=f37e182]
+            - cell "0" [ref=f37e183]
+            - cell "0" [ref=f37e184]
+            - cell "0" [ref=f37e185]
+            - cell "0" [ref=f37e186]
+          - row [ref=f37e187]:
+            - cell "1N4001 General Purpose Diode 50v" [ref=f37e188]
+            - cell "No SKU" [ref=f37e191]
+            - cell "0" [ref=f37e192]
+            - cell "0" [ref=f37e193]
+            - cell "0" [ref=f37e194]
+            - cell "0" [ref=f37e195]
+            - cell "0" [ref=f37e196]
+          - row [ref=f37e197]:
+            - cell "1N4148 Switching Diode" [ref=f37e198]
+            - cell "1N4148" [ref=f37e201]
+            - cell "0" [ref=f37e202]
+            - cell "0" [ref=f37e203]
+            - cell "0" [ref=f37e204]
+            - cell "0" [ref=f37e205]
+            - cell "0" [ref=f37e206]
+          - row [ref=f37e207]:
+            - cell "1N4739A Zener Diode" [ref=f37e208]
+            - cell "No SKU" [ref=f37e211]
+            - cell "-10" [ref=f37e212]
+            - cell "0" [ref=f37e213]
+            - cell "0" [ref=f37e214]
+            - cell "0" [ref=f37e215]
+            - cell "-10" [ref=f37e216]
+          - row [ref=f37e217]:
+            - cell "1n4742a Zener Diode" [ref=f37e218]
+            - cell "No SKU" [ref=f37e221]
+            - cell "8" [ref=f37e222]
+            - cell "0" [ref=f37e223]
+            - cell "0" [ref=f37e224]
+            - cell "0" [ref=f37e225]
+            - cell "8" [ref=f37e226]
+          - row [ref=f37e227]:
+            - cell "1N5817 Diode Schottky 1A 20V" [ref=f37e228]
+            - cell "No SKU" [ref=f37e231]
+            - cell "0" [ref=f37e232]
+            - cell "0" [ref=f37e233]
+            - cell "0" [ref=f37e234]
+            - cell "0" [ref=f37e235]
+            - cell "0" [ref=f37e236]
+          - row [ref=f37e237]:
+            - cell "1N914 Small Signal Switching Diode 100v" [ref=f37e238]
+            - cell "No SKU" [ref=f37e241]
+            - cell "0" [ref=f37e242]
+            - cell "0" [ref=f37e243]
+            - cell "0" [ref=f37e244]
+            - cell "0" [ref=f37e245]
+            - cell "0" [ref=f37e246]
+          - row [ref=f37e247]:
+            - cell "2N3904 General Purpose Transistor NPN" [ref=f37e248]
+            - cell "No SKU" [ref=f37e251]
+            - cell "0" [ref=f37e252]
+            - cell "0" [ref=f37e253]
+            - cell "0" [ref=f37e254]
+            - cell "0" [ref=f37e255]
+            - cell "0" [ref=f37e256]
+          - row [ref=f37e257]:
+            - cell "2N3906 General Purpose Transistor PNP" [ref=f37e258]
+            - cell "No SKU" [ref=f37e261]
+            - cell "-10" [ref=f37e262]
+            - cell "0" [ref=f37e263]
+            - cell "0" [ref=f37e264]
+            - cell "0" [ref=f37e265]
+            - cell "-10" [ref=f37e266]
+          - row [ref=f37e267]:
+            - cell "2N4125 General Purpose Transistor PNP" [ref=f37e268]
+            - cell "No SKU" [ref=f37e271]
+            - cell "10" [ref=f37e272]
+            - cell "0" [ref=f37e273]
+            - cell "0" [ref=f37e274]
+            - cell "0" [ref=f37e275]
+            - cell "10" [ref=f37e276]
+          - row [ref=f37e277]:
+            - cell "2N5087 General Purpose Transistor PNP" [ref=f37e278]
+            - cell "No SKU" [ref=f37e281]
+            - cell "22" [ref=f37e282]
+            - cell "0" [ref=f37e283]
+            - cell "0" [ref=f37e284]
+            - cell "0" [ref=f37e285]
+            - cell "22" [ref=f37e286]
+          - row [ref=f37e287]:
+            - cell "2N5088 General Purpose Transistor NPN" [ref=f37e288]
+            - cell "No SKU" [ref=f37e291]
+            - cell "0" [ref=f37e292]
+            - cell "0" [ref=f37e293]
+            - cell "0" [ref=f37e294]
+            - cell "0" [ref=f37e295]
+            - cell "0" [ref=f37e296]
+          - row [ref=f37e297]:
+            - cell "2N5458 JFET General Purpose" [ref=f37e298]
+            - cell "No SKU" [ref=f37e301]
+            - cell "-10" [ref=f37e302]
+            - cell "0" [ref=f37e303]
+            - cell "0" [ref=f37e304]
+            - cell "0" [ref=f37e305]
+            - cell "-10" [ref=f37e306]
+          - row [ref=f37e307]:
+            - cell "2N7000 Mosfet" [ref=f37e308]
+            - cell "No SKU" [ref=f37e311]
+            - cell "0" [ref=f37e312]
+            - cell "0" [ref=f37e313]
+            - cell "0" [ref=f37e314]
+            - cell "0" [ref=f37e315]
+            - cell "0" [ref=f37e316]
+          - row [ref=f37e317]:
+            - cell "2SC1815 General Purpose Transistor NPN" [ref=f37e318]
+            - cell "No SKU" [ref=f37e321]
+            - cell "0" [ref=f37e322]
+            - cell "0" [ref=f37e323]
+            - cell "0" [ref=f37e324]
+            - cell "0" [ref=f37e325]
+            - cell "0" [ref=f37e326]
+          - row [ref=f37e327]:
+            - cell "3M Dual Lock SJ3550 Reclosable Fastener - Black 1 Side" [ref=f37e328]:
+              - generic [ref=f37e329]:
+                - generic [ref=f37e330]: 3M Dual Lock SJ3550 Reclosable Fastener - Black
+                - generic [ref=f37e331]: 1 Side
+            - cell "No SKU" [ref=f37e332]
+            - cell "-146" [ref=f37e333]
+            - cell "0" [ref=f37e334]
+            - cell "0" [ref=f37e335]
+            - cell "0" [ref=f37e336]
+            - cell "-146" [ref=f37e337]
+          - row [ref=f37e338]:
+            - cell "3M Dual Lock SJ3550 Reclosable Fastener - Black 2 Sides" [ref=f37e339]:
+              - generic [ref=f37e340]:
+                - generic [ref=f37e341]: 3M Dual Lock SJ3550 Reclosable Fastener - Black
+                - generic [ref=f37e342]: 2 Sides
+            - cell "No SKU" [ref=f37e343]
+            - cell "-12" [ref=f37e344]
+            - cell "0" [ref=f37e345]
+            - cell "0" [ref=f37e346]
+            - cell "0" [ref=f37e347]
+            - cell "-12" [ref=f37e348]
+          - row [ref=f37e349]:
+            - cell "3M Dual Lock SJ3560 Reclosable Fastener 1\" x 6\"" [ref=f37e350]
+            - cell "3M-SJ3560-12" [ref=f37e353]
+            - cell "0" [ref=f37e354]
+            - cell "0" [ref=f37e355]
+            - cell "0" [ref=f37e356]
+            - cell "0" [ref=f37e357]
+            - cell "0" [ref=f37e358]
+          - row [ref=f37e359]:
+            - cell "3M Hook and Loop Pair 25 Meters 1 inch" [ref=f37e360]:
+              - generic [ref=f37e361]:
+                - generic [ref=f37e362]: 3M Hook and Loop Pair 25 Meters
+                - generic [ref=f37e363]: 1 inch
+            - cell "3m-hook-loop" [ref=f37e364]
+            - cell "0" [ref=f37e365]
+            - cell "0" [ref=f37e366]
+            - cell "0" [ref=f37e367]
+            - cell "0" [ref=f37e368]
+            - cell "0" [ref=f37e369]
+          - row [ref=f37e370]:
+            - cell "3M Hook and Loop Pair 25 Meters 2 inches" [ref=f37e371]:
+              - generic [ref=f37e372]:
+                - generic [ref=f37e373]: 3M Hook and Loop Pair 25 Meters
+                - generic [ref=f37e374]: 2 inches
+            - cell "3m-hook-loop" [ref=f37e375]
+            - cell "0" [ref=f37e376]
+            - cell "0" [ref=f37e377]
+            - cell "0" [ref=f37e378]
+            - cell "0" [ref=f37e379]
+            - cell "0" [ref=f37e380]
+          - row [ref=f37e381]:
+            - cell "3M Self Adhesive Rubber Feet" [ref=f37e382]
+            - cell "No SKU" [ref=f37e385]
+            - cell "0" [ref=f37e386]
+            - cell "0" [ref=f37e387]
+            - cell "0" [ref=f37e388]
+            - cell "0" [ref=f37e389]
+            - cell "0" [ref=f37e390]
+          - row [ref=f37e391]:
+            - cell "3pcs Step Drill Bit Set Steel Titanium Nitride Coated - 1/4\" Shank" [ref=f37e392]
+            - cell "No SKU" [ref=f37e395]
+            - cell "-8" [ref=f37e396]
+            - cell "0" [ref=f37e397]
+            - cell "0" [ref=f37e398]
+            - cell "0" [ref=f37e399]
+            - cell "-8" [ref=f37e400]
+          - row [ref=f37e401]:
+            - cell "3PDT Latching Solder Lug Footswitch Blue" [ref=f37e402]
+            - cell "3PDT-FW" [ref=f37e405]
+            - cell "82" [ref=f37e406]
+            - cell "0" [ref=f37e407]
+            - cell "0" [ref=f37e408]
+            - cell "0" [ref=f37e409]
+            - cell "82" [ref=f37e410]
+          - row [ref=f37e411]:
+            - cell "3PDT With 2 Color LED Momentary Solder Lug Footswitch" [ref=f37e412]
+            - cell "3PDT-2LED-MOM" [ref=f37e415]
+            - cell "0" [ref=f37e416]
+            - cell "0" [ref=f37e417]
+            - cell "0" [ref=f37e418]
+            - cell "0" [ref=f37e419]
+            - cell "0" [ref=f37e420]
+          - row [ref=f37e421]:
+            - cell "3PDT With LED Latching Solder Lug Footswitch Blue Blue" [ref=f37e422]:
+              - generic [ref=f37e423]:
+                - generic [ref=f37e424]: 3PDT With LED Latching Solder Lug Footswitch Blue
+                - generic [ref=f37e425]: Blue
+            - cell "3PDT-FW-LED" [ref=f37e426]
+            - cell "0" [ref=f37e427]
+            - cell "0" [ref=f37e428]
+            - cell "0" [ref=f37e429]
+            - cell "0" [ref=f37e430]
+            - cell "0" [ref=f37e431]
+          - row [ref=f37e432]:
+            - cell "3PDT With LED Latching Solder Lug Footswitch Blue Green" [ref=f37e433]:
+              - generic [ref=f37e434]:
+                - generic [ref=f37e435]: 3PDT With LED Latching Solder Lug Footswitch Blue
+                - generic [ref=f37e436]: Green
+            - cell "3PDT-FW-LED" [ref=f37e437]
+            - cell "0" [ref=f37e438]
+            - cell "0" [ref=f37e439]
+            - cell "0" [ref=f37e440]
+            - cell "0" [ref=f37e441]
+            - cell "0" [ref=f37e442]
+          - row [ref=f37e443]:
+            - cell "3PDT With LED Latching Solder Lug Footswitch Blue Red" [ref=f37e444]:
+              - generic [ref=f37e445]:
+                - generic [ref=f37e446]: 3PDT With LED Latching Solder Lug Footswitch Blue
+                - generic [ref=f37e447]: Red
+            - cell "3PDT-FW-LED" [ref=f37e448]
+            - cell "0" [ref=f37e449]
+            - cell "0" [ref=f37e450]
+            - cell "0" [ref=f37e451]
+            - cell "0" [ref=f37e452]
+            - cell "0" [ref=f37e453]
+          - row [ref=f37e454]:
+            - cell "3PDT With LED Latching Solder Lug Footswitch RGBYW 2 Color - Red-Blue" [ref=f37e455]:
+              - generic [ref=f37e456]:
+                - generic [ref=f37e457]: 3PDT With LED Latching Solder Lug Footswitch RGBYW
+                - generic [ref=f37e458]: 2 Color - Red-Blue
+            - cell "3PDT-LED--RB" [ref=f37e459]
+            - cell "157" [ref=f37e460]
+            - cell "0" [ref=f37e461]
+            - cell "0" [ref=f37e462]
+            - cell "0" [ref=f37e463]
+            - cell "157" [ref=f37e464]
+          - row [ref=f37e465]:
+            - cell "3PDT With LED Latching Solder Lug Footswitch RGBYW Blue" [ref=f37e466]:
+              - generic [ref=f37e467]:
+                - generic [ref=f37e468]: 3PDT With LED Latching Solder Lug Footswitch RGBYW
+                - generic [ref=f37e469]: Blue
+            - cell "3PDT-LED-2-B" [ref=f37e470]
+            - cell "132" [ref=f37e471]
+            - cell "0" [ref=f37e472]
+            - cell "0" [ref=f37e473]
+            - cell "0" [ref=f37e474]
+            - cell "132" [ref=f37e475]
+          - row [ref=f37e476]:
+            - cell "3PDT With LED Latching Solder Lug Footswitch RGBYW Green" [ref=f37e477]:
+              - generic [ref=f37e478]:
+                - generic [ref=f37e479]: 3PDT With LED Latching Solder Lug Footswitch RGBYW
+                - generic [ref=f37e480]: Green
+            - cell "3PDT-LED-2-G" [ref=f37e481]
+            - cell "167" [ref=f37e482]
+            - cell "0" [ref=f37e483]
+            - cell "0" [ref=f37e484]
+            - cell "0" [ref=f37e485]
+            - cell "167" [ref=f37e486]
+          - row [ref=f37e487]:
+            - cell "3PDT With LED Latching Solder Lug Footswitch RGBYW Red" [ref=f37e488]:
+              - generic [ref=f37e489]:
+                - generic [ref=f37e490]: 3PDT With LED Latching Solder Lug Footswitch RGBYW
+                - generic [ref=f37e491]: Red
+            - cell "3PDT-LED-2-R" [ref=f37e492]
+            - cell "105" [ref=f37e493]
+            - cell "0" [ref=f37e494]
+            - cell "0" [ref=f37e495]
+            - cell "0" [ref=f37e496]
+            - cell "105" [ref=f37e497]
+          - row [ref=f37e498]:
+            - cell "3PDT With LED Latching Solder Lug Footswitch RGBYW White" [ref=f37e499]:
+              - generic [ref=f37e500]:
+                - generic [ref=f37e501]: 3PDT With LED Latching Solder Lug Footswitch RGBYW
+                - generic [ref=f37e502]: White
+            - cell "3PDT-LED-2-W" [ref=f37e503]
+            - cell "10" [ref=f37e504]
+            - cell "0" [ref=f37e505]
+            - cell "0" [ref=f37e506]
+            - cell "0" [ref=f37e507]
+            - cell "10" [ref=f37e508]
+          - row [ref=f37e509]:
+            - cell "3PDT With LED Latching Solder Lug Footswitch RGBYW Yellow" [ref=f37e510]:
+              - generic [ref=f37e511]:
+                - generic [ref=f37e512]: 3PDT With LED Latching Solder Lug Footswitch RGBYW
+                - generic [ref=f37e513]: Yellow
+            - cell "3PDT-LED-2-Y" [ref=f37e514]
+            - cell "171" [ref=f37e515]
+            - cell "0" [ref=f37e516]
+            - cell "0" [ref=f37e517]
+            - cell "0" [ref=f37e518]
+            - cell "171" [ref=f37e519]
+          - row [ref=f37e520]:
+            - cell "3PDT With LED Momentary Solder Lug Footswitch Blue" [ref=f37e521]
+            - cell "3PDT-LED-MOM" [ref=f37e524]
+            - cell "0" [ref=f37e525]
+            - cell "0" [ref=f37e526]
+            - cell "0" [ref=f37e527]
+            - cell "0" [ref=f37e528]
+            - cell "0" [ref=f37e529]
+          - row [ref=f37e530]:
+            - cell "9V 2A Power Supply Adapter Converter for Guitar Bass Effect 100~240V Input US Plug" [ref=f37e531]
+            - cell "mp-9v" [ref=f37e534]
+            - cell "0" [ref=f37e535]
+            - cell "0" [ref=f37e536]
+            - cell "0" [ref=f37e537]
+            - cell "0" [ref=f37e538]
+            - cell "0" [ref=f37e539]
+          - row [ref=f37e540]:
+            - cell "9v Battery Snap" [ref=f37e541]
+            - cell "9v-bat-snap" [ref=f37e544]
+            - cell "0" [ref=f37e545]
+            - cell "0" [ref=f37e546]
+            - cell "0" [ref=f37e547]
+            - cell "0" [ref=f37e548]
+            - cell "0" [ref=f37e549]
+          - row [ref=f37e550]:
+            - cell "9v Plastic Battery Snap" [ref=f37e551]
+            - cell "9v-plastic-bat" [ref=f37e554]
+            - cell "0" [ref=f37e555]
+            - cell "0" [ref=f37e556]
+            - cell "0" [ref=f37e557]
+            - cell "0" [ref=f37e558]
+            - cell "0" [ref=f37e559]
+          - row [ref=f37e560]:
+            - cell "Abasi Guitars testtesttesttesttesttesttesttest" [ref=f37e561]
+            - cell "test-01" [ref=f37e564]
+            - cell "0" [ref=f37e565]
+            - cell "0" [ref=f37e566]
+            - cell "0" [ref=f37e567]
+            - cell "0" [ref=f37e568]
+            - cell "0" [ref=f37e569]
+          - row [ref=f37e570]:
+            - cell "Abasi Guitars testtesttesttesttesttesttesttest 10 Ft" [ref=f37e571]:
+              - generic [ref=f37e572]:
+                - generic [ref=f37e573]: Abasi Guitars testtesttesttesttesttesttesttest
+                - generic [ref=f37e574]: 10 Ft
+            - cell "test-00" [ref=f37e575]
+            - cell "100" [ref=f37e576]
+            - cell "0" [ref=f37e577]
+            - cell "0" [ref=f37e578]
+            - cell "0" [ref=f37e579]
+            - cell "100" [ref=f37e580]
+      - generic [ref=f37e581]:
+        - generic [ref=f37e582]: 1 to 50 of 2,290
+        - generic [ref=f37e583]:
+          - button "Previous" [disabled]
+          - list "Pages" [ref=f37e584]:
+            - listitem [ref=f37e585]:
+              - generic [ref=f37e586]:
+                - generic [ref=f37e587]: Page
+                - text: "1"
+                - generic [ref=f37e588]: of 46, current page
+            - listitem [ref=f37e589]:
+              - link "Page 2" [ref=f37e590] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/warehousing/inventory?page=2
+                - generic [ref=f37e591]: Page
+                - text: "2"
+            - listitem [ref=f37e592]:
+              - link "Page 3" [ref=f37e593] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/warehousing/inventory?page=3
+                - generic [ref=f37e594]: Page
+                - text: "3"
+            - listitem [ref=f37e595]:
+              - generic [aria-hidden] [ref=f37e596]: …
+            - listitem [ref=f37e597]:
+              - link "Page 46" [ref=f37e598] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/warehousing/inventory?page=46
+                - generic [ref=f37e599]: Page
+                - text: "46"
+          - link "Next" [ref=f37e600] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/warehousing/inventory?page=2

@@ -1,0 +1,656 @@
+- generic [active] [ref=f20e1]:
+  - link "Skip to content" [ref=f20e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f20e4]:
+    - banner [ref=f20e5]:
+      - button "Open navigation" [ref=f20e6]
+      - generic [ref=f20e11]:
+        - generic [ref=f20e12]: Sales
+        - generic [ref=f20e13]: /
+        - generic [ref=f20e14]: Orders
+      - button "Search. Opens the command palette." [ref=f20e15] [cursor=pointer]:
+        - generic [ref=f20e19]: Search products, orders, SKUs
+        - generic [ref=f20e20]: Ctrl K
+      - generic [ref=f20e21]:
+        - generic [ref=f20e22]:
+          - button "Light theme" [ref=f20e23]
+          - button "Dark theme" [ref=f20e27]
+          - button "Match system theme" [ref=f20e30]
+        - button "DO Docs Screenshots (temporary)" [ref=f20e35]:
+          - generic [ref=f20e36]: DO
+          - generic [ref=f20e37]: Docs Screenshots (temporary)
+    - main [ref=f20e38]:
+      - generic [ref=f20e39]:
+        - generic [ref=f20e40]:
+          - heading "Orders" [level=1] [ref=f20e41]
+          - paragraph [ref=f20e42]: 44,255 orders
+        - link "New order" [ref=f20e43] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/sales/orders/create
+      - generic [ref=f20e44]:
+        - searchbox "Search name, email, order ID" [ref=f20e45]
+        - combobox [ref=f20e47]:
+          - option "All statuses" [selected]
+          - option "Pending"
+          - option "Processing"
+          - option "Shipped"
+          - option "Complete"
+          - option "Canceled"
+          - option "Denied"
+          - option "Reversed"
+          - option "Failed"
+          - option "Delivered"
+          - option "Completed"
+          - option "Unpaid"
+          - option "For Verification"
+          - option "Return in Progress"
+          - option "To Confirm Receive"
+          - option "Returned"
+          - option "Refunded"
+        - combobox [ref=f20e49]:
+          - option "All sources" [selected]
+          - option "Manual"
+          - option "Lazada"
+          - option "New Gear Day"
+          - option "Dragon Switch"
+          - option "Shopee"
+          - option "TikTok"
+          - option "New Gear Day"
+          - option "Dragon Switch"
+      - table [ref=f20e51]:
+        - rowgroup [ref=f20e52]:
+          - row [ref=f20e53]:
+            - columnheader [ref=f20e54]:
+              - link "Order" [ref=f20e55] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders?sort=order_id&dir=asc
+            - columnheader [ref=f20e56]:
+              - link "Customer" [ref=f20e57] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders?sort=firstname&dir=asc
+            - columnheader "Channel" [ref=f20e58]
+            - columnheader "Status" [ref=f20e59]
+            - columnheader [ref=f20e60]:
+              - link "Total" [ref=f20e61] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders?sort=total&dir=asc
+            - columnheader [ref=f20e62]:
+              - link "Date" [ref=f20e63] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders?sort=date_added&dir=asc
+            - columnheader "Actions" [ref=f20e66]
+        - rowgroup [ref=f20e68]:
+          - row [ref=f20e69]:
+            - cell [ref=f20e70]:
+              - link "1000082" [ref=f20e71] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000082
+            - cell "local_regress.ph" [ref=f20e72]
+            - cell "Shopee" [ref=f20e73]
+            - cell "Processing" [ref=f20e76]
+            - cell "₱5,288.00" [ref=f20e80]
+            - cell "2026-08-20 01:00" [ref=f20e82]
+            - cell [ref=f20e83]:
+              - button "Order 1000082 actions" [ref=f20e85]
+          - row [ref=f20e90]:
+            - cell [ref=f20e91]:
+              - link "1000081" [ref=f20e92] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000081
+            - cell "J******e" [ref=f20e93]
+            - cell "Lazada" [ref=f20e94]
+            - cell "Processing" [ref=f20e97]
+            - cell "₱1,320.00" [ref=f20e101]
+            - cell "2026-08-19 22:22" [ref=f20e103]
+            - cell [ref=f20e104]:
+              - button "Order 1000081 actions" [ref=f20e106]
+          - row [ref=f20e111]:
+            - cell [ref=f20e112]:
+              - link "1000080" [ref=f20e113] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000080
+            - cell "J******e" [ref=f20e114]
+            - cell "Lazada" [ref=f20e115]
+            - cell "Complete" [ref=f20e118]
+            - cell "₱1.00" [ref=f20e122]
+            - cell "2026-08-19 19:28" [ref=f20e124]
+            - cell [ref=f20e125]:
+              - button "Order 1000080 actions" [ref=f20e127]
+          - row [ref=f20e132]:
+            - cell [ref=f20e133]:
+              - link "1000079" [ref=f20e134] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000079
+            - cell "J******e" [ref=f20e135]
+            - cell "Lazada" [ref=f20e136]
+            - cell "Canceled" [ref=f20e139]
+            - cell "₱1.00" [ref=f20e143]
+            - cell "2026-08-19 19:14" [ref=f20e145]
+            - cell [ref=f20e146]:
+              - button "Order 1000079 actions" [ref=f20e148]
+          - row [ref=f20e153]:
+            - cell [ref=f20e154]:
+              - link "1000078" [ref=f20e155] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000078
+            - cell "J******e" [ref=f20e156]
+            - cell "Lazada" [ref=f20e157]
+            - cell "Processing" [ref=f20e160]
+            - cell "₱50.00" [ref=f20e164]
+            - cell "2026-08-19 16:44" [ref=f20e166]
+            - cell [ref=f20e167]:
+              - button "Order 1000078 actions" [ref=f20e169]
+          - row [ref=f20e174]:
+            - cell [ref=f20e175]:
+              - link "1000077" [ref=f20e176] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000077
+            - cell "J******e" [ref=f20e177]
+            - cell "Lazada" [ref=f20e178]
+            - cell "Processing" [ref=f20e181]
+            - cell "₱50.00" [ref=f20e185]
+            - cell "2026-08-19 16:41" [ref=f20e187]
+            - cell [ref=f20e188]:
+              - button "Order 1000077 actions" [ref=f20e190]
+          - row [ref=f20e195]:
+            - cell [ref=f20e196]:
+              - link "1000076" [ref=f20e197] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000076
+            - cell "J******e" [ref=f20e198]
+            - cell "Lazada" [ref=f20e199]
+            - cell "Pending" [ref=f20e202]
+            - cell "₱50.00" [ref=f20e206]
+            - cell "2026-08-19 16:37" [ref=f20e208]
+            - cell [ref=f20e209]:
+              - button "Order 1000076 actions" [ref=f20e211]
+          - row [ref=f20e216]:
+            - cell [ref=f20e217]:
+              - link "1000075" [ref=f20e218] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000075
+            - cell "J******e" [ref=f20e219]
+            - cell "Lazada" [ref=f20e220]
+            - cell "Pending" [ref=f20e223]
+            - cell "₱50.00" [ref=f20e227]
+            - cell "2026-08-19 16:34" [ref=f20e229]
+            - cell [ref=f20e230]:
+              - button "Order 1000075 actions" [ref=f20e232]
+          - row [ref=f20e237]:
+            - cell [ref=f20e238]:
+              - link "1000074" [ref=f20e239] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000074
+            - cell "J******e" [ref=f20e240]
+            - cell "Lazada" [ref=f20e241]
+            - cell "Pending" [ref=f20e244]
+            - cell "₱50.00" [ref=f20e248]
+            - cell "2026-08-19 16:31" [ref=f20e250]
+            - cell [ref=f20e251]:
+              - button "Order 1000074 actions" [ref=f20e253]
+          - row [ref=f20e258]:
+            - cell [ref=f20e259]:
+              - link "1000073" [ref=f20e260] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000073
+            - cell "J******e" [ref=f20e261]
+            - cell "Lazada" [ref=f20e262]
+            - cell "Pending" [ref=f20e265]
+            - cell "₱50.00" [ref=f20e269]
+            - cell "2026-08-19 16:22" [ref=f20e271]
+            - cell [ref=f20e272]:
+              - button "Order 1000073 actions" [ref=f20e274]
+          - row [ref=f20e279]:
+            - cell [ref=f20e280]:
+              - link "1000072" [ref=f20e281] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000072
+            - cell "J******e" [ref=f20e282]
+            - cell "Lazada" [ref=f20e283]
+            - cell "Pending" [ref=f20e286]
+            - cell "₱50.00" [ref=f20e290]
+            - cell "2026-08-19 16:07" [ref=f20e292]
+            - cell [ref=f20e293]:
+              - button "Order 1000072 actions" [ref=f20e295]
+          - row [ref=f20e300]:
+            - cell [ref=f20e301]:
+              - link "1000071" [ref=f20e302] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000071
+            - cell "J******e" [ref=f20e303]
+            - cell "Lazada" [ref=f20e304]
+            - cell "Processing" [ref=f20e307]
+            - cell "₱50.00" [ref=f20e311]
+            - cell "2026-08-19 15:59" [ref=f20e313]
+            - cell [ref=f20e314]:
+              - button "Order 1000071 actions" [ref=f20e316]
+          - row [ref=f20e321]:
+            - cell [ref=f20e322]:
+              - link "1000070" [ref=f20e323] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000070
+            - cell "J******e" [ref=f20e324]
+            - cell "Lazada" [ref=f20e325]
+            - cell "Pending" [ref=f20e328]
+            - cell "₱50.00" [ref=f20e332]
+            - cell "2026-08-19 15:55" [ref=f20e334]
+            - cell [ref=f20e335]:
+              - button "Order 1000070 actions" [ref=f20e337]
+          - row [ref=f20e342]:
+            - cell [ref=f20e343]:
+              - link "1000069" [ref=f20e344] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000069
+            - cell "J******e" [ref=f20e345]
+            - cell "Lazada" [ref=f20e346]
+            - cell "Pending" [ref=f20e349]
+            - cell "₱50.00" [ref=f20e353]
+            - cell "2026-08-19 15:47" [ref=f20e355]
+            - cell [ref=f20e356]:
+              - button "Order 1000069 actions" [ref=f20e358]
+          - row [ref=f20e363]:
+            - cell [ref=f20e364]:
+              - link "1000068" [ref=f20e365] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000068
+            - cell "J******e" [ref=f20e366]
+            - cell "Lazada" [ref=f20e367]
+            - cell "Pending" [ref=f20e370]
+            - cell "₱20.00" [ref=f20e374]
+            - cell "2026-08-19 15:37" [ref=f20e376]
+            - cell [ref=f20e377]:
+              - button "Order 1000068 actions" [ref=f20e379]
+          - row [ref=f20e384]:
+            - cell [ref=f20e385]:
+              - link "1000067" [ref=f20e386] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000067
+            - cell "J******e" [ref=f20e387]
+            - cell "Lazada" [ref=f20e388]
+            - cell "Pending" [ref=f20e391]
+            - cell "₱50.00" [ref=f20e395]
+            - cell "2026-08-19 15:36" [ref=f20e397]
+            - cell [ref=f20e398]:
+              - button "Order 1000067 actions" [ref=f20e400]
+          - row [ref=f20e405]:
+            - cell [ref=f20e406]:
+              - link "1000066" [ref=f20e407] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000066
+            - cell "J******e" [ref=f20e408]
+            - cell "Lazada" [ref=f20e409]
+            - cell "Pending" [ref=f20e412]
+            - cell "₱50.00" [ref=f20e416]
+            - cell "2026-08-19 15:27" [ref=f20e418]
+            - cell [ref=f20e419]:
+              - button "Order 1000066 actions" [ref=f20e421]
+          - row [ref=f20e426]:
+            - cell [ref=f20e427]:
+              - link "1000065" [ref=f20e428] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000065
+            - cell "J******e" [ref=f20e429]
+            - cell "Lazada" [ref=f20e430]
+            - cell "Processing" [ref=f20e433]
+            - cell "₱50.00" [ref=f20e437]
+            - cell "2026-08-19 08:27" [ref=f20e439]
+            - cell [ref=f20e440]:
+              - button "Order 1000065 actions" [ref=f20e442]
+          - row [ref=f20e447]:
+            - cell [ref=f20e448]:
+              - link "1000064" [ref=f20e449] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000064
+            - cell "J******e" [ref=f20e450]
+            - cell "Lazada" [ref=f20e451]
+            - cell "Delivered" [ref=f20e454]
+            - cell "₱50.00" [ref=f20e458]
+            - cell "2026-08-19 08:23" [ref=f20e460]
+            - cell [ref=f20e461]:
+              - button "Order 1000064 actions" [ref=f20e463]
+          - row [ref=f20e468]:
+            - cell [ref=f20e469]:
+              - link "1000063" [ref=f20e470] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000063
+            - cell "J******e" [ref=f20e471]
+            - cell "Lazada" [ref=f20e472]
+            - cell "Processing" [ref=f20e475]
+            - cell "₱50.00" [ref=f20e479]
+            - cell "2026-08-19 08:20" [ref=f20e481]
+            - cell [ref=f20e482]:
+              - button "Order 1000063 actions" [ref=f20e484]
+          - row [ref=f20e489]:
+            - cell [ref=f20e490]:
+              - link "1000062" [ref=f20e491] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000062
+            - cell "J******e" [ref=f20e492]
+            - cell "Lazada" [ref=f20e493]
+            - cell "Canceled" [ref=f20e496]
+            - cell "₱1,300.00" [ref=f20e500]
+            - cell "2026-08-13 16:57" [ref=f20e502]
+            - cell [ref=f20e503]:
+              - button "Order 1000062 actions" [ref=f20e505]
+          - row [ref=f20e510]:
+            - cell [ref=f20e511]:
+              - link "1000061" [ref=f20e512] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000061
+            - cell "J******e" [ref=f20e513]
+            - cell "Lazada" [ref=f20e514]
+            - cell "Canceled" [ref=f20e517]
+            - cell "₱100,000.00" [ref=f20e521]
+            - cell "2026-08-13 14:26" [ref=f20e523]
+            - cell [ref=f20e524]:
+              - button "Order 1000061 actions" [ref=f20e526]
+          - row [ref=f20e531]:
+            - cell [ref=f20e532]:
+              - link "1000060" [ref=f20e533] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000060
+            - cell "J******e" [ref=f20e534]
+            - cell "Lazada" [ref=f20e535]
+            - cell "Pending" [ref=f20e538]
+            - cell "₱599.00" [ref=f20e542]
+            - cell "2026-08-13 14:07" [ref=f20e544]
+            - cell [ref=f20e545]:
+              - button "Order 1000060 actions" [ref=f20e547]
+          - row [ref=f20e552]:
+            - cell [ref=f20e553]:
+              - link "1000059" [ref=f20e554] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000059
+            - cell "J******e" [ref=f20e555]
+            - cell "Lazada" [ref=f20e556]
+            - cell "Canceled" [ref=f20e559]
+            - cell "₱1,300.00" [ref=f20e563]
+            - cell "2026-08-13 14:03" [ref=f20e565]
+            - cell [ref=f20e566]:
+              - button "Order 1000059 actions" [ref=f20e568]
+          - row [ref=f20e573]:
+            - cell [ref=f20e574]:
+              - link "1000058" [ref=f20e575] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000058
+            - cell "J******e" [ref=f20e576]
+            - cell "Lazada" [ref=f20e577]
+            - cell "Canceled" [ref=f20e580]
+            - cell "₱1,300.00" [ref=f20e584]
+            - cell "2026-08-13 13:47" [ref=f20e586]
+            - cell [ref=f20e587]:
+              - button "Order 1000058 actions" [ref=f20e589]
+          - row [ref=f20e594]:
+            - cell [ref=f20e595]:
+              - link "1000057" [ref=f20e596] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000057
+            - cell "J******e" [ref=f20e597]
+            - cell "Lazada" [ref=f20e598]
+            - cell "Processing" [ref=f20e601]
+            - cell "₱3,999.00" [ref=f20e605]
+            - cell "2026-08-13 13:33" [ref=f20e607]
+            - cell [ref=f20e608]:
+              - button "Order 1000057 actions" [ref=f20e610]
+          - row [ref=f20e615]:
+            - cell [ref=f20e616]:
+              - link "1000056" [ref=f20e617] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000056
+            - cell "J******e" [ref=f20e618]
+            - cell "Lazada" [ref=f20e619]
+            - cell "Delivered" [ref=f20e622]
+            - cell "₱4,999.00" [ref=f20e626]
+            - cell "2026-08-13 13:04" [ref=f20e628]
+            - cell [ref=f20e629]:
+              - button "Order 1000056 actions" [ref=f20e631]
+          - row [ref=f20e636]:
+            - cell [ref=f20e637]:
+              - link "1000055" [ref=f20e638] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000055
+            - cell "J******e" [ref=f20e639]
+            - cell "Lazada" [ref=f20e640]
+            - cell "Delivered" [ref=f20e643]
+            - cell "₱4,999.00" [ref=f20e647]
+            - cell "2026-08-13 13:02" [ref=f20e649]
+            - cell [ref=f20e650]:
+              - button "Order 1000055 actions" [ref=f20e652]
+          - row [ref=f20e657]:
+            - cell [ref=f20e658]:
+              - link "1000054" [ref=f20e659] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000054
+            - cell "J******e" [ref=f20e660]
+            - cell "Lazada" [ref=f20e661]
+            - cell "Pending" [ref=f20e664]
+            - cell "₱599.00" [ref=f20e668]
+            - cell "2026-08-13 10:59" [ref=f20e670]
+            - cell [ref=f20e671]:
+              - button "Order 1000054 actions" [ref=f20e673]
+          - row [ref=f20e678]:
+            - cell [ref=f20e679]:
+              - link "1000053" [ref=f20e680] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000053
+            - cell "J******e" [ref=f20e681]
+            - cell "Lazada" [ref=f20e682]
+            - cell "Pending" [ref=f20e685]
+            - cell "₱1,198.00" [ref=f20e689]
+            - cell "2026-08-13 10:58" [ref=f20e691]
+            - cell [ref=f20e692]:
+              - button "Order 1000053 actions" [ref=f20e694]
+          - row [ref=f20e699]:
+            - cell [ref=f20e700]:
+              - link "1000052" [ref=f20e701] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000052
+            - cell "J******e" [ref=f20e702]
+            - cell "Lazada" [ref=f20e703]
+            - cell "Pending" [ref=f20e706]
+            - cell "₱1,797.00" [ref=f20e710]
+            - cell "2026-08-13 10:48" [ref=f20e712]
+            - cell [ref=f20e713]:
+              - button "Order 1000052 actions" [ref=f20e715]
+          - row [ref=f20e720]:
+            - cell [ref=f20e721]:
+              - link "1000051" [ref=f20e722] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000051
+            - cell "J******e" [ref=f20e723]
+            - cell "Lazada" [ref=f20e724]
+            - cell "Canceled" [ref=f20e727]
+            - cell "₱599.00" [ref=f20e731]
+            - cell "2026-08-13 10:48" [ref=f20e733]
+            - cell [ref=f20e734]:
+              - button "Order 1000051 actions" [ref=f20e736]
+          - row [ref=f20e741]:
+            - cell [ref=f20e742]:
+              - link "1000050" [ref=f20e743] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000050
+            - cell "J******e" [ref=f20e744]
+            - cell "Lazada" [ref=f20e745]
+            - cell "Processing" [ref=f20e748]
+            - cell "₱4,999.00" [ref=f20e752]
+            - cell "2026-08-13 01:04" [ref=f20e754]
+            - cell [ref=f20e755]:
+              - button "Order 1000050 actions" [ref=f20e757]
+          - row [ref=f20e762]:
+            - cell [ref=f20e763]:
+              - link "1000049" [ref=f20e764] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000049
+            - cell "J******e" [ref=f20e765]
+            - cell "Lazada" [ref=f20e766]
+            - cell "Processing" [ref=f20e769]
+            - cell "₱4,999.00" [ref=f20e773]
+            - cell "2026-08-13 01:01" [ref=f20e775]
+            - cell [ref=f20e776]:
+              - button "Order 1000049 actions" [ref=f20e778]
+          - row [ref=f20e783]:
+            - cell [ref=f20e784]:
+              - link "1000014" [ref=f20e785] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000014
+            - cell "local_regress.ph" [ref=f20e786]
+            - cell "Shopee" [ref=f20e787]
+            - cell "Canceled" [ref=f20e790]
+            - cell "₱7,590.00" [ref=f20e794]
+            - cell "2026-08-10 17:37" [ref=f20e796]
+            - cell [ref=f20e797]:
+              - button "Order 1000014 actions" [ref=f20e799]
+          - row [ref=f20e804]:
+            - cell [ref=f20e805]:
+              - link "1000035" [ref=f20e806] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000035
+            - cell "J******e" [ref=f20e807]
+            - cell "Lazada" [ref=f20e808]
+            - cell "Pending" [ref=f20e811]
+            - cell "₱85,000.00" [ref=f20e815]
+            - cell "2026-08-10 17:02" [ref=f20e817]
+            - cell [ref=f20e818]:
+              - button "Order 1000035 actions" [ref=f20e820]
+          - row [ref=f20e825]:
+            - cell [ref=f20e826]:
+              - link "1000034" [ref=f20e827] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000034
+            - cell "J******e" [ref=f20e828]
+            - cell "Lazada" [ref=f20e829]
+            - cell "Pending" [ref=f20e832]
+            - cell "₱4,999.00" [ref=f20e836]
+            - cell "2026-08-10 17:00" [ref=f20e838]
+            - cell [ref=f20e839]:
+              - button "Order 1000034 actions" [ref=f20e841]
+          - row [ref=f20e846]:
+            - cell [ref=f20e847]:
+              - link "1000033" [ref=f20e848] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000033
+            - cell "J******e" [ref=f20e849]
+            - cell "Lazada" [ref=f20e850]
+            - cell "Pending" [ref=f20e853]
+            - cell "₱10,000.00" [ref=f20e857]
+            - cell "2026-08-10 16:59" [ref=f20e859]
+            - cell [ref=f20e860]:
+              - button "Order 1000033 actions" [ref=f20e862]
+          - row [ref=f20e867]:
+            - cell [ref=f20e868]:
+              - link "1000032" [ref=f20e869] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000032
+            - cell "J******e" [ref=f20e870]
+            - cell "Lazada" [ref=f20e871]
+            - cell "Pending" [ref=f20e874]
+            - cell "₱85,000.00" [ref=f20e878]
+            - cell "2026-08-10 16:57" [ref=f20e880]
+            - cell [ref=f20e881]:
+              - button "Order 1000032 actions" [ref=f20e883]
+          - row [ref=f20e888]:
+            - cell [ref=f20e889]:
+              - link "1000031" [ref=f20e890] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000031
+            - cell "J******e" [ref=f20e891]
+            - cell "Lazada" [ref=f20e892]
+            - cell "Pending" [ref=f20e895]
+            - cell "₱4,999.00" [ref=f20e899]
+            - cell "2026-08-10 16:56" [ref=f20e901]
+            - cell [ref=f20e902]:
+              - button "Order 1000031 actions" [ref=f20e904]
+          - row [ref=f20e909]:
+            - cell [ref=f20e910]:
+              - link "1000030" [ref=f20e911] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000030
+            - cell "J******e" [ref=f20e912]
+            - cell "Lazada" [ref=f20e913]
+            - cell "Pending" [ref=f20e916]
+            - cell "₱10,000.00" [ref=f20e920]
+            - cell "2026-08-10 16:54" [ref=f20e922]
+            - cell [ref=f20e923]:
+              - button "Order 1000030 actions" [ref=f20e925]
+          - row [ref=f20e930]:
+            - cell [ref=f20e931]:
+              - link "1000029" [ref=f20e932] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000029
+            - cell "J******e" [ref=f20e933]
+            - cell "Lazada" [ref=f20e934]
+            - cell "Pending" [ref=f20e937]
+            - cell "₱85,000.00" [ref=f20e941]
+            - cell "2026-08-10 16:53" [ref=f20e943]
+            - cell [ref=f20e944]:
+              - button "Order 1000029 actions" [ref=f20e946]
+          - row [ref=f20e951]:
+            - cell [ref=f20e952]:
+              - link "1000028" [ref=f20e953] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000028
+            - cell "J******e" [ref=f20e954]
+            - cell "Lazada" [ref=f20e955]
+            - cell "Pending" [ref=f20e958]
+            - cell "₱4,999.00" [ref=f20e962]
+            - cell "2026-08-10 16:52" [ref=f20e964]
+            - cell [ref=f20e965]:
+              - button "Order 1000028 actions" [ref=f20e967]
+          - row [ref=f20e972]:
+            - cell [ref=f20e973]:
+              - link "1000027" [ref=f20e974] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000027
+            - cell "J******e" [ref=f20e975]
+            - cell "Lazada" [ref=f20e976]
+            - cell "Pending" [ref=f20e979]
+            - cell "₱10,000.00" [ref=f20e983]
+            - cell "2026-08-10 16:50" [ref=f20e985]
+            - cell [ref=f20e986]:
+              - button "Order 1000027 actions" [ref=f20e988]
+          - row [ref=f20e993]:
+            - cell [ref=f20e994]:
+              - link "1000026" [ref=f20e995] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000026
+            - cell "J******e" [ref=f20e996]
+            - cell "Lazada" [ref=f20e997]
+            - cell "Pending" [ref=f20e1000]
+            - cell "₱85,000.00" [ref=f20e1004]
+            - cell "2026-08-10 16:49" [ref=f20e1006]
+            - cell [ref=f20e1007]:
+              - button "Order 1000026 actions" [ref=f20e1009]
+          - row [ref=f20e1014]:
+            - cell [ref=f20e1015]:
+              - link "1000025" [ref=f20e1016] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000025
+            - cell "J******e" [ref=f20e1017]
+            - cell "Lazada" [ref=f20e1018]
+            - cell "Pending" [ref=f20e1021]
+            - cell "₱4,999.00" [ref=f20e1025]
+            - cell "2026-08-10 16:47" [ref=f20e1027]
+            - cell [ref=f20e1028]:
+              - button "Order 1000025 actions" [ref=f20e1030]
+          - row [ref=f20e1035]:
+            - cell [ref=f20e1036]:
+              - link "1000024" [ref=f20e1037] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000024
+            - cell "J******e" [ref=f20e1038]
+            - cell "Lazada" [ref=f20e1039]
+            - cell "Pending" [ref=f20e1042]
+            - cell "₱10,000.00" [ref=f20e1046]
+            - cell "2026-08-10 16:45" [ref=f20e1048]
+            - cell [ref=f20e1049]:
+              - button "Order 1000024 actions" [ref=f20e1051]
+          - row [ref=f20e1056]:
+            - cell [ref=f20e1057]:
+              - link "1000023" [ref=f20e1058] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000023
+            - cell "J******e" [ref=f20e1059]
+            - cell "Lazada" [ref=f20e1060]
+            - cell "Pending" [ref=f20e1063]
+            - cell "₱4,999.00" [ref=f20e1067]
+            - cell "2026-08-10 16:44" [ref=f20e1069]
+            - cell [ref=f20e1070]:
+              - button "Order 1000023 actions" [ref=f20e1072]
+          - row [ref=f20e1077]:
+            - cell [ref=f20e1078]:
+              - link "1000022" [ref=f20e1079] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000022
+            - cell "J******e" [ref=f20e1080]
+            - cell "Lazada" [ref=f20e1081]
+            - cell "Pending" [ref=f20e1084]
+            - cell "₱85,000.00" [ref=f20e1088]
+            - cell "2026-08-10 16:42" [ref=f20e1090]
+            - cell [ref=f20e1091]:
+              - button "Order 1000022 actions" [ref=f20e1093]
+          - row [ref=f20e1098]:
+            - cell [ref=f20e1099]:
+              - link "1000021" [ref=f20e1100] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders/1000021
+            - cell "J******e" [ref=f20e1101]
+            - cell "Lazada" [ref=f20e1102]
+            - cell "Pending" [ref=f20e1105]
+            - cell "₱85,000.00" [ref=f20e1109]
+            - cell "2026-08-10 16:41" [ref=f20e1111]
+            - cell [ref=f20e1112]:
+              - button "Order 1000021 actions" [ref=f20e1114]
+      - generic [ref=f20e1119]:
+        - generic [ref=f20e1120]: 1 to 50 of 44,255
+        - generic [ref=f20e1121]:
+          - button "Previous" [disabled]
+          - list "Pages" [ref=f20e1122]:
+            - listitem [ref=f20e1123]:
+              - generic [ref=f20e1124]:
+                - generic [ref=f20e1125]: Page
+                - text: "1"
+                - generic [ref=f20e1126]: of 886, current page
+            - listitem [ref=f20e1127]:
+              - link "Page 2" [ref=f20e1128] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders?page=2
+                - generic [ref=f20e1129]: Page
+                - text: "2"
+            - listitem [ref=f20e1130]:
+              - link "Page 3" [ref=f20e1131] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders?page=3
+                - generic [ref=f20e1132]: Page
+                - text: "3"
+            - listitem [ref=f20e1133]:
+              - generic [aria-hidden] [ref=f20e1134]: …
+            - listitem [ref=f20e1135]:
+              - link "Page 886" [ref=f20e1136] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders?page=886
+                - generic [ref=f20e1137]: Page
+                - text: "886"
+          - link "Next" [ref=f20e1138] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/sales/orders?page=2

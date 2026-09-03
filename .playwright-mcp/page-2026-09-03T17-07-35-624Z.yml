@@ -1,0 +1,65 @@
+- generic [active] [ref=f11e1]:
+  - link "Skip to content" [ref=f11e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f11e4]:
+    - banner [ref=f11e5]:
+      - button "Open navigation" [ref=f11e6]
+      - generic [ref=f11e11]:
+        - generic [ref=f11e12]: Channels
+        - generic [ref=f11e13]: /
+        - generic [ref=f11e14]: Shopee
+        - generic [ref=f11e15]: /
+        - generic [ref=f11e16]: Main store
+      - button "Search. Opens the command palette." [ref=f11e17] [cursor=pointer]:
+        - generic [ref=f11e21]: Search products, orders, SKUs
+        - generic [ref=f11e22]: Ctrl K
+      - generic [ref=f11e23]:
+        - generic [ref=f11e24]:
+          - button "Light theme" [ref=f11e25]
+          - button "Dark theme" [ref=f11e29]
+          - button "Match system theme" [ref=f11e32]
+        - button "DO Docs Screenshots (temporary)" [ref=f11e37]:
+          - generic [ref=f11e38]: DO
+          - generic [ref=f11e39]: Docs Screenshots (temporary)
+    - navigation "Shopee navigation" [ref=f11e41]:
+      - link "Overview" [ref=f11e42] [cursor=pointer]:
+        - /url: http://127.0.0.1:8000/channels/shopee/1
+      - button "Sell" [ref=f11e44] [cursor=pointer]
+      - button "Catalog" [ref=f11e48] [cursor=pointer]
+      - button "Settings" [ref=f11e52] [cursor=pointer]
+    - main [ref=f11e55]:
+      - generic [ref=f11e56]:
+        - generic [ref=f11e57]:
+          - heading "Main store" [level=1] [ref=f11e58]
+          - paragraph [ref=f11e59]: Shopee marketplace integration. OAuth, products, orders, returns.
+        - link "View orders" [ref=f11e60] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/channels/shopee/1/orders
+      - generic [ref=f11e61]:
+        - generic [ref=f11e63]:
+          - paragraph [ref=f11e64]: No sales recorded here yet
+          - paragraph [ref=f11e65]: Revenue, orders and best sellers appear once this channel has imported its first orders. Syncing runs on a schedule, so a channel connected in the last few hours may still be catching up.
+        - complementary [ref=f11e66]:
+          - generic [ref=f11e67]:
+            - heading "Waiting on you" [level=2] [ref=f11e69]
+            - generic [ref=f11e70]:
+              - generic [ref=f11e71]:
+                - term [ref=f11e72]: Orders to process
+                - definition [ref=f11e73]: "1"
+              - generic [ref=f11e74]:
+                - term [ref=f11e75]: Orders today
+                - definition [ref=f11e76]: "0"
+              - generic [ref=f11e77]:
+                - term [ref=f11e78]: Revenue today
+                - definition [ref=f11e79]: ₱0.00
+          - generic [ref=f11e80]:
+            - heading "Connection" [level=2] [ref=f11e82]
+            - generic [ref=f11e83]:
+              - generic [ref=f11e84]:
+                - term [ref=f11e85]: Last sync
+                - definition [ref=f11e86]: 21 hours ago
+              - generic [ref=f11e87]:
+                - term [ref=f11e88]: Sign-in expires
+                - definition [ref=f11e89]: Not tracked
+              - generic [ref=f11e90]:
+                - term [ref=f11e91]: API errors in 24 hours
+                - definition [ref=f11e92]: "2"

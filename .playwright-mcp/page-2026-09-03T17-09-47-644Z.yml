@@ -1,0 +1,114 @@
+- generic [active] [ref=f29e1]:
+  - link "Skip to content" [ref=f29e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f29e4]:
+    - banner [ref=f29e5]:
+      - button "Open navigation" [ref=f29e6]
+      - generic [ref=f29e11]:
+        - generic [ref=f29e12]: Warehousing
+        - generic [ref=f29e13]: /
+        - generic [ref=f29e14]: Transfers
+      - button "Search. Opens the command palette." [ref=f29e15] [cursor=pointer]:
+        - generic [ref=f29e19]: Search products, orders, SKUs
+        - generic [ref=f29e20]: Ctrl K
+      - generic [ref=f29e21]:
+        - generic [ref=f29e22]:
+          - button "Light theme" [ref=f29e23]
+          - button "Dark theme" [ref=f29e27]
+          - button "Match system theme" [ref=f29e30]
+        - button "DO Docs Screenshots (temporary)" [ref=f29e35]:
+          - generic [ref=f29e36]: DO
+          - generic [ref=f29e37]: Docs Screenshots (temporary)
+    - main [ref=f29e38]:
+      - generic [ref=f29e39]:
+        - generic [ref=f29e40]:
+          - heading "Transfers" [level=1] [ref=f29e41]
+          - paragraph [ref=f29e42]: 3 transfers
+        - link "New transfer" [ref=f29e43] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/warehousing/transfers/create
+      - generic [ref=f29e44]:
+        - generic [ref=f29e45]:
+          - generic [ref=f29e46]: Raised
+          - textbox "Raised" [ref=f29e47]
+          - generic [ref=f29e48]: to
+          - generic [ref=f29e49]: Raised on or before
+          - textbox "Raised on or before" [ref=f29e50]
+        - generic [ref=f29e51]:
+          - generic [ref=f29e52]: Location
+          - combobox "Location" [ref=f29e53]:
+            - option "Any location" [selected]
+            - option "Novaliches"
+            - option "StorageMart Commonwealth"
+            - option "Ningbo Joinaudio Warehouse"
+            - option "Dongguan Zhuoyang Technology Co., Ltd"
+        - generic [ref=f29e54]:
+          - generic [ref=f29e55]: Status
+          - combobox "Status" [ref=f29e56]:
+            - option "All statuses" [selected]
+            - option "Draft"
+            - option "In progress"
+            - option "Completed"
+            - option "Cancelled"
+            - option "Voided"
+        - button "Apply" [ref=f29e57] [cursor=pointer]
+      - table [ref=f29e59]:
+        - rowgroup [ref=f29e60]:
+          - row [ref=f29e61]:
+            - columnheader "Reference" [ref=f29e62]
+            - columnheader "Route" [ref=f29e63]
+            - columnheader "Lines" [ref=f29e64]
+            - columnheader "Status" [ref=f29e65]
+            - columnheader "Raised by" [ref=f29e66]
+            - columnheader "Raised" [ref=f29e67]
+            - columnheader "Actions" [ref=f29e68]
+        - rowgroup [ref=f29e70]:
+          - row [ref=f29e71]:
+            - cell [ref=f29e72]:
+              - link "TR2604-0003" [ref=f29e73] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/warehousing/transfers/3
+            - cell "Novaliches to StorageMart Commonwealth" [ref=f29e74]:
+              - generic [ref=f29e75]:
+                - generic [ref=f29e76]: Novaliches
+                - generic "to" [ref=f29e77]: →
+                - generic [ref=f29e78]: StorageMart Commonwealth
+            - cell "12" [ref=f29e79]
+            - cell "In progress" [ref=f29e80]
+            - cell "Paolo" [ref=f29e84]
+            - cell "2026-04-09" [ref=f29e85]
+            - cell [ref=f29e86]:
+              - button "Transfer TR2604-0003 actions" [ref=f29e88]
+          - row [ref=f29e93]:
+            - cell [ref=f29e94]:
+              - link "TR2603-0002" [ref=f29e95] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/warehousing/transfers/2
+            - cell "Dongguan Zhuoyang Technology Co., Ltd to Novaliches" [ref=f29e96]:
+              - generic [ref=f29e97]:
+                - generic [ref=f29e98]: Dongguan Zhuoyang Technology Co., Ltd
+                - generic "to" [ref=f29e99]: →
+                - generic [ref=f29e100]: Novaliches
+            - cell "2" [ref=f29e101]
+            - cell "Completed" [ref=f29e102]
+            - cell "Paolo" [ref=f29e106]
+            - cell "2026-03-29" [ref=f29e107]
+            - cell [ref=f29e108]:
+              - button "Transfer TR2603-0002 actions" [ref=f29e110]
+          - row [ref=f29e115]:
+            - cell [ref=f29e116]:
+              - link "TR2603-0001" [ref=f29e117] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/warehousing/transfers/1
+            - cell "Novaliches to StorageMart Commonwealth" [ref=f29e118]:
+              - generic [ref=f29e119]:
+                - generic [ref=f29e120]: Novaliches
+                - generic "to" [ref=f29e121]: →
+                - generic [ref=f29e122]: StorageMart Commonwealth
+            - cell "1" [ref=f29e123]
+            - cell "Voided" [ref=f29e124]
+            - cell "Paolo" [ref=f29e128]
+            - cell "2026-03-21" [ref=f29e129]
+            - cell [ref=f29e130]:
+              - button "Transfer TR2603-0001 actions" [ref=f29e132]
+      - generic [ref=f29e137]:
+        - generic [ref=f29e138]: 1 to 3 of 3
+        - generic [ref=f29e139]:
+          - button "Previous" [disabled]
+          - button "Next" [disabled]

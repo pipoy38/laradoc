@@ -1,0 +1,131 @@
+- generic [active] [ref=f15e1]:
+  - link "Skip to content" [ref=f15e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f15e4]:
+    - banner [ref=f15e5]:
+      - button "Open navigation" [ref=f15e6]
+      - generic [ref=f15e11]:
+        - generic [ref=f15e12]: Channels
+        - generic [ref=f15e13]: /
+        - generic [ref=f15e14]: Lazada
+        - generic [ref=f15e15]: /
+        - generic [ref=f15e16]: Settings
+      - button "Search. Opens the command palette." [ref=f15e17] [cursor=pointer]:
+        - generic [ref=f15e21]: Search products, orders, SKUs
+        - generic [ref=f15e22]: Ctrl K
+      - generic [ref=f15e23]:
+        - generic [ref=f15e24]:
+          - button "Light theme" [ref=f15e25]
+          - button "Dark theme" [ref=f15e29]
+          - button "Match system theme" [ref=f15e32]
+        - button "DO Docs Screenshots (temporary)" [ref=f15e37]:
+          - generic [ref=f15e38]: DO
+          - generic [ref=f15e39]: Docs Screenshots (temporary)
+    - navigation "Lazada navigation" [ref=f15e41]:
+      - link "Overview" [ref=f15e42] [cursor=pointer]:
+        - /url: http://127.0.0.1:8000/channels/lazada
+      - button "Sell" [ref=f15e44] [cursor=pointer]
+      - button "Catalog" [ref=f15e48] [cursor=pointer]
+      - button "Settings" [ref=f15e52] [cursor=pointer]
+    - main [ref=f15e55]:
+      - generic [ref=f15e61]:
+        - text: "Lazada: Sign-in expired. Syncing is paused until you reconnect."
+        - link "Open settings" [ref=f15e62] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/channels/lazada/settings
+      - generic [ref=f15e63]:
+        - generic [ref=f15e65]:
+          - heading "Settings" [level=1] [ref=f15e66]
+          - paragraph [ref=f15e67]: Credentials, status mapping and the API record for this Lazada shop.
+        - generic [ref=f15e68]:
+          - generic [ref=f15e69]:
+            - heading "Environment" [level=2] [ref=f15e71]
+            - generic [ref=f15e72]:
+              - tablist "Lazada environment" [ref=f15e74]:
+                - tab "Production" [ref=f15e75] [cursor=pointer]
+                - tab "Sandbox" [selected] [ref=f15e76] [cursor=pointer]
+              - paragraph [ref=f15e77]: Every sync, push and order fetch uses the credentials of the environment selected here. Production and sandbox keep separate app keys and separate tokens, but share one region.
+          - generic [ref=f15e78]:
+            - generic [ref=f15e79]:
+              - generic [ref=f15e80]:
+                - heading "Sandbox credentials" [level=2] [ref=f15e81]
+                - generic [ref=f15e82]: Configured
+              - generic [ref=f15e86]:
+                - generic [ref=f15e87]:
+                  - generic [ref=f15e88]:
+                    - generic [ref=f15e89]: Region
+                    - combobox "Region" [ref=f15e91]:
+                      - option "Not set"
+                      - option "Philippines (PH)" [selected]
+                      - option "Singapore (SG)"
+                      - option "Malaysia (MY)"
+                      - option "Indonesia (ID)"
+                      - option "Thailand (TH)"
+                      - option "Vietnam (VN)"
+                    - generic [ref=f15e92]: Shared with production. Choosing here also changes the live form.
+                  - generic [ref=f15e93]:
+                    - generic [ref=f15e94]: Sandbox App Key
+                    - textbox "Sandbox App Key" [ref=f15e95]: "114192"
+                  - generic [ref=f15e96]:
+                    - generic [ref=f15e97]: Sandbox App Secret
+                    - generic [ref=f15e98]:
+                      - generic [ref=f15e99]:
+                        - textbox "Sandbox App Secret" [ref=f15e100]: ••••••••••••••••••••••••••••••••
+                        - button "View and edit Sandbox App Secret" [ref=f15e101] [cursor=pointer]:
+                          - generic [ref=f15e105]: View and edit
+                      - paragraph [ref=f15e106]: 32 stored characters · read-only until you choose to edit
+                    - generic [ref=f15e107]: Stored encrypted.
+                  - generic [ref=f15e108]:
+                    - generic [ref=f15e109]: Redirect URI
+                    - textbox "Redirect URI" [ref=f15e110]: https://127.0.0.1:8000/lazada/callback
+                    - generic [ref=f15e111]: Register this exact URL in your Lazada Open Platform sandbox app. It is always https. To change it, edit APP_URL in the environment file.
+                - generic [ref=f15e112]:
+                  - button "Save sandbox settings" [ref=f15e113] [cursor=pointer]
+                  - generic [ref=f15e114]: Leave a masked field untouched to keep what is already stored. Saving also switches the shop to sandbox.
+            - generic [ref=f15e115]:
+              - heading "Sandbox authorisation" [level=2] [ref=f15e117]
+              - generic [ref=f15e118]: Token expired
+              - generic [ref=f15e122]:
+                - generic [ref=f15e123]:
+                  - generic [ref=f15e124]: "1"
+                  - generic [ref=f15e125]:
+                    - generic [ref=f15e126]: Authorise with the Lazada test environment
+                    - link "Open sandbox authorisation" [ref=f15e128] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/lazada/authorize?sandbox=1
+                    - paragraph [ref=f15e129]: Opens the Lazada test environment in a new tab, using the sandbox credentials above.
+                - generic [ref=f15e130]:
+                  - generic [ref=f15e131]: "2"
+                  - generic [ref=f15e132]:
+                    - generic [ref=f15e133]: Exchange an auth code by hand
+                    - generic [ref=f15e134]:
+                      - generic [ref=f15e135]:
+                        - generic [ref=f15e136]: Auth code
+                        - textbox "Auth code" [ref=f15e137]:
+                          - /placeholder: Paste the sandbox code here
+                      - button "Exchange" [ref=f15e138] [cursor=pointer]
+                - generic [ref=f15e139]:
+                  - generic [ref=f15e140]: "3"
+                  - generic [ref=f15e141]:
+                    - generic [ref=f15e142]: Refresh an expired token
+                    - button "Refresh sandbox token" [ref=f15e144] [cursor=pointer]
+            - generic [ref=f15e145]:
+              - heading "Paste a token instead" [level=2] [ref=f15e147]
+              - paragraph [ref=f15e148]: If you cannot sign in as the sandbox test seller, Lazada Open Platform's own API Explorer has a Get Token button that hands you a sandbox access token directly. Paste it here and the OAuth steps above can be skipped entirely. Saving switches the shop to sandbox.
+              - generic [ref=f15e149]:
+                - generic [ref=f15e150]:
+                  - generic [ref=f15e151]:
+                    - generic [ref=f15e152]:
+                      - text: Sandbox access token
+                      - generic [ref=f15e153]: Required
+                    - generic [ref=f15e154]:
+                      - generic [ref=f15e155]:
+                        - textbox "Sandbox access token Required" [ref=f15e156]: ••••••••••••••••••••••••••••••••••••••••••••••••
+                        - button "View and edit Sandbox access token" [ref=f15e157] [cursor=pointer]:
+                          - generic [ref=f15e161]: View and edit
+                      - paragraph [ref=f15e162]: 64 stored characters · read-only until you choose to edit
+                  - generic [ref=f15e163]:
+                    - generic [ref=f15e164]: Good for
+                    - generic [ref=f15e165]:
+                      - spinbutton "Good for" [ref=f15e166]: "7"
+                      - generic [ref=f15e167]: days
+                    - generic [ref=f15e168]: Anything from 1 to 365 days. Lazada does not say how long a pasted token lasts, so this is what the ERP will assume.
+                - button "Save sandbox token" [ref=f15e170] [cursor=pointer]

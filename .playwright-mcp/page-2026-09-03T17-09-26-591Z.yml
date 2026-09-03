@@ -1,0 +1,889 @@
+- generic [active] [ref=f24e1]:
+  - link "Skip to content" [ref=f24e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f24e4]:
+    - banner [ref=f24e5]:
+      - button "Open navigation" [ref=f24e6]
+      - generic [ref=f24e11]:
+        - generic [ref=f24e12]: Catalog
+        - generic [ref=f24e13]: /
+        - generic [ref=f24e14]: Products
+      - button "Search. Opens the command palette." [ref=f24e15] [cursor=pointer]:
+        - generic [ref=f24e19]: Search products, orders, SKUs
+        - generic [ref=f24e20]: Ctrl K
+      - generic [ref=f24e21]:
+        - generic [ref=f24e22]:
+          - button "Light theme" [ref=f24e23]
+          - button "Dark theme" [ref=f24e27]
+          - button "Match system theme" [ref=f24e30]
+        - button "DO Docs Screenshots (temporary)" [ref=f24e35]:
+          - generic [ref=f24e36]: DO
+          - generic [ref=f24e37]: Docs Screenshots (temporary)
+    - main [ref=f24e38]:
+      - generic [ref=f24e39]:
+        - generic [ref=f24e40]:
+          - heading "Products" [level=1] [ref=f24e41]
+          - paragraph [ref=f24e42]: 2,081 products
+        - link "New product" [ref=f24e43] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/catalog/products/create
+      - generic [ref=f24e46]:
+        - generic [ref=f24e47]: Search products
+        - searchbox "Search products" [ref=f24e48]
+        - generic [ref=f24e49]: Filter by status
+        - combobox "Filter by status" [ref=f24e51]:
+          - option "All statuses" [selected]
+          - option "Enabled"
+          - option "Disabled"
+          - option "Missing parcel"
+      - generic [ref=f24e52]:
+        - table [ref=f24e54]:
+          - rowgroup [ref=f24e55]:
+            - row [ref=f24e56]:
+              - columnheader [ref=f24e57]:
+                - checkbox "Select all products on this page" [ref=f24e58] [cursor=pointer]
+              - columnheader [ref=f24e59]:
+                - link "ID" [ref=f24e60] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/products?sort=product_id&dir=desc
+              - columnheader [ref=f24e63]:
+                - link "Product" [ref=f24e64] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/products?sort=name&dir=asc
+              - columnheader [ref=f24e65]:
+                - link "On hand" [ref=f24e66] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/products?sort=quantity&dir=asc
+              - columnheader [ref=f24e67]:
+                - link "Price" [ref=f24e68] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/products?sort=price&dir=asc
+              - columnheader [ref=f24e69]:
+                - link "Status" [ref=f24e70] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/products?sort=status&dir=asc
+              - columnheader "Actions" [ref=f24e71]
+          - rowgroup [ref=f24e73]:
+            - row [ref=f24e74]:
+              - cell [ref=f24e75]:
+                - checkbox "Select G7th Performance 2 Capo (Black)" [ref=f24e76] [cursor=pointer]
+              - cell "1" [ref=f24e77]
+              - cell "None G7th Performance 2 Capo (Black) G7th" [ref=f24e78]:
+                - generic [ref=f24e79]:
+                  - generic [ref=f24e80]: None
+                  - generic [ref=f24e81]:
+                    - link "G7th Performance 2 Capo (Black)" [ref=f24e82] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/1/edit
+                    - generic [ref=f24e83]: G7th
+              - cell "0" [ref=f24e85]
+              - cell "₱2,300.00" [ref=f24e86]
+              - cell "Enabled" [ref=f24e87]
+              - cell "Product 1 actions" [ref=f24e90]:
+                - button "Product 1 actions" [ref=f24e92]
+            - row [ref=f24e98]:
+              - cell [ref=f24e99]:
+                - checkbox "Select Bigsby USA B5 Vibrato Tailpiece for flat top solid body guitars" [ref=f24e100] [cursor=pointer]
+              - cell "2" [ref=f24e101]
+              - cell "None Bigsby USA B5 Vibrato Tailpiece for flat top solid body guitars BG-B5" [ref=f24e102]:
+                - generic [ref=f24e103]:
+                  - generic [ref=f24e104]: None
+                  - generic [ref=f24e105]:
+                    - link "Bigsby USA B5 Vibrato Tailpiece for flat top solid body guitars" [ref=f24e106] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/2/edit
+                    - generic [ref=f24e107]: BG-B5
+              - cell "0" [ref=f24e109]
+              - cell "₱9,150.00" [ref=f24e110]
+              - cell "Disabled" [ref=f24e111]
+              - cell "Product 2 actions" [ref=f24e114]:
+                - button "Product 2 actions" [ref=f24e116]
+            - row [ref=f24e122]:
+              - cell [ref=f24e123]:
+                - checkbox "Select Bigsby USA B5 Vibrato Tailpiece for flat top solid body guitars - Gold" [ref=f24e124] [cursor=pointer]
+              - cell "3" [ref=f24e125]
+              - cell "None Bigsby USA B5 Vibrato Tailpiece for flat top solid body guitars - Gold BG-B5G" [ref=f24e126]:
+                - generic [ref=f24e127]:
+                  - generic [ref=f24e128]: None
+                  - generic [ref=f24e129]:
+                    - link "Bigsby USA B5 Vibrato Tailpiece for flat top solid body guitars - Gold" [ref=f24e130] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/3/edit
+                    - generic [ref=f24e131]: BG-B5G
+              - cell "0" [ref=f24e133]
+              - cell "₱9,990.00" [ref=f24e134]
+              - cell "Disabled" [ref=f24e135]
+              - cell "Product 3 actions" [ref=f24e138]:
+                - button "Product 3 actions" [ref=f24e140]
+            - row [ref=f24e146]:
+              - cell [ref=f24e147]:
+                - checkbox "Select Gotoh Machine Heads SG381 (3 per side)" [ref=f24e148] [cursor=pointer]
+              - cell "4" [ref=f24e149]
+              - cell "None Gotoh Machine Heads SG381 (3 per side) -" [ref=f24e150]:
+                - generic [ref=f24e151]:
+                  - generic [ref=f24e152]: None
+                  - generic [ref=f24e153]:
+                    - link "Gotoh Machine Heads SG381 (3 per side)" [ref=f24e154] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/4/edit
+                    - generic [ref=f24e155]: "-"
+              - cell "0" [ref=f24e157]
+              - cell "₱3,100.00" [ref=f24e158]
+              - cell "Disabled" [ref=f24e159]
+              - cell "Product 4 actions" [ref=f24e162]:
+                - button "Product 4 actions" [ref=f24e164]
+            - row [ref=f24e170]:
+              - cell [ref=f24e171]:
+                - checkbox "Select Elixir 12102 Nanoweb (11-49) 6 sets" [ref=f24e172] [cursor=pointer]
+              - cell "5" [ref=f24e173]
+              - cell "None Elixir 12102 Nanoweb (11-49) 6 sets -" [ref=f24e174]:
+                - generic [ref=f24e175]:
+                  - generic [ref=f24e176]: None
+                  - generic [ref=f24e177]:
+                    - link "Elixir 12102 Nanoweb (11-49) 6 sets" [ref=f24e178] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/5/edit
+                    - generic [ref=f24e179]: "-"
+              - cell "0" [ref=f24e181]
+              - cell "₱3,000.00" [ref=f24e182]
+              - cell "Disabled" [ref=f24e183]
+              - cell "Product 5 actions" [ref=f24e186]:
+                - button "Product 5 actions" [ref=f24e188]
+            - row [ref=f24e194]:
+              - cell [ref=f24e195]:
+                - checkbox "Select Elixir 12027 Nanoweb (9-46) FREE SHIPPING" [ref=f24e196] [cursor=pointer]
+              - cell "6" [ref=f24e197]
+              - cell "None Elixir 12027 Nanoweb (9-46) FREE SHIPPING -" [ref=f24e198]:
+                - generic [ref=f24e199]:
+                  - generic [ref=f24e200]: None
+                  - generic [ref=f24e201]:
+                    - link "Elixir 12027 Nanoweb (9-46) FREE SHIPPING" [ref=f24e202] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/6/edit
+                    - generic [ref=f24e203]: "-"
+              - cell "0" [ref=f24e205]
+              - cell "₱750.00" [ref=f24e206]
+              - cell "Enabled" [ref=f24e207]
+              - cell "Product 6 actions" [ref=f24e210]:
+                - button "Product 6 actions" [ref=f24e212]
+            - row [ref=f24e218]:
+              - cell [ref=f24e219]:
+                - checkbox "Select Fulltone OCD v4 Obsessive Compulsive Drive. (USED) SN:48464" [ref=f24e220] [cursor=pointer]
+              - cell "7" [ref=f24e221]
+              - cell "None Fulltone OCD v4 Obsessive Compulsive Drive. (USED) SN:48464 -" [ref=f24e222]:
+                - generic [ref=f24e223]:
+                  - generic [ref=f24e224]: None
+                  - generic [ref=f24e225]:
+                    - link "Fulltone OCD v4 Obsessive Compulsive Drive. (USED) SN:48464" [ref=f24e226] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/7/edit
+                    - generic [ref=f24e227]: "-"
+              - cell "0" [ref=f24e229]
+              - cell "₱6,000.00" [ref=f24e230]
+              - cell "Disabled" [ref=f24e231]
+              - cell "Product 7 actions" [ref=f24e234]:
+                - button "Product 7 actions" [ref=f24e236]
+            - row [ref=f24e242]:
+              - cell [ref=f24e243]:
+                - checkbox "Select Fulltone OCD v4 Obsessive Compulsive Drive. (USED) SN:63853" [ref=f24e244] [cursor=pointer]
+              - cell "8" [ref=f24e245]
+              - cell "None Fulltone OCD v4 Obsessive Compulsive Drive. (USED) SN:63853 -" [ref=f24e246]:
+                - generic [ref=f24e247]:
+                  - generic [ref=f24e248]: None
+                  - generic [ref=f24e249]:
+                    - link "Fulltone OCD v4 Obsessive Compulsive Drive. (USED) SN:63853" [ref=f24e250] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/8/edit
+                    - generic [ref=f24e251]: "-"
+              - cell "0" [ref=f24e253]
+              - cell "₱6,000.00" [ref=f24e254]
+              - cell "Disabled" [ref=f24e255]
+              - cell "Product 8 actions" [ref=f24e258]:
+                - button "Product 8 actions" [ref=f24e260]
+            - row [ref=f24e266]:
+              - cell [ref=f24e267]:
+                - checkbox "Select Elixir 11027 Nanoweb 80/20 (11-52) 6 sets" [ref=f24e268] [cursor=pointer]
+              - cell "9" [ref=f24e269]
+              - cell "None Elixir 11027 Nanoweb 80/20 (11-52) 6 sets -" [ref=f24e270]:
+                - generic [ref=f24e271]:
+                  - generic [ref=f24e272]: None
+                  - generic [ref=f24e273]:
+                    - link "Elixir 11027 Nanoweb 80/20 (11-52) 6 sets" [ref=f24e274] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/9/edit
+                    - generic [ref=f24e275]: "-"
+              - cell "0" [ref=f24e277]
+              - cell "₱3,900.00" [ref=f24e278]
+              - cell "Disabled" [ref=f24e279]
+              - cell "Product 9 actions" [ref=f24e282]:
+                - button "Product 9 actions" [ref=f24e284]
+            - row [ref=f24e290]:
+              - cell [ref=f24e291]:
+                - checkbox "Select Elixir 11027 Nanoweb 80/20 (11-52) FREE SHIPPING" [ref=f24e292] [cursor=pointer]
+              - cell "10" [ref=f24e293]
+              - cell "None Elixir 11027 Nanoweb 80/20 (11-52) FREE SHIPPING -" [ref=f24e294]:
+                - generic [ref=f24e295]:
+                  - generic [ref=f24e296]: None
+                  - generic [ref=f24e297]:
+                    - link "Elixir 11027 Nanoweb 80/20 (11-52) FREE SHIPPING" [ref=f24e298] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/10/edit
+                    - generic [ref=f24e299]: "-"
+              - cell "0" [ref=f24e301]
+              - cell "₱900.00" [ref=f24e302]
+              - cell "Enabled" [ref=f24e303]
+              - cell "Product 10 actions" [ref=f24e306]:
+                - button "Product 10 actions" [ref=f24e308]
+            - row [ref=f24e314]:
+              - cell [ref=f24e315]:
+                - checkbox "Select Elixir 11050 Polyweb 80/20 (12-53)" [ref=f24e316] [cursor=pointer]
+              - cell "11" [ref=f24e317]
+              - cell "None Elixir 11050 Polyweb 80/20 (12-53) -" [ref=f24e318]:
+                - generic [ref=f24e319]:
+                  - generic [ref=f24e320]: None
+                  - generic [ref=f24e321]:
+                    - link "Elixir 11050 Polyweb 80/20 (12-53)" [ref=f24e322] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/11/edit
+                    - generic [ref=f24e323]: "-"
+              - cell "0" [ref=f24e325]
+              - cell "₱750.00" [ref=f24e326]
+              - cell "Disabled" [ref=f24e327]
+              - cell "Product 11 actions" [ref=f24e330]:
+                - button "Product 11 actions" [ref=f24e332]
+            - row [ref=f24e338]:
+              - cell [ref=f24e339]:
+                - checkbox "Select Elixir 11050 Polyweb 80/20 (12-53) 6 sets" [ref=f24e340] [cursor=pointer]
+              - cell "12" [ref=f24e341]
+              - cell "None Elixir 11050 Polyweb 80/20 (12-53) 6 sets -" [ref=f24e342]:
+                - generic [ref=f24e343]:
+                  - generic [ref=f24e344]: None
+                  - generic [ref=f24e345]:
+                    - link "Elixir 11050 Polyweb 80/20 (12-53) 6 sets" [ref=f24e346] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/12/edit
+                    - generic [ref=f24e347]: "-"
+              - cell "0" [ref=f24e349]
+              - cell "₱3,900.00" [ref=f24e350]
+              - cell "Disabled" [ref=f24e351]
+              - cell "Product 12 actions" [ref=f24e354]:
+                - button "Product 12 actions" [ref=f24e356]
+            - row [ref=f24e362]:
+              - cell [ref=f24e363]:
+                - checkbox "Select Elixir 12052 Nanoweb (10-46) FREE SHIPPING" [ref=f24e364] [cursor=pointer]
+              - cell "14" [ref=f24e365]
+              - cell "None Elixir 12052 Nanoweb (10-46) FREE SHIPPING -" [ref=f24e366]:
+                - generic [ref=f24e367]:
+                  - generic [ref=f24e368]: None
+                  - generic [ref=f24e369]:
+                    - link "Elixir 12052 Nanoweb (10-46) FREE SHIPPING" [ref=f24e370] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/14/edit
+                    - generic [ref=f24e371]: "-"
+              - cell "0" [ref=f24e373]
+              - cell "₱750.00" [ref=f24e374]
+              - cell "Enabled" [ref=f24e375]
+              - cell "Product 14 actions" [ref=f24e378]:
+                - button "Product 14 actions" [ref=f24e380]
+            - row [ref=f24e386]:
+              - cell [ref=f24e387]:
+                - checkbox "Select Elixir 12002 Nanoweb (9-42) FREE SHIPPING" [ref=f24e388] [cursor=pointer]
+              - cell "15" [ref=f24e389]
+              - cell "None Elixir 12002 Nanoweb (9-42) FREE SHIPPING -" [ref=f24e390]:
+                - generic [ref=f24e391]:
+                  - generic [ref=f24e392]: None
+                  - generic [ref=f24e393]:
+                    - link "Elixir 12002 Nanoweb (9-42) FREE SHIPPING" [ref=f24e394] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/15/edit
+                    - generic [ref=f24e395]: "-"
+              - cell "0" [ref=f24e397]
+              - cell "₱750.00" [ref=f24e398]
+              - cell "Enabled" [ref=f24e399]
+              - cell "Product 15 actions" [ref=f24e402]:
+                - button "Product 15 actions" [ref=f24e404]
+            - row [ref=f24e410]:
+              - cell [ref=f24e411]:
+                - checkbox "Select Ernie Ball VP JR 25k 6181" [ref=f24e412] [cursor=pointer]
+              - cell "16" [ref=f24e413]
+              - cell "None Ernie Ball VP JR 25k 6181 EB-6181" [ref=f24e414]:
+                - generic [ref=f24e415]:
+                  - generic [ref=f24e416]: None
+                  - generic [ref=f24e417]:
+                    - link "Ernie Ball VP JR 25k 6181" [ref=f24e418] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/16/edit
+                    - generic [ref=f24e419]: EB-6181
+              - cell "0" [ref=f24e421]
+              - cell "₱5,600.00" [ref=f24e422]
+              - cell "Enabled" [ref=f24e423]
+              - cell "Product 16 actions" [ref=f24e426]:
+                - button "Product 16 actions" [ref=f24e428]
+            - row [ref=f24e434]:
+              - cell [ref=f24e435]:
+                - checkbox "Select Elixir 12027 Nanoweb (9-46) 6 Pack" [ref=f24e436] [cursor=pointer]
+              - cell "17" [ref=f24e437]
+              - cell "None Elixir 12027 Nanoweb (9-46) 6 Pack -" [ref=f24e438]:
+                - generic [ref=f24e439]:
+                  - generic [ref=f24e440]: None
+                  - generic [ref=f24e441]:
+                    - link "Elixir 12027 Nanoweb (9-46) 6 Pack" [ref=f24e442] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/17/edit
+                    - generic [ref=f24e443]: "-"
+              - cell "-2" [ref=f24e445]
+              - cell "₱3,000.00" [ref=f24e446]
+              - cell "Disabled" [ref=f24e447]
+              - cell "Product 17 actions" [ref=f24e450]:
+                - button "Product 17 actions" [ref=f24e452]
+            - row [ref=f24e458]:
+              - cell [ref=f24e459]:
+                - checkbox "Select Elixir 12002 Nanoweb (9-42) 6 sets" [ref=f24e460] [cursor=pointer]
+              - cell "18" [ref=f24e461]
+              - cell "None Elixir 12002 Nanoweb (9-42) 6 sets -" [ref=f24e462]:
+                - generic [ref=f24e463]:
+                  - generic [ref=f24e464]: None
+                  - generic [ref=f24e465]:
+                    - link "Elixir 12002 Nanoweb (9-42) 6 sets" [ref=f24e466] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/18/edit
+                    - generic [ref=f24e467]: "-"
+              - cell "0" [ref=f24e469]
+              - cell "₱3,000.00" [ref=f24e470]
+              - cell "Disabled" [ref=f24e471]
+              - cell "Product 18 actions" [ref=f24e474]:
+                - button "Product 18 actions" [ref=f24e476]
+            - row [ref=f24e482]:
+              - cell [ref=f24e483]:
+                - checkbox "Select Electro-Harmonix Metal Muff with Top Boost" [ref=f24e484] [cursor=pointer]
+              - cell "19" [ref=f24e485]
+              - cell "None Electro-Harmonix Metal Muff with Top Boost ehx-metal-muff" [ref=f24e486]:
+                - generic [ref=f24e487]:
+                  - generic [ref=f24e488]: None
+                  - generic [ref=f24e489]:
+                    - link "Electro-Harmonix Metal Muff with Top Boost" [ref=f24e490] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/19/edit
+                    - generic [ref=f24e491]: ehx-metal-muff
+              - cell "0" [ref=f24e493]
+              - cell "₱5,300.00" [ref=f24e494]
+              - cell "Enabled" [ref=f24e495]
+              - cell "Product 19 actions" [ref=f24e498]:
+                - button "Product 19 actions" [ref=f24e500]
+            - row [ref=f24e506]:
+              - cell [ref=f24e507]:
+                - checkbox "Select Fulltone OCD v4 Obsessive Compulsive Drive" [ref=f24e508] [cursor=pointer]
+              - cell "20" [ref=f24e509]
+              - cell "None Fulltone OCD v4 Obsessive Compulsive Drive -" [ref=f24e510]:
+                - generic [ref=f24e511]:
+                  - generic [ref=f24e512]: None
+                  - generic [ref=f24e513]:
+                    - link "Fulltone OCD v4 Obsessive Compulsive Drive" [ref=f24e514] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/20/edit
+                    - generic [ref=f24e515]: "-"
+              - cell "0" [ref=f24e517]
+              - cell "₱7,300.00" [ref=f24e518]
+              - cell "Disabled" [ref=f24e519]
+              - cell "Product 20 actions" [ref=f24e522]:
+                - button "Product 20 actions" [ref=f24e524]
+            - row [ref=f24e530]:
+              - cell [ref=f24e531]:
+                - checkbox "Select Loop-Master 5 Looper Effect Switcher" [ref=f24e532] [cursor=pointer]
+              - cell "21" [ref=f24e533]
+              - cell "None Loop-Master 5 Looper Effect Switcher -" [ref=f24e534]:
+                - generic [ref=f24e535]:
+                  - generic [ref=f24e536]: None
+                  - generic [ref=f24e537]:
+                    - link "Loop-Master 5 Looper Effect Switcher" [ref=f24e538] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/21/edit
+                    - generic [ref=f24e539]: "-"
+              - cell "-2" [ref=f24e541]
+              - cell "₱5,600.00" [ref=f24e542]
+              - cell "Enabled" [ref=f24e543]
+              - cell "Product 21 actions" [ref=f24e546]:
+                - button "Product 21 actions" [ref=f24e548]
+            - row [ref=f24e554]:
+              - cell [ref=f24e555]:
+                - checkbox "Select Loop-Master 2 Looper Effect Switcher" [ref=f24e556] [cursor=pointer]
+              - cell "22" [ref=f24e557]
+              - cell "None Loop-Master 2 Looper Effect Switcher -" [ref=f24e558]:
+                - generic [ref=f24e559]:
+                  - generic [ref=f24e560]: None
+                  - generic [ref=f24e561]:
+                    - link "Loop-Master 2 Looper Effect Switcher" [ref=f24e562] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/22/edit
+                    - generic [ref=f24e563]: "-"
+              - cell "0" [ref=f24e565]
+              - cell "₱3,500.00" [ref=f24e566]
+              - cell "Enabled" [ref=f24e567]
+              - cell "Product 22 actions" [ref=f24e570]:
+                - button "Product 22 actions" [ref=f24e572]
+            - row [ref=f24e578]:
+              - cell [ref=f24e579]:
+                - checkbox "Select Focusrite Scarlett 2i2" [ref=f24e580] [cursor=pointer]
+              - cell "23" [ref=f24e581]
+              - cell "None Focusrite Scarlett 2i2 -" [ref=f24e582]:
+                - generic [ref=f24e583]:
+                  - generic [ref=f24e584]: None
+                  - generic [ref=f24e585]:
+                    - link "Focusrite Scarlett 2i2" [ref=f24e586] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/23/edit
+                    - generic [ref=f24e587]: "-"
+              - cell "-11" [ref=f24e589]
+              - cell "₱8,000.00" [ref=f24e590]
+              - cell "Disabled" [ref=f24e591]
+              - cell "Product 23 actions" [ref=f24e594]:
+                - button "Product 23 actions" [ref=f24e596]
+            - row [ref=f24e602]:
+              - cell [ref=f24e603]:
+                - checkbox "Select Loop-Master 3 Looper Effect Switcher" [ref=f24e604] [cursor=pointer]
+              - cell "24" [ref=f24e605]
+              - cell "None Loop-Master 3 Looper Effect Switcher -" [ref=f24e606]:
+                - generic [ref=f24e607]:
+                  - generic [ref=f24e608]: None
+                  - generic [ref=f24e609]:
+                    - link "Loop-Master 3 Looper Effect Switcher" [ref=f24e610] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/24/edit
+                    - generic [ref=f24e611]: "-"
+              - cell "0" [ref=f24e613]
+              - cell "₱4,000.00" [ref=f24e614]
+              - cell "Enabled" [ref=f24e615]
+              - cell "Product 24 actions" [ref=f24e618]:
+                - button "Product 24 actions" [ref=f24e620]
+            - row [ref=f24e626]:
+              - cell [ref=f24e627]:
+                - checkbox "Select Loop-Master Tap Tempo with Polarity Switch" [ref=f24e628] [cursor=pointer]
+              - cell "25" [ref=f24e629]
+              - cell "None Loop-Master Tap Tempo with Polarity Switch -" [ref=f24e630]:
+                - generic [ref=f24e631]:
+                  - generic [ref=f24e632]: None
+                  - generic [ref=f24e633]:
+                    - link "Loop-Master Tap Tempo with Polarity Switch" [ref=f24e634] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/25/edit
+                    - generic [ref=f24e635]: "-"
+              - cell "-6" [ref=f24e637]
+              - cell "₱1,800.00" [ref=f24e638]
+              - cell "Enabled" [ref=f24e639]
+              - cell "Product 25 actions" [ref=f24e642]:
+                - button "Product 25 actions" [ref=f24e644]
+            - row [ref=f24e650]:
+              - cell [ref=f24e651]:
+                - checkbox "Select Ernie Ball VP JR 250k 6180" [ref=f24e652] [cursor=pointer]
+              - cell "26" [ref=f24e653]
+              - cell "None Ernie Ball VP JR 250k 6180 EB-6180" [ref=f24e654]:
+                - generic [ref=f24e655]:
+                  - generic [ref=f24e656]: None
+                  - generic [ref=f24e657]:
+                    - link "Ernie Ball VP JR 250k 6180" [ref=f24e658] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/26/edit
+                    - generic [ref=f24e659]: EB-6180
+              - cell "0" [ref=f24e661]
+              - cell "₱5,600.00" [ref=f24e662]
+              - cell "Enabled" [ref=f24e663]
+              - cell "Product 26 actions" [ref=f24e666]:
+                - button "Product 26 actions" [ref=f24e668]
+            - row [ref=f24e674]:
+              - cell [ref=f24e675]:
+                - checkbox "Select Electro-Harmonix The Silencer Noise Gate/Effect Loop Guitar" [ref=f24e676] [cursor=pointer]
+              - cell "27" [ref=f24e677]
+              - cell "None Electro-Harmonix The Silencer Noise Gate/Effect Loop Guitar ehx-Silencer" [ref=f24e678]:
+                - generic [ref=f24e679]:
+                  - generic [ref=f24e680]: None
+                  - generic [ref=f24e681]:
+                    - link "Electro-Harmonix The Silencer Noise Gate/Effect Loop Guitar" [ref=f24e682] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/27/edit
+                    - generic [ref=f24e683]: ehx-Silencer
+              - cell "0" [ref=f24e685]
+              - cell "₱3,900.00" [ref=f24e686]
+              - cell "Enabled" [ref=f24e687]
+              - cell "Product 27 actions" [ref=f24e690]:
+                - button "Product 27 actions" [ref=f24e692]
+            - row [ref=f24e698]:
+              - cell [ref=f24e699]:
+                - checkbox "Select Ernie Ball MVP Most Valuable Pedal" [ref=f24e700] [cursor=pointer]
+              - cell "28" [ref=f24e701]
+              - cell "None Ernie Ball MVP Most Valuable Pedal -" [ref=f24e702]:
+                - generic [ref=f24e703]:
+                  - generic [ref=f24e704]: None
+                  - generic [ref=f24e705]:
+                    - link "Ernie Ball MVP Most Valuable Pedal" [ref=f24e706] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/28/edit
+                    - generic [ref=f24e707]: "-"
+              - cell "0" [ref=f24e709]
+              - cell "₱8,700.00" [ref=f24e710]
+              - cell "Enabled" [ref=f24e711]
+              - cell "Product 28 actions" [ref=f24e714]:
+                - button "Product 28 actions" [ref=f24e716]
+            - row [ref=f24e722]:
+              - cell [ref=f24e723]:
+                - checkbox "Select Hipshot Button Set of 6 D03 Black, Imperial style also fits Grover" [ref=f24e724] [cursor=pointer]
+              - cell "29" [ref=f24e725]
+              - cell "None Hipshot Button Set of 6 D03 Black, Imperial style also fits Grover HIP-D03B" [ref=f24e726]:
+                - generic [ref=f24e727]:
+                  - generic [ref=f24e728]: None
+                  - generic [ref=f24e729]:
+                    - link "Hipshot Button Set of 6 D03 Black, Imperial style also fits Grover" [ref=f24e730] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/29/edit
+                    - generic [ref=f24e731]: HIP-D03B
+              - cell "0" [ref=f24e733]
+              - cell "₱920.00" [ref=f24e734]
+              - cell "Disabled" [ref=f24e735]
+              - cell "Product 29 actions" [ref=f24e738]:
+                - button "Product 29 actions" [ref=f24e740]
+            - row [ref=f24e746]:
+              - cell [ref=f24e747]:
+                - checkbox "Select Hipshot Button Set of 6 D03 Chrome, Imperial style also fits Grover" [ref=f24e748] [cursor=pointer]
+              - cell "30" [ref=f24e749]
+              - cell "None Hipshot Button Set of 6 D03 Chrome, Imperial style also fits Grover HIP-D03C" [ref=f24e750]:
+                - generic [ref=f24e751]:
+                  - generic [ref=f24e752]: None
+                  - generic [ref=f24e753]:
+                    - link "Hipshot Button Set of 6 D03 Chrome, Imperial style also fits Grover" [ref=f24e754] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/30/edit
+                    - generic [ref=f24e755]: HIP-D03C
+              - cell "0" [ref=f24e757]
+              - cell "₱920.00" [ref=f24e758]
+              - cell "Disabled" [ref=f24e759]
+              - cell "Product 30 actions" [ref=f24e762]:
+                - button "Product 30 actions" [ref=f24e764]
+            - row [ref=f24e770]:
+              - cell [ref=f24e771]:
+                - checkbox "Select Hipshot Button Set of 6 D03 Gold Imperial style also fits Grover" [ref=f24e772] [cursor=pointer]
+              - cell "31" [ref=f24e773]
+              - cell "None Hipshot Button Set of 6 D03 Gold Imperial style also fits Grover HIP-D03G" [ref=f24e774]:
+                - generic [ref=f24e775]:
+                  - generic [ref=f24e776]: None
+                  - generic [ref=f24e777]:
+                    - link "Hipshot Button Set of 6 D03 Gold Imperial style also fits Grover" [ref=f24e778] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/31/edit
+                    - generic [ref=f24e779]: HIP-D03G
+              - cell "0" [ref=f24e781]
+              - cell "₱1,030.00" [ref=f24e782]
+              - cell "Disabled" [ref=f24e783]
+              - cell "Product 31 actions" [ref=f24e786]:
+                - button "Product 31 actions" [ref=f24e788]
+            - row [ref=f24e794]:
+              - cell [ref=f24e795]:
+                - checkbox "Select Hipshot Button Set of 6 D04 Black also fits Grover" [ref=f24e796] [cursor=pointer]
+              - cell "32" [ref=f24e797]
+              - cell "None Hipshot Button Set of 6 D04 Black also fits Grover HIP-D04B" [ref=f24e798]:
+                - generic [ref=f24e799]:
+                  - generic [ref=f24e800]: None
+                  - generic [ref=f24e801]:
+                    - link "Hipshot Button Set of 6 D04 Black also fits Grover" [ref=f24e802] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/32/edit
+                    - generic [ref=f24e803]: HIP-D04B
+              - cell "-1" [ref=f24e805]
+              - cell "₱920.00" [ref=f24e806]
+              - cell "Disabled" [ref=f24e807]
+              - cell "Product 32 actions" [ref=f24e810]:
+                - button "Product 32 actions" [ref=f24e812]
+            - row [ref=f24e818]:
+              - cell [ref=f24e819]:
+                - checkbox "Select Hipshot Button Set of 6 D04 Chrome also fits Grover" [ref=f24e820] [cursor=pointer]
+              - cell "33" [ref=f24e821]
+              - cell "None Hipshot Button Set of 6 D04 Chrome also fits Grover HIP-D04C" [ref=f24e822]:
+                - generic [ref=f24e823]:
+                  - generic [ref=f24e824]: None
+                  - generic [ref=f24e825]:
+                    - link "Hipshot Button Set of 6 D04 Chrome also fits Grover" [ref=f24e826] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/33/edit
+                    - generic [ref=f24e827]: HIP-D04C
+              - cell "0" [ref=f24e829]
+              - cell "₱920.00" [ref=f24e830]
+              - cell "Disabled" [ref=f24e831]
+              - cell "Product 33 actions" [ref=f24e834]:
+                - button "Product 33 actions" [ref=f24e836]
+            - row [ref=f24e842]:
+              - cell [ref=f24e843]:
+                - checkbox "Select Hipshot Button Set of 6 D04 Gold also fits Grover" [ref=f24e844] [cursor=pointer]
+              - cell "34" [ref=f24e845]
+              - cell "None Hipshot Button Set of 6 D04 Gold also fits Grover HIP-D04G" [ref=f24e846]:
+                - generic [ref=f24e847]:
+                  - generic [ref=f24e848]: None
+                  - generic [ref=f24e849]:
+                    - link "Hipshot Button Set of 6 D04 Gold also fits Grover" [ref=f24e850] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/34/edit
+                    - generic [ref=f24e851]: HIP-D04G
+              - cell "0" [ref=f24e853]
+              - cell "₱1,030.00" [ref=f24e854]
+              - cell "Disabled" [ref=f24e855]
+              - cell "Product 34 actions" [ref=f24e858]:
+                - button "Product 34 actions" [ref=f24e860]
+            - row [ref=f24e866]:
+              - cell [ref=f24e867]:
+                - checkbox "Select Hipshot Button Set of 6 D04 Nickel also fits Grover" [ref=f24e868] [cursor=pointer]
+              - cell "35" [ref=f24e869]
+              - cell "None Hipshot Button Set of 6 D04 Nickel also fits Grover HIP-D04N" [ref=f24e870]:
+                - generic [ref=f24e871]:
+                  - generic [ref=f24e872]: None
+                  - generic [ref=f24e873]:
+                    - link "Hipshot Button Set of 6 D04 Nickel also fits Grover" [ref=f24e874] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/35/edit
+                    - generic [ref=f24e875]: HIP-D04N
+              - cell "0" [ref=f24e877]
+              - cell "₱920.00" [ref=f24e878]
+              - cell "Disabled" [ref=f24e879]
+              - cell "Product 35 actions" [ref=f24e882]:
+                - button "Product 35 actions" [ref=f24e884]
+            - row [ref=f24e890]:
+              - cell [ref=f24e891]:
+                - checkbox "Select Hipshot Button Set of 6 D05 Vintage 'Butterbean' Gold also fits Grover" [ref=f24e892] [cursor=pointer]
+              - cell "36" [ref=f24e893]
+              - cell "None Hipshot Button Set of 6 D05 Vintage 'Butterbean' Gold also fits Grover HIP-D05G" [ref=f24e894]:
+                - generic [ref=f24e895]:
+                  - generic [ref=f24e896]: None
+                  - generic [ref=f24e897]:
+                    - link "Hipshot Button Set of 6 D05 Vintage 'Butterbean' Gold also fits Grover" [ref=f24e898] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/36/edit
+                    - generic [ref=f24e899]: HIP-D05G
+              - cell "0" [ref=f24e901]
+              - cell "₱1,030.00" [ref=f24e902]
+              - cell "Disabled" [ref=f24e903]
+              - cell "Product 36 actions" [ref=f24e906]:
+                - button "Product 36 actions" [ref=f24e908]
+            - row [ref=f24e914]:
+              - cell [ref=f24e915]:
+                - checkbox "Select Hipshot Button Set of 6 D05 Vintage 'Butterbean' Black also fits Grover" [ref=f24e916] [cursor=pointer]
+              - cell "37" [ref=f24e917]
+              - cell "None Hipshot Button Set of 6 D05 Vintage 'Butterbean' Black also fits Grover HIP-D05B" [ref=f24e918]:
+                - generic [ref=f24e919]:
+                  - generic [ref=f24e920]: None
+                  - generic [ref=f24e921]:
+                    - link "Hipshot Button Set of 6 D05 Vintage 'Butterbean' Black also fits Grover" [ref=f24e922] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/37/edit
+                    - generic [ref=f24e923]: HIP-D05B
+              - cell "0" [ref=f24e925]
+              - cell "₱920.00" [ref=f24e926]
+              - cell "Disabled" [ref=f24e927]
+              - cell "Product 37 actions" [ref=f24e930]:
+                - button "Product 37 actions" [ref=f24e932]
+            - row [ref=f24e938]:
+              - cell [ref=f24e939]:
+                - checkbox "Select Hipshot Button Set of 6 D05 Vintage 'Butterbean' Chrome also fits Grover" [ref=f24e940] [cursor=pointer]
+              - cell "38" [ref=f24e941]
+              - cell "None Hipshot Button Set of 6 D05 Vintage 'Butterbean' Chrome also fits Grover HIP-D05C" [ref=f24e942]:
+                - generic [ref=f24e943]:
+                  - generic [ref=f24e944]: None
+                  - generic [ref=f24e945]:
+                    - link "Hipshot Button Set of 6 D05 Vintage 'Butterbean' Chrome also fits Grover" [ref=f24e946] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/38/edit
+                    - generic [ref=f24e947]: HIP-D05C
+              - cell "0" [ref=f24e949]
+              - cell "₱920.00" [ref=f24e950]
+              - cell "Disabled" [ref=f24e951]
+              - cell "Product 38 actions" [ref=f24e954]:
+                - button "Product 38 actions" [ref=f24e956]
+            - row [ref=f24e962]:
+              - cell [ref=f24e963]:
+                - checkbox "Select Hipshot Button Set of 6 D05 Vintage 'Butterbean' Nickel also fits Grover" [ref=f24e964] [cursor=pointer]
+              - cell "39" [ref=f24e965]
+              - cell "None Hipshot Button Set of 6 D05 Vintage 'Butterbean' Nickel also fits Grover HIP-D05N" [ref=f24e966]:
+                - generic [ref=f24e967]:
+                  - generic [ref=f24e968]: None
+                  - generic [ref=f24e969]:
+                    - link "Hipshot Button Set of 6 D05 Vintage 'Butterbean' Nickel also fits Grover" [ref=f24e970] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/39/edit
+                    - generic [ref=f24e971]: HIP-D05N
+              - cell "0" [ref=f24e973]
+              - cell "₱920.00" [ref=f24e974]
+              - cell "Disabled" [ref=f24e975]
+              - cell "Product 39 actions" [ref=f24e978]:
+                - button "Product 39 actions" [ref=f24e980]
+            - row [ref=f24e986]:
+              - cell [ref=f24e987]:
+                - checkbox "Select Hipshot Button Set of 6 D05 Vintage 'Butterbean' Satin Chrome also fits Grover" [ref=f24e988] [cursor=pointer]
+              - cell "40" [ref=f24e989]
+              - cell "None Hipshot Button Set of 6 D05 Vintage 'Butterbean' Satin Chrome also fits Grover HIP-D05S" [ref=f24e990]:
+                - generic [ref=f24e991]:
+                  - generic [ref=f24e992]: None
+                  - generic [ref=f24e993]:
+                    - link "Hipshot Button Set of 6 D05 Vintage 'Butterbean' Satin Chrome also fits Grover" [ref=f24e994] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/40/edit
+                    - generic [ref=f24e995]: HIP-D05S
+              - cell "0" [ref=f24e997]
+              - cell "₱920.00" [ref=f24e998]
+              - cell "Disabled" [ref=f24e999]
+              - cell "Product 40 actions" [ref=f24e1002]:
+                - button "Product 40 actions" [ref=f24e1004]
+            - row [ref=f24e1010]:
+              - cell [ref=f24e1011]:
+                - checkbox "Select Hipshot Button Set of 6 D07 'Mini Schaller' Black also fits Grover" [ref=f24e1012] [cursor=pointer]
+              - cell "41" [ref=f24e1013]
+              - cell "None Hipshot Button Set of 6 D07 'Mini Schaller' Black also fits Grover HIP-D07B" [ref=f24e1014]:
+                - generic [ref=f24e1015]:
+                  - generic [ref=f24e1016]: None
+                  - generic [ref=f24e1017]:
+                    - link "Hipshot Button Set of 6 D07 'Mini Schaller' Black also fits Grover" [ref=f24e1018] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/41/edit
+                    - generic [ref=f24e1019]: HIP-D07B
+              - cell "0" [ref=f24e1021]
+              - cell "₱920.00" [ref=f24e1022]
+              - cell "Disabled" [ref=f24e1023]
+              - cell "Product 41 actions" [ref=f24e1026]:
+                - button "Product 41 actions" [ref=f24e1028]
+            - row [ref=f24e1034]:
+              - cell [ref=f24e1035]:
+                - checkbox "Select Hipshot Button Set of 6 D07 'Mini Schaller' Chrome also fits Grover" [ref=f24e1036] [cursor=pointer]
+              - cell "42" [ref=f24e1037]
+              - cell "None Hipshot Button Set of 6 D07 'Mini Schaller' Chrome also fits Grover HIP-D07C" [ref=f24e1038]:
+                - generic [ref=f24e1039]:
+                  - generic [ref=f24e1040]: None
+                  - generic [ref=f24e1041]:
+                    - link "Hipshot Button Set of 6 D07 'Mini Schaller' Chrome also fits Grover" [ref=f24e1042] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/42/edit
+                    - generic [ref=f24e1043]: HIP-D07C
+              - cell "0" [ref=f24e1045]
+              - cell "₱920.00" [ref=f24e1046]
+              - cell "Disabled" [ref=f24e1047]
+              - cell "Product 42 actions" [ref=f24e1050]:
+                - button "Product 42 actions" [ref=f24e1052]
+            - row [ref=f24e1058]:
+              - cell [ref=f24e1059]:
+                - checkbox "Select Hipshot Button Set of 6 D07 'Mini Schaller' Gold also fits Grover" [ref=f24e1060] [cursor=pointer]
+              - cell "43" [ref=f24e1061]
+              - cell "None Hipshot Button Set of 6 D07 'Mini Schaller' Gold also fits Grover HIP-D07G" [ref=f24e1062]:
+                - generic [ref=f24e1063]:
+                  - generic [ref=f24e1064]: None
+                  - generic [ref=f24e1065]:
+                    - link "Hipshot Button Set of 6 D07 'Mini Schaller' Gold also fits Grover" [ref=f24e1066] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/43/edit
+                    - generic [ref=f24e1067]: HIP-D07G
+              - cell "0" [ref=f24e1069]
+              - cell "₱1,030.00" [ref=f24e1070]
+              - cell "Disabled" [ref=f24e1071]
+              - cell "Product 43 actions" [ref=f24e1074]:
+                - button "Product 43 actions" [ref=f24e1076]
+            - row [ref=f24e1082]:
+              - cell [ref=f24e1083]:
+                - checkbox "Select Hipshot Button Set of 6 D07 'Mini Schaller' Nickel also fits Grover" [ref=f24e1084] [cursor=pointer]
+              - cell "44" [ref=f24e1085]
+              - cell "None Hipshot Button Set of 6 D07 'Mini Schaller' Nickel also fits Grover HIP-D07N" [ref=f24e1086]:
+                - generic [ref=f24e1087]:
+                  - generic [ref=f24e1088]: None
+                  - generic [ref=f24e1089]:
+                    - link "Hipshot Button Set of 6 D07 'Mini Schaller' Nickel also fits Grover" [ref=f24e1090] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/44/edit
+                    - generic [ref=f24e1091]: HIP-D07N
+              - cell "0" [ref=f24e1093]
+              - cell "₱920.00" [ref=f24e1094]
+              - cell "Disabled" [ref=f24e1095]
+              - cell "Product 44 actions" [ref=f24e1098]:
+                - button "Product 44 actions" [ref=f24e1100]
+            - row [ref=f24e1106]:
+              - cell [ref=f24e1107]:
+                - checkbox "Select Hipshot Button Set of 6 D07 'Mini Schaller' Satin Chrome also fits Grover" [ref=f24e1108] [cursor=pointer]
+              - cell "45" [ref=f24e1109]
+              - cell "None Hipshot Button Set of 6 D07 'Mini Schaller' Satin Chrome also fits Grover HIP-D07S" [ref=f24e1110]:
+                - generic [ref=f24e1111]:
+                  - generic [ref=f24e1112]: None
+                  - generic [ref=f24e1113]:
+                    - link "Hipshot Button Set of 6 D07 'Mini Schaller' Satin Chrome also fits Grover" [ref=f24e1114] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/45/edit
+                    - generic [ref=f24e1115]: HIP-D07S
+              - cell "0" [ref=f24e1117]
+              - cell "₱920.00" [ref=f24e1118]
+              - cell "Disabled" [ref=f24e1119]
+              - cell "Product 45 actions" [ref=f24e1122]:
+                - button "Product 45 actions" [ref=f24e1124]
+            - row [ref=f24e1130]:
+              - cell [ref=f24e1131]:
+                - checkbox "Select Schaller Security Locks - Chrome" [ref=f24e1132] [cursor=pointer]
+              - cell "46" [ref=f24e1133]
+              - cell "None Schaller Security Locks - Chrome SC-14010201" [ref=f24e1134]:
+                - generic [ref=f24e1135]:
+                  - generic [ref=f24e1136]: None
+                  - generic [ref=f24e1137]:
+                    - link "Schaller Security Locks - Chrome" [ref=f24e1138] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/46/edit
+                    - generic [ref=f24e1139]: SC-14010201
+              - cell "0" [ref=f24e1141]
+              - cell "₱990.00" [ref=f24e1142]
+              - cell "Disabled" [ref=f24e1143]
+              - cell "Product 46 actions" [ref=f24e1146]:
+                - button "Product 46 actions" [ref=f24e1148]
+            - row [ref=f24e1154]:
+              - cell [ref=f24e1155]:
+                - checkbox "Select Schaller Security Locks - Black" [ref=f24e1156] [cursor=pointer]
+              - cell "47" [ref=f24e1157]
+              - cell "None Schaller Security Locks - Black SC-14010401" [ref=f24e1158]:
+                - generic [ref=f24e1159]:
+                  - generic [ref=f24e1160]: None
+                  - generic [ref=f24e1161]:
+                    - link "Schaller Security Locks - Black" [ref=f24e1162] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/47/edit
+                    - generic [ref=f24e1163]: SC-14010401
+              - cell "0" [ref=f24e1165]
+              - cell "₱990.00" [ref=f24e1166]
+              - cell "Disabled" [ref=f24e1167]
+              - cell "Product 47 actions" [ref=f24e1170]:
+                - button "Product 47 actions" [ref=f24e1172]
+            - row [ref=f24e1178]:
+              - cell [ref=f24e1179]:
+                - checkbox "Select Electro-Harmonix Soul Food" [ref=f24e1180] [cursor=pointer]
+              - cell "48" [ref=f24e1181]
+              - cell "None Electro-Harmonix Soul Food EHX-Soul-food" [ref=f24e1182]:
+                - generic [ref=f24e1183]:
+                  - generic [ref=f24e1184]: None
+                  - generic [ref=f24e1185]:
+                    - link "Electro-Harmonix Soul Food" [ref=f24e1186] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/48/edit
+                    - generic [ref=f24e1187]: EHX-Soul-food
+              - cell "0" [ref=f24e1189]
+              - cell "₱4,400.00" [ref=f24e1190]
+              - cell "Enabled" [ref=f24e1191]
+              - cell "Product 48 actions" [ref=f24e1194]:
+                - button "Product 48 actions" [ref=f24e1196]
+            - row [ref=f24e1202]:
+              - cell [ref=f24e1203]:
+                - checkbox "Select MXR EVH 5150" [ref=f24e1204] [cursor=pointer]
+              - cell "49" [ref=f24e1205]
+              - cell "None MXR EVH 5150 -" [ref=f24e1206]:
+                - generic [ref=f24e1207]:
+                  - generic [ref=f24e1208]: None
+                  - generic [ref=f24e1209]:
+                    - link "MXR EVH 5150" [ref=f24e1210] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/49/edit
+                    - generic [ref=f24e1211]: "-"
+              - cell "-7" [ref=f24e1213]
+              - cell "₱10,400.00" [ref=f24e1214]
+              - cell "Enabled" [ref=f24e1215]
+              - cell "Product 49 actions" [ref=f24e1218]:
+                - button "Product 49 actions" [ref=f24e1220]
+            - row [ref=f24e1226]:
+              - cell [ref=f24e1227]:
+                - checkbox "Select Singular Sound BeatBuddy Mini Drum Machine Pedal" [ref=f24e1228] [cursor=pointer]
+              - cell "51" [ref=f24e1229]
+              - cell "None Singular Sound BeatBuddy Mini Drum Machine Pedal -" [ref=f24e1230]:
+                - generic [ref=f24e1231]:
+                  - generic [ref=f24e1232]: None
+                  - generic [ref=f24e1233]:
+                    - link "Singular Sound BeatBuddy Mini Drum Machine Pedal" [ref=f24e1234] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/51/edit
+                    - generic [ref=f24e1235]: "-"
+              - cell "0" [ref=f24e1237]
+              - cell "₱8,500.00" [ref=f24e1238]
+              - cell "Disabled" [ref=f24e1239]
+              - cell "Product 51 actions" [ref=f24e1242]:
+                - button "Product 51 actions" [ref=f24e1244]
+            - row [ref=f24e1250]:
+              - cell [ref=f24e1251]:
+                - checkbox "Select Focusrite Scarlett Solo (2nd Gen) Audio Recording Interface with Pro Tools First" [ref=f24e1252] [cursor=pointer]
+              - cell "52" [ref=f24e1253]
+              - cell "None Focusrite Scarlett Solo (2nd Gen) Audio Recording Interface with Pro Tools First -" [ref=f24e1254]:
+                - generic [ref=f24e1255]:
+                  - generic [ref=f24e1256]: None
+                  - generic [ref=f24e1257]:
+                    - link "Focusrite Scarlett Solo (2nd Gen) Audio Recording Interface with Pro Tools First" [ref=f24e1258] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/catalog/products/52/edit
+                    - generic [ref=f24e1259]: "-"
+              - cell "0" [ref=f24e1261]
+              - cell "₱5,800.00" [ref=f24e1262]
+              - cell "Disabled" [ref=f24e1263]
+              - cell "Product 52 actions" [ref=f24e1266]:
+                - button "Product 52 actions" [ref=f24e1268]
+        - generic [ref=f24e1274]:
+          - generic [ref=f24e1275]: 1 to 50 of 2,081
+          - generic [ref=f24e1276]:
+            - button "Previous" [disabled]
+            - list "Pages" [ref=f24e1277]:
+              - listitem [ref=f24e1278]:
+                - generic [ref=f24e1279]:
+                  - generic [ref=f24e1280]: Page
+                  - text: "1"
+                  - generic [ref=f24e1281]: of 42, current page
+              - listitem [ref=f24e1282]:
+                - link "Page 2" [ref=f24e1283] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/products?page=2
+                  - generic [ref=f24e1284]: Page
+                  - text: "2"
+              - listitem [ref=f24e1285]:
+                - link "Page 3" [ref=f24e1286] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/products?page=3
+                  - generic [ref=f24e1287]: Page
+                  - text: "3"
+              - listitem [ref=f24e1288]:
+                - generic [aria-hidden] [ref=f24e1289]: …
+              - listitem [ref=f24e1290]:
+                - link "Page 42" [ref=f24e1291] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/products?page=42
+                  - generic [ref=f24e1292]: Page
+                  - text: "42"
+            - link "Next" [ref=f24e1293] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/catalog/products?page=2

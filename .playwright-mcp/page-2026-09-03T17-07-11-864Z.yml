@@ -1,0 +1,877 @@
+- generic [active] [ref=f5e1]:
+  - link "Skip to content" [ref=f5e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f5e4]:
+    - banner [ref=f5e5]:
+      - button "Open navigation" [ref=f5e6]
+      - generic [ref=f5e11]:
+        - link "Settings" [ref=f5e12] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/settings
+        - generic [ref=f5e13]: /
+        - link "User Groups" [ref=f5e14] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/settings/user-groups
+        - generic [ref=f5e15]: /
+        - generic [ref=f5e16]: Administrator
+      - button "Search. Opens the command palette." [ref=f5e17] [cursor=pointer]:
+        - generic [ref=f5e21]: Search products, orders, SKUs
+        - generic [ref=f5e22]: Ctrl K
+      - generic [ref=f5e23]:
+        - generic [ref=f5e24]:
+          - button "Light theme" [ref=f5e25]
+          - button "Dark theme" [ref=f5e29]
+          - button "Match system theme" [ref=f5e32]
+        - button "DO Docs Screenshots (temporary)" [ref=f5e37]:
+          - generic [ref=f5e38]: DO
+          - generic [ref=f5e39]: Docs Screenshots (temporary)
+    - main [ref=f5e40]:
+      - generic [ref=f5e41]:
+        - status [ref=f5e42]:
+          - generic [ref=f5e43]: This is the Administrator group. Settings, users and user groups stay switched on for it however you leave them below, and the group cannot be deleted.
+        - generic [ref=f5e46]:
+          - link "User groups" [ref=f5e47] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/settings/user-groups
+          - heading "Administrator" [level=1] [ref=f5e50]
+          - generic [ref=f5e51]:
+            - generic [ref=f5e52]:
+              - generic [ref=f5e53]: ID
+              - generic [ref=f5e54]: "1"
+            - generic [ref=f5e55]:
+              - generic [ref=f5e56]: Areas granted
+              - generic [ref=f5e57]: 80 of 80
+        - generic [ref=f5e59]:
+          - generic [ref=f5e60]:
+            - heading "Name" [level=2] [ref=f5e62]
+            - generic [ref=f5e64]:
+              - generic [ref=f5e65]:
+                - text: Group name
+                - generic [ref=f5e66]: Required
+              - textbox "Group name Required" [ref=f5e67]: Administrator
+              - generic [ref=f5e68]: Name it after the job, not the person. Operator, Warehouse, Accounts.
+          - generic [ref=f5e71]:
+            - generic [ref=f5e72]:
+              - generic [ref=f5e73]:
+                - generic [ref=f5e74]: Permissions
+                - generic [aria-hidden] [ref=f5e75]: 80 / 80
+                - status [ref=f5e76]: 80 of 80 areas granted
+              - generic [ref=f5e77]:
+                - button "Off all" [ref=f5e78] [cursor=pointer]
+                - button "View all" [ref=f5e80] [cursor=pointer]
+                - button "Manage all" [ref=f5e82] [cursor=pointer]
+                - button "Preset" [ref=f5e85] [cursor=pointer]
+            - searchbox "Filter permissions" [ref=f5e87]
+            - region [ref=f5e88]:
+              - generic [ref=f5e89]:
+                - button "Ai Tools 1 manage 0 view" [expanded] [ref=f5e90] [cursor=pointer]:
+                  - generic [ref=f5e94]: Ai Tools
+                  - generic [ref=f5e96]:
+                    - generic [ref=f5e97]:
+                      - generic [ref=f5e99]: "1"
+                      - text: manage
+                    - generic [ref=f5e100]:
+                      - generic [ref=f5e102]: "0"
+                      - text: view
+                - group "Set every Ai Tools row" [ref=f5e103]:
+                  - button "Off" [ref=f5e104] [cursor=pointer]
+                  - button "View" [ref=f5e105] [cursor=pointer]
+                  - button "Manage" [ref=f5e106] [cursor=pointer]
+              - generic [ref=f5e108]:
+                - generic [ref=f5e110]:
+                  - generic [ref=f5e111]: Assistant
+                  - generic "permission key" [ref=f5e112]: ai_tools/assistant
+                - 'radiogroup "Ai Tools: Assistant permission level" [ref=f5e113]':
+                  - radio "Off" [ref=f5e114] [cursor=pointer]
+                  - radio "View" [ref=f5e119] [cursor=pointer]
+                  - radio "Manage" [checked] [ref=f5e124] [cursor=pointer]
+            - region [ref=f5e128]:
+              - generic [ref=f5e129]:
+                - button "Audit & Monitoring 1 manage 0 view" [expanded] [ref=f5e130] [cursor=pointer]:
+                  - generic [ref=f5e134]: Audit & Monitoring
+                  - generic [ref=f5e136]:
+                    - generic [ref=f5e137]:
+                      - generic [ref=f5e139]: "1"
+                      - text: manage
+                    - generic [ref=f5e140]:
+                      - generic [ref=f5e142]: "0"
+                      - text: view
+                - group "Set every Audit & Monitoring row" [ref=f5e143]:
+                  - button "Off" [ref=f5e144] [cursor=pointer]
+                  - button "View" [ref=f5e145] [cursor=pointer]
+                  - button "Manage" [ref=f5e146] [cursor=pointer]
+              - generic [ref=f5e148]:
+                - generic [ref=f5e150]:
+                  - generic [ref=f5e151]: Activity Log
+                  - generic "permission key" [ref=f5e152]: audit/activity_log
+                - 'radiogroup "Audit & Monitoring: Activity Log permission level" [ref=f5e153]':
+                  - radio "Off" [ref=f5e154] [cursor=pointer]
+                  - radio "View" [ref=f5e159] [cursor=pointer]
+                  - radio "Manage" [checked] [ref=f5e164] [cursor=pointer]
+            - region [ref=f5e168]:
+              - generic [ref=f5e169]:
+                - button "Catalog 5 manage 0 view" [expanded] [ref=f5e170] [cursor=pointer]:
+                  - generic [ref=f5e174]: Catalog
+                  - generic [ref=f5e176]:
+                    - generic [ref=f5e177]:
+                      - generic [ref=f5e179]: "5"
+                      - text: manage
+                    - generic [ref=f5e180]:
+                      - generic [ref=f5e182]: "0"
+                      - text: view
+                - group "Set every Catalog row" [ref=f5e183]:
+                  - button "Off" [ref=f5e184] [cursor=pointer]
+                  - button "View" [ref=f5e185] [cursor=pointer]
+                  - button "Manage" [ref=f5e186] [cursor=pointer]
+              - generic [ref=f5e187]:
+                - generic [ref=f5e188]:
+                  - generic [ref=f5e190]:
+                    - generic [ref=f5e191]: Categories
+                    - generic "permission key" [ref=f5e192]: catalog/category
+                  - 'radiogroup "Catalog: Categories permission level" [ref=f5e193]':
+                    - radio "Off" [ref=f5e194] [cursor=pointer]
+                    - radio "View" [ref=f5e199] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e204] [cursor=pointer]
+                - generic [ref=f5e208]:
+                  - generic [ref=f5e210]:
+                    - generic [ref=f5e211]: Manufacturers
+                    - generic "permission key" [ref=f5e212]: catalog/manufacturer
+                  - 'radiogroup "Catalog: Manufacturers permission level" [ref=f5e213]':
+                    - radio "Off" [ref=f5e214] [cursor=pointer]
+                    - radio "View" [ref=f5e219] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e224] [cursor=pointer]
+                - generic [ref=f5e228]:
+                  - generic [ref=f5e230]:
+                    - generic [ref=f5e231]: Product Images
+                    - generic "permission key" [ref=f5e232]: catalog/product_image
+                  - 'radiogroup "Catalog: Product Images permission level" [ref=f5e233]':
+                    - radio "Off" [ref=f5e234] [cursor=pointer]
+                    - radio "View" [ref=f5e239] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e244] [cursor=pointer]
+                - generic [ref=f5e248]:
+                  - generic [ref=f5e250]:
+                    - generic [ref=f5e251]: Products
+                    - generic "permission key" [ref=f5e252]: catalog/product
+                  - 'radiogroup "Catalog: Products permission level" [ref=f5e253]':
+                    - radio "Off" [ref=f5e254] [cursor=pointer]
+                    - radio "View" [ref=f5e259] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e264] [cursor=pointer]
+                - generic [ref=f5e268]:
+                  - generic [ref=f5e270]:
+                    - generic [ref=f5e271]: Variations
+                    - generic "permission key" [ref=f5e272]: catalog/product_option
+                  - 'radiogroup "Catalog: Variations permission level" [ref=f5e273]':
+                    - radio "Off" [ref=f5e274] [cursor=pointer]
+                    - radio "View" [ref=f5e279] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e284] [cursor=pointer]
+            - region [ref=f5e288]:
+              - generic [ref=f5e289]:
+                - button "Lazada 9 manage 1 view" [expanded] [ref=f5e290] [cursor=pointer]:
+                  - generic [ref=f5e294]: Lazada
+                  - generic [ref=f5e296]:
+                    - generic [ref=f5e297]:
+                      - generic [ref=f5e299]: "9"
+                      - text: manage
+                    - generic [ref=f5e300]:
+                      - generic [ref=f5e302]: "1"
+                      - text: view
+                - group "Set every Lazada row" [ref=f5e303]:
+                  - button "Off" [ref=f5e304] [cursor=pointer]
+                  - button "View" [ref=f5e305] [cursor=pointer]
+                  - button "Manage" [ref=f5e306] [cursor=pointer]
+              - generic [ref=f5e307]:
+                - generic [ref=f5e308]:
+                  - generic [ref=f5e309]:
+                    - generic [ref=f5e310]:
+                      - generic [ref=f5e311]: API explorer
+                      - generic "permission key" [ref=f5e312]: lazada/api_explorer
+                    - generic [ref=f5e313]: sends requests to the marketplace as your shop
+                  - 'radiogroup "Lazada: API explorer permission level" [ref=f5e314]':
+                    - radio "Off" [ref=f5e315] [cursor=pointer]
+                    - radio "View" [ref=f5e320] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e325] [cursor=pointer]
+                - generic [ref=f5e329]:
+                  - generic [ref=f5e331]:
+                    - generic [ref=f5e332]: Brands
+                    - generic "permission key" [ref=f5e333]: lazada/brand
+                  - 'radiogroup "Lazada: Brands permission level" [ref=f5e334]':
+                    - radio "Off" [ref=f5e335] [cursor=pointer]
+                    - radio "View" [ref=f5e340] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e345] [cursor=pointer]
+                - generic [ref=f5e349]:
+                  - generic [ref=f5e351]:
+                    - generic [ref=f5e352]: Categories
+                    - generic "permission key" [ref=f5e353]: lazada/category
+                  - 'radiogroup "Lazada: Categories permission level" [ref=f5e354]':
+                    - radio "Off" [ref=f5e355] [cursor=pointer]
+                    - radio "View" [ref=f5e360] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e365] [cursor=pointer]
+                - generic [ref=f5e369]:
+                  - generic [ref=f5e371]:
+                    - generic [ref=f5e372]: Category Attributes
+                    - generic "permission key" [ref=f5e373]: lazada/category_attribute
+                  - 'radiogroup "Lazada: Category Attributes permission level" [ref=f5e374]':
+                    - radio "Off" [ref=f5e375] [cursor=pointer]
+                    - radio "View" [ref=f5e380] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e385] [cursor=pointer]
+                - generic [ref=f5e389]:
+                  - generic [ref=f5e391]:
+                    - generic [ref=f5e392]: Listings
+                    - generic "permission key" [ref=f5e393]: lazada/product
+                  - 'radiogroup "Lazada: Listings permission level" [ref=f5e394]':
+                    - radio "Off" [ref=f5e395] [cursor=pointer]
+                    - radio "View" [ref=f5e400] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e405] [cursor=pointer]
+                - generic [ref=f5e409]:
+                  - generic [ref=f5e411]:
+                    - generic [ref=f5e412]: Orders
+                    - generic "permission key" [ref=f5e413]: lazada/order
+                  - 'radiogroup "Lazada: Orders permission level" [ref=f5e414]':
+                    - radio "Off" [ref=f5e415] [cursor=pointer]
+                    - radio "View" [ref=f5e420] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e425] [cursor=pointer]
+                - generic [ref=f5e429]:
+                  - generic [ref=f5e431]:
+                    - generic [ref=f5e432]: Overview
+                    - generic "permission key" [ref=f5e433]: lazada/dashboard
+                  - 'radiogroup "Lazada: Overview permission level" [ref=f5e434]':
+                    - radio "Off" [ref=f5e435] [cursor=pointer]
+                    - radio "View" [checked] [ref=f5e440] [cursor=pointer]
+                - generic [ref=f5e445]:
+                  - generic [ref=f5e447]:
+                    - generic [ref=f5e448]: Product Groups
+                    - generic "permission key" [ref=f5e449]: lazada/product_group
+                  - 'radiogroup "Lazada: Product Groups permission level" [ref=f5e450]':
+                    - radio "Off" [ref=f5e451] [cursor=pointer]
+                    - radio "View" [ref=f5e456] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e461] [cursor=pointer]
+                - generic [ref=f5e465]:
+                  - generic [ref=f5e467]:
+                    - generic [ref=f5e468]: Settings
+                    - generic "permission key" [ref=f5e469]: lazada/settings
+                  - 'radiogroup "Lazada: Settings permission level" [ref=f5e470]':
+                    - radio "Off" [ref=f5e471] [cursor=pointer]
+                    - radio "View" [ref=f5e476] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e481] [cursor=pointer]
+                - generic [ref=f5e485]:
+                  - generic [ref=f5e487]:
+                    - generic [ref=f5e488]: Voucher
+                    - generic "permission key" [ref=f5e489]: lazada/voucher
+                  - 'radiogroup "Lazada: Voucher permission level" [ref=f5e490]':
+                    - radio "Off" [ref=f5e491] [cursor=pointer]
+                    - radio "View" [ref=f5e496] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e501] [cursor=pointer]
+            - region [ref=f5e505]:
+              - generic [ref=f5e506]:
+                - button "OpenCart 3 manage 2 view" [expanded] [ref=f5e507] [cursor=pointer]:
+                  - generic [ref=f5e511]: OpenCart
+                  - generic [ref=f5e513]:
+                    - generic [ref=f5e514]:
+                      - generic [ref=f5e516]: "3"
+                      - text: manage
+                    - generic [ref=f5e517]:
+                      - generic [ref=f5e519]: "2"
+                      - text: view
+                - group "Set every OpenCart row" [ref=f5e520]:
+                  - button "Off" [ref=f5e521] [cursor=pointer]
+                  - button "View" [ref=f5e522] [cursor=pointer]
+                  - button "Manage" [ref=f5e523] [cursor=pointer]
+              - generic [ref=f5e524]:
+                - generic [ref=f5e525]:
+                  - generic [ref=f5e527]:
+                    - generic [ref=f5e528]: Orders
+                    - generic "permission key" [ref=f5e529]: opencart/order
+                  - 'radiogroup "OpenCart: Orders permission level" [ref=f5e530]':
+                    - radio "Off" [ref=f5e531] [cursor=pointer]
+                    - radio "View" [checked] [ref=f5e536] [cursor=pointer]
+                - generic [ref=f5e541]:
+                  - generic [ref=f5e543]:
+                    - generic [ref=f5e544]: Overview
+                    - generic "permission key" [ref=f5e545]: opencart/dashboard
+                  - 'radiogroup "OpenCart: Overview permission level" [ref=f5e546]':
+                    - radio "Off" [ref=f5e547] [cursor=pointer]
+                    - radio "View" [checked] [ref=f5e552] [cursor=pointer]
+                - generic [ref=f5e557]:
+                  - generic [ref=f5e559]:
+                    - generic [ref=f5e560]: Product Groups
+                    - generic "permission key" [ref=f5e561]: opencart/product_group
+                  - 'radiogroup "OpenCart: Product Groups permission level" [ref=f5e562]':
+                    - radio "Off" [ref=f5e563] [cursor=pointer]
+                    - radio "View" [ref=f5e568] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e573] [cursor=pointer]
+                - generic [ref=f5e577]:
+                  - generic [ref=f5e579]:
+                    - generic [ref=f5e580]: Reviews
+                    - generic "permission key" [ref=f5e581]: opencart/review
+                  - 'radiogroup "OpenCart: Reviews permission level" [ref=f5e582]':
+                    - radio "Off" [ref=f5e583] [cursor=pointer]
+                    - radio "View" [ref=f5e588] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e593] [cursor=pointer]
+                - generic [ref=f5e597]:
+                  - generic [ref=f5e599]:
+                    - generic [ref=f5e600]: Settings
+                    - generic "permission key" [ref=f5e601]: opencart/settings
+                  - 'radiogroup "OpenCart: Settings permission level" [ref=f5e602]':
+                    - radio "Off" [ref=f5e603] [cursor=pointer]
+                    - radio "View" [ref=f5e608] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e613] [cursor=pointer]
+            - region [ref=f5e617]:
+              - generic [ref=f5e618]:
+                - button "Petty Cash 2 manage 0 view" [expanded] [ref=f5e619] [cursor=pointer]:
+                  - generic [ref=f5e623]: Petty Cash
+                  - generic [ref=f5e625]:
+                    - generic [ref=f5e626]:
+                      - generic [ref=f5e628]: "2"
+                      - text: manage
+                    - generic [ref=f5e629]:
+                      - generic [ref=f5e631]: "0"
+                      - text: view
+                - group "Set every Petty Cash row" [ref=f5e632]:
+                  - button "Off" [ref=f5e633] [cursor=pointer]
+                  - button "View" [ref=f5e634] [cursor=pointer]
+                  - button "Manage" [ref=f5e635] [cursor=pointer]
+              - generic [ref=f5e636]:
+                - generic [ref=f5e637]:
+                  - generic [ref=f5e639]:
+                    - generic [ref=f5e640]: Settings
+                    - generic "permission key" [ref=f5e641]: pettycash/settings
+                  - 'radiogroup "Petty Cash: Settings permission level" [ref=f5e642]':
+                    - radio "Off" [ref=f5e643] [cursor=pointer]
+                    - radio "View" [ref=f5e648] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e653] [cursor=pointer]
+                - generic [ref=f5e657]:
+                  - generic [ref=f5e659]:
+                    - generic [ref=f5e660]: Transactions
+                    - generic "permission key" [ref=f5e661]: pettycash/ledger
+                  - 'radiogroup "Petty Cash: Transactions permission level" [ref=f5e662]':
+                    - radio "Off" [ref=f5e663] [cursor=pointer]
+                    - radio "View" [ref=f5e668] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e673] [cursor=pointer]
+            - region [ref=f5e677]:
+              - generic [ref=f5e678]:
+                - button "Purchasing 4 manage 0 view" [expanded] [ref=f5e679] [cursor=pointer]:
+                  - generic [ref=f5e683]: Purchasing
+                  - generic [ref=f5e685]:
+                    - generic [ref=f5e686]:
+                      - generic [ref=f5e688]: "4"
+                      - text: manage
+                    - generic [ref=f5e689]:
+                      - generic [ref=f5e691]: "0"
+                      - text: view
+                - group "Set every Purchasing row" [ref=f5e692]:
+                  - button "Off" [ref=f5e693] [cursor=pointer]
+                  - button "View" [ref=f5e694] [cursor=pointer]
+                  - button "Manage" [ref=f5e695] [cursor=pointer]
+              - generic [ref=f5e696]:
+                - generic [ref=f5e697]:
+                  - generic [ref=f5e699]:
+                    - generic [ref=f5e700]: Product Vendors
+                    - generic "permission key" [ref=f5e701]: purchasing/product_vendor
+                  - 'radiogroup "Purchasing: Product Vendors permission level" [ref=f5e702]':
+                    - radio "Off" [ref=f5e703] [cursor=pointer]
+                    - radio "View" [ref=f5e708] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e713] [cursor=pointer]
+                - generic [ref=f5e717]:
+                  - generic [ref=f5e719]:
+                    - generic [ref=f5e720]: Purchase Orders
+                    - generic "permission key" [ref=f5e721]: purchasing/purchase_order
+                  - 'radiogroup "Purchasing: Purchase Orders permission level" [ref=f5e722]':
+                    - radio "Off" [ref=f5e723] [cursor=pointer]
+                    - radio "View" [ref=f5e728] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e733] [cursor=pointer]
+                - generic [ref=f5e737]:
+                  - generic [ref=f5e739]:
+                    - generic [ref=f5e740]: Reorder Suggestions
+                    - generic "permission key" [ref=f5e741]: purchasing/reorder
+                  - 'radiogroup "Purchasing: Reorder Suggestions permission level" [ref=f5e742]':
+                    - radio "Off" [ref=f5e743] [cursor=pointer]
+                    - radio "View" [ref=f5e748] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e753] [cursor=pointer]
+                - generic [ref=f5e757]:
+                  - generic [ref=f5e759]:
+                    - generic [ref=f5e760]: Vendors
+                    - generic "permission key" [ref=f5e761]: purchasing/vendor
+                  - 'radiogroup "Purchasing: Vendors permission level" [ref=f5e762]':
+                    - radio "Off" [ref=f5e763] [cursor=pointer]
+                    - radio "View" [ref=f5e768] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e773] [cursor=pointer]
+            - region [ref=f5e777]:
+              - generic [ref=f5e778]:
+                - button "Reports 0 manage 2 view" [expanded] [ref=f5e779] [cursor=pointer]:
+                  - generic [ref=f5e783]: Reports
+                  - generic [ref=f5e785]:
+                    - generic [ref=f5e786]:
+                      - generic [ref=f5e788]: "0"
+                      - text: manage
+                    - generic [ref=f5e789]:
+                      - generic [ref=f5e791]: "2"
+                      - text: view
+                - group "Set every Reports row" [ref=f5e792]:
+                  - button "Off" [ref=f5e793] [cursor=pointer]
+                  - button "View" [ref=f5e794] [cursor=pointer]
+                  - button "Manage" [ref=f5e795] [cursor=pointer]
+              - generic [ref=f5e796]:
+                - generic [ref=f5e797]:
+                  - generic [ref=f5e799]:
+                    - generic [ref=f5e800]: Reports
+                    - generic "permission key" [ref=f5e801]: reports/report
+                  - 'radiogroup "Reports: Reports permission level" [ref=f5e802]':
+                    - radio "Off" [ref=f5e803] [cursor=pointer]
+                    - radio "View" [checked] [ref=f5e808] [cursor=pointer]
+                - generic [ref=f5e813]:
+                  - generic [ref=f5e815]:
+                    - generic [ref=f5e816]: Reports over the API
+                    - generic "permission key" [ref=f5e817]: reports/api_report_api
+                  - 'radiogroup "Reports: Reports over the API permission level" [ref=f5e818]':
+                    - radio "Off" [ref=f5e819] [cursor=pointer]
+                    - radio "View" [checked] [ref=f5e824] [cursor=pointer]
+            - region [ref=f5e829]:
+              - generic [ref=f5e830]:
+                - button "Sales 2 manage 0 view" [expanded] [ref=f5e831] [cursor=pointer]:
+                  - generic [ref=f5e835]: Sales
+                  - generic [ref=f5e837]:
+                    - generic [ref=f5e838]:
+                      - generic [ref=f5e840]: "2"
+                      - text: manage
+                    - generic [ref=f5e841]:
+                      - generic [ref=f5e843]: "0"
+                      - text: view
+                - group "Set every Sales row" [ref=f5e844]:
+                  - button "Off" [ref=f5e845] [cursor=pointer]
+                  - button "View" [ref=f5e846] [cursor=pointer]
+                  - button "Manage" [ref=f5e847] [cursor=pointer]
+              - generic [ref=f5e848]:
+                - generic [ref=f5e849]:
+                  - generic [ref=f5e851]:
+                    - generic [ref=f5e852]: Order Payment
+                    - generic "permission key" [ref=f5e853]: sales/order_payment
+                  - 'radiogroup "Sales: Order Payment permission level" [ref=f5e854]':
+                    - radio "Off" [ref=f5e855] [cursor=pointer]
+                    - radio "View" [ref=f5e860] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e865] [cursor=pointer]
+                - generic [ref=f5e869]:
+                  - generic [ref=f5e871]:
+                    - generic [ref=f5e872]: Orders
+                    - generic "permission key" [ref=f5e873]: sales/order
+                  - 'radiogroup "Sales: Orders permission level" [ref=f5e874]':
+                    - radio "Off" [ref=f5e875] [cursor=pointer]
+                    - radio "View" [ref=f5e880] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e885] [cursor=pointer]
+            - region [ref=f5e889]:
+              - generic [ref=f5e890]:
+                - button "Settings 8 manage 1 view" [expanded] [ref=f5e891] [cursor=pointer]:
+                  - generic [ref=f5e895]: Settings
+                  - generic [ref=f5e897]:
+                    - generic [ref=f5e898]:
+                      - generic [ref=f5e900]: "8"
+                      - text: manage
+                    - generic [ref=f5e901]:
+                      - generic [ref=f5e903]: "1"
+                      - text: view
+                - group "Set every Settings row" [ref=f5e904]:
+                  - button "Off" [ref=f5e905] [cursor=pointer]
+                  - button "View" [ref=f5e906] [cursor=pointer]
+                  - button "Manage" [ref=f5e907] [cursor=pointer]
+              - generic [ref=f5e908]:
+                - generic [ref=f5e909]:
+                  - generic [ref=f5e910]:
+                    - generic [ref=f5e911]:
+                      - generic [ref=f5e912]: API Clients
+                      - generic "permission key" [ref=f5e913]: settings/api_client
+                    - generic [ref=f5e914]: issues keys that reach the data from outside
+                  - 'radiogroup "Settings: API Clients permission level" [ref=f5e915]':
+                    - radio "Off" [ref=f5e916] [cursor=pointer]
+                    - radio "View" [ref=f5e921] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e926] [cursor=pointer]
+                - generic [ref=f5e930]:
+                  - generic [ref=f5e932]:
+                    - generic [ref=f5e933]: Currencies
+                    - generic "permission key" [ref=f5e934]: settings/currency
+                  - 'radiogroup "Settings: Currencies permission level" [ref=f5e935]':
+                    - radio "Off" [ref=f5e936] [cursor=pointer]
+                    - radio "View" [ref=f5e941] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e946] [cursor=pointer]
+                - generic [ref=f5e950]:
+                  - generic [ref=f5e952]:
+                    - generic [ref=f5e953]: Error Log
+                    - generic "permission key" [ref=f5e954]: settings/error_log
+                  - 'radiogroup "Settings: Error Log permission level" [ref=f5e955]':
+                    - radio "Off" [ref=f5e956] [cursor=pointer]
+                    - radio "View" [ref=f5e961] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e966] [cursor=pointer]
+                - generic [ref=f5e970]:
+                  - generic [ref=f5e971]:
+                    - generic [ref=f5e972]:
+                      - generic [ref=f5e973]: Extensions
+                      - generic "permission key" [ref=f5e974]: settings/extension
+                    - generic [ref=f5e975]: installs code that runs with full access
+                  - 'radiogroup "Settings: Extensions permission level" [ref=f5e976]':
+                    - radio "Off" [ref=f5e977] [cursor=pointer]
+                    - radio "View" [ref=f5e982] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e987] [cursor=pointer]
+                - generic [ref=f5e991]:
+                  - generic [ref=f5e993]:
+                    - generic [ref=f5e994]: General Settings
+                    - generic "permission key" [ref=f5e995]: settings/setting
+                  - 'radiogroup "Settings: General Settings permission level" [ref=f5e996]':
+                    - radio "Off" [ref=f5e997] [cursor=pointer]
+                    - radio "View" [ref=f5e1002] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1007] [cursor=pointer]
+                - generic [ref=f5e1011]:
+                  - generic [ref=f5e1013]:
+                    - generic [ref=f5e1014]: Order Statuses
+                    - generic "permission key" [ref=f5e1015]: settings/order_status
+                  - 'radiogroup "Settings: Order Statuses permission level" [ref=f5e1016]':
+                    - radio "Off" [ref=f5e1017] [cursor=pointer]
+                    - radio "View" [ref=f5e1022] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1027] [cursor=pointer]
+                - generic [ref=f5e1031]:
+                  - generic [ref=f5e1033]:
+                    - generic [ref=f5e1034]: Settings Home
+                    - generic "permission key" [ref=f5e1035]: settings/settings_hub
+                  - 'radiogroup "Settings: Settings Home permission level" [ref=f5e1036]':
+                    - radio "Off" [ref=f5e1037] [cursor=pointer]
+                    - radio "View" [checked] [ref=f5e1042] [cursor=pointer]
+                - generic [ref=f5e1047]:
+                  - generic [ref=f5e1048]:
+                    - generic [ref=f5e1049]:
+                      - generic [ref=f5e1050]: User Groups
+                      - generic "permission key" [ref=f5e1051]: settings/user_group
+                    - generic [ref=f5e1052]: sets what every group may do, this one included
+                  - 'radiogroup "Settings: User Groups permission level" [ref=f5e1053]':
+                    - radio "Off" [ref=f5e1054] [cursor=pointer]
+                    - radio "View" [ref=f5e1059] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1064] [cursor=pointer]
+                - generic [ref=f5e1068]:
+                  - generic [ref=f5e1069]:
+                    - generic [ref=f5e1070]:
+                      - generic [ref=f5e1071]: Users
+                      - generic "permission key" [ref=f5e1072]: settings/user
+                    - generic [ref=f5e1073]: creates logins and moves people between groups
+                  - 'radiogroup "Settings: Users permission level" [ref=f5e1074]':
+                    - radio "Off" [ref=f5e1075] [cursor=pointer]
+                    - radio "View" [ref=f5e1080] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1085] [cursor=pointer]
+            - region [ref=f5e1089]:
+              - generic [ref=f5e1090]:
+                - button "Shopee 9 manage 1 view" [expanded] [ref=f5e1091] [cursor=pointer]:
+                  - generic [ref=f5e1095]: Shopee
+                  - generic [ref=f5e1097]:
+                    - generic [ref=f5e1098]:
+                      - generic [ref=f5e1100]: "9"
+                      - text: manage
+                    - generic [ref=f5e1101]:
+                      - generic [ref=f5e1103]: "1"
+                      - text: view
+                - group "Set every Shopee row" [ref=f5e1104]:
+                  - button "Off" [ref=f5e1105] [cursor=pointer]
+                  - button "View" [ref=f5e1106] [cursor=pointer]
+                  - button "Manage" [ref=f5e1107] [cursor=pointer]
+              - generic [ref=f5e1108]:
+                - generic [ref=f5e1109]:
+                  - generic [ref=f5e1110]:
+                    - generic [ref=f5e1111]:
+                      - generic [ref=f5e1112]: API explorer
+                      - generic "permission key" [ref=f5e1113]: shopee/api_explorer
+                    - generic [ref=f5e1114]: sends requests to the marketplace as your shop
+                  - 'radiogroup "Shopee: API explorer permission level" [ref=f5e1115]':
+                    - radio "Off" [ref=f5e1116] [cursor=pointer]
+                    - radio "View" [ref=f5e1121] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1126] [cursor=pointer]
+                - generic [ref=f5e1130]:
+                  - generic [ref=f5e1132]:
+                    - generic [ref=f5e1133]: Categories
+                    - generic "permission key" [ref=f5e1134]: shopee/category
+                  - 'radiogroup "Shopee: Categories permission level" [ref=f5e1135]':
+                    - radio "Off" [ref=f5e1136] [cursor=pointer]
+                    - radio "View" [ref=f5e1141] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1146] [cursor=pointer]
+                - generic [ref=f5e1150]:
+                  - generic [ref=f5e1152]:
+                    - generic [ref=f5e1153]: Category Attributes
+                    - generic "permission key" [ref=f5e1154]: shopee/category_attribute
+                  - 'radiogroup "Shopee: Category Attributes permission level" [ref=f5e1155]':
+                    - radio "Off" [ref=f5e1156] [cursor=pointer]
+                    - radio "View" [ref=f5e1161] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1166] [cursor=pointer]
+                - generic [ref=f5e1170]:
+                  - generic [ref=f5e1172]:
+                    - generic [ref=f5e1173]: Listings
+                    - generic "permission key" [ref=f5e1174]: shopee/product
+                  - 'radiogroup "Shopee: Listings permission level" [ref=f5e1175]':
+                    - radio "Off" [ref=f5e1176] [cursor=pointer]
+                    - radio "View" [ref=f5e1181] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1186] [cursor=pointer]
+                - generic [ref=f5e1190]:
+                  - generic [ref=f5e1192]:
+                    - generic [ref=f5e1193]: Logistics
+                    - generic "permission key" [ref=f5e1194]: shopee/logistics
+                  - 'radiogroup "Shopee: Logistics permission level" [ref=f5e1195]':
+                    - radio "Off" [ref=f5e1196] [cursor=pointer]
+                    - radio "View" [ref=f5e1201] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1206] [cursor=pointer]
+                - generic [ref=f5e1210]:
+                  - generic [ref=f5e1212]:
+                    - generic [ref=f5e1213]: Orders
+                    - generic "permission key" [ref=f5e1214]: shopee/order
+                  - 'radiogroup "Shopee: Orders permission level" [ref=f5e1215]':
+                    - radio "Off" [ref=f5e1216] [cursor=pointer]
+                    - radio "View" [ref=f5e1221] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1226] [cursor=pointer]
+                - generic [ref=f5e1230]:
+                  - generic [ref=f5e1232]:
+                    - generic [ref=f5e1233]: Overview
+                    - generic "permission key" [ref=f5e1234]: shopee/dashboard
+                  - 'radiogroup "Shopee: Overview permission level" [ref=f5e1235]':
+                    - radio "Off" [ref=f5e1236] [cursor=pointer]
+                    - radio "View" [checked] [ref=f5e1241] [cursor=pointer]
+                - generic [ref=f5e1246]:
+                  - generic [ref=f5e1248]:
+                    - generic [ref=f5e1249]: Product Groups
+                    - generic "permission key" [ref=f5e1250]: shopee/product_group
+                  - 'radiogroup "Shopee: Product Groups permission level" [ref=f5e1251]':
+                    - radio "Off" [ref=f5e1252] [cursor=pointer]
+                    - radio "View" [ref=f5e1257] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1262] [cursor=pointer]
+                - generic [ref=f5e1266]:
+                  - generic [ref=f5e1268]:
+                    - generic [ref=f5e1269]: Settings
+                    - generic "permission key" [ref=f5e1270]: shopee/settings
+                  - 'radiogroup "Shopee: Settings permission level" [ref=f5e1271]':
+                    - radio "Off" [ref=f5e1272] [cursor=pointer]
+                    - radio "View" [ref=f5e1277] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1282] [cursor=pointer]
+                - generic [ref=f5e1286]:
+                  - generic [ref=f5e1288]:
+                    - generic [ref=f5e1289]: Voucher
+                    - generic "permission key" [ref=f5e1290]: shopee/voucher
+                  - 'radiogroup "Shopee: Voucher permission level" [ref=f5e1291]':
+                    - radio "Off" [ref=f5e1292] [cursor=pointer]
+                    - radio "View" [ref=f5e1297] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1302] [cursor=pointer]
+            - region [ref=f5e1306]:
+              - generic [ref=f5e1307]:
+                - button "TikTok Shop 7 manage 1 view" [expanded] [ref=f5e1308] [cursor=pointer]:
+                  - generic [ref=f5e1312]: TikTok Shop
+                  - generic [ref=f5e1314]:
+                    - generic [ref=f5e1315]:
+                      - generic [ref=f5e1317]: "7"
+                      - text: manage
+                    - generic [ref=f5e1318]:
+                      - generic [ref=f5e1320]: "1"
+                      - text: view
+                - group "Set every TikTok Shop row" [ref=f5e1321]:
+                  - button "Off" [ref=f5e1322] [cursor=pointer]
+                  - button "View" [ref=f5e1323] [cursor=pointer]
+                  - button "Manage" [ref=f5e1324] [cursor=pointer]
+              - generic [ref=f5e1325]:
+                - generic [ref=f5e1326]:
+                  - generic [ref=f5e1327]:
+                    - generic [ref=f5e1328]:
+                      - generic [ref=f5e1329]: API explorer
+                      - generic "permission key" [ref=f5e1330]: tiktok/api_explorer
+                    - generic [ref=f5e1331]: sends requests to the marketplace as your shop
+                  - 'radiogroup "TikTok Shop: API explorer permission level" [ref=f5e1332]':
+                    - radio "Off" [ref=f5e1333] [cursor=pointer]
+                    - radio "View" [ref=f5e1338] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1343] [cursor=pointer]
+                - generic [ref=f5e1347]:
+                  - generic [ref=f5e1349]:
+                    - generic [ref=f5e1350]: Coupon
+                    - generic "permission key" [ref=f5e1351]: tiktok/coupon
+                  - 'radiogroup "TikTok Shop: Coupon permission level" [ref=f5e1352]':
+                    - radio "Off" [ref=f5e1353] [cursor=pointer]
+                    - radio "View" [ref=f5e1358] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1363] [cursor=pointer]
+                - generic [ref=f5e1367]:
+                  - generic [ref=f5e1369]:
+                    - generic [ref=f5e1370]: Listing
+                    - generic "permission key" [ref=f5e1371]: tiktok/listing
+                  - 'radiogroup "TikTok Shop: Listing permission level" [ref=f5e1372]':
+                    - radio "Off" [ref=f5e1373] [cursor=pointer]
+                    - radio "View" [ref=f5e1378] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1383] [cursor=pointer]
+                - generic [ref=f5e1387]:
+                  - generic [ref=f5e1389]:
+                    - generic [ref=f5e1390]: Orders
+                    - generic "permission key" [ref=f5e1391]: tiktok/order
+                  - 'radiogroup "TikTok Shop: Orders permission level" [ref=f5e1392]':
+                    - radio "Off" [ref=f5e1393] [cursor=pointer]
+                    - radio "View" [ref=f5e1398] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1403] [cursor=pointer]
+                - generic [ref=f5e1407]:
+                  - generic [ref=f5e1409]:
+                    - generic [ref=f5e1410]: Overview
+                    - generic "permission key" [ref=f5e1411]: tiktok/dashboard
+                  - 'radiogroup "TikTok Shop: Overview permission level" [ref=f5e1412]':
+                    - radio "Off" [ref=f5e1413] [cursor=pointer]
+                    - radio "View" [checked] [ref=f5e1418] [cursor=pointer]
+                - generic [ref=f5e1423]:
+                  - generic [ref=f5e1425]:
+                    - generic [ref=f5e1426]: Product
+                    - generic "permission key" [ref=f5e1427]: tiktok/product
+                  - 'radiogroup "TikTok Shop: Product permission level" [ref=f5e1428]':
+                    - radio "Off" [ref=f5e1429] [cursor=pointer]
+                    - radio "View" [ref=f5e1434] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1439] [cursor=pointer]
+                - generic [ref=f5e1443]:
+                  - generic [ref=f5e1445]:
+                    - generic [ref=f5e1446]: Product Groups
+                    - generic "permission key" [ref=f5e1447]: tiktok/product_group
+                  - 'radiogroup "TikTok Shop: Product Groups permission level" [ref=f5e1448]':
+                    - radio "Off" [ref=f5e1449] [cursor=pointer]
+                    - radio "View" [ref=f5e1454] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1459] [cursor=pointer]
+                - generic [ref=f5e1463]:
+                  - generic [ref=f5e1465]:
+                    - generic [ref=f5e1466]: Settings
+                    - generic "permission key" [ref=f5e1467]: tiktok/settings
+                  - 'radiogroup "TikTok Shop: Settings permission level" [ref=f5e1468]':
+                    - radio "Off" [ref=f5e1469] [cursor=pointer]
+                    - radio "View" [ref=f5e1474] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1479] [cursor=pointer]
+            - region [ref=f5e1483]:
+              - generic [ref=f5e1484]:
+                - button "Venta Store 5 manage 2 view" [expanded] [ref=f5e1485] [cursor=pointer]:
+                  - generic [ref=f5e1489]: Venta Store
+                  - generic [ref=f5e1491]:
+                    - generic [ref=f5e1492]:
+                      - generic [ref=f5e1494]: "5"
+                      - text: manage
+                    - generic [ref=f5e1495]:
+                      - generic [ref=f5e1497]: "2"
+                      - text: view
+                - group "Set every Venta Store row" [ref=f5e1498]:
+                  - button "Off" [ref=f5e1499] [cursor=pointer]
+                  - button "View" [ref=f5e1500] [cursor=pointer]
+                  - button "Manage" [ref=f5e1501] [cursor=pointer]
+              - generic [ref=f5e1502]:
+                - generic [ref=f5e1503]:
+                  - generic [ref=f5e1505]:
+                    - generic [ref=f5e1506]: Listing
+                    - generic "permission key" [ref=f5e1507]: venta/listing
+                  - 'radiogroup "Venta Store: Listing permission level" [ref=f5e1508]':
+                    - radio "Off" [ref=f5e1509] [cursor=pointer]
+                    - radio "View" [ref=f5e1514] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1519] [cursor=pointer]
+                - generic [ref=f5e1523]:
+                  - generic [ref=f5e1525]:
+                    - generic [ref=f5e1526]: Orders
+                    - generic "permission key" [ref=f5e1527]: venta/order
+                  - 'radiogroup "Venta Store: Orders permission level" [ref=f5e1528]':
+                    - radio "Off" [ref=f5e1529] [cursor=pointer]
+                    - radio "View" [ref=f5e1534] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1539] [cursor=pointer]
+                - generic [ref=f5e1543]:
+                  - generic [ref=f5e1545]:
+                    - generic [ref=f5e1546]: Orders over the API
+                    - generic "permission key" [ref=f5e1547]: venta/api_venta_order_api
+                  - 'radiogroup "Venta Store: Orders over the API permission level" [ref=f5e1548]':
+                    - radio "Off" [ref=f5e1549] [cursor=pointer]
+                    - radio "View" [checked] [ref=f5e1554] [cursor=pointer]
+                - generic [ref=f5e1559]:
+                  - generic [ref=f5e1561]:
+                    - generic [ref=f5e1562]: Overview
+                    - generic "permission key" [ref=f5e1563]: venta/dashboard
+                  - 'radiogroup "Venta Store: Overview permission level" [ref=f5e1564]':
+                    - radio "Off" [ref=f5e1565] [cursor=pointer]
+                    - radio "View" [checked] [ref=f5e1570] [cursor=pointer]
+                - generic [ref=f5e1575]:
+                  - generic [ref=f5e1577]:
+                    - generic [ref=f5e1578]: Product Groups
+                    - generic "permission key" [ref=f5e1579]: venta/product_group
+                  - 'radiogroup "Venta Store: Product Groups permission level" [ref=f5e1580]':
+                    - radio "Off" [ref=f5e1581] [cursor=pointer]
+                    - radio "View" [ref=f5e1586] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1591] [cursor=pointer]
+                - generic [ref=f5e1595]:
+                  - generic [ref=f5e1597]:
+                    - generic [ref=f5e1598]: Review
+                    - generic "permission key" [ref=f5e1599]: venta/review
+                  - 'radiogroup "Venta Store: Review permission level" [ref=f5e1600]':
+                    - radio "Off" [ref=f5e1601] [cursor=pointer]
+                    - radio "View" [ref=f5e1606] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1611] [cursor=pointer]
+                - generic [ref=f5e1615]:
+                  - generic [ref=f5e1617]:
+                    - generic [ref=f5e1618]: Settings
+                    - generic "permission key" [ref=f5e1619]: venta/settings
+                  - 'radiogroup "Venta Store: Settings permission level" [ref=f5e1620]':
+                    - radio "Off" [ref=f5e1621] [cursor=pointer]
+                    - radio "View" [ref=f5e1626] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1631] [cursor=pointer]
+            - region [ref=f5e1635]:
+              - generic [ref=f5e1636]:
+                - button "Warehousing 3 manage 0 view" [expanded] [ref=f5e1637] [cursor=pointer]:
+                  - generic [ref=f5e1641]: Warehousing
+                  - generic [ref=f5e1643]:
+                    - generic [ref=f5e1644]:
+                      - generic [ref=f5e1646]: "3"
+                      - text: manage
+                    - generic [ref=f5e1647]:
+                      - generic [ref=f5e1649]: "0"
+                      - text: view
+                - group "Set every Warehousing row" [ref=f5e1650]:
+                  - button "Off" [ref=f5e1651] [cursor=pointer]
+                  - button "View" [ref=f5e1652] [cursor=pointer]
+                  - button "Manage" [ref=f5e1653] [cursor=pointer]
+              - generic [ref=f5e1654]:
+                - generic [ref=f5e1655]:
+                  - generic [ref=f5e1657]:
+                    - generic [ref=f5e1658]: Inventory
+                    - generic "permission key" [ref=f5e1659]: warehousing/warehouse_inventory
+                  - 'radiogroup "Warehousing: Inventory permission level" [ref=f5e1660]':
+                    - radio "Off" [ref=f5e1661] [cursor=pointer]
+                    - radio "View" [ref=f5e1666] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1671] [cursor=pointer]
+                - generic [ref=f5e1675]:
+                  - generic [ref=f5e1677]:
+                    - generic [ref=f5e1678]: Locations
+                    - generic "permission key" [ref=f5e1679]: warehousing/warehouse
+                  - 'radiogroup "Warehousing: Locations permission level" [ref=f5e1680]':
+                    - radio "Off" [ref=f5e1681] [cursor=pointer]
+                    - radio "View" [ref=f5e1686] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1691] [cursor=pointer]
+                - generic [ref=f5e1695]:
+                  - generic [ref=f5e1697]:
+                    - generic [ref=f5e1698]: Transfers
+                    - generic "permission key" [ref=f5e1699]: warehousing/warehouse_transfer
+                  - 'radiogroup "Warehousing: Transfers permission level" [ref=f5e1700]':
+                    - radio "Off" [ref=f5e1701] [cursor=pointer]
+                    - radio "View" [ref=f5e1706] [cursor=pointer]
+                    - radio "Manage" [checked] [ref=f5e1711] [cursor=pointer]
+            - region [ref=f5e1715]:
+              - generic [ref=f5e1716]:
+                - button "Mobile app access What the VentaSync phone app may reach when this group signs in on it. Nothing here appears in the web interface. 4 manage 4 view" [ref=f5e1717] [cursor=pointer]:
+                  - generic [ref=f5e1721]:
+                    - generic [ref=f5e1722]: Mobile app access
+                    - generic [ref=f5e1723]: What the VentaSync phone app may reach when this group signs in on it. Nothing here appears in the web interface.
+                  - generic [ref=f5e1724]:
+                    - generic [ref=f5e1725]:
+                      - generic [ref=f5e1727]: "4"
+                      - text: manage
+                    - generic [ref=f5e1728]:
+                      - generic [ref=f5e1730]: "4"
+                      - text: view
+                - group "Set every Mobile app access row" [ref=f5e1731]:
+                  - button "Off" [ref=f5e1732] [cursor=pointer]
+                  - button "View" [ref=f5e1733] [cursor=pointer]
+                  - button "Manage" [ref=f5e1734] [cursor=pointer]
+            - region [ref=f5e1735]:
+              - generic [ref=f5e1736]:
+                - button "Partner API access What an outside system may read using an API client key issued to this group. 0 manage 3 view" [ref=f5e1737] [cursor=pointer]:
+                  - generic [ref=f5e1741]:
+                    - generic [ref=f5e1742]: Partner API access
+                    - generic [ref=f5e1743]: What an outside system may read using an API client key issued to this group.
+                  - generic [ref=f5e1744]:
+                    - generic [ref=f5e1745]:
+                      - generic [ref=f5e1747]: "0"
+                      - text: manage
+                    - generic [ref=f5e1748]:
+                      - generic [ref=f5e1750]: "3"
+                      - text: view
+                - group "Set every Partner API access row" [ref=f5e1751]:
+                  - button "Off" [ref=f5e1752] [cursor=pointer]
+                  - button "View" [ref=f5e1753] [cursor=pointer]
+                  - button "Manage" [ref=f5e1754] [cursor=pointer]
+        - generic [ref=f5e1756]:
+          - link "Cancel" [ref=f5e1757] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/settings/user-groups
+          - button "Save changes" [ref=f5e1758] [cursor=pointer]

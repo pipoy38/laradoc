@@ -1,0 +1,12 @@
+- generic [ref=f31e2]:
+  - generic [ref=f31e3]: "404"
+  - heading "Page not found" [level=1] [ref=f31e4]
+  - paragraph [ref=f31e5]:
+    - text: We couldn't find
+    - code [ref=f31e6]: /reports
+    - text: .
+  - paragraph [ref=f31e7]: The link may be outdated, or the page may have moved.
+  - generic [ref=f31e8]:
+    - button "← Back" [ref=f31e9] [cursor=pointer]
+    - link "Home" [ref=f31e10] [cursor=pointer]:
+      - /url: http://127.0.0.1:8000

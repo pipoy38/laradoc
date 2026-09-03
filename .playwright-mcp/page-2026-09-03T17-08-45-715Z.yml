@@ -1,0 +1,109 @@
+- generic [active] [ref=f18e1]:
+  - link "Skip to content" [ref=f18e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f18e4]:
+    - banner [ref=f18e5]:
+      - button "Open navigation" [ref=f18e6]
+      - generic [ref=f18e11]:
+        - generic [ref=f18e12]: Channels
+        - generic [ref=f18e13]: /
+        - generic [ref=f18e14]: TikTok Shop
+        - generic [ref=f18e15]: /
+        - generic [ref=f18e16]: Settings
+      - button "Search. Opens the command palette." [ref=f18e17] [cursor=pointer]:
+        - generic [ref=f18e21]: Search products, orders, SKUs
+        - generic [ref=f18e22]: Ctrl K
+      - generic [ref=f18e23]:
+        - generic [ref=f18e24]:
+          - button "Light theme" [ref=f18e25]
+          - button "Dark theme" [ref=f18e29]
+          - button "Match system theme" [ref=f18e32]
+        - button "DO Docs Screenshots (temporary)" [ref=f18e37]:
+          - generic [ref=f18e38]: DO
+          - generic [ref=f18e39]: Docs Screenshots (temporary)
+    - navigation "TikTok Shop navigation" [ref=f18e41]:
+      - link "Overview" [ref=f18e42] [cursor=pointer]:
+        - /url: http://127.0.0.1:8000/channels/tiktok
+      - button "Sell" [ref=f18e44] [cursor=pointer]
+      - button "Catalog" [ref=f18e48] [cursor=pointer]
+      - button "Settings" [ref=f18e52] [cursor=pointer]
+    - main [ref=f18e55]:
+      - generic [ref=f18e56]:
+        - generic [ref=f18e58]:
+          - heading "Settings" [level=1] [ref=f18e59]
+          - paragraph [ref=f18e60]: Credentials, status mapping and the API record for this TikTok Shop.
+        - generic [ref=f18e61]:
+          - generic [ref=f18e62]:
+            - heading "Environment" [level=2] [ref=f18e64]
+            - generic [ref=f18e65]:
+              - tablist "TikTok environment" [ref=f18e67]:
+                - tab "Production" [ref=f18e68] [cursor=pointer]
+                - tab "Sandbox" [selected] [ref=f18e69] [cursor=pointer]
+              - paragraph [ref=f18e70]: Every sync, push and order fetch uses the credentials of the environment selected here. It is also what the Authorise button sends, so switch first and authorise second.
+          - generic [ref=f18e71]:
+            - generic [ref=f18e72]:
+              - generic [ref=f18e73]:
+                - heading "Sandbox credentials" [level=2] [ref=f18e74]
+                - generic [ref=f18e75]: Configured
+              - generic [ref=f18e79]:
+                - generic [ref=f18e80]:
+                  - generic [ref=f18e81]:
+                    - generic [ref=f18e82]: Sandbox App Key
+                    - textbox "Sandbox App Key" [ref=f18e83]: 6jbrll2ef2isf
+                  - generic [ref=f18e84]:
+                    - generic [ref=f18e85]: Sandbox App Secret
+                    - generic [ref=f18e86]:
+                      - generic [ref=f18e87]:
+                        - textbox "Sandbox App Secret" [ref=f18e88]: ••••••••••••••••••••••••••••••••••••••••
+                        - button "View and edit Sandbox App Secret" [ref=f18e89] [cursor=pointer]:
+                          - generic [ref=f18e93]: View and edit
+                      - paragraph [ref=f18e94]: 40 stored characters · read-only until you choose to edit
+                    - generic [ref=f18e95]: Stored encrypted. Read-only until you choose to edit it.
+                  - generic [ref=f18e96]:
+                    - generic [ref=f18e97]: Redirect URI
+                    - textbox "Redirect URI" [ref=f18e98]: https://127.0.0.1:8000/tiktok/callback
+                    - generic [ref=f18e99]: Register this exact URL in your TikTok Shop sandbox app. It is always https. To change it, edit APP_URL in the environment file.
+                - generic [ref=f18e100]:
+                  - button "Save sandbox settings" [ref=f18e101] [cursor=pointer]
+                  - generic [ref=f18e102]: Leave a masked field untouched to keep what is already stored. Saving also switches the shop to sandbox.
+            - generic [ref=f18e103]:
+              - heading "Sandbox authorisation" [level=2] [ref=f18e105]
+              - generic [ref=f18e106]:
+                - generic [ref=f18e107]: No token
+                - generic [ref=f18e110]: Fill in the sandbox credentials first, then authorise.
+              - generic [ref=f18e111]:
+                - generic [ref=f18e112]:
+                  - generic [ref=f18e113]: "1"
+                  - generic [ref=f18e114]:
+                    - generic [ref=f18e115]: Authorise with the TikTok test environment
+                    - link "Open sandbox authorisation" [ref=f18e117] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/tiktok/authorize
+                    - paragraph [ref=f18e118]: Opens the TikTok test environment in a new tab, using the sandbox credentials above.
+                - generic [ref=f18e119]:
+                  - generic [ref=f18e120]: "2"
+                  - generic [ref=f18e121]:
+                    - generic [ref=f18e122]: Exchange an auth code by hand
+                    - generic [ref=f18e123]:
+                      - generic [ref=f18e124]:
+                        - generic [ref=f18e125]: Auth code
+                        - textbox "Auth code" [ref=f18e126]:
+                          - /placeholder: Paste the sandbox code here
+                      - button "Exchange" [ref=f18e127] [cursor=pointer]
+                - generic [ref=f18e128]:
+                  - generic [ref=f18e129]: "3"
+                  - generic [ref=f18e130]:
+                    - generic [ref=f18e131]: Fetch the sandbox shop
+                    - button "Fetch shop" [ref=f18e133] [cursor=pointer]
+                - generic [ref=f18e134]:
+                  - generic [ref=f18e135]: "4"
+                  - generic [ref=f18e136]:
+                    - generic [ref=f18e137]: Refresh an expired token
+                    - button "Refresh sandbox token" [ref=f18e139] [cursor=pointer]
+          - generic [ref=f18e140]:
+            - heading "Setting this up for the first time" [level=2] [ref=f18e142]
+            - list [ref=f18e143]:
+              - listitem [ref=f18e144]: Register a developer account at partner.tiktokshop.com. This is the seller side. developers.tiktok.com is a different platform and will not sync shops, orders or products.
+              - listitem [ref=f18e145]: Create an app in the Partner Center. It gives you an App Key and an App Secret.
+              - listitem [ref=f18e146]: Paste the Redirect URI shown above into that app's settings, exactly as it appears.
+              - listitem [ref=f18e147]: Put the App Key and App Secret in the fields above and save.
+              - listitem [ref=f18e148]: Authorise the shop, then fetch the shop so the shop cipher is stored.

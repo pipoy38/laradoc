@@ -1,0 +1,27 @@
+- generic [ref=f3e2]:
+  - generic [ref=f3e3]:
+    - img "NGD Musical Goods Trading" [ref=f3e4]
+    - paragraph [ref=f3e5]: NGD Musical Goods Trading
+  - generic [ref=f3e6]:
+    - heading "Sign in" [level=1] [ref=f3e7]
+    - generic [ref=f3e8]:
+      - generic [ref=f3e9]:
+        - generic [ref=f3e10]:
+          - text: Username
+          - generic [ref=f3e11]: Required
+        - textbox "Username Required" [active] [ref=f3e12]:
+          - /placeholder: Your assigned username
+      - generic [ref=f3e13]:
+        - generic [ref=f3e14]:
+          - text: Password
+          - generic [ref=f3e15]: Required
+        - textbox "Password Required" [ref=f3e16]:
+          - /placeholder: Your password
+      - generic [ref=f3e17]:
+        - generic [ref=f3e18] [cursor=pointer]:
+          - checkbox "Remember me" [ref=f3e19]
+          - text: Remember me
+        - link "Forgot password?" [ref=f3e20] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/forgot-password
+      - button "Sign in" [ref=f3e21] [cursor=pointer]
+    - paragraph [ref=f3e22]: Use your assigned username, not your email address.

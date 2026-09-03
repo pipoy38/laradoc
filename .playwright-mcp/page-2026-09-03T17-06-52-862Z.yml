@@ -1,0 +1,436 @@
+- generic [ref=f1e1]:
+  - link "Skip to content" [ref=f1e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f1e3]:
+    - complementary [ref=f1e398]:
+      - generic [ref=f1e399]:
+        - img "NGD Musical Goods Trading" [ref=f1e400]
+        - button "Close navigation" [ref=f1e401]
+      - navigation "Main" [ref=f1e405]:
+        - link "Dashboard" [ref=f1e406] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/dashboard
+        - generic [ref=f1e411]:
+          - button "Sales" [ref=f1e412]
+          - generic:
+            - generic:
+              - link "Orders" [ref=f1e420] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders
+              - link "Payments" [ref=f1e421] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/order-payments
+        - link "Fulfilment 34" [ref=f1e422] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/channels/fulfilment
+          - generic [ref=f1e426]: Fulfilment
+          - generic [ref=f1e427]: "34"
+        - generic [ref=f1e428]:
+          - button "Channels" [ref=f1e429]
+          - generic:
+            - generic:
+              - link "All channels" [ref=f1e436] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/channels
+              - link "All listings" [ref=f1e437] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/channels/listings
+              - link "Lazada" [ref=f1e438] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/channels/lazada
+              - link "Shopee" [ref=f1e439] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/channels/shopee/1
+              - link "TikTok Shop" [ref=f1e440] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/channels/tiktok
+              - link "Venta New Gear Day" [ref=f1e441] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/channels/venta/2
+              - link "Venta Dragon Switch" [ref=f1e442] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/channels/venta/3
+              - link "OpenCart New Gear Day" [ref=f1e443] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/channels/opencart/1
+              - link "OpenCart Dragon Switch" [ref=f1e444] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/channels/opencart/2
+        - generic [ref=f1e445]:
+          - button "Catalog" [ref=f1e446]
+          - generic:
+            - generic:
+              - link "Products" [ref=f1e454] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/catalog/products
+              - link "Categories" [ref=f1e455] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/catalog/categories
+              - link "Manufacturers" [ref=f1e456] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/catalog/manufacturers
+              - link "Reviews" [ref=f1e457] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/catalog/reviews
+        - generic [ref=f1e458]:
+          - button "Purchasing" [ref=f1e459]
+          - generic:
+            - generic:
+              - link "Purchase Orders" [ref=f1e468] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/purchasing/purchase-orders
+              - link "Vendors" [ref=f1e469] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/purchasing/vendors
+              - link "Reorder Suggestions" [ref=f1e470] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/purchasing/reorder-suggestions
+        - generic [ref=f1e471]:
+          - button "Warehousing" [ref=f1e472]
+          - generic:
+            - generic:
+              - link "Transfers" [ref=f1e480] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/warehousing/transfers
+              - link "Inventory" [ref=f1e481] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/warehousing/inventory
+              - link "Locations" [ref=f1e482] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/warehousing/locations
+              - link "Stock Adjustment" [ref=f1e483] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/warehousing/adjust
+        - generic [ref=f1e484]:
+          - button "Reports" [ref=f1e485]
+          - generic:
+            - generic:
+              - link "Orders" [ref=f1e493] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/reports/orders
+              - link "Products" [ref=f1e494] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/reports/products
+              - link "Categories" [ref=f1e495] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/reports/categories
+              - link "Fees" [ref=f1e496] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/reports/fees
+              - link "Payouts" [ref=f1e497] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/reports/payouts
+              - link "Inventory" [ref=f1e498] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/reports/inventory
+        - generic [ref=f1e499]:
+          - button "Petty Cash" [ref=f1e500]
+          - generic:
+            - generic:
+              - link "Petty Cash" [ref=f1e508] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/petty-cash
+              - link "Settings" [ref=f1e509] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/petty-cash/settings
+        - generic [ref=f1e510]:
+          - button "Audit & Monitoring" [ref=f1e511]
+          - link "Activity Log" [ref=f1e518] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/activity-log
+        - link "AI Tools" [ref=f1e519] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/ai-tools
+        - link "Settings" [ref=f1e524] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/settings
+    - generic [ref=f1e4]:
+      - banner [ref=f1e5]:
+        - button "Open navigation" [active] [ref=f1e6]
+        - generic [ref=f1e9]: Dashboard
+        - button "Search. Opens the command palette." [ref=f1e13] [cursor=pointer]:
+          - generic [ref=f1e17]: Search products, orders, SKUs
+          - generic [ref=f1e18]: Ctrl K
+        - generic [ref=f1e19]:
+          - generic [ref=f1e20]:
+            - button "Light theme" [ref=f1e21]
+            - button "Dark theme" [ref=f1e25]
+            - button "Match system theme" [ref=f1e28]
+          - button "DO Docs Screenshots (temporary)" [ref=f1e33]:
+            - generic [ref=f1e34]: DO
+            - generic [ref=f1e35]: Docs Screenshots (temporary)
+      - main [ref=f1e36]:
+        - generic [ref=f1e37]:
+          - generic [ref=f1e38]:
+            - heading "Good morning" [level=1] [ref=f1e39]
+            - paragraph [ref=f1e40]: Friday, 4 September · trading since 00:00
+          - link "Find an order" [ref=f1e42] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/search
+        - generic [ref=f1e46]:
+          - link "Orders today 0 none yesterday to compare" [ref=f1e47] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/sales/orders
+            - generic [ref=f1e48]: Orders today
+            - generic [ref=f1e55]: "0"
+            - generic [ref=f1e56]: none yesterday to compare
+          - link "Revenue today ₱0.00 none yesterday to compare" [ref=f1e57] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/sales/orders
+            - generic [ref=f1e58]: Revenue today
+            - generic [ref=f1e64]: ₱0.00
+            - generic [ref=f1e65]: none yesterday to compare
+          - link "Week to date ₱0.00 0 orders" [ref=f1e66] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/sales/orders
+            - generic [ref=f1e67]: Week to date
+            - generic [ref=f1e73]: ₱0.00
+            - generic [ref=f1e74]: 0 orders
+          - link "Waiting to ship 71 across your channels" [ref=f1e75] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/channels/fulfilment
+            - generic [ref=f1e76]: Waiting to ship
+            - generic [ref=f1e82]: "71"
+            - generic [ref=f1e83]: across your channels
+          - link "Stock at cost ₱3.9M 45.5% margin at list" [ref=f1e84] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/catalog/products
+            - generic [ref=f1e85]: Stock at cost
+            - generic [ref=f1e91]: ₱3.9M
+            - generic [ref=f1e92]: 45.5% margin at list
+        - generic [ref=f1e93]:
+          - link "Lazada reconnect needed, the access token expired 34 waiting" [ref=f1e94] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/channels/lazada/orders?tab=TO_SHIP
+            - img [aria-hidden] [ref=f1e95]:
+              - generic [ref=f1e97]: L
+            - generic [ref=f1e98]:
+              - generic [ref=f1e99]: Lazada
+              - generic [ref=f1e100]: reconnect needed, the access token expired
+            - generic [ref=f1e101]:
+              - text: "34"
+              - generic [ref=f1e102]: waiting
+          - link "Shopee reconnect needed, the access token expired 3 listings need attention 0 waiting" [ref=f1e103] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/channels/shopee/1/orders
+            - img [aria-hidden] [ref=f1e104]:
+              - generic [ref=f1e106]: S
+            - generic [ref=f1e107]:
+              - generic [ref=f1e108]: Shopee
+              - generic [ref=f1e109]: reconnect needed, the access token expired
+              - generic [ref=f1e110]: 3 listings need attention
+            - generic [ref=f1e111]:
+              - text: "0"
+              - generic [ref=f1e112]: waiting
+          - link "TikTok reconnect needed, the access token expired 0 waiting" [ref=f1e113] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/channels/tiktok/orders
+            - img [aria-hidden] [ref=f1e114]:
+              - generic [ref=f1e116]: T
+            - generic [ref=f1e117]:
+              - generic [ref=f1e118]: TikTok
+              - generic [ref=f1e119]: reconnect needed, the access token expired
+            - generic [ref=f1e120]:
+              - text: "0"
+              - generic [ref=f1e121]: waiting
+          - link "New Gear Day connected 1 waiting" [ref=f1e122] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/channels/venta/2/orders
+            - img [aria-hidden] [ref=f1e123]:
+              - generic [ref=f1e125]: "N"
+            - generic [ref=f1e126]:
+              - generic [ref=f1e127]: New Gear Day
+              - generic [ref=f1e128]: connected
+            - generic [ref=f1e129]:
+              - text: "1"
+              - generic [ref=f1e130]: waiting
+        - generic [ref=f1e131]:
+          - generic [ref=f1e132]:
+            - generic [ref=f1e133]:
+              - heading "Latest orders" [level=2] [ref=f1e134]
+              - generic [ref=f1e135]: 44,255 in total
+              - link "All orders" [ref=f1e136] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/sales/orders
+            - table [ref=f1e138]:
+              - rowgroup [ref=f1e139]:
+                - row [ref=f1e140]:
+                  - columnheader "Order" [ref=f1e141]
+                  - columnheader "Channel" [ref=f1e142]
+                  - columnheader "Buyer" [ref=f1e143]
+                  - columnheader "Placed" [ref=f1e144]
+                  - columnheader "Total" [ref=f1e145]
+                  - columnheader "State" [ref=f1e146]
+              - rowgroup [ref=f1e147]:
+                - row [ref=f1e148]:
+                  - cell [ref=f1e149]:
+                    - link "#1000082" [ref=f1e150] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/sales/orders/1000082
+                  - cell "Shopee" [ref=f1e151]
+                  - cell "local_regress.ph" [ref=f1e154]
+                  - cell "2w ago" [ref=f1e155]
+                  - cell "₱5,288.00" [ref=f1e156]
+                  - cell "Processing" [ref=f1e157]
+                - row [ref=f1e160]:
+                  - cell [ref=f1e161]:
+                    - link "#1000081" [ref=f1e162] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/sales/orders/1000081
+                  - cell "Lazada" [ref=f1e163]
+                  - cell "J******e" [ref=f1e166]
+                  - cell "2w ago" [ref=f1e167]
+                  - cell "₱1,320.00" [ref=f1e168]
+                  - cell "Processing" [ref=f1e169]
+                - row [ref=f1e172]:
+                  - cell [ref=f1e173]:
+                    - link "#1000080" [ref=f1e174] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/sales/orders/1000080
+                  - cell "Lazada" [ref=f1e175]
+                  - cell "J******e" [ref=f1e178]
+                  - cell "2w ago" [ref=f1e179]
+                  - cell "₱1.00" [ref=f1e180]
+                  - cell "Complete" [ref=f1e181]
+                - row [ref=f1e184]:
+                  - cell [ref=f1e185]:
+                    - link "#1000079" [ref=f1e186] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/sales/orders/1000079
+                  - cell "Lazada" [ref=f1e187]
+                  - cell "J******e" [ref=f1e190]
+                  - cell "2w ago" [ref=f1e191]
+                  - cell "₱1.00" [ref=f1e192]
+                  - cell "Canceled" [ref=f1e193]
+                - row [ref=f1e196]:
+                  - cell [ref=f1e197]:
+                    - link "#1000078" [ref=f1e198] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/sales/orders/1000078
+                  - cell "Lazada" [ref=f1e199]
+                  - cell "J******e" [ref=f1e202]
+                  - cell "2w ago" [ref=f1e203]
+                  - cell "₱50.00" [ref=f1e204]
+                  - cell "Processing" [ref=f1e205]
+                - row [ref=f1e208]:
+                  - cell [ref=f1e209]:
+                    - link "#1000077" [ref=f1e210] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/sales/orders/1000077
+                  - cell "Lazada" [ref=f1e211]
+                  - cell "J******e" [ref=f1e214]
+                  - cell "2w ago" [ref=f1e215]
+                  - cell "₱50.00" [ref=f1e216]
+                  - cell "Processing" [ref=f1e217]
+                - row [ref=f1e220]:
+                  - cell [ref=f1e221]:
+                    - link "#1000076" [ref=f1e222] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/sales/orders/1000076
+                  - cell "Lazada" [ref=f1e223]
+                  - cell "J******e" [ref=f1e226]
+                  - cell "2w ago" [ref=f1e227]
+                  - cell "₱50.00" [ref=f1e228]
+                  - cell "Pending" [ref=f1e229]
+                - row [ref=f1e232]:
+                  - cell [ref=f1e233]:
+                    - link "#1000075" [ref=f1e234] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/sales/orders/1000075
+                  - cell "Lazada" [ref=f1e235]
+                  - cell "J******e" [ref=f1e238]
+                  - cell "2w ago" [ref=f1e239]
+                  - cell "₱50.00" [ref=f1e240]
+                  - cell "Pending" [ref=f1e241]
+                - row [ref=f1e244]:
+                  - cell [ref=f1e245]:
+                    - link "#1000074" [ref=f1e246] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/sales/orders/1000074
+                  - cell "Lazada" [ref=f1e247]
+                  - cell "J******e" [ref=f1e250]
+                  - cell "2w ago" [ref=f1e251]
+                  - cell "₱50.00" [ref=f1e252]
+                  - cell "Pending" [ref=f1e253]
+                - row [ref=f1e256]:
+                  - cell [ref=f1e257]:
+                    - link "#1000073" [ref=f1e258] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/sales/orders/1000073
+                  - cell "Lazada" [ref=f1e259]
+                  - cell "J******e" [ref=f1e262]
+                  - cell "2w ago" [ref=f1e263]
+                  - cell "₱50.00" [ref=f1e264]
+                  - cell "Pending" [ref=f1e265]
+            - generic [ref=f1e268]:
+              - heading "Sales over the last 30 days" [level=2] [ref=f1e269]
+              - group "Chart range" [ref=f1e270]:
+                - link "30d" [ref=f1e271] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/dashboard?range=30d
+                - link "90d" [ref=f1e272] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/dashboard?range=90d
+                - link "This Month" [ref=f1e273] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/dashboard?range=mtd
+                - link "Last Month" [ref=f1e274] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/dashboard?range=lastmonth
+                - link "This Year" [ref=f1e275] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/dashboard?range=ytd
+                - link "12m" [ref=f1e276] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/dashboard?range=12m
+                - link "All Time" [ref=f1e277] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/dashboard?range=all
+            - generic [ref=f1e279]:
+              - generic [ref=f1e280]:
+                - generic [ref=f1e281]:
+                  - text: Revenue
+                  - generic [ref=f1e284]: peak ₱783,515.00
+                - generic [ref=f1e285]:
+                  - text: Orders
+                  - generic [ref=f1e288]: peak 24
+              - img "Revenue and orders over the period, each against its own scale" [ref=f1e290]:
+                - generic "Aug 06 · ₱6,000.00 · 1 order" [ref=f1e294]
+                - generic "Aug 07 · ₱136,123.00 · 8 orders" [ref=f1e295]
+                - generic "Aug 08 · ₱0.00 · 0 orders" [ref=f1e296]
+                - generic "Aug 09 · ₱0.00 · 0 orders" [ref=f1e297]
+                - generic "Aug 10 · ₱783,515.00 · 24 orders" [ref=f1e298]
+                - generic "Aug 11 · ₱0.00 · 0 orders" [ref=f1e299]
+                - generic "Aug 12 · ₱0.00 · 0 orders" [ref=f1e300]
+                - generic "Aug 13 · ₱28,188.00 · 14 orders" [ref=f1e301]
+                - generic "Aug 14 · ₱0.00 · 0 orders" [ref=f1e302]
+                - generic "Aug 15 · ₱0.00 · 0 orders" [ref=f1e303]
+                - generic "Aug 16 · ₱0.00 · 0 orders" [ref=f1e304]
+                - generic "Aug 17 · ₱0.00 · 0 orders" [ref=f1e305]
+                - generic "Aug 18 · ₱0.00 · 0 orders" [ref=f1e306]
+                - generic "Aug 19 · ₱2,091.00 · 19 orders" [ref=f1e307]
+                - generic "Aug 20 · ₱5,288.00 · 1 order" [ref=f1e308]
+                - generic "Aug 21 · ₱0.00 · 0 orders" [ref=f1e309]
+                - generic "Aug 22 · ₱0.00 · 0 orders" [ref=f1e310]
+                - generic "Aug 23 · ₱0.00 · 0 orders" [ref=f1e311]
+                - generic "Aug 24 · ₱0.00 · 0 orders" [ref=f1e312]
+                - generic "Aug 25 · ₱0.00 · 0 orders" [ref=f1e313]
+                - generic "Aug 26 · ₱0.00 · 0 orders" [ref=f1e314]
+                - generic "Aug 27 · ₱0.00 · 0 orders" [ref=f1e315]
+                - generic "Aug 28 · ₱0.00 · 0 orders" [ref=f1e316]
+                - generic "Aug 29 · ₱0.00 · 0 orders" [ref=f1e317]
+                - generic "Aug 30 · ₱0.00 · 0 orders" [ref=f1e318]
+                - generic "Aug 31 · ₱0.00 · 0 orders" [ref=f1e319]
+                - generic "Sep 01 · ₱0.00 · 0 orders" [ref=f1e320]
+                - generic "Sep 02 · ₱0.00 · 0 orders" [ref=f1e321]
+                - generic "Sep 03 · ₱0.00 · 0 orders" [ref=f1e322]
+                - generic "Sep 04 · ₱0.00 · 0 orders" [ref=f1e323]
+              - generic [ref=f1e324]:
+                - generic [ref=f1e325]: Aug 06
+                - generic [ref=f1e326]: Aug 11
+                - generic [ref=f1e327]: Aug 16
+                - generic [ref=f1e328]: Aug 21
+                - generic [ref=f1e329]: Aug 26
+                - generic [ref=f1e330]: Aug 31
+                - generic [ref=f1e331]: Sep 04
+            - generic [ref=f1e332]:
+              - heading "Orders by channel" [level=2] [ref=f1e333]
+              - generic [ref=f1e334]: the last 30 days
+              - generic [ref=f1e335]:
+                - button "What this ring counts" [ref=f1e336]:
+                  - generic [aria-hidden] [ref=f1e337]: "?"
+                - tooltip "Orders, not revenue. A channel with one large order can hold a small share of the ring and the largest figure in the revenue column beside it."
+            - generic [ref=f1e338]:
+              - img "Share of orders by channel" [ref=f1e340]:
+                - 'generic "Lazada: 65 orders" [ref=f1e341]'
+                - 'generic "Shopee: 2 orders" [ref=f1e342]'
+                - generic [ref=f1e343]: "67"
+                - generic [ref=f1e344]: orders
+              - table [ref=f1e346]:
+                - rowgroup [ref=f1e347]:
+                  - row [ref=f1e348]:
+                    - columnheader "Channel" [ref=f1e349]
+                    - columnheader "Orders" [ref=f1e350]
+                    - columnheader "Revenue" [ref=f1e351]
+                    - columnheader "Share" [ref=f1e352]
+                - rowgroup [ref=f1e353]:
+                  - row [ref=f1e354]:
+                    - cell [ref=f1e355]:
+                      - link "Lazada" [ref=f1e358] [cursor=pointer]:
+                        - /url: http://127.0.0.1:8000/channels/lazada/orders?tab=TO_SHIP
+                    - cell "65" [ref=f1e359]
+                    - cell "₱955,917.00" [ref=f1e360]
+                    - cell "97.0%" [ref=f1e361]
+                  - row [ref=f1e362]:
+                    - cell [ref=f1e363]:
+                      - link "Shopee" [ref=f1e366] [cursor=pointer]:
+                        - /url: http://127.0.0.1:8000/channels/shopee/1/orders
+                    - cell "2" [ref=f1e367]
+                    - cell "₱5,288.00" [ref=f1e368]
+                    - cell "3.0%" [ref=f1e369]
+          - generic [ref=f1e370]:
+            - generic [ref=f1e371]:
+              - heading "Inventory" [level=2] [ref=f1e372]
+              - generic [ref=f1e373]: 670 products
+            - generic [ref=f1e374]:
+              - generic [ref=f1e375]:
+                - heading "Stock" [level=2] [ref=f1e376]
+                - generic [ref=f1e377]: enabled products only
+              - generic [ref=f1e378]:
+                - term [ref=f1e379]: At cost
+                - definition [ref=f1e380]: ₱3,853,255.41
+                - term [ref=f1e381]: At sale price
+                - definition [ref=f1e382]: ₱7,076,029.00
+                - term [ref=f1e383]: Margin on stock
+                - definition [ref=f1e384]: 45.5%
+                - term [ref=f1e385]: All time
+                - definition [ref=f1e386]: ₱91,924,529.97
+            - generic [ref=f1e387]:
+              - generic [ref=f1e388]:
+                - heading "Purchasing" [level=2] [ref=f1e389]
+                - link "All purchase orders" [ref=f1e390] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/purchasing/purchase-orders
+              - generic [ref=f1e391]:
+                - term [ref=f1e392]: Open purchase orders
+                - definition [ref=f1e393]: 5 · 1 awaiting delivery
+                - term [ref=f1e394]: Overdue deliveries
+                - definition [ref=f1e395]: "0"
+                - term [ref=f1e396]: Purchasing this month
+                - definition [ref=f1e397]: ₱0.00

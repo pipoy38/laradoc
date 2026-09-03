@@ -1,0 +1,60 @@
+- generic [active] [ref=f36e1]:
+  - link "Skip to content" [ref=f36e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f36e4]:
+    - banner [ref=f36e5]:
+      - button "Open navigation" [ref=f36e6]
+      - generic [ref=f36e9]: Petty Cash
+      - button "Search. Opens the command palette." [ref=f36e13] [cursor=pointer]:
+        - generic [ref=f36e17]: Search products, orders, SKUs
+        - generic [ref=f36e18]: Ctrl K
+      - generic [ref=f36e19]:
+        - generic [ref=f36e20]:
+          - button "Light theme" [ref=f36e21]
+          - button "Dark theme" [ref=f36e25]
+          - button "Match system theme" [ref=f36e28]
+        - button "DO Docs Screenshots (temporary)" [ref=f36e33]:
+          - generic [ref=f36e34]: DO
+          - generic [ref=f36e35]: Docs Screenshots (temporary)
+    - main [ref=f36e36]:
+      - generic [ref=f36e37]:
+        - generic [ref=f36e38]:
+          - generic [ref=f36e39]:
+            - heading "Petty cash" [level=1] [ref=f36e40]
+            - paragraph [ref=f36e41]: 0 entries
+          - button "New expense" [ref=f36e42] [cursor=pointer]
+        - generic [ref=f36e43]:
+          - generic [ref=f36e44]:
+            - generic [ref=f36e45]: Your balance
+            - generic [ref=f36e46]: ₱0.00
+            - generic [ref=f36e47]: ₱0.00 handed out, ₱0.00 spent
+          - generic [ref=f36e48]:
+            - generic [ref=f36e49]:
+              - generic [ref=f36e50]: Handed to you
+              - generic [ref=f36e51]: ₱0.00
+            - generic [ref=f36e52]:
+              - generic [ref=f36e53]: Spent
+              - generic [ref=f36e54]: ₱0.00
+        - generic [ref=f36e55]:
+          - generic [ref=f36e56]:
+            - generic [ref=f36e57]: Dated
+            - textbox "Dated" [ref=f36e58]
+            - generic [ref=f36e59]: to
+            - generic [ref=f36e60]: On or before
+            - textbox "On or before" [ref=f36e61]
+          - generic [ref=f36e62]:
+            - generic [ref=f36e63]: Category
+            - combobox "Category" [ref=f36e64]:
+              - option "Any category" [selected]
+              - option "Gas/Fuel"
+              - option "Shipping/Courier"
+              - option "Tools & Supplies"
+              - option "Office Supplies"
+              - option "Food/Meals"
+              - option "Transportation"
+              - option "Miscellaneous"
+          - button "Apply" [ref=f36e65] [cursor=pointer]
+        - generic [ref=f36e66]:
+          - paragraph [ref=f36e67]: Nothing logged yet
+          - paragraph [ref=f36e68]: Log what you spent and it appears here against your balance.
+          - button "New expense" [ref=f36e70] [cursor=pointer]

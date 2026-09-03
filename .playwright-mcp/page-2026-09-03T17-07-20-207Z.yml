@@ -1,0 +1,273 @@
+- generic [active] [ref=f7e1]:
+  - link "Skip to content" [ref=f7e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f7e4]:
+    - banner [ref=f7e5]:
+      - button "Open navigation" [ref=f7e6]
+      - generic [ref=f7e11]:
+        - link "Settings" [ref=f7e12] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/settings
+        - generic [ref=f7e13]: /
+        - generic [ref=f7e14]: Order statuses
+      - button "Search. Opens the command palette." [ref=f7e15] [cursor=pointer]:
+        - generic [ref=f7e19]: Search products, orders, SKUs
+        - generic [ref=f7e20]: Ctrl K
+      - generic [ref=f7e21]:
+        - generic [ref=f7e22]:
+          - button "Light theme" [ref=f7e23]
+          - button "Dark theme" [ref=f7e27]
+          - button "Match system theme" [ref=f7e30]
+        - button "DO Docs Screenshots (temporary)" [ref=f7e35]:
+          - generic [ref=f7e36]: DO
+          - generic [ref=f7e37]: Docs Screenshots (temporary)
+    - main [ref=f7e38]:
+      - generic [ref=f7e39]:
+        - generic [ref=f7e40]:
+          - heading "Order statuses" [level=1] [ref=f7e41]
+          - paragraph [ref=f7e42]: 16 statuses an order can move through. Each marketplace maps its own statuses onto these in that channel's settings.
+        - link "New status" [ref=f7e43] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/settings/order-statuses/create
+      - generic [ref=f7e44]:
+        - generic [ref=f7e45]: Search order statuses
+        - searchbox "Search order statuses" [ref=f7e46]
+      - generic [ref=f7e47]:
+        - table [ref=f7e49]:
+          - rowgroup [ref=f7e50]:
+            - row [ref=f7e51]:
+              - columnheader [ref=f7e52]:
+                - checkbox "Select every order status on this page" [ref=f7e53]
+              - columnheader "ID" [ref=f7e54]
+              - columnheader "Name" [ref=f7e55]
+              - columnheader "Takes stock" [ref=f7e56]
+              - columnheader "Counts as revenue" [ref=f7e57]
+              - columnheader "Actions" [ref=f7e58]
+          - rowgroup [ref=f7e60]:
+            - row [ref=f7e61]:
+              - cell [ref=f7e62]:
+                - checkbox "Select Pending" [ref=f7e63]
+              - cell "1" [ref=f7e64]
+              - cell [ref=f7e65]:
+                - link "Pending" [ref=f7e66] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/settings/order-statuses/1/edit
+              - cell "Yes" [ref=f7e67]
+              - cell "Yes" [ref=f7e71]
+              - cell [ref=f7e75]:
+                - generic [ref=f7e76]:
+                  - link "Edit" [ref=f7e77] [cursor=pointer]:
+                    - /url: http://127.0.0.1:8000/settings/order-statuses/1/edit
+                  - button "Delete" [ref=f7e78] [cursor=pointer]
+            - row [ref=f7e79]:
+              - cell [ref=f7e80]:
+                - checkbox "Select Processing" [ref=f7e81]
+              - cell "2" [ref=f7e82]
+              - cell [ref=f7e83]:
+                - link "Processing" [ref=f7e84] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/settings/order-statuses/2/edit
+              - cell "Yes" [ref=f7e85]
+              - cell "Yes" [ref=f7e89]
+              - cell [ref=f7e93]:
+                - generic [ref=f7e94]:
+                  - link "Edit" [ref=f7e95] [cursor=pointer]:
+                    - /url: http://127.0.0.1:8000/settings/order-statuses/2/edit
+                  - button "Delete" [ref=f7e96] [cursor=pointer]
+            - row [ref=f7e97]:
+              - cell [ref=f7e98]:
+                - checkbox "Select Shipped" [ref=f7e99]
+              - cell "3" [ref=f7e100]
+              - cell [ref=f7e101]:
+                - link "Shipped" [ref=f7e102] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/settings/order-statuses/3/edit
+              - cell "Yes" [ref=f7e103]
+              - cell "Yes" [ref=f7e107]
+              - cell [ref=f7e111]:
+                - generic [ref=f7e112]:
+                  - link "Edit" [ref=f7e113] [cursor=pointer]:
+                    - /url: http://127.0.0.1:8000/settings/order-statuses/3/edit
+                  - button "Delete" [ref=f7e114] [cursor=pointer]
+            - row [ref=f7e115]:
+              - cell [ref=f7e116]:
+                - checkbox "Select Complete" [ref=f7e117]
+              - cell "4" [ref=f7e118]
+              - cell [ref=f7e119]:
+                - link "Complete" [ref=f7e120] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/settings/order-statuses/4/edit
+              - cell "Yes" [ref=f7e121]
+              - cell "Yes" [ref=f7e125]
+              - cell [ref=f7e129]:
+                - generic [ref=f7e130]:
+                  - link "Edit" [ref=f7e131] [cursor=pointer]:
+                    - /url: http://127.0.0.1:8000/settings/order-statuses/4/edit
+                  - button "Delete" [ref=f7e132] [cursor=pointer]
+            - row [ref=f7e133]:
+              - cell [ref=f7e134]:
+                - checkbox "Select Canceled" [ref=f7e135]
+              - cell "5" [ref=f7e136]
+              - cell [ref=f7e137]:
+                - link "Canceled" [ref=f7e138] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/settings/order-statuses/5/edit
+              - cell "No" [ref=f7e139]
+              - cell "No" [ref=f7e143]
+              - cell [ref=f7e147]:
+                - generic [ref=f7e148]:
+                  - link "Edit" [ref=f7e149] [cursor=pointer]:
+                    - /url: http://127.0.0.1:8000/settings/order-statuses/5/edit
+                  - button "Delete" [ref=f7e150] [cursor=pointer]
+            - row [ref=f7e151]:
+              - cell [ref=f7e152]:
+                - checkbox "Select Denied" [ref=f7e153]
+              - cell "6" [ref=f7e154]
+              - cell [ref=f7e155]:
+                - link "Denied" [ref=f7e156] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/settings/order-statuses/6/edit
+              - cell "No" [ref=f7e157]
+              - cell "No" [ref=f7e161]
+              - cell [ref=f7e165]:
+                - generic [ref=f7e166]:
+                  - link "Edit" [ref=f7e167] [cursor=pointer]:
+                    - /url: http://127.0.0.1:8000/settings/order-statuses/6/edit
+                  - button "Delete" [ref=f7e168] [cursor=pointer]
+            - row [ref=f7e169]:
+              - cell [ref=f7e170]:
+                - checkbox "Select Reversed" [ref=f7e171]
+              - cell "7" [ref=f7e172]
+              - cell [ref=f7e173]:
+                - link "Reversed" [ref=f7e174] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/settings/order-statuses/7/edit
+              - cell "No" [ref=f7e175]
+              - cell "No" [ref=f7e179]
+              - cell [ref=f7e183]:
+                - generic [ref=f7e184]:
+                  - link "Edit" [ref=f7e185] [cursor=pointer]:
+                    - /url: http://127.0.0.1:8000/settings/order-statuses/7/edit
+                  - button "Delete" [ref=f7e186] [cursor=pointer]
+            - row [ref=f7e187]:
+              - cell [ref=f7e188]:
+                - checkbox "Select Failed" [ref=f7e189]
+              - cell "8" [ref=f7e190]
+              - cell [ref=f7e191]:
+                - link "Failed" [ref=f7e192] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/settings/order-statuses/8/edit
+              - cell "No" [ref=f7e193]
+              - cell "No" [ref=f7e197]
+              - cell [ref=f7e201]:
+                - generic [ref=f7e202]:
+                  - link "Edit" [ref=f7e203] [cursor=pointer]:
+                    - /url: http://127.0.0.1:8000/settings/order-statuses/8/edit
+                  - button "Delete" [ref=f7e204] [cursor=pointer]
+            - row [ref=f7e205]:
+              - cell [ref=f7e206]:
+                - checkbox "Select Delivered" [ref=f7e207]
+              - cell "9" [ref=f7e208]
+              - cell [ref=f7e209]:
+                - link "Delivered" [ref=f7e210] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/settings/order-statuses/9/edit
+              - cell "Yes" [ref=f7e211]
+              - cell "Yes" [ref=f7e215]
+              - cell [ref=f7e219]:
+                - generic [ref=f7e220]:
+                  - link "Edit" [ref=f7e221] [cursor=pointer]:
+                    - /url: http://127.0.0.1:8000/settings/order-statuses/9/edit
+                  - button "Delete" [ref=f7e222] [cursor=pointer]
+            - row [ref=f7e223]:
+              - cell [ref=f7e224]:
+                - checkbox "Select Completed" [ref=f7e225]
+              - cell "10" [ref=f7e226]
+              - cell [ref=f7e227]:
+                - link "Completed" [ref=f7e228] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/settings/order-statuses/10/edit
+              - cell "Yes" [ref=f7e229]
+              - cell "Yes" [ref=f7e233]
+              - cell [ref=f7e237]:
+                - generic [ref=f7e238]:
+                  - link "Edit" [ref=f7e239] [cursor=pointer]:
+                    - /url: http://127.0.0.1:8000/settings/order-statuses/10/edit
+                  - button "Delete" [ref=f7e240] [cursor=pointer]
+            - row [ref=f7e241]:
+              - cell [ref=f7e242]:
+                - checkbox "Select Unpaid" [ref=f7e243]
+              - cell "11" [ref=f7e244]
+              - cell [ref=f7e245]:
+                - link "Unpaid" [ref=f7e246] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/settings/order-statuses/11/edit
+              - cell "Yes" [ref=f7e247]
+              - cell "No" [ref=f7e251]
+              - cell [ref=f7e255]:
+                - generic [ref=f7e256]:
+                  - link "Edit" [ref=f7e257] [cursor=pointer]:
+                    - /url: http://127.0.0.1:8000/settings/order-statuses/11/edit
+                  - button "Delete" [ref=f7e258] [cursor=pointer]
+            - row [ref=f7e259]:
+              - cell [ref=f7e260]:
+                - checkbox "Select For Verification" [ref=f7e261]
+              - cell "12" [ref=f7e262]
+              - cell [ref=f7e263]:
+                - link "For Verification" [ref=f7e264] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/settings/order-statuses/12/edit
+              - cell "Yes" [ref=f7e265]
+              - cell "No" [ref=f7e269]
+              - cell [ref=f7e273]:
+                - generic [ref=f7e274]:
+                  - link "Edit" [ref=f7e275] [cursor=pointer]:
+                    - /url: http://127.0.0.1:8000/settings/order-statuses/12/edit
+                  - button "Delete" [ref=f7e276] [cursor=pointer]
+            - row [ref=f7e277]:
+              - cell [ref=f7e278]:
+                - checkbox "Select Return in Progress" [ref=f7e279]
+              - cell "13" [ref=f7e280]
+              - cell [ref=f7e281]:
+                - link "Return in Progress" [ref=f7e282] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/settings/order-statuses/13/edit
+              - cell "Yes" [ref=f7e283]
+              - cell "No" [ref=f7e287]
+              - cell [ref=f7e291]:
+                - generic [ref=f7e292]:
+                  - link "Edit" [ref=f7e293] [cursor=pointer]:
+                    - /url: http://127.0.0.1:8000/settings/order-statuses/13/edit
+                  - button "Delete" [ref=f7e294] [cursor=pointer]
+            - row [ref=f7e295]:
+              - cell [ref=f7e296]:
+                - checkbox "Select To Confirm Receive" [ref=f7e297]
+              - cell "14" [ref=f7e298]
+              - cell [ref=f7e299]:
+                - link "To Confirm Receive" [ref=f7e300] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/settings/order-statuses/14/edit
+              - cell "Yes" [ref=f7e301]
+              - cell "Yes" [ref=f7e305]
+              - cell [ref=f7e309]:
+                - generic [ref=f7e310]:
+                  - link "Edit" [ref=f7e311] [cursor=pointer]:
+                    - /url: http://127.0.0.1:8000/settings/order-statuses/14/edit
+                  - button "Delete" [ref=f7e312] [cursor=pointer]
+            - row [ref=f7e313]:
+              - cell [ref=f7e314]:
+                - checkbox "Select Returned" [ref=f7e315]
+              - cell "15" [ref=f7e316]
+              - cell [ref=f7e317]:
+                - link "Returned" [ref=f7e318] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/settings/order-statuses/15/edit
+              - cell "Yes" [ref=f7e319]
+              - cell "No" [ref=f7e323]
+              - cell [ref=f7e327]:
+                - generic [ref=f7e328]:
+                  - link "Edit" [ref=f7e329] [cursor=pointer]:
+                    - /url: http://127.0.0.1:8000/settings/order-statuses/15/edit
+                  - button "Delete" [ref=f7e330] [cursor=pointer]
+            - row [ref=f7e331]:
+              - cell [ref=f7e332]:
+                - checkbox "Select Refunded" [ref=f7e333]
+              - cell "16" [ref=f7e334]
+              - cell [ref=f7e335]:
+                - link "Refunded" [ref=f7e336] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/settings/order-statuses/16/edit
+              - cell "Yes" [ref=f7e337]
+              - cell "No" [ref=f7e341]
+              - cell [ref=f7e345]:
+                - generic [ref=f7e346]:
+                  - link "Edit" [ref=f7e347] [cursor=pointer]:
+                    - /url: http://127.0.0.1:8000/settings/order-statuses/16/edit
+                  - button "Delete" [ref=f7e348] [cursor=pointer]
+        - generic [ref=f7e365]:
+          - generic [ref=f7e366]: 1 to 16 of 16
+          - generic [ref=f7e367]:
+            - button "Previous" [disabled]
+            - button "Next" [disabled]

@@ -1,0 +1,118 @@
+- generic [active] [ref=f33e1]:
+  - link "Skip to content" [ref=f33e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f33e4]:
+    - banner [ref=f33e5]:
+      - button "Open navigation" [ref=f33e6]
+      - generic [ref=f33e11]:
+        - generic [ref=f33e12]: AI Tools
+        - generic [ref=f33e13]: /
+        - generic [ref=f33e14]: AI Tools
+      - button "Search. Opens the command palette." [ref=f33e15] [cursor=pointer]:
+        - generic [ref=f33e19]: Search products, orders, SKUs
+        - generic [ref=f33e20]: Ctrl K
+      - generic [ref=f33e21]:
+        - generic [ref=f33e22]:
+          - button "Light theme" [ref=f33e23]
+          - button "Dark theme" [ref=f33e27]
+          - button "Match system theme" [ref=f33e30]
+        - button "DO Docs Screenshots (temporary)" [ref=f33e35]:
+          - generic [ref=f33e36]: DO
+          - generic [ref=f33e37]: Docs Screenshots (temporary)
+    - main [ref=f33e38]:
+      - generic [ref=f33e39]:
+        - generic [ref=f33e41]:
+          - heading "AI Tools" [level=1] [ref=f33e42]
+          - paragraph [ref=f33e43]: Connect the assistant you already use. It can read your store and answer questions; it never changes anything.
+        - generic [ref=f33e44]:
+          - generic [ref=f33e45]:
+            - generic [ref=f33e46]:
+              - heading "Connected" [level=2] [ref=f33e47]
+              - generic [ref=f33e48]: 2 assistants
+            - generic [ref=f33e49]:
+              - generic [ref=f33e50]:
+                - generic [aria-hidden] [ref=f33e51]: OC
+                - generic [ref=f33e52]:
+                  - generic [ref=f33e53]:
+                    - text: OpenClaw
+                    - generic [ref=f33e54]: OpenClaw
+                  - generic [ref=f33e55]:
+                    - generic [ref=f33e56]: Never used yet
+                    - generic [ref=f33e57]: Reads products, orders, inventory, sales reports
+                - generic [ref=f33e58]:
+                  - group [ref=f33e59]:
+                    - generic "Change" [ref=f33e60] [cursor=pointer]
+                  - button "Disconnect" [ref=f33e62] [cursor=pointer]
+              - generic [ref=f33e63]:
+                - generic [aria-hidden] [ref=f33e64]: GP
+                - generic [ref=f33e65]:
+                  - generic [ref=f33e66]:
+                    - text: ChatGPT
+                    - generic [ref=f33e67]: ChatGPT
+                  - generic [ref=f33e68]:
+                    - generic [ref=f33e69]: Never used yet
+                    - generic [ref=f33e70]: Reads products, orders, inventory, sales reports
+                - generic [ref=f33e71]:
+                  - group [ref=f33e72]:
+                    - generic "Change" [ref=f33e73] [cursor=pointer]
+                  - button "Disconnect" [ref=f33e75] [cursor=pointer]
+              - paragraph [ref=f33e76]: Each assistant has its own key. Disconnecting one does not touch the others.
+          - generic [ref=f33e77]:
+            - heading "Connect an assistant" [level=2] [ref=f33e79]
+            - generic [ref=f33e80]:
+              - generic [ref=f33e81]:
+                - paragraph [ref=f33e82]:
+                  - generic [ref=f33e83]: "1"
+                  - text: Which one?
+                - group "Assistant" [ref=f33e84]:
+                  - button "Claude" [pressed] [ref=f33e85] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f33e86]: Cl
+                    - text: Claude
+                  - button "Cursor" [ref=f33e87] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f33e88]: Cu
+                    - text: Cursor
+                  - button "ChatGPT" [ref=f33e89] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f33e90]: GP
+                    - text: ChatGPT
+                  - button "OpenClaw" [ref=f33e91] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f33e92]: OC
+                    - text: OpenClaw
+                  - button "Other MCP client" [ref=f33e93] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f33e94]: AI
+                    - text: Other MCP client
+              - generic [ref=f33e95]:
+                - paragraph [ref=f33e96]:
+                  - generic [ref=f33e97]: "2"
+                  - text: Name it and choose what it may read
+                - generic [ref=f33e98]:
+                  - generic [ref=f33e99]:
+                    - generic [ref=f33e100]: Name
+                    - textbox "Name" [ref=f33e101]:
+                      - /placeholder: Claude, office PC
+                    - generic [ref=f33e102]: Where it runs, so you know which key is which.
+                  - generic [ref=f33e103]:
+                    - generic [ref=f33e104]: It may read
+                    - generic [ref=f33e105]:
+                      - generic [ref=f33e106] [cursor=pointer]:
+                        - checkbox "Products" [checked] [ref=f33e107]
+                        - text: Products
+                      - generic [ref=f33e108] [cursor=pointer]:
+                        - checkbox "Orders" [checked] [ref=f33e109]
+                        - text: Orders
+                      - generic [ref=f33e110] [cursor=pointer]:
+                        - checkbox "Inventory" [checked] [ref=f33e111]
+                        - text: Inventory
+                      - generic [ref=f33e112] [cursor=pointer]:
+                        - checkbox "Sales Reports" [checked] [ref=f33e113]
+                        - text: Sales Reports
+              - generic [ref=f33e114]:
+                - paragraph [ref=f33e115]:
+                  - generic [ref=f33e116]: "3"
+                  - generic [ref=f33e117]: Paste this into Claude
+                - paragraph [ref=f33e118]: Connect issues the key and shows exactly what to paste, once.
+                - button "Connect" [ref=f33e120] [cursor=pointer]
+        - generic [ref=f33e121]:
+          - text: "Try asking:"
+          - generic [ref=f33e122]: Which products are below reorder level?
+          - generic [ref=f33e123]: What did the GP-200 make last month?
+          - generic [ref=f33e124]: Any Shopee orders waiting to ship since yesterday?

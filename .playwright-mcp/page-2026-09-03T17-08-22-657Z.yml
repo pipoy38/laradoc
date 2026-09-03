@@ -1,0 +1,109 @@
+- generic [active] [ref=f16e1]:
+  - link "Skip to content" [ref=f16e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f16e4]:
+    - banner [ref=f16e5]:
+      - button "Open navigation" [ref=f16e6]
+      - generic [ref=f16e11]:
+        - generic [ref=f16e12]: Channels
+        - generic [ref=f16e13]: /
+        - generic [ref=f16e14]: Lazada
+        - generic [ref=f16e15]: /
+        - generic [ref=f16e16]: Settings
+      - button "Search. Opens the command palette." [ref=f16e17] [cursor=pointer]:
+        - generic [ref=f16e21]: Search products, orders, SKUs
+        - generic [ref=f16e22]: Ctrl K
+      - generic [ref=f16e23]:
+        - generic [ref=f16e24]:
+          - button "Light theme" [ref=f16e25]
+          - button "Dark theme" [ref=f16e29]
+          - button "Match system theme" [ref=f16e32]
+        - button "DO Docs Screenshots (temporary)" [ref=f16e37]:
+          - generic [ref=f16e38]: DO
+          - generic [ref=f16e39]: Docs Screenshots (temporary)
+    - navigation "Lazada navigation" [ref=f16e41]:
+      - link "Overview" [ref=f16e42] [cursor=pointer]:
+        - /url: http://127.0.0.1:8000/channels/lazada
+      - button "Sell" [ref=f16e44] [cursor=pointer]
+      - button "Catalog" [ref=f16e48] [cursor=pointer]
+      - button "Settings" [ref=f16e52] [cursor=pointer]
+    - main [ref=f16e55]:
+      - status [ref=f16e56]:
+        - generic [ref=f16e60]: Switched to Production mode.
+        - button "Close" [ref=f16e61] [cursor=pointer]: ×
+      - generic [ref=f16e62]:
+        - generic [ref=f16e64]:
+          - heading "Settings" [level=1] [ref=f16e65]
+          - paragraph [ref=f16e66]: Credentials, status mapping and the API record for this Lazada shop.
+        - generic [ref=f16e67]:
+          - generic [ref=f16e68]:
+            - heading "Environment" [level=2] [ref=f16e70]
+            - generic [ref=f16e71]:
+              - tablist "Lazada environment" [ref=f16e73]:
+                - tab "Production" [selected] [ref=f16e74] [cursor=pointer]
+                - tab "Sandbox" [ref=f16e75] [cursor=pointer]
+              - paragraph [ref=f16e76]: Every sync, push and order fetch uses the credentials of the environment selected here. Production and sandbox keep separate app keys and separate tokens, but share one region.
+          - generic [ref=f16e77]:
+            - generic [ref=f16e78]:
+              - generic [ref=f16e79]:
+                - heading "Production credentials" [level=2] [ref=f16e80]
+                - generic [ref=f16e81]: Configured
+              - generic [ref=f16e85]:
+                - generic [ref=f16e86]:
+                  - generic [ref=f16e87]:
+                    - generic [ref=f16e88]: Region
+                    - combobox "Region" [ref=f16e90]:
+                      - option "Not set"
+                      - option "Philippines (PH)" [selected]
+                      - option "Singapore (SG)"
+                      - option "Malaysia (MY)"
+                      - option "Indonesia (ID)"
+                      - option "Thailand (TH)"
+                      - option "Vietnam (VN)"
+                    - generic [ref=f16e91]: Which Lazada country site this shop trades on. Production and sandbox share this one setting.
+                  - generic [ref=f16e92]:
+                    - generic [ref=f16e93]: App Key
+                    - textbox "App Key" [ref=f16e94]: "113257"
+                    - generic [ref=f16e95]: The app identifier from your Lazada Open Platform app. Not a secret, so it is shown in full.
+                  - generic [ref=f16e96]:
+                    - generic [ref=f16e97]: App Secret
+                    - textbox "App Secret" [ref=f16e100]
+                    - generic [ref=f16e101]: Stored encrypted. Read-only until you choose to edit it.
+                  - generic [ref=f16e102]:
+                    - generic [ref=f16e103]: Redirect URI
+                    - textbox "Redirect URI" [ref=f16e104]: https://127.0.0.1:8000/lazada/callback
+                    - generic [ref=f16e105]: Register this exact URL in your Lazada Open Platform production app. It is always https. To change it, edit APP_URL in the environment file.
+                - generic [ref=f16e106]:
+                  - button "Save production settings" [ref=f16e107] [cursor=pointer]
+                  - generic [ref=f16e108]: Leave a masked field untouched to keep what is already stored. Saving also switches the shop to production.
+            - generic [ref=f16e109]:
+              - heading "Production authorisation" [level=2] [ref=f16e111]
+              - generic [ref=f16e112]:
+                - generic [ref=f16e113]: Token expired
+                - generic [ref=f16e116]: Use step 3 to renew it without authorising again.
+              - generic [ref=f16e117]:
+                - generic [ref=f16e118]:
+                  - generic [ref=f16e119]: "1"
+                  - generic [ref=f16e120]:
+                    - generic [ref=f16e121]: Authorise with Lazada
+                    - link "Open Lazada authorisation" [ref=f16e123] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8000/lazada/authorize
+                    - paragraph [ref=f16e124]: Opens Lazada sign-in in a new tab. After you grant access Lazada sends you back to the callback URL above with an auth code, and the code is exchanged for a token automatically.
+                - generic [ref=f16e125]:
+                  - generic [ref=f16e126]: "2"
+                  - generic [ref=f16e127]:
+                    - generic [ref=f16e128]: Exchange an auth code by hand
+                    - generic [ref=f16e129]:
+                      - generic [ref=f16e130]:
+                        - generic [ref=f16e131]: Auth code
+                        - textbox "Auth code" [ref=f16e132]:
+                          - /placeholder: Fills in after the callback, or paste it here
+                          - text: x
+                      - button "Exchange" [ref=f16e133] [cursor=pointer]
+                    - paragraph [ref=f16e134]: Only needed when the automatic exchange did not run, for example if you copied the redirect URL out of the address bar.
+                - generic [ref=f16e135]:
+                  - generic [ref=f16e136]: "3"
+                  - generic [ref=f16e137]:
+                    - generic [ref=f16e138]: Refresh an expired token
+                    - button "Refresh access token" [ref=f16e140] [cursor=pointer]
+                    - paragraph [ref=f16e141]: Lazada access tokens last about two days. The scheduled job renews them every six hours, so this is here for when that job has not run.

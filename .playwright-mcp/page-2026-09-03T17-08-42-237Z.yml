@@ -1,0 +1,72 @@
+- generic [active] [ref=f17e1]:
+  - link "Skip to content" [ref=f17e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f17e4]:
+    - banner [ref=f17e5]:
+      - button "Open navigation" [ref=f17e6]
+      - generic [ref=f17e11]:
+        - generic [ref=f17e12]: Channels
+        - generic [ref=f17e13]: /
+        - generic [ref=f17e14]: TikTok Shop
+      - button "Search. Opens the command palette." [ref=f17e15] [cursor=pointer]:
+        - generic [ref=f17e19]: Search products, orders, SKUs
+        - generic [ref=f17e20]: Ctrl K
+      - generic [ref=f17e21]:
+        - generic [ref=f17e22]:
+          - button "Light theme" [ref=f17e23]
+          - button "Dark theme" [ref=f17e27]
+          - button "Match system theme" [ref=f17e30]
+        - button "DO Docs Screenshots (temporary)" [ref=f17e35]:
+          - generic [ref=f17e36]: DO
+          - generic [ref=f17e37]: Docs Screenshots (temporary)
+    - navigation "TikTok Shop navigation" [ref=f17e39]:
+      - link "Overview" [ref=f17e40] [cursor=pointer]:
+        - /url: http://127.0.0.1:8000/channels/tiktok
+      - button "Sell" [ref=f17e42] [cursor=pointer]
+      - button "Catalog" [ref=f17e46] [cursor=pointer]
+      - button "Settings" [ref=f17e50] [cursor=pointer]
+    - main [ref=f17e53]:
+      - generic [ref=f17e55]:
+        - heading "TikTok Shop" [level=1] [ref=f17e56]
+        - paragraph [ref=f17e57]: TikTok Shop integration. OAuth, product sync, orders.
+      - generic [ref=f17e58]:
+        - generic [ref=f17e60]:
+          - generic [ref=f17e61]:
+            - heading "Last 30 days" [level=2] [ref=f17e62]
+            - paragraph [ref=f17e63]: Compared with the 30 days before
+          - generic [ref=f17e64]:
+            - generic [ref=f17e65]:
+              - generic [ref=f17e66]: Revenue
+              - generic [ref=f17e67]: ₱0.00
+              - generic [ref=f17e68]: "-100%"
+            - generic [ref=f17e69]:
+              - generic [ref=f17e70]: Orders
+              - generic [ref=f17e71]: "0"
+              - generic [ref=f17e72]: "-100%"
+        - complementary [ref=f17e73]:
+          - generic [ref=f17e74]:
+            - heading "Waiting on you" [level=2] [ref=f17e76]
+            - generic [ref=f17e77]:
+              - generic [ref=f17e78]:
+                - term [ref=f17e79]: Orders to process
+                - definition [ref=f17e80]: "0"
+              - generic [ref=f17e81]:
+                - term [ref=f17e82]: Orders today
+                - definition [ref=f17e83]: "0"
+              - generic [ref=f17e84]:
+                - term [ref=f17e85]: Revenue today
+                - definition [ref=f17e86]: ₱0.00
+          - generic [ref=f17e87]:
+            - heading "Connection" [level=2] [ref=f17e89]
+            - generic [ref=f17e90]:
+              - generic [ref=f17e91]:
+                - term [ref=f17e92]: Last sync
+                - definition [ref=f17e93]:
+                  - text: 1 month ago
+                  - generic [ref=f17e94]: Overdue
+              - generic [ref=f17e95]:
+                - term [ref=f17e96]: Sign-in expires
+                - definition [ref=f17e97]: Not tracked
+              - generic [ref=f17e98]:
+                - term [ref=f17e99]: API errors in 24 hours
+                - definition [ref=f17e100]: Not tracked

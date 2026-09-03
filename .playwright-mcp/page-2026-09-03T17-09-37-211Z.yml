@@ -1,0 +1,659 @@
+- generic [active] [ref=f26e1]:
+  - link "Skip to content" [ref=f26e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f26e4]:
+    - banner [ref=f26e5]:
+      - button "Open navigation" [ref=f26e6]
+      - generic [ref=f26e11]:
+        - generic [ref=f26e12]: Catalog
+        - generic [ref=f26e13]: /
+        - generic [ref=f26e14]: Categories
+      - button "Search. Opens the command palette." [ref=f26e15] [cursor=pointer]:
+        - generic [ref=f26e19]: Search products, orders, SKUs
+        - generic [ref=f26e20]: Ctrl K
+      - generic [ref=f26e21]:
+        - generic [ref=f26e22]:
+          - button "Light theme" [ref=f26e23]
+          - button "Dark theme" [ref=f26e27]
+          - button "Match system theme" [ref=f26e30]
+        - button "DO Docs Screenshots (temporary)" [ref=f26e35]:
+          - generic [ref=f26e36]: DO
+          - generic [ref=f26e37]: Docs Screenshots (temporary)
+    - main [ref=f26e38]:
+      - generic [ref=f26e39]:
+        - generic [ref=f26e40]:
+          - heading "Categories" [level=1] [ref=f26e41]
+          - paragraph [ref=f26e42]: 76 categories
+        - link "New category" [ref=f26e43] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/catalog/categories/create
+      - searchbox "Search categories" [ref=f26e45]
+      - generic [ref=f26e46]:
+        - table [ref=f26e48]:
+          - rowgroup [ref=f26e49]:
+            - row [ref=f26e50]:
+              - columnheader [ref=f26e51]:
+                - checkbox "Select all categories on this page" [ref=f26e52]
+              - columnheader "ID" [ref=f26e53]
+              - columnheader "Name" [ref=f26e54]
+              - columnheader "Parent" [ref=f26e55]
+              - columnheader "Sort" [ref=f26e56]
+              - columnheader "Status" [ref=f26e57]
+              - columnheader "Actions" [ref=f26e58]
+          - rowgroup [ref=f26e60]:
+            - row [ref=f26e61]:
+              - cell [ref=f26e62]:
+                - checkbox [ref=f26e63]
+              - cell "65" [ref=f26e64]
+              - cell [ref=f26e65]:
+                - link "Accessories" [ref=f26e66] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/65/edit
+              - cell "-" [ref=f26e67]
+              - cell "6" [ref=f26e68]
+              - cell "Enabled" [ref=f26e69]
+              - cell [ref=f26e73]:
+                - button "Category 65 actions" [ref=f26e75]
+            - row [ref=f26e80]:
+              - cell [ref=f26e81]:
+                - checkbox [ref=f26e82]
+              - cell "1" [ref=f26e83]
+              - cell [ref=f26e84]:
+                - link "Bass Guitars" [ref=f26e85] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/1/edit
+              - cell "-" [ref=f26e86]
+              - cell "0" [ref=f26e87]
+              - cell "Enabled" [ref=f26e88]
+              - cell [ref=f26e92]:
+                - button "Category 1 actions" [ref=f26e94]
+            - row [ref=f26e99]:
+              - cell [ref=f26e100]:
+                - checkbox [ref=f26e101]
+              - cell "64" [ref=f26e102]
+              - cell [ref=f26e103]:
+                - link "Cables and Plugs" [ref=f26e104] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/64/edit
+              - cell "-" [ref=f26e105]
+              - cell "5" [ref=f26e106]
+              - cell "Enabled" [ref=f26e107]
+              - cell [ref=f26e111]:
+                - button "Category 64 actions" [ref=f26e113]
+            - row [ref=f26e118]:
+              - cell [ref=f26e119]:
+                - checkbox [ref=f26e120]
+              - cell "66" [ref=f26e121]
+              - cell [ref=f26e122]:
+                - link "Effects Pedals" [ref=f26e123] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/66/edit
+              - cell "-" [ref=f26e124]
+              - cell "7" [ref=f26e125]
+              - cell "Enabled" [ref=f26e126]
+              - cell [ref=f26e130]:
+                - button "Category 66 actions" [ref=f26e132]
+            - row [ref=f26e137]:
+              - cell [ref=f26e138]:
+                - checkbox [ref=f26e139]
+              - cell "63" [ref=f26e140]
+              - cell [ref=f26e141]:
+                - link "Electronic Components" [ref=f26e142] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/63/edit
+              - cell "-" [ref=f26e143]
+              - cell "4" [ref=f26e144]
+              - cell "Enabled" [ref=f26e145]
+              - cell [ref=f26e149]:
+                - button "Category 63 actions" [ref=f26e151]
+            - row [ref=f26e156]:
+              - cell [ref=f26e157]:
+                - checkbox [ref=f26e158]
+              - cell "58" [ref=f26e159]
+              - cell [ref=f26e160]:
+                - link "Enclosures" [ref=f26e161] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/58/edit
+              - cell "-" [ref=f26e162]
+              - cell "0" [ref=f26e163]
+              - cell "Enabled" [ref=f26e164]
+              - cell [ref=f26e168]:
+                - button "Category 58 actions" [ref=f26e170]
+            - row [ref=f26e175]:
+              - cell [ref=f26e176]:
+                - checkbox [ref=f26e177]
+              - cell "67" [ref=f26e178]
+              - cell [ref=f26e179]:
+                - link "Guitar Strings" [ref=f26e180] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/67/edit
+              - cell "-" [ref=f26e181]
+              - cell "8" [ref=f26e182]
+              - cell "Disabled" [ref=f26e183]
+              - cell [ref=f26e187]:
+                - button "Category 67 actions" [ref=f26e189]
+            - row [ref=f26e194]:
+              - cell [ref=f26e195]:
+                - checkbox [ref=f26e196]
+              - cell "3" [ref=f26e197]
+              - cell [ref=f26e198]:
+                - link "Guitars" [ref=f26e199] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/3/edit
+              - cell "-" [ref=f26e200]
+              - cell "0" [ref=f26e201]
+              - cell "Enabled" [ref=f26e202]
+              - cell [ref=f26e206]:
+                - button "Category 3 actions" [ref=f26e208]
+            - row [ref=f26e213]:
+              - cell [ref=f26e214]:
+                - checkbox [ref=f26e215]
+              - cell "7" [ref=f26e216]
+              - cell [ref=f26e217]:
+                - link "Headphones" [ref=f26e218] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/7/edit
+              - cell "-" [ref=f26e219]
+              - cell "65" [ref=f26e220]
+              - cell "Enabled" [ref=f26e221]
+              - cell [ref=f26e225]:
+                - button "Category 7 actions" [ref=f26e227]
+            - row [ref=f26e232]:
+              - cell [ref=f26e233]:
+                - checkbox [ref=f26e234]
+              - cell "4" [ref=f26e235]
+              - cell [ref=f26e236]:
+                - link "Keys & Synths" [ref=f26e237] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/4/edit
+              - cell "-" [ref=f26e238]
+              - cell "25" [ref=f26e239]
+              - cell "Enabled" [ref=f26e240]
+              - cell [ref=f26e244]:
+                - button "Category 4 actions" [ref=f26e246]
+            - row [ref=f26e251]:
+              - cell [ref=f26e252]:
+                - checkbox [ref=f26e253]
+              - cell "61" [ref=f26e254]
+              - cell [ref=f26e255]:
+                - link "Knobs" [ref=f26e256] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/61/edit
+              - cell "-" [ref=f26e257]
+              - cell "3" [ref=f26e258]
+              - cell "Enabled" [ref=f26e259]
+              - cell [ref=f26e263]:
+                - button "Category 61 actions" [ref=f26e265]
+            - row [ref=f26e270]:
+              - cell [ref=f26e271]:
+                - checkbox [ref=f26e272]
+              - cell "10" [ref=f26e273]
+              - cell [ref=f26e274]:
+                - link "Merch" [ref=f26e275] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/10/edit
+              - cell "-" [ref=f26e276]
+              - cell "100" [ref=f26e277]
+              - cell "Enabled" [ref=f26e278]
+              - cell [ref=f26e282]:
+                - button "Category 10 actions" [ref=f26e284]
+            - row [ref=f26e289]:
+              - cell [ref=f26e290]:
+                - checkbox [ref=f26e291]
+              - cell "62" [ref=f26e292]
+              - cell [ref=f26e293]:
+                - link "Power Supplies" [ref=f26e294] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/62/edit
+              - cell "-" [ref=f26e295]
+              - cell "3" [ref=f26e296]
+              - cell "Enabled" [ref=f26e297]
+              - cell [ref=f26e301]:
+                - button "Category 62 actions" [ref=f26e303]
+            - row [ref=f26e308]:
+              - cell [ref=f26e309]:
+                - checkbox [ref=f26e310]
+              - cell "2" [ref=f26e311]
+              - cell [ref=f26e312]:
+                - link "Pre-Amp and Speakers" [ref=f26e313] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/2/edit
+              - cell "-" [ref=f26e314]
+              - cell "0" [ref=f26e315]
+              - cell "Enabled" [ref=f26e316]
+              - cell [ref=f26e320]:
+                - button "Category 2 actions" [ref=f26e322]
+            - row [ref=f26e327]:
+              - cell [ref=f26e328]:
+                - checkbox [ref=f26e329]
+              - cell "9" [ref=f26e330]
+              - cell [ref=f26e331]:
+                - link "Pre-Order" [ref=f26e332] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/9/edit
+              - cell "-" [ref=f26e333]
+              - cell "97" [ref=f26e334]
+              - cell "Enabled" [ref=f26e335]
+              - cell [ref=f26e339]:
+                - button "Category 9 actions" [ref=f26e341]
+            - row [ref=f26e346]:
+              - cell [ref=f26e347]:
+                - checkbox [ref=f26e348]
+              - cell "6" [ref=f26e349]
+              - cell [ref=f26e350]:
+                - link "Recording" [ref=f26e351] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/6/edit
+              - cell "-" [ref=f26e352]
+              - cell "63" [ref=f26e353]
+              - cell "Enabled" [ref=f26e354]
+              - cell [ref=f26e358]:
+                - button "Category 6 actions" [ref=f26e360]
+            - row [ref=f26e365]:
+              - cell [ref=f26e366]:
+                - checkbox [ref=f26e367]
+              - cell "60" [ref=f26e368]
+              - cell [ref=f26e369]:
+                - link "Switches" [ref=f26e370] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/60/edit
+              - cell "-" [ref=f26e371]
+              - cell "1" [ref=f26e372]
+              - cell "Enabled" [ref=f26e373]
+              - cell [ref=f26e377]:
+                - button "Category 60 actions" [ref=f26e379]
+            - row [ref=f26e384]:
+              - cell [ref=f26e385]:
+                - checkbox [ref=f26e386]
+              - cell "59" [ref=f26e387]
+              - cell [ref=f26e388]:
+                - link "test" [ref=f26e389] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/59/edit
+              - cell "-" [ref=f26e390]
+              - cell "0" [ref=f26e391]
+              - cell "Enabled" [ref=f26e392]
+              - cell [ref=f26e396]:
+                - button "Category 59 actions" [ref=f26e398]
+            - row [ref=f26e403]:
+              - cell [ref=f26e404]:
+                - checkbox [ref=f26e405]
+              - cell "8" [ref=f26e406]
+              - cell [ref=f26e407]:
+                - link "Used Gear" [ref=f26e408] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/8/edit
+              - cell "-" [ref=f26e409]
+              - cell "95" [ref=f26e410]
+              - cell "Enabled" [ref=f26e411]
+              - cell [ref=f26e415]:
+                - button "Category 8 actions" [ref=f26e417]
+            - row [ref=f26e422]:
+              - cell [ref=f26e423]:
+                - checkbox [ref=f26e424]
+              - cell "5" [ref=f26e425]
+              - cell [ref=f26e426]:
+                - link "Voice" [ref=f26e427] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/5/edit
+              - cell "-" [ref=f26e428]
+              - cell "30" [ref=f26e429]
+              - cell "Enabled" [ref=f26e430]
+              - cell [ref=f26e434]:
+                - button "Category 5 actions" [ref=f26e436]
+            - row [ref=f26e441]:
+              - cell [ref=f26e442]:
+                - checkbox [ref=f26e443]
+              - cell "12" [ref=f26e444]
+              - cell [ref=f26e445]:
+                - link "Bass Guitars > Bass Bridges" [ref=f26e446] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/12/edit
+              - cell "Bass Guitars" [ref=f26e447]
+              - cell "0" [ref=f26e448]
+              - cell "Enabled" [ref=f26e449]
+              - cell [ref=f26e453]:
+                - button "Category 12 actions" [ref=f26e455]
+            - row [ref=f26e460]:
+              - cell [ref=f26e461]:
+                - checkbox [ref=f26e462]
+              - cell "13" [ref=f26e463]
+              - cell [ref=f26e464]:
+                - link "Bass Guitars > Bass Hardware & Parts" [ref=f26e465] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/13/edit
+              - cell "Bass Guitars" [ref=f26e466]
+              - cell "0" [ref=f26e467]
+              - cell "Enabled" [ref=f26e468]
+              - cell [ref=f26e472]:
+                - button "Category 13 actions" [ref=f26e474]
+            - row [ref=f26e479]:
+              - cell [ref=f26e480]:
+                - checkbox [ref=f26e481]
+              - cell "14" [ref=f26e482]
+              - cell [ref=f26e483]:
+                - link "Bass Guitars > Bass Knobs" [ref=f26e484] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/14/edit
+              - cell "Bass Guitars" [ref=f26e485]
+              - cell "0" [ref=f26e486]
+              - cell "Enabled" [ref=f26e487]
+              - cell [ref=f26e491]:
+                - button "Category 14 actions" [ref=f26e493]
+            - row [ref=f26e498]:
+              - cell [ref=f26e499]:
+                - checkbox [ref=f26e500]
+              - cell "15" [ref=f26e501]
+              - cell [ref=f26e502]:
+                - link "Bass Guitars > Bass Pickups" [ref=f26e503] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/15/edit
+              - cell "Bass Guitars" [ref=f26e504]
+              - cell "0" [ref=f26e505]
+              - cell "Enabled" [ref=f26e506]
+              - cell [ref=f26e510]:
+                - button "Category 15 actions" [ref=f26e512]
+            - row [ref=f26e517]:
+              - cell [ref=f26e518]:
+                - checkbox [ref=f26e519]
+              - cell "16" [ref=f26e520]
+              - cell [ref=f26e521]:
+                - link "Bass Guitars > Bass Retainers" [ref=f26e522] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/16/edit
+              - cell "Bass Guitars" [ref=f26e523]
+              - cell "0" [ref=f26e524]
+              - cell "Enabled" [ref=f26e525]
+              - cell [ref=f26e529]:
+                - button "Category 16 actions" [ref=f26e531]
+            - row [ref=f26e536]:
+              - cell [ref=f26e537]:
+                - checkbox [ref=f26e538]
+              - cell "17" [ref=f26e539]
+              - cell [ref=f26e540]:
+                - link "Bass Guitars > Bass Tuners" [ref=f26e541] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/17/edit
+              - cell "Bass Guitars" [ref=f26e542]
+              - cell "0" [ref=f26e543]
+              - cell "Enabled" [ref=f26e544]
+              - cell [ref=f26e548]:
+                - button "Category 17 actions" [ref=f26e550]
+            - row [ref=f26e555]:
+              - cell [ref=f26e556]:
+                - checkbox [ref=f26e557]
+              - cell "27" [ref=f26e558]
+              - cell [ref=f26e559]:
+                - link "Guitars > Accessories" [ref=f26e560] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/27/edit
+              - cell "Guitars" [ref=f26e561]
+              - cell "70" [ref=f26e562]
+              - cell "Enabled" [ref=f26e563]
+              - cell [ref=f26e567]:
+                - button "Category 27 actions" [ref=f26e569]
+            - row [ref=f26e574]:
+              - cell [ref=f26e575]:
+                - checkbox [ref=f26e576]
+              - cell "25" [ref=f26e577]
+              - cell [ref=f26e578]:
+                - link "Guitars > Cables" [ref=f26e579] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/25/edit
+              - cell "Guitars" [ref=f26e580]
+              - cell "67" [ref=f26e581]
+              - cell "Enabled" [ref=f26e582]
+              - cell [ref=f26e586]:
+                - button "Category 25 actions" [ref=f26e588]
+            - row [ref=f26e593]:
+              - cell [ref=f26e594]:
+                - checkbox [ref=f26e595]
+              - cell "23" [ref=f26e596]
+              - cell [ref=f26e597]:
+                - link "Guitars > Effects Pedals" [ref=f26e598] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/23/edit
+              - cell "Guitars" [ref=f26e599]
+              - cell "0" [ref=f26e600]
+              - cell "Enabled" [ref=f26e601]
+              - cell [ref=f26e605]:
+                - button "Category 23 actions" [ref=f26e607]
+            - row [ref=f26e612]:
+              - cell [ref=f26e613]:
+                - checkbox [ref=f26e614]
+              - cell "19" [ref=f26e615]
+              - cell [ref=f26e616]:
+                - link "Guitars > Electric Guitars" [ref=f26e617] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/19/edit
+              - cell "Guitars" [ref=f26e618]
+              - cell "0" [ref=f26e619]
+              - cell "Enabled" [ref=f26e620]
+              - cell [ref=f26e624]:
+                - button "Category 19 actions" [ref=f26e626]
+            - row [ref=f26e631]:
+              - cell [ref=f26e632]:
+                - checkbox [ref=f26e633]
+              - cell "28" [ref=f26e634]
+              - cell [ref=f26e635]:
+                - link "Guitars > Guitar Hardware & Parts" [ref=f26e636] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/28/edit
+              - cell "Guitars" [ref=f26e637]
+              - cell "75" [ref=f26e638]
+              - cell "Enabled" [ref=f26e639]
+              - cell [ref=f26e643]:
+                - button "Category 28 actions" [ref=f26e645]
+            - row [ref=f26e650]:
+              - cell [ref=f26e651]:
+                - checkbox [ref=f26e652]
+              - cell "24" [ref=f26e653]
+              - cell [ref=f26e654]:
+                - link "Guitars > Guitar Straps" [ref=f26e655] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/24/edit
+              - cell "Guitars" [ref=f26e656]
+              - cell "23" [ref=f26e657]
+              - cell "Enabled" [ref=f26e658]
+              - cell [ref=f26e662]:
+                - button "Category 24 actions" [ref=f26e664]
+            - row [ref=f26e669]:
+              - cell [ref=f26e670]:
+                - checkbox [ref=f26e671]
+              - cell "26" [ref=f26e672]
+              - cell [ref=f26e673]:
+                - link "Guitars > Strings" [ref=f26e674] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/26/edit
+              - cell "Guitars" [ref=f26e675]
+              - cell "67" [ref=f26e676]
+              - cell "Enabled" [ref=f26e677]
+              - cell [ref=f26e681]:
+                - button "Category 26 actions" [ref=f26e683]
+            - row [ref=f26e688]:
+              - cell [ref=f26e689]:
+                - checkbox [ref=f26e690]
+              - cell "11" [ref=f26e691]
+              - cell [ref=f26e692]:
+                - link "Recording > Audio Recorders" [ref=f26e693] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/11/edit
+              - cell "Recording" [ref=f26e694]
+              - cell "0" [ref=f26e695]
+              - cell "Enabled" [ref=f26e696]
+              - cell [ref=f26e700]:
+                - button "Category 11 actions" [ref=f26e702]
+            - row [ref=f26e707]:
+              - cell [ref=f26e708]:
+                - checkbox [ref=f26e709]
+              - cell "22" [ref=f26e710]
+              - cell [ref=f26e711]:
+                - link "Recording > Direct Box" [ref=f26e712] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/22/edit
+              - cell "Recording" [ref=f26e713]
+              - cell "3" [ref=f26e714]
+              - cell "Enabled" [ref=f26e715]
+              - cell [ref=f26e719]:
+                - button "Category 22 actions" [ref=f26e721]
+            - row [ref=f26e726]:
+              - cell [ref=f26e727]:
+                - checkbox [ref=f26e728]
+              - cell "20" [ref=f26e729]
+              - cell [ref=f26e730]:
+                - link "Recording > Headphones" [ref=f26e731] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/20/edit
+              - cell "Recording" [ref=f26e732]
+              - cell "0" [ref=f26e733]
+              - cell "Enabled" [ref=f26e734]
+              - cell [ref=f26e738]:
+                - button "Category 20 actions" [ref=f26e740]
+            - row [ref=f26e745]:
+              - cell [ref=f26e746]:
+                - checkbox [ref=f26e747]
+              - cell "18" [ref=f26e748]
+              - cell [ref=f26e749]:
+                - link "Headphones > Earphones" [ref=f26e750] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/18/edit
+              - cell "Headphones" [ref=f26e751]
+              - cell "0" [ref=f26e752]
+              - cell "Enabled" [ref=f26e753]
+              - cell [ref=f26e757]:
+                - button "Category 18 actions" [ref=f26e759]
+            - row [ref=f26e764]:
+              - cell [ref=f26e765]:
+                - checkbox [ref=f26e766]
+              - cell "21" [ref=f26e767]
+              - cell [ref=f26e768]:
+                - link "Headphones > Headphones" [ref=f26e769] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/21/edit
+              - cell "Headphones" [ref=f26e770]
+              - cell "0" [ref=f26e771]
+              - cell "Enabled" [ref=f26e772]
+              - cell [ref=f26e776]:
+                - button "Category 21 actions" [ref=f26e778]
+            - row [ref=f26e783]:
+              - cell [ref=f26e784]:
+                - checkbox [ref=f26e785]
+              - cell "29" [ref=f26e786]
+              - cell [ref=f26e787]:
+                - link "Guitars > Effects Pedals > Buffer Pedals" [ref=f26e788] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/29/edit
+              - cell "Effects Pedals" [ref=f26e789]
+              - cell "0" [ref=f26e790]
+              - cell "Enabled" [ref=f26e791]
+              - cell [ref=f26e795]:
+                - button "Category 29 actions" [ref=f26e797]
+            - row [ref=f26e802]:
+              - cell [ref=f26e803]:
+                - checkbox [ref=f26e804]
+              - cell "30" [ref=f26e805]
+              - cell [ref=f26e806]:
+                - link "Guitars > Effects Pedals > Cabinet Simulator" [ref=f26e807] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/30/edit
+              - cell "Effects Pedals" [ref=f26e808]
+              - cell "0" [ref=f26e809]
+              - cell "Enabled" [ref=f26e810]
+              - cell [ref=f26e814]:
+                - button "Category 30 actions" [ref=f26e816]
+            - row [ref=f26e821]:
+              - cell [ref=f26e822]:
+                - checkbox [ref=f26e823]
+              - cell "42" [ref=f26e824]
+              - cell [ref=f26e825]:
+                - link "Guitars > Effects Pedals > Delay | Reverb" [ref=f26e826] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/42/edit
+              - cell "Effects Pedals" [ref=f26e827]
+              - cell "0" [ref=f26e828]
+              - cell "Enabled" [ref=f26e829]
+              - cell [ref=f26e833]:
+                - button "Category 42 actions" [ref=f26e835]
+            - row [ref=f26e840]:
+              - cell [ref=f26e841]:
+                - checkbox [ref=f26e842]
+              - cell "49" [ref=f26e843]
+              - cell [ref=f26e844]:
+                - link "Guitars > Effects Pedals > Drum Machine" [ref=f26e845] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/49/edit
+              - cell "Effects Pedals" [ref=f26e846]
+              - cell "64" [ref=f26e847]
+              - cell "Enabled" [ref=f26e848]
+              - cell [ref=f26e852]:
+                - button "Category 49 actions" [ref=f26e854]
+            - row [ref=f26e859]:
+              - cell [ref=f26e860]:
+                - checkbox [ref=f26e861]
+              - cell "44" [ref=f26e862]
+              - cell [ref=f26e863]:
+                - link "Guitars > Effects Pedals > EQ | Comp | Gate" [ref=f26e864] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/44/edit
+              - cell "Effects Pedals" [ref=f26e865]
+              - cell "33" [ref=f26e866]
+              - cell "Enabled" [ref=f26e867]
+              - cell [ref=f26e871]:
+                - button "Category 44 actions" [ref=f26e873]
+            - row [ref=f26e878]:
+              - cell [ref=f26e879]:
+                - checkbox [ref=f26e880]
+              - cell "33" [ref=f26e881]
+              - cell [ref=f26e882]:
+                - link "Guitars > Effects Pedals > Foot Controllers" [ref=f26e883] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/33/edit
+              - cell "Effects Pedals" [ref=f26e884]
+              - cell "0" [ref=f26e885]
+              - cell "Enabled" [ref=f26e886]
+              - cell [ref=f26e890]:
+                - button "Category 33 actions" [ref=f26e892]
+            - row [ref=f26e897]:
+              - cell [ref=f26e898]:
+                - checkbox [ref=f26e899]
+              - cell "50" [ref=f26e900]
+              - cell [ref=f26e901]:
+                - link "Guitars > Effects Pedals > Looper Pedals" [ref=f26e902] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/50/edit
+              - cell "Effects Pedals" [ref=f26e903]
+              - cell "65" [ref=f26e904]
+              - cell "Enabled" [ref=f26e905]
+              - cell [ref=f26e909]:
+                - button "Category 50 actions" [ref=f26e911]
+            - row [ref=f26e916]:
+              - cell [ref=f26e917]:
+                - checkbox [ref=f26e918]
+              - cell "43" [ref=f26e919]
+              - cell [ref=f26e920]:
+                - link "Guitars > Effects Pedals > Modulations" [ref=f26e921] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/43/edit
+              - cell "Effects Pedals" [ref=f26e922]
+              - cell "30" [ref=f26e923]
+              - cell "Enabled" [ref=f26e924]
+              - cell [ref=f26e928]:
+                - button "Category 43 actions" [ref=f26e930]
+            - row [ref=f26e935]:
+              - cell [ref=f26e936]:
+                - checkbox [ref=f26e937]
+              - cell "51" [ref=f26e938]
+              - cell [ref=f26e939]:
+                - link "Guitars > Effects Pedals > Multi Effects Processor" [ref=f26e940] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/51/edit
+              - cell "Effects Pedals" [ref=f26e941]
+              - cell "65" [ref=f26e942]
+              - cell "Enabled" [ref=f26e943]
+              - cell [ref=f26e947]:
+                - button "Category 51 actions" [ref=f26e949]
+            - row [ref=f26e954]:
+              - cell [ref=f26e955]:
+                - checkbox [ref=f26e956]
+              - cell "39" [ref=f26e957]
+              - cell [ref=f26e958]:
+                - link "Guitars > Effects Pedals > Overdrive | Distortion | Fuzz" [ref=f26e959] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/39/edit
+              - cell "Effects Pedals" [ref=f26e960]
+              - cell "0" [ref=f26e961]
+              - cell "Enabled" [ref=f26e962]
+              - cell [ref=f26e966]:
+                - button "Category 39 actions" [ref=f26e968]
+            - row [ref=f26e973]:
+              - cell [ref=f26e974]:
+                - checkbox [ref=f26e975]
+              - cell "48" [ref=f26e976]
+              - cell [ref=f26e977]:
+                - link "Guitars > Effects Pedals > Pedalboards" [ref=f26e978] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/48/edit
+              - cell "Effects Pedals" [ref=f26e979]
+              - cell "55" [ref=f26e980]
+              - cell "Enabled" [ref=f26e981]
+              - cell [ref=f26e985]:
+                - button "Category 48 actions" [ref=f26e987]
+            - row [ref=f26e992]:
+              - cell [ref=f26e993]:
+                - checkbox [ref=f26e994]
+              - cell "46" [ref=f26e995]
+              - cell [ref=f26e996]:
+                - link "Guitars > Effects Pedals > Power Supplies" [ref=f26e997] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories/46/edit
+              - cell "Effects Pedals" [ref=f26e998]
+              - cell "50" [ref=f26e999]
+              - cell "Enabled" [ref=f26e1000]
+              - cell [ref=f26e1004]:
+                - button "Category 46 actions" [ref=f26e1006]
+        - generic [ref=f26e1011]:
+          - generic [ref=f26e1012]: 1 to 50 of 76
+          - generic [ref=f26e1013]:
+            - button "Previous" [disabled]
+            - list "Pages" [ref=f26e1014]:
+              - listitem [ref=f26e1015]:
+                - generic [ref=f26e1016]:
+                  - generic [ref=f26e1017]: Page
+                  - text: "1"
+                  - generic [ref=f26e1018]: of 2, current page
+              - listitem [ref=f26e1019]:
+                - link "Page 2" [ref=f26e1020] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/categories?page=2
+                  - generic [ref=f26e1021]: Page
+                  - text: "2"
+            - link "Next" [ref=f26e1022] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/catalog/categories?page=2

@@ -1,0 +1,168 @@
+- generic [active] [ref=f9e1]:
+  - link "Skip to content" [ref=f9e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f9e4]:
+    - banner [ref=f9e5]:
+      - button "Open navigation" [ref=f9e6]
+      - generic [ref=f9e11]:
+        - generic [ref=f9e12]: Channels
+        - generic [ref=f9e13]: /
+        - generic [ref=f9e14]: All channels
+      - button "Search. Opens the command palette." [ref=f9e15] [cursor=pointer]:
+        - generic [ref=f9e19]: Search products, orders, SKUs
+        - generic [ref=f9e20]: Ctrl K
+      - generic [ref=f9e21]:
+        - generic [ref=f9e22]:
+          - button "Light theme" [ref=f9e23]
+          - button "Dark theme" [ref=f9e27]
+          - button "Match system theme" [ref=f9e30]
+        - button "DO Docs Screenshots (temporary)" [ref=f9e35]:
+          - generic [ref=f9e36]: DO
+          - generic [ref=f9e37]: Docs Screenshots (temporary)
+    - main [ref=f9e38]:
+      - heading "Integrations" [level=1] [ref=f9e39]
+      - paragraph [ref=f9e40]: Connection health across every sales channel.
+      - generic [ref=f9e41]:
+        - article [ref=f9e42]:
+          - generic [ref=f9e43]:
+            - paragraph [ref=f9e45]: Lazada
+            - generic [ref=f9e46]: Sign-in expired
+          - generic [ref=f9e49]:
+            - generic [ref=f9e50]:
+              - term [ref=f9e51]: Last sync
+              - definition [ref=f9e52]: 1 month ago
+            - generic [ref=f9e53]:
+              - term [ref=f9e54]: Token expired
+              - definition [ref=f9e55]: 1 week ago
+            - generic [ref=f9e56]:
+              - term [ref=f9e57]: Errors, 24h
+              - definition [ref=f9e58]: not tracked
+          - generic [ref=f9e59]:
+            - link "Open" [ref=f9e60] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/channels/lazada
+            - link "View orders" [ref=f9e61] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/channels/lazada/orders?tab=TO_SHIP
+        - article [ref=f9e62]:
+          - generic [ref=f9e63]:
+            - generic [ref=f9e64]:
+              - paragraph [ref=f9e65]: Shopee
+              - paragraph [ref=f9e66]: Main store
+            - generic [ref=f9e67]: Connected
+          - generic [ref=f9e70]:
+            - generic [ref=f9e71]:
+              - term [ref=f9e72]: Last sync
+              - definition [ref=f9e73]: 21 hours ago
+            - generic [ref=f9e74]:
+              - term [ref=f9e75]: Token expires
+              - definition [ref=f9e76]: not tracked
+            - generic [ref=f9e77]:
+              - term [ref=f9e78]: Errors, 24h
+              - definition [ref=f9e79]: "2"
+          - generic [ref=f9e80]:
+            - link "Open" [ref=f9e81] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/channels/shopee/1
+            - link "View orders" [ref=f9e82] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/channels/shopee/1/orders
+        - article [ref=f9e83]:
+          - generic [ref=f9e84]:
+            - paragraph [ref=f9e86]: TikTok Shop
+            - generic [ref=f9e87]: Not connected
+          - generic [ref=f9e90]:
+            - generic [ref=f9e91]:
+              - term [ref=f9e92]: Last sync
+              - definition [ref=f9e93]: 1 month ago
+            - generic [ref=f9e94]:
+              - term [ref=f9e95]: Token expires
+              - definition [ref=f9e96]: not tracked
+            - generic [ref=f9e97]:
+              - term [ref=f9e98]: Errors, 24h
+              - definition [ref=f9e99]: not tracked
+          - generic [ref=f9e100]:
+            - link "Open" [ref=f9e101] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/channels/tiktok
+            - link "View orders" [ref=f9e102] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/channels/tiktok/orders
+        - article [ref=f9e103]:
+          - generic [ref=f9e104]:
+            - generic [ref=f9e105]:
+              - paragraph [ref=f9e106]: Venta
+              - paragraph [ref=f9e107]: New Gear Day
+            - generic [ref=f9e108]: Sync overdue
+          - generic [ref=f9e111]:
+            - generic [ref=f9e112]:
+              - term [ref=f9e113]: Last sync
+              - definition [ref=f9e114]: 3 weeks ago
+            - generic [ref=f9e115]:
+              - term [ref=f9e116]: Token expires
+              - definition [ref=f9e117]: not tracked
+            - generic [ref=f9e118]:
+              - term [ref=f9e119]: Errors, 24h
+              - definition [ref=f9e120]: not tracked
+          - generic [ref=f9e121]:
+            - link "Open" [ref=f9e122] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/channels/venta/2
+            - link "View orders" [ref=f9e123] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/channels/venta/2/orders
+        - article [ref=f9e124]:
+          - generic [ref=f9e125]:
+            - generic [ref=f9e126]:
+              - paragraph [ref=f9e127]: Venta
+              - paragraph [ref=f9e128]: Dragon Switch
+            - generic [ref=f9e129]: Turned off
+          - generic [ref=f9e132]:
+            - generic [ref=f9e133]:
+              - term [ref=f9e134]: Last sync
+              - definition [ref=f9e135]: 1 month ago
+            - generic [ref=f9e136]:
+              - term [ref=f9e137]: Token expires
+              - definition [ref=f9e138]: not tracked
+            - generic [ref=f9e139]:
+              - term [ref=f9e140]: Errors, 24h
+              - definition [ref=f9e141]: not tracked
+          - generic [ref=f9e142]:
+            - link "Open" [ref=f9e143] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/channels/venta/3
+            - link "View orders" [ref=f9e144] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/channels/venta/3/orders
+        - article [ref=f9e145]:
+          - generic [ref=f9e146]:
+            - generic [ref=f9e147]:
+              - paragraph [ref=f9e148]: OpenCart
+              - paragraph [ref=f9e149]: New Gear Day
+            - generic [ref=f9e150]: Turned off
+          - generic [ref=f9e153]:
+            - generic [ref=f9e154]:
+              - term [ref=f9e155]: Last sync
+              - definition [ref=f9e156]: 5 months ago
+            - generic [ref=f9e157]:
+              - term [ref=f9e158]: Token expires
+              - definition [ref=f9e159]: not tracked
+            - generic [ref=f9e160]:
+              - term [ref=f9e161]: Errors, 24h
+              - definition [ref=f9e162]: "0"
+          - generic [ref=f9e163]:
+            - link "Open" [ref=f9e164] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/channels/opencart/1
+            - link "View orders" [ref=f9e165] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/channels/opencart/1/orders
+        - article [ref=f9e166]:
+          - generic [ref=f9e167]:
+            - generic [ref=f9e168]:
+              - paragraph [ref=f9e169]: OpenCart
+              - paragraph [ref=f9e170]: Dragon Switch
+            - generic [ref=f9e171]: Turned off
+          - generic [ref=f9e174]:
+            - generic [ref=f9e175]:
+              - term [ref=f9e176]: Last sync
+              - definition [ref=f9e177]: 5 months ago
+            - generic [ref=f9e178]:
+              - term [ref=f9e179]: Token expires
+              - definition [ref=f9e180]: not tracked
+            - generic [ref=f9e181]:
+              - term [ref=f9e182]: Errors, 24h
+              - definition [ref=f9e183]: "0"
+          - generic [ref=f9e184]:
+            - link "Open" [ref=f9e185] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/channels/opencart/2
+            - link "View orders" [ref=f9e186] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/channels/opencart/2/orders

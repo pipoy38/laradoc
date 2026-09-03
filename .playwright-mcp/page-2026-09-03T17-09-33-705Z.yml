@@ -1,0 +1,234 @@
+- generic [active] [ref=f25e1]:
+  - link "Skip to content" [ref=f25e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f25e4]:
+    - banner [ref=f25e5]:
+      - button "Open navigation" [ref=f25e6]
+      - generic [ref=f25e11]:
+        - generic [ref=f25e12]: Catalog
+        - generic [ref=f25e13]: /
+        - link "Products" [ref=f25e14] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/catalog/products
+        - generic [ref=f25e15]: /
+        - generic [ref=f25e16]: G7th Performance 2 Capo (Black)
+      - button "Search. Opens the command palette." [ref=f25e17] [cursor=pointer]:
+        - generic: Search products, orders, SKUs
+        - generic [ref=f25e20]: Ctrl K
+      - generic [ref=f25e21]:
+        - generic [ref=f25e22]:
+          - button "Light theme" [ref=f25e23]
+          - button "Dark theme" [ref=f25e27]
+          - button "Match system theme" [ref=f25e30]
+        - button "DO Docs Screenshots (temporary)" [ref=f25e35]:
+          - generic [ref=f25e36]: DO
+          - generic [ref=f25e37]: Docs Screenshots (temporary)
+    - main [ref=f25e38]:
+      - generic [ref=f25e39]:
+        - status
+        - generic [ref=f25e40]:
+          - generic [ref=f25e41]:
+            - link "Products" [ref=f25e42] [cursor=pointer]:
+              - /url: /catalog/products
+            - heading "G7th Performance 2 Capo (Black)" [level=1] [ref=f25e45]
+            - generic [ref=f25e46]:
+              - generic [ref=f25e47]:
+                - generic [ref=f25e48]: ID
+                - generic [ref=f25e49]: "1"
+              - generic [ref=f25e50]:
+                - generic [ref=f25e51]: SKU
+                - generic [ref=f25e52]: G7th
+              - generic [ref=f25e53]:
+                - generic [ref=f25e54]: Added
+                - generic [ref=f25e55]: 2016-05-29
+          - button "Product 1 actions" [ref=f25e58]
+        - generic [ref=f25e63]:
+          - generic [ref=f25e64]:
+            - region [ref=f25e65]:
+              - heading "General" [level=2] [ref=f25e67]
+              - generic [ref=f25e68]:
+                - generic [ref=f25e69]:
+                  - generic [ref=f25e70]: Manufacturer
+                  - textbox "Manufacturer" [ref=f25e72]:
+                    - /placeholder: Search manufacturers
+                    - text: G7th
+                  - generic [ref=f25e73]: Type to search, then pick from the list. Used on marketplace listings.
+                - generic [ref=f25e74]:
+                  - generic [ref=f25e75]:
+                    - text: Name
+                    - generic [ref=f25e76]: Required
+                  - textbox "Name Required" [ref=f25e78]: G7th Performance 2 Capo (Black)
+                - generic [ref=f25e79]:
+                  - generic [ref=f25e80]: Model
+                  - textbox "Model" [ref=f25e81]: Performance 2 Capo (Black)
+                - generic [ref=f25e82]:
+                  - generic [ref=f25e83]: SKU
+                  - textbox "SKU" [ref=f25e84]: G7th
+                - generic [ref=f25e85]:
+                  - generic [ref=f25e86]: Categories
+                  - generic [ref=f25e87]:
+                    - generic [ref=f25e88]:
+                      - generic [ref=f25e89]: Guitars
+                      - button "Remove Guitars" [ref=f25e90] [cursor=pointer]: ×
+                    - generic [ref=f25e91]:
+                      - generic [ref=f25e92]: Guitar Hardware &amp; Parts
+                      - button "Remove Guitar Hardware &amp; Parts" [ref=f25e93] [cursor=pointer]: ×
+                    - generic [ref=f25e94]:
+                      - generic [ref=f25e95]: Capo
+                      - button "Remove Capo" [ref=f25e96] [cursor=pointer]: ×
+                  - textbox "Categories" [ref=f25e98]:
+                    - /placeholder: Search categories
+                  - generic [ref=f25e99]: Pick as many as apply.
+                - generic [ref=f25e100]:
+                  - generic [ref=f25e101]: Description
+                  - generic [ref=f25e102]:
+                    - toolbar [ref=f25e103]:
+                      - button "Style" [ref=f25e106] [cursor=pointer]:
+                        - generic [ref=f25e107]: 
+                        - generic [ref=f25e108]: 
+                      - generic [ref=f25e109]:
+                        - button "Bold (CTRL+B)" [ref=f25e110] [cursor=pointer]:
+                          - generic [ref=f25e111]: 
+                        - button "Italic (CTRL+I)" [ref=f25e112] [cursor=pointer]:
+                          - generic [ref=f25e113]: 
+                        - button "Underline (CTRL+U)" [ref=f25e114] [cursor=pointer]:
+                          - generic [ref=f25e115]: 
+                        - button "Remove Font Style (CTRL+\\)" [ref=f25e116] [cursor=pointer]:
+                          - generic [ref=f25e117]: 
+                      - generic [ref=f25e118]:
+                        - button "Unordered list (CTRL+SHIFT+NUM7)" [ref=f25e119] [cursor=pointer]:
+                          - generic [ref=f25e120]: 
+                        - button "Ordered list (CTRL+SHIFT+NUM8)" [ref=f25e121] [cursor=pointer]:
+                          - generic [ref=f25e122]: 
+                        - generic [ref=f25e123]:
+                          - button "Paragraph" [ref=f25e124] [cursor=pointer]:
+                            - generic [ref=f25e125]: 
+                            - generic [ref=f25e126]: 
+                          - text:      
+                      - generic [ref=f25e127]:
+                        - button "Link (CTRL+K)" [ref=f25e128] [cursor=pointer]:
+                          - generic [ref=f25e129]: 
+                        - button "Table" [ref=f25e131] [cursor=pointer]:
+                          - generic [ref=f25e132]: 
+                          - generic [ref=f25e133]: 
+                      - button "Code View" [ref=f25e135] [cursor=pointer]:
+                        - generic [ref=f25e136]: 
+                    - textbox "Description" [ref=f25e138]:
+                      - paragraph [ref=f25e139]: In 2004, The Performance Original set a new standard in capo design.
+                      - paragraph [ref=f25e140]: Players loved the way that it kept the guitar in tune, but wanted it to be smaller and lighter, without compromising the tone.
+                      - paragraph [ref=f25e141]: "All that has been impossible until now:"
+                      - paragraph [ref=f25e142]: The new Performance 2 gives you the ultimate capoexperience.
+                      - paragraph [ref=f25e143]: Not only have we made it slimmer and lighter, but we have also reversed it’s patented clutch mechanism, which gives it a lightning fast squeeze-on, squeeze-off action. It has also been designed to store behind the nut or on the peghead when not in use.
+                    - status
+                    - status [ref=f25e144]:
+                      - generic "resize" [ref=f25e145]
+                    - text:                  
+            - region [ref=f25e149]:
+              - generic [ref=f25e150]:
+                - heading "Pricing" [level=2] [ref=f25e151]
+                - button "Edit by hand" [ref=f25e153] [cursor=pointer]
+              - paragraph [ref=f25e154]: Set when a purchase order is received.
+              - generic [ref=f25e156]:
+                - generic [ref=f25e157]: Selling price
+                - textbox "Selling price" [ref=f25e158]: "2300"
+              - generic [ref=f25e159]:
+                - generic [ref=f25e161]:
+                  - generic [ref=f25e162]: Cost
+                  - textbox "Cost" [ref=f25e163]: "0"
+                  - generic [ref=f25e164]: A fixed amount per unit.
+                - generic [ref=f25e165]: plus
+                - generic [ref=f25e167]:
+                  - generic [ref=f25e168]: Cost %
+                  - textbox "Cost %" [ref=f25e169]: "0"
+                  - generic [ref=f25e170]: Share of the selling price.
+                - generic [ref=f25e171]: plus
+                - generic [ref=f25e173]:
+                  - generic [ref=f25e174]: Additional cost
+                  - textbox "Additional cost" [ref=f25e175]: "0"
+                  - generic [ref=f25e176]: Supplier shipping and the like.
+                - generic [ref=f25e177]: equals
+                - generic [ref=f25e179]:
+                  - generic [ref=f25e180]: Unit cost
+                  - textbox "Unit cost" [ref=f25e181]: "0"
+                  - generic [ref=f25e182]: Worked out for you when you save.
+              - generic [ref=f25e183]:
+                - generic [ref=f25e184]:
+                  - generic [ref=f25e185]: Profit
+                  - generic [ref=f25e186]: "2300.00"
+                - generic [ref=f25e187]:
+                  - generic [ref=f25e188]: Margin
+                  - generic [ref=f25e189]: 100.00%
+                - generic [ref=f25e190]:
+                  - generic [ref=f25e191]: Markup
+                  - generic [ref=f25e192]: 0.00%
+            - region [ref=f25e193]:
+              - generic [ref=f25e194]:
+                - heading "Images" [level=2] [ref=f25e195]
+                - generic [ref=f25e196]:
+                  - button "How image order works" [ref=f25e197]:
+                    - generic [aria-hidden] [ref=f25e198]: "?"
+                  - tooltip "Drag a tile to reorder. The first image is the one the catalog and the marketplaces show, and it is marked Main."
+                - button "Browse library" [ref=f25e200] [cursor=pointer]
+              - generic [ref=f25e207]:
+                - generic [ref=f25e209]: Main
+                - generic [ref=f25e210]:
+                  - generic [ref=f25e219]: "1"
+                  - button "Remove image 1" [ref=f25e220] [cursor=pointer]
+            - region [ref=f25e223]:
+              - heading "Variations" [level=2] [ref=f25e225]
+              - paragraph [ref=f25e226]: With variations, this product's quantity is the total of its variation quantities. A variation can go negative if it is oversold. Every variation needs its own SKU.
+              - button "Add a variation" [ref=f25e228] [cursor=pointer]
+          - generic [ref=f25e231]:
+            - generic [ref=f25e232]:
+              - heading "Status" [level=2] [ref=f25e234]
+              - generic [ref=f25e236] [cursor=pointer]:
+                - checkbox "Enabled Off keeps it out of the storefront and marketplace listings." [checked]
+                - generic [ref=f25e238]:
+                  - generic [ref=f25e239]: Enabled
+                  - generic [ref=f25e240]: Off keeps it out of the storefront and marketplace listings.
+            - generic [ref=f25e241]:
+              - generic [ref=f25e242]:
+                - heading "Inventory" [level=2] [ref=f25e243]
+                - link "History" [ref=f25e244] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/catalog/products/1/stock-history
+              - generic [ref=f25e245]:
+                - generic [ref=f25e246]:
+                  - generic [ref=f25e247]:
+                    - generic [ref=f25e248]: Quantity
+                    - textbox "Quantity" [ref=f25e249]: "0"
+                  - generic [ref=f25e250]:
+                    - generic [ref=f25e251]: Reorder level
+                    - spinbutton "Reorder level" [ref=f25e252]: "0"
+                - generic [ref=f25e253]: Reorder level 0 turns the low-stock alert off.
+            - generic [ref=f25e254]:
+              - heading "Shipping" [level=2] [ref=f25e256]
+              - generic [ref=f25e257]:
+                - status [ref=f25e258]:
+                  - generic [ref=f25e259]: This product has no complete parcel. Shopee, Lazada and TikTok all refuse a push or relist without a weight and size - fill these four fields and the channel pages stop flagging it.
+                - generic [ref=f25e260]:
+                  - generic [ref=f25e261]:
+                    - generic [ref=f25e262]: Weight
+                    - textbox "Weight" [ref=f25e263]:
+                      - /placeholder: "0.5"
+                      - text: "1"
+                  - generic [ref=f25e264]:
+                    - generic [ref=f25e265]: Length
+                    - textbox "Length" [ref=f25e266]:
+                      - /placeholder: "10"
+                      - text: "0"
+                  - generic [ref=f25e267]:
+                    - generic [ref=f25e268]: Width
+                    - textbox "Width" [ref=f25e269]:
+                      - /placeholder: "5"
+                      - text: "0"
+                  - generic [ref=f25e270]:
+                    - generic [ref=f25e271]: Height
+                    - textbox "Height" [ref=f25e272]:
+                      - /placeholder: "3"
+                      - text: "0"
+                - generic [ref=f25e273]: Shopee, Lazada and TikTok all refuse a push without a parcel.
+        - generic [ref=f25e274]:
+          - generic [ref=f25e275]: Product 1
+          - generic [ref=f25e276]:
+            - link "Cancel" [ref=f25e277] [cursor=pointer]:
+              - /url: /catalog/products
+            - button "Save changes" [ref=f25e278] [cursor=pointer]

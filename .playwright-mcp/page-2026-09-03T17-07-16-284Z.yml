@@ -1,0 +1,135 @@
+- generic [active] [ref=f6e1]:
+  - link "Skip to content" [ref=f6e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f6e4]:
+    - banner [ref=f6e5]:
+      - button "Open navigation" [ref=f6e6]
+      - generic [ref=f6e11]:
+        - link "Settings" [ref=f6e12] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/settings
+        - generic [ref=f6e13]: /
+        - generic [ref=f6e14]: Currencies
+      - button "Search. Opens the command palette." [ref=f6e15] [cursor=pointer]:
+        - generic [ref=f6e19]: Search products, orders, SKUs
+        - generic [ref=f6e20]: Ctrl K
+      - generic [ref=f6e21]:
+        - generic [ref=f6e22]:
+          - button "Light theme" [ref=f6e23]
+          - button "Dark theme" [ref=f6e27]
+          - button "Match system theme" [ref=f6e30]
+        - button "DO Docs Screenshots (temporary)" [ref=f6e35]:
+          - generic [ref=f6e36]: DO
+          - generic [ref=f6e37]: Docs Screenshots (temporary)
+    - main [ref=f6e38]:
+      - generic [ref=f6e39]:
+        - generic [ref=f6e40]:
+          - heading "Currencies" [level=1] [ref=f6e41]
+          - paragraph [ref=f6e42]: 5 currencies. A rate says how much of PHP one unit of that currency is worth.
+        - generic [ref=f6e43]:
+          - button "Refresh rates" [ref=f6e45] [cursor=pointer]
+          - link "New currency" [ref=f6e46] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/settings/currencies/create
+      - generic [ref=f6e47]:
+        - generic [ref=f6e48]: Search currencies
+        - searchbox "Search currencies" [ref=f6e49]
+      - table [ref=f6e51]:
+        - rowgroup [ref=f6e52]:
+          - row [ref=f6e53]:
+            - columnheader "Code" [ref=f6e54]
+            - columnheader "Name" [ref=f6e55]
+            - columnheader "Symbol" [ref=f6e56]
+            - columnheader "Rate" [ref=f6e57]
+            - columnheader "Status" [ref=f6e58]
+            - columnheader "Actions" [ref=f6e59]
+        - rowgroup [ref=f6e61]:
+          - row [ref=f6e62]:
+            - cell [ref=f6e63]:
+              - link "CAD" [ref=f6e64] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/settings/currencies/7/edit
+            - cell "CAD" [ref=f6e65]
+            - cell "CAD" [ref=f6e66]
+            - cell "44.64285714 1 CAD = 44.64285714 PHP" [ref=f6e67]:
+              - generic [ref=f6e68]:
+                - generic [ref=f6e69]: "44.64285714"
+                - generic [ref=f6e70]: 1 CAD = 44.64285714 PHP
+            - cell "Active" [ref=f6e71]
+            - cell [ref=f6e75]:
+              - generic [ref=f6e76]:
+                - link "Edit" [ref=f6e77] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/settings/currencies/7/edit
+                - button "Delete" [ref=f6e78] [cursor=pointer]
+          - row [ref=f6e79]:
+            - cell [ref=f6e80]:
+              - link "CNY" [ref=f6e81] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/settings/currencies/3/edit
+            - cell "Chinese Yuan" [ref=f6e82]
+            - cell "¥" [ref=f6e83]
+            - cell "9.06864968 1 CNY = 9.06864968 PHP" [ref=f6e84]:
+              - generic [ref=f6e85]:
+                - generic [ref=f6e86]: "9.06864968"
+                - generic [ref=f6e87]: 1 CNY = 9.06864968 PHP
+            - cell "Active" [ref=f6e88]
+            - cell [ref=f6e92]:
+              - generic [ref=f6e93]:
+                - link "Edit" [ref=f6e94] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/settings/currencies/3/edit
+                - button "Delete" [ref=f6e95] [cursor=pointer]
+          - row [ref=f6e96]:
+            - cell [ref=f6e97]:
+              - link "EUR" [ref=f6e98] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/settings/currencies/6/edit
+            - cell "EUR" [ref=f6e99]
+            - cell "EUR" [ref=f6e100]
+            - cell "71.42857143 1 EUR = 71.42857143 PHP" [ref=f6e101]:
+              - generic [ref=f6e102]:
+                - generic [ref=f6e103]: "71.42857143"
+                - generic [ref=f6e104]: 1 EUR = 71.42857143 PHP
+            - cell "Active" [ref=f6e105]
+            - cell [ref=f6e109]:
+              - generic [ref=f6e110]:
+                - link "Edit" [ref=f6e111] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/settings/currencies/6/edit
+                - button "Delete" [ref=f6e112] [cursor=pointer]
+          - row [ref=f6e113]:
+            - cell [ref=f6e114]:
+              - link "PHP" [ref=f6e115] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/settings/currencies/1/edit
+            - cell "Philippine Peso Default. Every stored figure is reported in this currency." [ref=f6e116]:
+              - text: Philippine Peso
+              - generic [ref=f6e117]: Default. Every stored figure is reported in this currency.
+            - cell "₱" [ref=f6e118]
+            - cell "1 1 PHP = 1 PHP" [ref=f6e119]:
+              - generic [ref=f6e120]:
+                - generic [ref=f6e121]: "1"
+                - generic [ref=f6e122]: 1 PHP = 1 PHP
+            - cell "Active" [ref=f6e123]
+            - cell [ref=f6e127]:
+              - link "Edit" [ref=f6e129] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/settings/currencies/1/edit
+          - row [ref=f6e130]:
+            - cell [ref=f6e131]:
+              - link "USD" [ref=f6e132] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/settings/currencies/2/edit
+            - cell "US Dollar" [ref=f6e133]
+            - cell "$" [ref=f6e134]
+            - cell "61.61429452 1 USD = 61.61429452 PHP" [ref=f6e135]:
+              - generic [ref=f6e136]:
+                - generic [ref=f6e137]: "61.61429452"
+                - generic [ref=f6e138]: 1 USD = 61.61429452 PHP
+            - cell "Active" [ref=f6e139]
+            - cell [ref=f6e143]:
+              - generic [ref=f6e144]:
+                - link "Edit" [ref=f6e145] [cursor=pointer]:
+                  - /url: http://127.0.0.1:8000/settings/currencies/2/edit
+                - button "Delete" [ref=f6e146] [cursor=pointer]
+      - generic [ref=f6e151]:
+        - generic [ref=f6e152]: 1 to 5 of 5
+        - generic [ref=f6e153]:
+          - button "Previous" [disabled]
+          - button "Next" [disabled]
+      - generic [ref=f6e154]:
+        - heading "Keeping rates up to date" [level=2] [ref=f6e155]
+        - paragraph [ref=f6e156]: Rates come from the European Central Bank through frankfurter.app, which publishes once every business day at about 16:00 CET. Weekends and holidays keep the last rate. Refresh rates above does it now for every active currency that is not the default; the line below does the same thing on a schedule. Run it once a day at 17:00.
+        - generic [ref=f6e157]:
+          - code [ref=f6e158]: /usr/bin/php /home/ubuntu/ventasync/preyes-erp/artisan currencies:update-rates
+          - button "Copy" [ref=f6e159] [cursor=pointer]

@@ -174,10 +174,10 @@ class WikiImportDocs extends Command
         $excerpt = trim((string) ($art['excerpt'] ?? '')) !== '' ? $art['excerpt'] : HtmlSanitizer::excerpt($cleanBody);
         $bodyText = HtmlSanitizer::toText($cleanBody);
 
-        // Primary key is (category_id, slug); if that misses, fall back to a bare slug
-        // lookup so an article that moved category between runs is updated, not duplicated.
-        $article = Article::where('category_id', $category->id)->where('slug', $art['slug'])->first()
-            ?? Article::where('slug', $art['slug'])->first();
+        // Identity is (category_id, slug) only. Slugs such as "common-errors" legitimately
+        // repeat across channel categories, so a bare-slug fallback would move articles
+        // between categories instead of creating them.
+        $article = Article::where('category_id', $category->id)->where('slug', $art['slug'])->first();
         $isNew = $article === null;
 
         $attrs = [
