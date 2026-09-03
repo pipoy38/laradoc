@@ -1,0 +1,272 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - generic [ref=f1e3]:
+      - link "Laradoc" [ref=f1e4] [cursor=pointer]:
+        - /url: http://127.0.0.1:9005
+      - navigation "Site menu"
+      - generic [ref=f1e6]:
+        - search [ref=f1e7]:
+          - generic [ref=f1e8]: Search
+          - searchbox "Search" [ref=f1e9]
+        - button "Toggle dark mode" [ref=f1e10]:
+          - generic [aria-hidden] [ref=f1e11]: ☀️
+  - generic [ref=f1e12]:
+    - complementary "Documentation" [ref=f1e14]:
+      - navigation "Documentation" [ref=f1e15]:
+        - group [ref=f1e16]:
+          - generic "▸ 🚀 Getting started with VentaSync" [ref=f1e17] [cursor=pointer]
+          - generic [ref=f1e18]:
+            - link "What VentaSync is" [ref=f1e19] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/getting-started/what-is-ventasync
+            - link "Install VentaSync and log in for the first time" [ref=f1e20] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/getting-started/install-and-first-login
+            - link "A tour of the dashboard and navigation" [ref=f1e21] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/getting-started/dashboard-tour
+            - link "Users, user groups and permissions" [ref=f1e22] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/getting-started/users-groups-and-permissions
+            - 'link "Settings: general, website, mail, currencies and order statuses" [ref=f1e23] [cursor=pointer]':
+              - /url: http://127.0.0.1:9005/getting-started/settings-hub
+            - link "Automations, scheduled jobs and the one cron entry" [ref=f1e24] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/getting-started/automations-and-cron
+        - group [ref=f1e25]:
+          - generic "▸ 🛍️ Shopee" [ref=f1e26] [cursor=pointer]
+          - generic [ref=f1e27]:
+            - group [ref=f1e28]:
+              - generic "▸ Setup" [ref=f1e29] [cursor=pointer]
+              - generic [ref=f1e30]:
+                - link "Create an app on the Shopee Open Platform" [ref=f1e31] [cursor=pointer]:
+                  - /url: http://127.0.0.1:9005/shopee/setup/create-a-shopee-open-platform-app
+                - link "Connect your Shopee store to VentaSync" [ref=f1e32] [cursor=pointer]:
+                  - /url: http://127.0.0.1:9005/shopee/setup/connect-your-shopee-store
+                - link "Test in the Shopee sandbox before going live" [ref=f1e33] [cursor=pointer]:
+                  - /url: http://127.0.0.1:9005/shopee/setup/sandbox-vs-production
+                - link "Add more than one Shopee store" [ref=f1e34] [cursor=pointer]:
+                  - /url: http://127.0.0.1:9005/shopee/setup/add-more-shopee-stores
+            - group [ref=f1e35]:
+              - generic "▸ Daily operations" [ref=f1e36] [cursor=pointer]
+            - group [ref=f1e37]:
+              - generic "▸ Troubleshooting" [ref=f1e38] [cursor=pointer]
+        - group [ref=f1e39]:
+          - generic "▸ 🧡 Lazada" [ref=f1e40] [cursor=pointer]
+          - generic [ref=f1e41]:
+            - group [ref=f1e42]:
+              - generic "▸ Setup" [ref=f1e43] [cursor=pointer]
+            - group [ref=f1e44]:
+              - generic "▸ Daily operations" [ref=f1e45] [cursor=pointer]
+            - group [ref=f1e46]:
+              - generic "▸ Troubleshooting" [ref=f1e47] [cursor=pointer]
+        - group [ref=f1e48]:
+          - generic "▸ 🎵 TikTok Shop" [ref=f1e49] [cursor=pointer]
+          - generic [ref=f1e50]:
+            - group [ref=f1e51]:
+              - generic "▸ Setup" [ref=f1e52] [cursor=pointer]
+            - group [ref=f1e53]:
+              - generic "▸ Daily operations" [ref=f1e54] [cursor=pointer]
+            - group [ref=f1e55]:
+              - generic "▸ Troubleshooting" [ref=f1e56] [cursor=pointer]
+        - group [ref=f1e57]:
+          - generic "▸ 🧭 Working in the ERP" [ref=f1e58] [cursor=pointer]
+          - generic [ref=f1e59]:
+            - 'link "Orders: the one list for every channel" [ref=f1e60] [cursor=pointer]':
+              - /url: http://127.0.0.1:9005/working-in-the-erp/orders
+            - link "The fulfilment queue, pick lists and packing lists" [ref=f1e61] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/working-in-the-erp/fulfilment-queue
+            - link "Products, categories and manufacturers" [ref=f1e62] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/working-in-the-erp/products-and-catalog
+            - 'link "Warehousing: inventory, locations and transfers" [ref=f1e63] [cursor=pointer]':
+              - /url: http://127.0.0.1:9005/working-in-the-erp/warehousing
+            - link "Channels overview and all listings" [ref=f1e64] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/working-in-the-erp/channels-and-listings
+            - link "Petty cash" [ref=f1e65] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/working-in-the-erp/petty-cash
+            - link "Reports and other Plus features" [ref=f1e66] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/working-in-the-erp/reports-and-plus
+            - link "AI tools and read-only API access" [ref=f1e67] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/working-in-the-erp/ai-tools
+    - main [ref=f1e68]:
+      - navigation "Breadcrumb" [ref=f1e69]:
+        - list [ref=f1e70]:
+          - listitem [ref=f1e71]:
+            - link "Home" [ref=f1e72] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005
+          - listitem [aria-hidden] [ref=f1e73]: ›
+          - listitem [ref=f1e74]:
+            - link "Shopee" [ref=f1e75] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/shopee
+          - listitem [aria-hidden] [ref=f1e76]: ›
+          - listitem [ref=f1e77]:
+            - link "Setup" [ref=f1e78] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/shopee/setup
+      - article [ref=f1e79]:
+        - heading "Connect your Shopee store to VentaSync" [level=1] [ref=f1e80]
+        - paragraph [ref=f1e81]: Updated 3 Sep 2026 by Admin
+        - paragraph [ref=f1e82]:
+          - link "setup" [ref=f1e83] [cursor=pointer]:
+            - /url: http://127.0.0.1:9005/tags/setup
+          - link "shopee" [ref=f1e84] [cursor=pointer]:
+            - /url: http://127.0.0.1:9005/tags/shopee
+          - link "oauth" [ref=f1e85] [cursor=pointer]:
+            - /url: http://127.0.0.1:9005/tags/oauth
+        - generic [ref=f1e86]:
+          - heading "Before you begin" [level=2] [ref=f1e87]
+          - paragraph [ref=f1e88]:
+            - text: You need a Shopee Open Platform app with a Partner ID and Partner Key — see
+            - link "Create an app on the Shopee Open Platform" [ref=f1e89] [cursor=pointer]:
+              - /url: /shopee/setup/create-a-shopee-open-platform-app
+            - text: if you have not done that yet. You also need the
+            - strong [ref=f1e90]: Shopee
+            - text: permission's manage tier in VentaSync (Settings → User Groups); a view-only Shopee permission can look at these settings but not save or authorise them.
+          - heading "1. Create the store" [level=2] [ref=f1e91]
+          - list [ref=f1e92]:
+            - listitem [ref=f1e93]:
+              - text: Go to
+              - strong [ref=f1e94]: Channels → All channels
+              - text: and open the Shopee card, or go straight to
+              - strong [ref=f1e95]: Channels → Shopee
+              - text: .
+            - listitem [ref=f1e96]:
+              - text: Use
+              - strong [ref=f1e97]: Add New Store
+              - text: "and give it a Store name (used across the ERP: the sidebar, fulfilment, the channels board)."
+            - listitem [ref=f1e98]:
+              - text: VentaSync creates the store and opens its own settings page at
+              - code [ref=f1e99]: "/channels/shopee/{store}/settings"
+              - text: ", ready to be filled in. A newly-created store is disabled until you finish configuring it."
+          - img "The Shopee dashboard for a connected store" [ref=f1e100]
+          - heading "2. Fill in production credentials" [level=2] [ref=f1e101]
+          - paragraph [ref=f1e102]:
+            - text: On the store's settings page, under
+            - strong [ref=f1e103]: Production credentials
+            - text: ", fill in:"
+          - list [ref=f1e104]:
+            - listitem [ref=f1e105]:
+              - strong [ref=f1e106]: Store name
+              - text: and
+              - strong [ref=f1e107]: Store is active
+              - text: — leave Store is active checked once you're ready for this store to sync on the crons.
+            - listitem [ref=f1e108]:
+              - strong [ref=f1e109]: Partner ID
+              - text: — the numeric ID from your Live app.
+            - listitem [ref=f1e110]:
+              - strong [ref=f1e111]: Partner Key
+              - text: — the Live app's signing secret. It is stored encrypted; once saved, the field shows only a masked placeholder. Leave it blank on a later save to keep the stored value.
+            - listitem [ref=f1e112]:
+              - strong [ref=f1e113]: Shop ID
+              - text: — normally filled in for you automatically once you authorise (step 3); you only need to type it by hand if you already know it.
+            - listitem [ref=f1e114]:
+              - strong [ref=f1e115]: Region
+              - text: — pick your seller region, e.g.
+              - strong [ref=f1e116]: Philippines (PH)
+              - text: .
+          - paragraph [ref=f1e117]:
+            - text: The
+            - strong [ref=f1e118]: Redirect URI
+            - text: field beside these is read-only — it is shown so you can copy it into the Shopee console, and is never submitted back. See
+            - link "Create an app on the Shopee Open Platform" [ref=f1e119] [cursor=pointer]:
+              - /url: /shopee/setup/create-a-shopee-open-platform-app
+            - text: for registering it.
+          - paragraph [ref=f1e120]:
+            - text: Save with
+            - strong [ref=f1e121]: Save production settings
+            - text: .
+          - img "The Shopee store settings page" [ref=f1e122]
+          - heading "3. Authorise with Shopee" [level=2] [ref=f1e123]
+          - paragraph [ref=f1e124]:
+            - text: Under
+            - strong [ref=f1e125]: Production authorisation
+            - text: ", work through the three steps:"
+          - list [ref=f1e126]:
+            - listitem [ref=f1e127]:
+              - strong [ref=f1e128]: Authorise with Shopee
+              - text: — click
+              - strong [ref=f1e129]: Open Shopee authorisation
+              - text: . This opens Shopee's sign-in in a new tab, built from your Partner ID, Partner Key and the redirect URI. Sign in as the seller and click
+              - strong [ref=f1e130]: Confirm Authorization
+              - text: . Shopee redirects your browser back to
+              - code [ref=f1e131]: https://<your-domain>/shopee
+              - text: with an auth code and a Shop ID attached. VentaSync reads those off that request and exchanges the code for tokens automatically, before you see any page.
+            - listitem [ref=f1e132]:
+              - strong [ref=f1e133]: Exchange an auth code by hand
+              - text: — only needed if the automatic exchange did not run (for example, you copied the redirect URL out of the address bar instead of letting the browser follow it). Paste the
+              - code [ref=f1e134]: code=
+              - text: value into the
+              - strong [ref=f1e135]: Auth code
+              - text: field and click
+              - strong [ref=f1e136]: Exchange
+              - text: .
+            - listitem [ref=f1e137]:
+              - strong [ref=f1e138]: Refresh an expired token
+              - text: — not needed on first setup; see
+              - link "Access tokens, refresh tokens and re-authorising" [ref=f1e139] [cursor=pointer]:
+                - /url: /shopee/troubleshooting/tokens-and-reauthorising
+              - text: .
+          - img "Production credentials and Production authorisation on the Shopee settings page" [ref=f1e140]
+          - paragraph [ref=f1e141]:
+            - text: Shopee's authorisation link is only valid for a few minutes — if you leave the tab idle too long before confirming, start again from
+            - strong [ref=f1e142]: Open Shopee authorisation
+            - text: .
+          - heading "4. Verify the connection" [level=2] [ref=f1e143]
+          - paragraph [ref=f1e144]:
+            - text: Once authorisation succeeds, the page shows a
+            - strong [ref=f1e145]: Token active
+            - text: badge with an expiry time, and the Shop ID field is filled in. Open
+            - strong [ref=f1e146]: Channels → Shopee
+            - text: and confirm the store's dashboard loads without an authorisation warning.
+          - paragraph [ref=f1e147]:
+            - text: A quick way to confirm the credentials actually work end to end is the API explorer's
+            - strong [ref=f1e148]: Shop info
+            - text: preset — see
+            - link "Use the API explorer and request recording" [ref=f1e149] [cursor=pointer]:
+              - /url: /shopee/troubleshooting/api-explorer-and-recording
+            - text: . It runs a small bundle of read-only calls against the shop's live credentials and lands the result on the API log, which is a faster way to catch a wrong Partner Key or a missing scope than waiting for the first scheduled sync to fail quietly overnight.
+          - heading "Who can do this" [level=2] [ref=f1e150]
+          - paragraph [ref=f1e151]:
+            - text: Connecting and authorising a store needs the manage tier of the
+            - strong [ref=f1e152]: Shopee
+            - text: permission (Settings → User Groups). Someone holding only the view tier can open this same settings page and read every field — credentials, tokens, status mapping, the API log — but every button that writes something (Save, Authorise, Exchange, Refresh) is disabled for them. That split exists so a warehouse operator can check whether a store is connected without being able to reconnect it to the wrong shop by mistake. See
+            - link "Users, user groups and permissions" [ref=f1e153] [cursor=pointer]:
+              - /url: /getting-started/users-groups-and-permissions
+            - text: for how View and Manage tiers work across VentaSync generally.
+          - heading "Next" [level=2] [ref=f1e154]
+          - paragraph [ref=f1e155]:
+            - text: Set up the
+            - link "order and return status mapping" [ref=f1e156] [cursor=pointer]:
+              - /url: /shopee/operations/order-and-return-status-mapping
+            - text: so synced orders land on the right VentaSync status, then run your first
+            - link "order sync" [ref=f1e157] [cursor=pointer]:
+              - /url: /shopee/operations/sync-orders-and-returns
+            - text: . If you would rather try the whole flow against a test shop before touching a real one, read
+            - link "Test in the Shopee sandbox before going live" [ref=f1e158] [cursor=pointer]:
+              - /url: /shopee/setup/sandbox-vs-production
+            - text: first.
+      - navigation "Previous and next" [ref=f1e159]:
+        - link "← Create an app on the Shopee Open Platform" [ref=f1e161] [cursor=pointer]:
+          - /url: http://127.0.0.1:9005/shopee/setup/create-a-shopee-open-platform-app
+        - link "Test in the Shopee sandbox before going live →" [ref=f1e163] [cursor=pointer]:
+          - /url: http://127.0.0.1:9005/shopee/setup/sandbox-vs-production
+    - complementary "On this page" [ref=f1e164]:
+      - generic [ref=f1e165]:
+        - paragraph [ref=f1e166]: On this page
+        - list [ref=f1e167]:
+          - listitem [ref=f1e168]:
+            - link "Before you begin" [ref=f1e169] [cursor=pointer]:
+              - /url: "#before-you-begin"
+          - listitem [ref=f1e170]:
+            - link "1. Create the store" [ref=f1e171] [cursor=pointer]:
+              - /url: "#1-create-the-store"
+          - listitem [ref=f1e172]:
+            - link "2. Fill in production credentials" [ref=f1e173] [cursor=pointer]:
+              - /url: "#2-fill-in-production-credentials"
+          - listitem [ref=f1e174]:
+            - link "3. Authorise with Shopee" [ref=f1e175] [cursor=pointer]:
+              - /url: "#3-authorise-with-shopee"
+          - listitem [ref=f1e176]:
+            - link "4. Verify the connection" [ref=f1e177] [cursor=pointer]:
+              - /url: "#4-verify-the-connection"
+          - listitem [ref=f1e178]:
+            - link "Who can do this" [ref=f1e179] [cursor=pointer]:
+              - /url: "#who-can-do-this"
+          - listitem [ref=f1e180]:
+            - link "Next" [ref=f1e181] [cursor=pointer]:
+              - /url: "#next"
+  - contentinfo [ref=f1e182]: © 2026 Laradoc

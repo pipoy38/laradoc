@@ -1,0 +1,225 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - generic [ref=f2e3]:
+      - link "Laradoc" [ref=f2e4] [cursor=pointer]:
+        - /url: http://127.0.0.1:9005
+      - navigation "Site menu"
+      - generic [ref=f2e6]:
+        - search [ref=f2e7]:
+          - generic [ref=f2e8]: Search
+          - searchbox "Search" [ref=f2e9]
+        - button "Toggle dark mode" [ref=f2e10]:
+          - generic [aria-hidden] [ref=f2e11]: ☀️
+  - generic [ref=f2e12]:
+    - complementary "Documentation" [ref=f2e14]:
+      - navigation "Documentation" [ref=f2e15]:
+        - group [ref=f2e16]:
+          - generic "▸ 🚀 Getting started with VentaSync" [ref=f2e17] [cursor=pointer]
+          - generic [ref=f2e18]:
+            - link "What VentaSync is" [ref=f2e19] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/getting-started/what-is-ventasync
+            - link "Install VentaSync and log in for the first time" [ref=f2e20] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/getting-started/install-and-first-login
+            - link "A tour of the dashboard and navigation" [ref=f2e21] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/getting-started/dashboard-tour
+            - link "Users, user groups and permissions" [ref=f2e22] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/getting-started/users-groups-and-permissions
+            - 'link "Settings: general, website, mail, currencies and order statuses" [ref=f2e23] [cursor=pointer]':
+              - /url: http://127.0.0.1:9005/getting-started/settings-hub
+            - link "Automations, scheduled jobs and the one cron entry" [ref=f2e24] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/getting-started/automations-and-cron
+        - group [ref=f2e25]:
+          - generic "▸ 🛍️ Shopee" [ref=f2e26] [cursor=pointer]
+          - generic [ref=f2e27]:
+            - group [ref=f2e28]:
+              - generic "▸ Setup" [ref=f2e29] [cursor=pointer]
+            - group [ref=f2e30]:
+              - generic "▸ Daily operations" [ref=f2e31] [cursor=pointer]
+            - group [ref=f2e32]:
+              - generic "▸ Troubleshooting" [ref=f2e33] [cursor=pointer]
+        - group [ref=f2e34]:
+          - generic "▸ 🧡 Lazada" [ref=f2e35] [cursor=pointer]
+          - generic [ref=f2e36]:
+            - group [ref=f2e37]:
+              - generic "▸ Setup" [ref=f2e38] [cursor=pointer]
+            - group [ref=f2e39]:
+              - generic "▸ Daily operations" [ref=f2e40] [cursor=pointer]
+            - group [ref=f2e41]:
+              - generic "▸ Troubleshooting" [ref=f2e42] [cursor=pointer]
+              - generic [ref=f2e43]:
+                - 'link "Lazada tokens: 7-day access, 30-day refresh" [ref=f2e44] [cursor=pointer]':
+                  - /url: http://127.0.0.1:9005/lazada/troubleshooting/tokens-and-reauthorising
+                - link "Use the API explorer and request recording" [ref=f2e45] [cursor=pointer]:
+                  - /url: http://127.0.0.1:9005/lazada/troubleshooting/api-explorer-and-recording
+                - link "Common Lazada errors and what they mean" [ref=f2e46] [cursor=pointer]:
+                  - /url: http://127.0.0.1:9005/lazada/troubleshooting/common-errors
+        - group [ref=f2e47]:
+          - generic "▸ 🎵 TikTok Shop" [ref=f2e48] [cursor=pointer]
+          - generic [ref=f2e49]:
+            - group [ref=f2e50]:
+              - generic "▸ Setup" [ref=f2e51] [cursor=pointer]
+            - group [ref=f2e52]:
+              - generic "▸ Daily operations" [ref=f2e53] [cursor=pointer]
+            - group [ref=f2e54]:
+              - generic "▸ Troubleshooting" [ref=f2e55] [cursor=pointer]
+        - group [ref=f2e56]:
+          - generic "▸ 🧭 Working in the ERP" [ref=f2e57] [cursor=pointer]
+          - generic [ref=f2e58]:
+            - 'link "Orders: the one list for every channel" [ref=f2e59] [cursor=pointer]':
+              - /url: http://127.0.0.1:9005/working-in-the-erp/orders
+            - link "The fulfilment queue, pick lists and packing lists" [ref=f2e60] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/working-in-the-erp/fulfilment-queue
+            - link "Products, categories and manufacturers" [ref=f2e61] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/working-in-the-erp/products-and-catalog
+            - 'link "Warehousing: inventory, locations and transfers" [ref=f2e62] [cursor=pointer]':
+              - /url: http://127.0.0.1:9005/working-in-the-erp/warehousing
+            - link "Channels overview and all listings" [ref=f2e63] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/working-in-the-erp/channels-and-listings
+            - link "Petty cash" [ref=f2e64] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/working-in-the-erp/petty-cash
+            - link "Reports and other Plus features" [ref=f2e65] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/working-in-the-erp/reports-and-plus
+            - link "AI tools and read-only API access" [ref=f2e66] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/working-in-the-erp/ai-tools
+    - main [ref=f2e67]:
+      - navigation "Breadcrumb" [ref=f2e68]:
+        - list [ref=f2e69]:
+          - listitem [ref=f2e70]:
+            - link "Home" [ref=f2e71] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005
+          - listitem [aria-hidden] [ref=f2e72]: ›
+          - listitem [ref=f2e73]:
+            - link "Lazada" [ref=f2e74] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/lazada
+          - listitem [aria-hidden] [ref=f2e75]: ›
+          - listitem [ref=f2e76]:
+            - link "Troubleshooting" [ref=f2e77] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/lazada/troubleshooting
+      - article [ref=f2e78]:
+        - heading "Common Lazada errors and what they mean" [level=1] [ref=f2e79]
+        - paragraph [ref=f2e80]: Updated 3 Sep 2026 by Admin
+        - paragraph [ref=f2e81]:
+          - link "lazada" [ref=f2e82] [cursor=pointer]:
+            - /url: http://127.0.0.1:9005/tags/lazada
+          - link "troubleshooting" [ref=f2e83] [cursor=pointer]:
+            - /url: http://127.0.0.1:9005/tags/troubleshooting
+          - link "errors" [ref=f2e84] [cursor=pointer]:
+            - /url: http://127.0.0.1:9005/tags/errors
+        - generic [ref=f2e85]:
+          - heading "Where to see the exact error" [level=2] [ref=f2e86]
+          - paragraph [ref=f2e87]:
+            - text: VentaSync shows Lazada's own error message on the settings page after any action that calls the API, and keeps the full response in the API log — see
+            - link "Use the API explorer and request recording" [ref=f2e88] [cursor=pointer]:
+              - /url: /lazada/troubleshooting/api-explorer-and-recording
+            - text: . Lazada answers with a
+            - code [ref=f2e89]: code
+            - text: and a
+            - code [ref=f2e90]: message
+            - text: ; code
+            - code [ref=f2e91]: "0"
+            - text: means success, anything else is a refusal.
+          - heading "Common errors" [level=2] [ref=f2e92]
+          - table [ref=f2e94]:
+            - rowgroup [ref=f2e95]:
+              - row [ref=f2e96]:
+                - columnheader "Code / text" [ref=f2e97]
+                - columnheader "Cause" [ref=f2e98]
+                - columnheader "Fix" [ref=f2e99]
+            - rowgroup [ref=f2e100]:
+              - row [ref=f2e101]:
+                - cell [ref=f2e102]:
+                  - code [ref=f2e103]: IllegalAccessToken
+                - cell "The access token is missing, invalid, or has expired (Lazada access tokens last 7 days)." [ref=f2e104]
+                - cell [ref=f2e105]:
+                  - text: Refresh the token from
+                  - strong [ref=f2e106]: Channels → Lazada settings → Production authorisation
+                  - text: ", or run"
+                  - code [ref=f2e107]: php artisan lazada:refresh-token
+                  - text: . If the refresh token has also expired (30 days), re-authorise from scratch — see
+                  - 'link "Lazada tokens: 7-day access, 30-day refresh" [ref=f2e108] [cursor=pointer]':
+                    - /url: /lazada/troubleshooting/tokens-and-reauthorising
+                  - text: .
+              - row [ref=f2e109]:
+                - cell [ref=f2e110]:
+                  - code [ref=f2e111]: InvalidSignature
+                  - text: /
+                  - code [ref=f2e112]: IncompleteSignature
+                - cell "The request's signature doesn't match what Lazada computed. VentaSync signs every request automatically, so this almost always means the wrong App Secret was saved for the active environment (production vs sandbox), or the request was built with parameters Lazada wasn't expecting." [ref=f2e113]
+                - cell "Re-check the App Secret (or Sandbox App Secret) against the value on the Lazada Open Platform app for the same environment you're calling. A blank secret field on save keeps the old value, so if it was ever mistyped, retype it fully rather than leaving it blank." [ref=f2e114]
+              - row [ref=f2e115]:
+                - cell [ref=f2e116]:
+                  - code [ref=f2e117]: InvalidAppKey
+                - cell "The App Key doesn't match a registered app, or you're using a production key against a sandbox call (or vice versa)." [ref=f2e118]
+                - cell "Confirm the Environment switch matches the credentials you mean to use, and that App Key / Sandbox App Key are copied from the correct app on the Open Platform console." [ref=f2e119]
+              - row [ref=f2e120]:
+                - cell [ref=f2e121]:
+                  - code [ref=f2e122]: ApiCallLimit
+                  - text: /
+                  - code [ref=f2e123]: SellerCallLimit
+                - cell "Too many requests sent to Lazada in a short window." [ref=f2e124]
+                - cell "VentaSync already rate-limits and retries these automatically with a short backoff. If you see it repeatedly, avoid running syncs, pushes and the API explorer for the same shop at the same time." [ref=f2e125]
+              - row [ref=f2e126]:
+                - cell [ref=f2e127]:
+                  - text: "No"
+                  - code [ref=f2e128]: code
+                  - text: returned to the callback
+                - cell [ref=f2e129]:
+                  - text: Lazada never called
+                  - code [ref=f2e130]: /lazada/callback
+                  - text: with an auth code — usually a redirect URI registered on the Lazada app that doesn't byte-for-byte match VentaSync's computed Redirect URI.
+                - cell [ref=f2e131]:
+                  - text: Compare the Redirect URI shown on the Lazada settings page against what's registered on the Open Platform app. If
+                  - code [ref=f2e132]: APP_URL
+                  - text: changed recently, update the app's registered redirect URI to match.
+              - row [ref=f2e133]:
+                - cell [ref=f2e134]:
+                  - code [ref=f2e135]: E005
+                  - text: — Invalid Request Format
+                - cell [ref=f2e136]:
+                  - text: An endpoint's
+                  - code [ref=f2e137]: payload
+                  - text: parameter wasn't in the shape Lazada expected (some endpoints want JSON, some want XML inside the same field).
+                - cell "Check the specific endpoint's expected payload shape in the API explorer's endpoint hint, and rebuild the payload accordingly." [ref=f2e138]
+              - row [ref=f2e139]:
+                - cell [ref=f2e140]:
+                  - code [ref=f2e141]: E0207
+                  - text: — SKU not exist on Lazada
+                - cell "A stock push referenced a cached Lazada SKU ID that no longer exists on Lazada's side." [ref=f2e142]
+                - cell [ref=f2e143]:
+                  - text: VentaSync invalidates the stale SKU ID automatically so the next
+                  - code [ref=f2e144]: lazada:push-stock
+                  - text: run re-resolves it. No action needed unless it keeps recurring for the same listing, which usually means the listing itself needs re-linking.
+              - row [ref=f2e145]:
+                - cell [ref=f2e146]:
+                  - code [ref=f2e147]: E208
+                  - text: (image migrate)
+                - cell "An image migrate job hasn't finished processing yet." [ref=f2e148]
+                - cell "Wait a few seconds and try the response endpoint again with the same batch ID; VentaSync's explorer already retries this a few times automatically." [ref=f2e149]
+              - row [ref=f2e150]:
+                - cell "\"Lazada refused with code <code>\" (no message text)" [ref=f2e151]
+                - cell "Lazada returned a non-zero code with no readable message text." [ref=f2e152]
+                - cell "Open the full response in the API log's Request and response disclosure — the raw body sometimes carries detail the summary line doesn't." [ref=f2e153]
+          - heading "If none of these match" [level=2] [ref=f2e154]
+          - paragraph [ref=f2e155]:
+            - text: Open
+            - strong [ref=f2e156]: Recent calls
+            - text: on the API log tab and expand the failing request's
+            - strong [ref=f2e157]: Request and response
+            - text: disclosure to see exactly what was sent and what came back. That raw response is the most reliable source — the summary message VentaSync shows is a shortened version of it.
+      - navigation "Previous and next" [ref=f2e158]:
+        - link "← Use the API explorer and request recording" [ref=f2e160] [cursor=pointer]:
+          - /url: http://127.0.0.1:9005/lazada/troubleshooting/api-explorer-and-recording
+    - complementary "On this page" [ref=f2e161]:
+      - generic [ref=f2e162]:
+        - paragraph [ref=f2e163]: On this page
+        - list [ref=f2e164]:
+          - listitem [ref=f2e165]:
+            - link "Where to see the exact error" [ref=f2e166] [cursor=pointer]:
+              - /url: "#where-to-see-the-exact-error"
+          - listitem [ref=f2e167]:
+            - link "Common errors" [ref=f2e168] [cursor=pointer]:
+              - /url: "#common-errors"
+          - listitem [ref=f2e169]:
+            - link "If none of these match" [ref=f2e170] [cursor=pointer]:
+              - /url: "#if-none-of-these-match"
+  - contentinfo [ref=f2e171]: © 2026 Laradoc

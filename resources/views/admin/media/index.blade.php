@@ -12,7 +12,7 @@
     <div>{{ $m->width }}×{{ $m->height }} · {{ number_format($m->size / 1024) }} KB · {{ $m->uploader?->name }}</div>
     <form method="post" action="{{ admin_route('media.update', $m) }}" class="mt-2 flex gap-1">@csrf @method('patch')<input name="alt" class="input" placeholder="Alt text" value="{{ $m->alt }}" aria-label="Alt text"><button class="btn">Save</button></form>
     <div class="mt-2 flex gap-1">
-      <button type="button" class="btn" @click="navigator.clipboard.writeText(@js($m->url())); copied = true; setTimeout(() => copied = false, 1500)" x-text="copied ? 'Copied' : 'Copy URL'"></button>
+      <button type="button" class="btn" @click="navigator.clipboard.writeText(@js(url($m->url()))); copied = true; setTimeout(() => copied = false, 1500)" x-text="copied ? 'Copied' : 'Copy URL'"></button>
       <form method="post" action="{{ admin_route('media.destroy', $m) }}" onsubmit="return confirm('Delete this file? Articles that embed it will show a broken image.')">@csrf @method('delete')<button class="btn" style="color:var(--bad)">Delete</button></form>
     </div>
   </div>

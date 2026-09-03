@@ -1,0 +1,145 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Laradoc" [ref=e4] [cursor=pointer]:
+        - /url: http://127.0.0.1:9005
+      - navigation "Site menu"
+      - generic [ref=e6]:
+        - search [ref=e7]:
+          - generic [ref=e8]: Search
+          - searchbox "Search" [ref=e9]
+        - button "Toggle dark mode" [ref=e10]:
+          - generic [aria-hidden] [ref=e11]: ☀️
+  - generic [ref=e12]:
+    - complementary "Documentation" [ref=e14]:
+      - navigation "Documentation" [ref=e15]:
+        - group [ref=e16]:
+          - generic "▸ 🚀 Getting started with VentaSync" [ref=e17] [cursor=pointer]
+          - generic [ref=e18]:
+            - link "What VentaSync is" [ref=e19] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/getting-started/what-is-ventasync
+            - link "Install VentaSync and log in for the first time" [ref=e20] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/getting-started/install-and-first-login
+            - link "A tour of the dashboard and navigation" [ref=e21] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/getting-started/dashboard-tour
+            - link "Users, user groups and permissions" [ref=e22] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/getting-started/users-groups-and-permissions
+            - 'link "Settings: general, website, mail, currencies and order statuses" [ref=e23] [cursor=pointer]':
+              - /url: http://127.0.0.1:9005/getting-started/settings-hub
+            - link "Automations, scheduled jobs and the one cron entry" [ref=e24] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/getting-started/automations-and-cron
+        - group [ref=e25]:
+          - generic "▸ 🛍️ Shopee" [ref=e26] [cursor=pointer]
+          - generic [ref=e27]:
+            - group [ref=e28]:
+              - generic "▸ Setup" [ref=e29] [cursor=pointer]
+            - group [ref=e30]:
+              - generic "▸ Daily operations" [ref=e31] [cursor=pointer]
+            - group [ref=e32]:
+              - generic "▸ Troubleshooting" [ref=e33] [cursor=pointer]
+        - group [ref=e34]:
+          - generic "▸ 🧡 Lazada" [ref=e35] [cursor=pointer]
+          - generic [ref=e36]:
+            - group [ref=e37]:
+              - generic "▸ Setup" [ref=e38] [cursor=pointer]
+            - group [ref=e39]:
+              - generic "▸ Daily operations" [ref=e40] [cursor=pointer]
+            - group [ref=e41]:
+              - generic "▸ Troubleshooting" [ref=e42] [cursor=pointer]
+        - group [ref=e43]:
+          - generic "▸ 🎵 TikTok Shop" [ref=e44] [cursor=pointer]
+          - generic [ref=e45]:
+            - group [ref=e46]:
+              - generic "▸ Setup" [ref=e47] [cursor=pointer]
+            - group [ref=e48]:
+              - generic "▸ Daily operations" [ref=e49] [cursor=pointer]
+            - group [ref=e50]:
+              - generic "▸ Troubleshooting" [ref=e51] [cursor=pointer]
+        - group [ref=e52]:
+          - generic "▸ 🧭 Working in the ERP" [ref=e53] [cursor=pointer]
+          - generic [ref=e54]:
+            - 'link "Orders: the one list for every channel" [ref=e55] [cursor=pointer]':
+              - /url: http://127.0.0.1:9005/working-in-the-erp/orders
+            - link "The fulfilment queue, pick lists and packing lists" [ref=e56] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/working-in-the-erp/fulfilment-queue
+            - link "Products, categories and manufacturers" [ref=e57] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/working-in-the-erp/products-and-catalog
+            - 'link "Warehousing: inventory, locations and transfers" [ref=e58] [cursor=pointer]':
+              - /url: http://127.0.0.1:9005/working-in-the-erp/warehousing
+            - link "Channels overview and all listings" [ref=e59] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/working-in-the-erp/channels-and-listings
+            - link "Petty cash" [ref=e60] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/working-in-the-erp/petty-cash
+            - link "Reports and other Plus features" [ref=e61] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/working-in-the-erp/reports-and-plus
+            - link "AI tools and read-only API access" [ref=e62] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/working-in-the-erp/ai-tools
+    - main [ref=e63]:
+      - generic [ref=e64]:
+        - heading "Laradoc" [level=1] [ref=e65]
+        - paragraph [ref=e66]: Documentation
+      - generic [ref=e67]:
+        - link "🚀 Getting started with VentaSync Install VentaSync, log in for the first time, and learn the dashboard, users, settings and automations before you connect a marketplace." [ref=e68] [cursor=pointer]:
+          - /url: http://127.0.0.1:9005/getting-started
+          - generic [ref=e69]: 🚀 Getting started with VentaSync
+          - paragraph [ref=e70]: Install VentaSync, log in for the first time, and learn the dashboard, users, settings and automations before you connect a marketplace.
+        - link "🛍️ Shopee Connect a Shopee store to VentaSync, keep orders, stock and prices in sync, and fix it when Shopee refuses a call." [ref=e71] [cursor=pointer]:
+          - /url: http://127.0.0.1:9005/shopee
+          - generic [ref=e72]: 🛍️ Shopee
+          - paragraph [ref=e73]: Connect a Shopee store to VentaSync, keep orders, stock and prices in sync, and fix it when Shopee refuses a call.
+        - link "🧡 Lazada Connect a Lazada store to VentaSync, keep orders, stock and prices in sync, and fix the errors that come up along the way." [ref=e74] [cursor=pointer]:
+          - /url: http://127.0.0.1:9005/lazada
+          - generic [ref=e75]: 🧡 Lazada
+          - paragraph [ref=e76]: Connect a Lazada store to VentaSync, keep orders, stock and prices in sync, and fix the errors that come up along the way.
+        - link "🎵 TikTok Shop Connect a TikTok Shop, sync orders and listings, and fix the errors that come up along the way." [ref=e77] [cursor=pointer]:
+          - /url: http://127.0.0.1:9005/tiktok-shop
+          - generic [ref=e78]: 🎵 TikTok Shop
+          - paragraph [ref=e79]: Connect a TikTok Shop, sync orders and listings, and fix the errors that come up along the way.
+        - 'link "🧭 Working in the ERP Day-to-day operator tasks in VentaSync: orders, fulfilment, catalog, warehousing, channels, petty cash, reports and AI tools." [ref=e80] [cursor=pointer]':
+          - /url: http://127.0.0.1:9005/working-in-the-erp
+          - generic [ref=e81]: 🧭 Working in the ERP
+          - paragraph [ref=e82]: "Day-to-day operator tasks in VentaSync: orders, fulfilment, catalog, warehousing, channels, petty cash, reports and AI tools."
+      - generic [ref=e83]:
+        - heading "Recently updated" [level=2] [ref=e84]
+        - list [ref=e85]:
+          - listitem [ref=e86]:
+            - link "Common Shopee errors and what they mean" [ref=e87] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/shopee/troubleshooting/common-errors
+            - generic [ref=e88]: Troubleshooting · 3 Sep 2026
+          - listitem [ref=e89]:
+            - link "Use the API explorer and request recording" [ref=e90] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/shopee/troubleshooting/api-explorer-and-recording
+            - generic [ref=e91]: Troubleshooting · 3 Sep 2026
+          - listitem [ref=e92]:
+            - link "Access tokens, refresh tokens and re-authorising" [ref=e93] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/shopee/troubleshooting/tokens-and-reauthorising
+            - generic [ref=e94]: Troubleshooting · 3 Sep 2026
+          - listitem [ref=e95]:
+            - link "Common Lazada errors and what they mean" [ref=e96] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/lazada/troubleshooting/common-errors
+            - generic [ref=e97]: Troubleshooting · 3 Sep 2026
+          - listitem [ref=e98]:
+            - link "Use the API explorer and request recording" [ref=e99] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/lazada/troubleshooting/api-explorer-and-recording
+            - generic [ref=e100]: Troubleshooting · 3 Sep 2026
+          - listitem [ref=e101]:
+            - 'link "Lazada tokens: 7-day access, 30-day refresh" [ref=e102] [cursor=pointer]':
+              - /url: http://127.0.0.1:9005/lazada/troubleshooting/tokens-and-reauthorising
+            - generic [ref=e103]: Troubleshooting · 3 Sep 2026
+          - listitem [ref=e104]:
+            - link "Map Lazada order and return statuses" [ref=e105] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/lazada/operations/order-and-return-status-mapping
+            - generic [ref=e106]: Daily operations · 3 Sep 2026
+          - listitem [ref=e107]:
+            - link "Push stock and prices to Lazada" [ref=e108] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/lazada/operations/push-stock-and-prices
+            - generic [ref=e109]: Daily operations · 3 Sep 2026
+          - listitem [ref=e110]:
+            - link "AI tools and read-only API access" [ref=e111] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/working-in-the-erp/ai-tools
+            - generic [ref=e112]: Working in the ERP · 3 Sep 2026
+          - listitem [ref=e113]:
+            - link "Reports and other Plus features" [ref=e114] [cursor=pointer]:
+              - /url: http://127.0.0.1:9005/working-in-the-erp/reports-and-plus
+            - generic [ref=e115]: Working in the ERP · 3 Sep 2026
+  - contentinfo [ref=e116]: © 2026 Laradoc

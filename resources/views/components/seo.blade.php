@@ -1,6 +1,6 @@
 @props(['title' => null, 'description' => null, 'canonical' => null, 'noindex' => false, 'image' => null, 'type' => 'website', 'jsonld' => null])
 @php $site = setting('site_name', 'Laradoc'); $full = $title ? "$title · $site" : $site; $canonical = $canonical ?: url()->current();
-     $image = $image ?: ((setting('logo_media_id') && ($l = \App\Models\Media::find(setting('logo_media_id')))) ? $l->url() : null); @endphp
+     $image = $image ?: ((setting('logo_media_id') && ($l = \App\Models\Media::find(setting('logo_media_id')))) ? $l->url() : null); $image = $image ? url($image) : null; @endphp
 <title>{{ $full }}</title>
 @if($description)<meta name="description" content="{{ $description }}">@endif
 <link rel="canonical" href="{{ $canonical }}">
