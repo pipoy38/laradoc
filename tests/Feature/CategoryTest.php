@@ -1,6 +1,8 @@
 <?php
+
 use App\Models\Article;
 use App\Models\Category;
+use App\Models\PathRedirect;
 use App\Models\User;
 
 beforeEach(fn () => $this->actingAs(User::factory()->create()));
@@ -34,8 +36,8 @@ it('records a redirect when a category slug changes', function () {
     $a = Category::factory()->create(['slug' => 'old']);
     Article::factory()->create(['slug' => 'art', 'category_id' => $a->id]);
     $this->put("/admin/categories/{$a->id}", ['name' => 'Old', 'slug' => 'new', 'parent_id' => null]);
-    expect(\App\Models\PathRedirect::where('from_path', 'old/art')->value('to_path'))->toBe('new/art')
-        ->and(\App\Models\PathRedirect::where('from_path', 'old')->value('to_path'))->toBe('new');
+    expect(PathRedirect::where('from_path', 'old/art')->value('to_path'))->toBe('new/art')
+        ->and(PathRedirect::where('from_path', 'old')->value('to_path'))->toBe('new');
 });
 
 it('moves categories up and down', function () {

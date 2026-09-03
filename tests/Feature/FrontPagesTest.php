@@ -1,4 +1,5 @@
 <?php
+
 use App\Models\Article;
 use App\Models\Category;
 use App\Models\PathRedirect;
@@ -28,16 +29,16 @@ it('renders a category page', function () {
 it('renders an article with breadcrumbs, toc, prev/next, sidebar and seo', function () {
     $r = $this->get('/guides/install/linux')->assertOk();
     $r->assertSee('<title>Linux setup · ERP Docs</title>', false)
-      ->assertSee('<meta name="description" content="Install on Linux">', false)
-      ->assertSee('<link rel="canonical" href="'.url('/guides/install/linux').'">', false)
-      ->assertSee('property="og:title"', false)
-      ->assertSee('"@type":"TechArticle"', false)
-      ->assertSee('<h2 id="step-one">', false)
-      ->assertSee('href="#step-one"', false)
-      ->assertSee('Windows setup')            // next link
-      ->assertSee('class="tree', false)
-      ->assertSee('aria-current="page"', false)
-      ->assertSee('Guides');                   // breadcrumb
+        ->assertSee('<meta name="description" content="Install on Linux">', false)
+        ->assertSee('<link rel="canonical" href="'.url('/guides/install/linux').'">', false)
+        ->assertSee('property="og:title"', false)
+        ->assertSee('"@type":"TechArticle"', false)
+        ->assertSee('<h2 id="step-one">', false)
+        ->assertSee('href="#step-one"', false)
+        ->assertSee('Windows setup')            // next link
+        ->assertSee('class="tree', false)
+        ->assertSee('aria-current="page"', false)
+        ->assertSee('Guides');                   // breadcrumb
     $this->get('/guides/install/windows')->assertOk()->assertSee('Linux setup'); // prev link
 });
 

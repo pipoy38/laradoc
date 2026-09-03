@@ -1,4 +1,5 @@
 <?php
+
 use App\Support\AdminPrefix;
 use App\Support\Settings;
 use Illuminate\Support\Facades\Route;

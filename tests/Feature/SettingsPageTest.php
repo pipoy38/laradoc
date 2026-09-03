@@ -1,8 +1,10 @@
 <?php
+
 use App\Mail\TestMail;
 use App\Models\Media;
 use App\Models\User;
 use App\Support\AdminPrefix;
+use App\Support\Settings;
 use Illuminate\Support\Facades\Mail;
 
 beforeEach(fn () => $this->actingAs(User::factory()->admin()->create()));
@@ -34,7 +36,7 @@ it('supports explicitly disabling smtp encryption', function () {
 });
 
 it('keeps the stored mail password when the field is left blank', function () {
-    app(\App\Support\Settings::class)->set('mail_password', 'keep-me');
+    app(Settings::class)->set('mail_password', 'keep-me');
     $this->put('/admin/settings', ['section' => 'email', 'mail_mailer' => 'smtp', 'mail_host' => 'h', 'mail_port' => 587, 'mail_username' => 'u', 'mail_password' => '', 'mail_encryption' => 'tls', 'mail_from_address' => 'a@b.c', 'mail_from_name' => 'X']);
     expect(setting('mail_password'))->toBe('keep-me');
 });

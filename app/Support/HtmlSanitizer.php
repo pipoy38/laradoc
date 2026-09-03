@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Support;
 
 use Illuminate\Support\Str;
@@ -6,34 +7,56 @@ use Illuminate\Support\Str;
 class HtmlSanitizer
 {
     private const IFRAME_HOSTS = ['www.youtube.com', 'youtube.com', 'www.youtube-nocookie.com', 'player.vimeo.com', 'vimeo.com'];
+
     private const URL_ATTRS = ['href', 'src', 'xlink:href', 'action', 'formaction', 'poster', 'data', 'srcset'];
 
     public static function clean(string $html): string
     {
-        if (trim($html) === '') { return ''; }
+        if (trim($html) === '') {
+            return '';
+        }
         $doc = self::load($html);
         $xpath = new \DOMXPath($doc);
         foreach (['script', 'object', 'embed', 'style', 'form', 'input', 'button', 'meta', 'link', 'base'] as $tag) {
-            foreach (iterator_to_array($doc->getElementsByTagName($tag)) as $el) { $el->parentNode?->removeChild($el); }
+            foreach (iterator_to_array($doc->getElementsByTagName($tag)) as $el) {
+                $el->parentNode?->removeChild($el);
+            }
         }
         foreach (iterator_to_array($doc->getElementsByTagName('iframe')) as $el) {
             $host = strtolower((string) parse_url($el->getAttribute('src'), PHP_URL_HOST));
-            if (! in_array($host, self::IFRAME_HOSTS, true)) { $el->parentNode?->removeChild($el); continue; }
-            foreach (['srcdoc', 'onload'] as $a) { $el->removeAttribute($a); }
+            if (! in_array($host, self::IFRAME_HOSTS, true)) {
+                $el->parentNode?->removeChild($el);
+
+                continue;
+            }
+            foreach (['srcdoc', 'onload'] as $a) {
+                $el->removeAttribute($a);
+            }
         }
         foreach ($xpath->query('//@*') as $attr) {
-            $name = strtolower($attr->nodeName); $value = trim($attr->nodeValue ?? '');
-            if (str_starts_with($name, 'on')) { $attr->ownerElement?->removeAttribute($attr->nodeName); continue; }
-            if (! in_array($name, self::URL_ATTRS, true)) { continue; }
+            $name = strtolower($attr->nodeName);
+            $value = trim($attr->nodeValue ?? '');
+            if (str_starts_with($name, 'on')) {
+                $attr->ownerElement?->removeAttribute($attr->nodeName);
+
+                continue;
+            }
+            if (! in_array($name, self::URL_ATTRS, true)) {
+                continue;
+            }
             $allowed = $name === 'srcset' ? self::srcsetAllowed($value) : self::urlAllowed($attr->ownerElement, $name, $value);
-            if (! $allowed) { $attr->ownerElement?->removeAttribute($attr->nodeName); }
+            if (! $allowed) {
+                $attr->ownerElement?->removeAttribute($attr->nodeName);
+            }
         }
+
         return self::innerHtml($doc, $xpath);
     }
 
     public static function toText(string $html): string
     {
         $text = html_entity_decode(strip_tags(preg_replace('/<(\/?)(p|div|br|h[1-6]|li|tr|blockquote|pre)[^>]*>/i', ' ', $html) ?? ''), ENT_QUOTES | ENT_HTML5, 'UTF-8');
+
         return trim(preg_replace('/\s+/u', ' ', $text) ?? '');
     }
 
@@ -44,6 +67,7 @@ class HtmlSanitizer
         // Shave the budget by the marker's extra byte cost so strlen(excerpt) stays <= $len+1.
         $end = '…';
         $budget = max(0, $len - (strlen($end) - 1));
+
         return Str::limit(self::toText($html), $budget, $end);
     }
 
@@ -77,9 +101,13 @@ class HtmlSanitizer
     {
         foreach (explode(',', $value) as $candidate) {
             $candidate = trim($candidate);
-            if ($candidate === '') { continue; }
+            if ($candidate === '') {
+                continue;
+            }
             $url = preg_split('/\s+/', $candidate, 2)[0] ?? '';
-            if (! self::urlValueAllowed($url, false)) { return false; }
+            if (! self::urlValueAllowed($url, false)) {
+                return false;
+            }
         }
 
         return true;
@@ -89,11 +117,17 @@ class HtmlSanitizer
     {
         $normalized = strtolower(preg_replace('/[\x00-\x20\x7f]+/', '', html_entity_decode($value, ENT_QUOTES | ENT_HTML5, 'UTF-8')));
 
-        if ($normalized === '') { return true; }
+        if ($normalized === '') {
+            return true;
+        }
         // Also matches protocol-relative URLs ("//host/path"), which are intentionally allowed —
         // they carry the same risk class as an absolute https: link.
-        if (preg_match('~^(/|#|\?|\./|\.\./)~', $normalized)) { return true; }
-        if (preg_match('~^(https?:|mailto:|tel:)~', $normalized)) { return true; }
+        if (preg_match('~^(/|#|\?|\./|\.\./)~', $normalized)) {
+            return true;
+        }
+        if (preg_match('~^(https?:|mailto:|tel:)~', $normalized)) {
+            return true;
+        }
 
         if ($allowDataImage && preg_match('~^data:image/(png|jpeg|gif|webp);base64,~', $normalized)) {
             return true;
@@ -104,9 +138,13 @@ class HtmlSanitizer
         $stopPos = false;
         foreach (['/', '?', '#'] as $delim) {
             $p = strpos($normalized, $delim);
-            if ($p !== false && ($stopPos === false || $p < $stopPos)) { $stopPos = $p; }
+            if ($p !== false && ($stopPos === false || $p < $stopPos)) {
+                $stopPos = $p;
+            }
         }
-        if ($colonPos === false || ($stopPos !== false && $colonPos > $stopPos)) { return true; }
+        if ($colonPos === false || ($stopPos !== false && $colonPos > $stopPos)) {
+            return true;
+        }
 
         return false;
     }
@@ -117,6 +155,7 @@ class HtmlSanitizer
         libxml_use_internal_errors(true);
         $doc->loadHTML('<?xml encoding="UTF-8"><div id="__root">'.$html.'</div>', LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD | LIBXML_NONET);
         libxml_clear_errors();
+
         return $doc;
     }
 
@@ -129,7 +168,10 @@ class HtmlSanitizer
     {
         $root = $xpath->query('//*[@id="__root"]')->item(0);
         $out = '';
-        foreach ($root->childNodes as $child) { $out .= $doc->saveHTML($child); }
+        foreach ($root->childNodes as $child) {
+            $out .= $doc->saveHTML($child);
+        }
+
         return trim($out);
     }
 }

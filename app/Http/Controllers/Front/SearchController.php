@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
@@ -10,6 +11,7 @@ class SearchController extends Controller
     public function page(Request $request, SearchService $search)
     {
         $q = (string) $request->query('q', '');
+
         return view('front.search', ['q' => $q, 'results' => $search->search($q, 50), 'search' => $search]);
     }
 

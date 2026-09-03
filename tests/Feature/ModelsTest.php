@@ -1,4 +1,5 @@
 <?php
+
 use App\Models\Article;
 use App\Models\Category;
 use App\Models\User;

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
@@ -12,10 +13,17 @@ class SitemapController extends Controller
     public function sitemap()
     {
         $urls = [['loc' => url('/'), 'lastmod' => Article::published()->max('updated_at')]];
-        foreach (Category::ordered()->get() as $c) { $urls[] = ['loc' => $c->url(), 'lastmod' => null]; }
-        foreach (Article::published()->where('noindex', false)->with('category')->get() as $a) { $urls[] = ['loc' => $a->url(), 'lastmod' => $a->updated_at]; }
+        foreach (Category::ordered()->get() as $c) {
+            $urls[] = ['loc' => $c->url(), 'lastmod' => null];
+        }
+        foreach (Article::published()->where('noindex', false)->with('category')->get() as $a) {
+            $urls[] = ['loc' => $a->url(), 'lastmod' => $a->updated_at];
+        }
         $xml = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-        foreach ($urls as $u) { $xml .= '<url><loc>'.e($u['loc']).'</loc>'.($u['lastmod'] ? '<lastmod>'.Carbon::parse($u['lastmod'])->toAtomString().'</lastmod>' : '').'</url>'; }
+        foreach ($urls as $u) {
+            $xml .= '<url><loc>'.e($u['loc']).'</loc>'.($u['lastmod'] ? '<lastmod>'.Carbon::parse($u['lastmod'])->toAtomString().'</lastmod>' : '').'</url>';
+        }
+
         return response($xml.'</urlset>', 200, ['Content-Type' => 'application/xml']);
     }
 

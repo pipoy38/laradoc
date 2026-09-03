@@ -1,22 +1,28 @@
 <?php
+
 namespace App\Support;
 
 class AdminPrefix
 {
     public const DEFAULT = 'admin';
+
     public const RESERVED = ['search', 'tags', 'api', 'sitemap.xml', 'robots.txt', 'storage', 'build', 'vendor', 'login', 'logout', 'up'];
 
     public static function current(): string
     {
         try {
             $value = app(Settings::class)->get('admin_prefix', self::DEFAULT);
+
             return self::isValid($value) ? $value : self::DEFAULT;
         } catch (\Throwable) {
             return self::DEFAULT; // no DB yet (fresh install, route:cache before migrate)
         }
     }
 
-    public static function reserved(): array { return self::RESERVED; }
+    public static function reserved(): array
+    {
+        return self::RESERVED;
+    }
 
     public static function isValid(?string $value): bool
     {

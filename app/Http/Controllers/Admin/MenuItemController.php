@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
@@ -21,28 +22,45 @@ class MenuItemController extends Controller
         return ['url.regex' => 'Use a full http(s) URL, a path starting with /, an anchor, or a mailto: link.'];
     }
 
-    public function index() { return view('admin.menu.index', ['items' => MenuItem::orderBy('sort_order')->get()]); }
+    public function index()
+    {
+        return view('admin.menu.index', ['items' => MenuItem::orderBy('sort_order')->get()]);
+    }
 
     public function store(Request $request)
     {
         $data = $request->validate($this->rules(), $this->messages());
         MenuItem::create($data + ['new_tab' => $request->boolean('new_tab'), 'sort_order' => (MenuItem::max('sort_order') ?? -1) + 1]);
+
         return redirect()->route('admin.menu.index')->with('ok', 'Menu item added.');
     }
 
     public function update(Request $request, MenuItem $menu)
     {
         $menu->update($request->validate($this->rules(), $this->messages()) + ['new_tab' => $request->boolean('new_tab')]);
+
         return redirect()->route('admin.menu.index')->with('ok', 'Menu item saved.');
     }
 
-    public function destroy(MenuItem $menu) { $menu->delete(); return back()->with('ok', 'Menu item removed.'); }
+    public function destroy(MenuItem $menu)
+    {
+        $menu->delete();
+
+        return back()->with('ok', 'Menu item removed.');
+    }
 
     public function move(Request $request, MenuItem $menu)
     {
         $items = MenuItem::orderBy('sort_order')->get()->values();
-        $i = $items->search(fn ($m) => $m->id === $menu->id); $j = $i + ($request->input('dir') === 'up' ? -1 : 1);
-        if (isset($items[$j])) { foreach ($items as $k => $m) { $m->sort_order = $k; } [$items[$i]->sort_order, $items[$j]->sort_order] = [$j, $i]; $items->each->save(); }
+        $i = $items->search(fn ($m) => $m->id === $menu->id);
+        $j = $i + ($request->input('dir') === 'up' ? -1 : 1);
+        if (isset($items[$j])) {
+            foreach ($items as $k => $m) {
+                $m->sort_order = $k;
+            } [$items[$i]->sort_order, $items[$j]->sort_order] = [$j, $i];
+            $items->each->save();
+        }
+
         return back();
     }
 }

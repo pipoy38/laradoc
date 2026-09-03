@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Requests\Admin;
 
 use App\Models\Category;
@@ -8,7 +9,10 @@ use Illuminate\Validation\Rule;
 
 class ArticleRequest extends FormRequest
 {
-    public function authorize(): bool { return true; }
+    public function authorize(): bool
+    {
+        return true;
+    }
 
     protected function prepareForValidation(): void
     {
@@ -18,6 +22,7 @@ class ArticleRequest extends FormRequest
     public function rules(): array
     {
         $id = $this->route('article')?->id;
+
         return [
             'title' => 'required|string|max:200',
             'slug' => ['required', 'string', 'max:200', 'regex:/^[a-z0-9-]+$/', Rule::unique('articles')->where('category_id', $this->input('category_id'))->ignore($id),

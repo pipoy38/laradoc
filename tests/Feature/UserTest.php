@@ -1,8 +1,12 @@
 <?php
+
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
-beforeEach(function () { $this->admin = User::factory()->admin()->create(); $this->actingAs($this->admin); });
+beforeEach(function () {
+    $this->admin = User::factory()->admin()->create();
+    $this->actingAs($this->admin);
+});
 
 it('creates, edits and deletes users', function () {
     $this->post('/admin/users', ['name' => 'Bob', 'username' => 'bob', 'email' => 'bob@x.io', 'password' => 'password123', 'password_confirmation' => 'password123', 'role' => 'editor'])->assertRedirect('/admin/users');

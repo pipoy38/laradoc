@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Support;
 
 use Illuminate\Support\Facades\Schema;
@@ -14,7 +15,9 @@ class MailConfig
     public static function apply(Settings $s): void
     {
         try {
-            if (! Schema::hasTable('settings')) { return; }
+            if (! Schema::hasTable('settings')) {
+                return;
+            }
             $mailer = $s->get('mail_mailer', 'log');
             config(['mail.default' => $mailer]);
             if ($mailer === 'smtp') {
@@ -24,7 +27,10 @@ class MailConfig
                     'mail.mailers.smtp.encryption' => $encryptionSetting === 'tls' ? 'tls' : null,
                     'mail.mailers.smtp.scheme' => $encryptionSetting === 'ssl' ? 'smtps' : null]);
             }
-            if ($from = $s->get('mail_from_address')) { config(['mail.from.address' => $from, 'mail.from.name' => $s->get('mail_from_name', $s->get('site_name'))]); }
-        } catch (\Throwable) { /* DB not ready */ }
+            if ($from = $s->get('mail_from_address')) {
+                config(['mail.from.address' => $from, 'mail.from.name' => $s->get('mail_from_name', $s->get('site_name'))]);
+            }
+        } catch (\Throwable) { /* DB not ready */
+        }
     }
 }

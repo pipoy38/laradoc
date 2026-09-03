@@ -1,4 +1,5 @@
 <?php
+
 use App\Models\MenuItem;
 use App\Models\User;
 

@@ -1,4 +1,5 @@
 <?php
+
 use App\Support\HtmlSanitizer;
 
 it('strips scripts, handlers and javascript urls but keeps content', function () {

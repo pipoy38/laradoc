@@ -1,7 +1,8 @@
 <?php
+
 use App\Models\User;
-use Illuminate\Support\Facades\Notification;
 use Illuminate\Auth\Notifications\ResetPassword;
+use Illuminate\Support\Facades\Notification;
 
 it('shows the login page', fn () => $this->get('/admin/login')->assertOk()->assertSee('Log in'));
 
@@ -15,7 +16,9 @@ it('logs in with email or username', function () {
 
 it('rejects bad credentials and throttles', function () {
     User::factory()->create(['username' => 'alice', 'password' => 'secret123']);
-    foreach (range(1, 5) as $i) { $this->from('/admin/login')->post('/admin/login', ['login' => 'alice', 'password' => 'nope'])->assertRedirect('/admin/login'); }
+    foreach (range(1, 5) as $i) {
+        $this->from('/admin/login')->post('/admin/login', ['login' => 'alice', 'password' => 'nope'])->assertRedirect('/admin/login');
+    }
     $this->post('/admin/login', ['login' => 'alice', 'password' => 'secret123'])->assertStatus(429);
 });
 

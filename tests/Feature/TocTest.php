@@ -1,4 +1,5 @@
 <?php
+
 use App\Support\Toc;
 
 it('adds unique ids to h2/h3 and lists them', function () {

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Support;
 
 use App\Models\Article;
@@ -11,7 +12,9 @@ class SearchService
     public function search(string $q, int $limit = 20): Collection
     {
         $q = trim(preg_replace('/\s+/', ' ', $q) ?? '');
-        if (mb_strlen($q) < 2) { return collect(); }
+        if (mb_strlen($q) < 2) {
+            return collect();
+        }
 
         // Strip fulltext operator characters up front so both the MySQL boolean-mode
         // path and the LIKE fallback tokenize the query the same way, and drop any
@@ -21,7 +24,9 @@ class SearchService
             ->map(fn ($w) => preg_replace('/[+\-<>()~*"@]/', '', $w))
             ->filter(fn ($w) => $w !== '')
             ->values();
-        if ($words->isEmpty()) { return collect(); }
+        if ($words->isEmpty()) {
+            return collect();
+        }
 
         $query = Article::published()->with('category');
 
@@ -32,7 +37,7 @@ class SearchService
         if (DB::connection()->getDriverName() === 'mysql' && $words->every(fn ($w) => mb_strlen($w) >= 3)) {
             $boolean = $words->map(fn ($w) => '+'.$w.'*')->implode(' ');
             $query->whereRaw('MATCH(title, excerpt, body_text) AGAINST(? IN BOOLEAN MODE)', [$boolean])
-                  ->orderByRaw('MATCH(title, excerpt, body_text) AGAINST(? IN BOOLEAN MODE) DESC', [$boolean]);
+                ->orderByRaw('MATCH(title, excerpt, body_text) AGAINST(? IN BOOLEAN MODE) DESC', [$boolean]);
         } else {
             $this->applyLike($query, $words, $q);
         }
@@ -67,8 +72,10 @@ class SearchService
 
     public function snippet(Article $a, string $q, int $len = 160): string
     {
-        $text = $a->body_text; $pos = mb_stripos($text, explode(' ', trim($q))[0] ?? '');
+        $text = $a->body_text;
+        $pos = mb_stripos($text, explode(' ', trim($q))[0] ?? '');
         $start = $pos === false ? 0 : max(0, $pos - 60);
+
         return ($start > 0 ? '…' : '').mb_substr($text, $start, $len).(mb_strlen($text) > $start + $len ? '…' : '');
     }
 }

@@ -1,4 +1,5 @@
 <?php
+
 use App\Models\Article;
 use App\Models\ArticleRevision;
 use App\Models\Category;
@@ -6,9 +7,14 @@ use App\Models\PathRedirect;
 use App\Models\Tag;
 use App\Models\User;
 
-beforeEach(function () { $this->user = User::factory()->create(); $this->actingAs($this->user); $this->cat = Category::factory()->create(['slug' => 'guides']); });
+beforeEach(function () {
+    $this->user = User::factory()->create();
+    $this->actingAs($this->user);
+    $this->cat = Category::factory()->create(['slug' => 'guides']);
+});
 
-function articlePayload(array $over = []): array {
+function articlePayload(array $over = []): array
+{
     return array_merge(['title' => 'Hello World', 'slug' => '', 'category_id' => test()->cat->id, 'status' => 'published', 'body_html' => '<h2>Intro</h2><p>Text</p>', 'tags' => 'php, Laravel', 'change_note' => 'first'], $over);
 }
 
@@ -68,5 +74,5 @@ it('deletes an article with its revisions and tag links', function () {
     $a->tags()->attach(Tag::factory()->create());
     ArticleRevision::create(['article_id' => $a->id, 'title' => 't', 'body_html' => '<p>x</p>']);
     $this->delete("/admin/articles/{$a->id}")->assertRedirect('/admin/articles');
-    expect(Article::count())->toBe(0)->and(ArticleRevision::count())->toBe(0)->and(\DB::table('article_tag')->count())->toBe(0);
+    expect(Article::count())->toBe(0)->and(ArticleRevision::count())->toBe(0)->and(DB::table('article_tag')->count())->toBe(0);
 });

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
@@ -7,7 +8,10 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    public function show() { return view('admin.auth.login'); }
+    public function show()
+    {
+        return view('admin.auth.login');
+    }
 
     public function login(Request $request)
     {
@@ -17,12 +21,16 @@ class AuthController extends Controller
             return back()->withInput($request->only('login'))->withErrors(['login' => 'Those details do not match our records.']);
         }
         $request->session()->regenerate();
+
         return redirect()->intended(route('admin.dashboard'));
     }
 
     public function logout(Request $request)
     {
-        Auth::logout(); $request->session()->invalidate(); $request->session()->regenerateToken();
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
         return redirect()->route('admin.login');
     }
 }

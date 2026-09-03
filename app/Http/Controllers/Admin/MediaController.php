@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
@@ -27,22 +28,29 @@ class MediaController extends Controller
         [$w, $h] = $size ? [$size[0], $size[1]] : [null, null];
         $media = Media::create(['disk_path' => "$dir/$name", 'original_name' => $file->getClientOriginalName(), 'mime' => $file->getMimeType(), 'size' => $file->getSize(),
             'width' => $w, 'height' => $h, 'uploaded_by' => $request->user()->id]);
-        if ($request->expectsJson()) { return response()->json(['location' => $media->url(), 'id' => $media->id], 201); }
+        if ($request->expectsJson()) {
+            return response()->json(['location' => $media->url(), 'id' => $media->id], 201);
+        }
+
         return redirect()->route('admin.media.index')->with('ok', 'Uploaded.');
     }
 
     public function update(Request $request, Media $media)
     {
         $media->update($request->validate(['alt' => 'nullable|string|max:255']));
+
         return back()->with('ok', 'Alt text saved.');
     }
 
     public function destroy(Media $media)
     {
         $inUse = in_array((string) $media->id, [setting('logo_media_id'), setting('favicon_media_id')], true) || Article::where('og_image_id', $media->id)->exists();
-        if ($inUse) { return back()->with('err', 'This file is used as the logo, favicon or a share image. Change that first.'); }
+        if ($inUse) {
+            return back()->with('err', 'This file is used as the logo, favicon or a share image. Change that first.');
+        }
         Storage::disk('public')->delete($media->disk_path);
         $media->delete();
+
         return back()->with('ok', 'File deleted.');
     }
 }

@@ -1,4 +1,5 @@
 <?php
+
 use App\Support\Settings;
 
 if (! function_exists('setting')) {

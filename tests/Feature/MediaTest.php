@@ -1,4 +1,5 @@
 <?php
+
 use App\Models\Article;
 use App\Models\Media;
 use App\Models\User;
@@ -6,7 +7,10 @@ use App\Support\Settings;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 
-beforeEach(function () { Storage::fake('public'); $this->actingAs(User::factory()->create()); });
+beforeEach(function () {
+    Storage::fake('public');
+    $this->actingAs(User::factory()->create());
+});
 
 it('uploads an image from the editor and returns its location', function () {
     $r = $this->postJson('/admin/media/upload', ['file' => UploadedFile::fake()->image('shot.png', 400, 300)]);

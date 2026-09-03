@@ -1,6 +1,9 @@
 <?php
+
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MediaController;
 use App\Http\Controllers\Admin\MenuItemController;
 use App\Http\Controllers\Admin\PasswordResetController;
@@ -22,9 +25,9 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
-    Route::get('/', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
-    Route::resource('categories', \App\Http\Controllers\Admin\CategoryController::class)->except('show');
-    Route::post('categories/{category}/move', [\App\Http\Controllers\Admin\CategoryController::class, 'move'])->name('categories.move');
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('categories', CategoryController::class)->except('show');
+    Route::post('categories/{category}/move', [CategoryController::class, 'move'])->name('categories.move');
     Route::resource('articles', ArticleController::class)->except('show');
     Route::get('articles/{article}/revisions/{revision}', [RevisionController::class, 'show'])->name('articles.revisions.show');
     Route::post('articles/{article}/revisions/{revision}/restore', [RevisionController::class, 'restore'])->name('articles.revisions.restore');

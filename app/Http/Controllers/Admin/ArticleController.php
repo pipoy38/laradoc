@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
@@ -16,14 +17,26 @@ class ArticleController extends Controller
     public function index(Request $request)
     {
         $q = Article::with(['category', 'editor', 'creator'])->latest('updated_at');
-        if ($s = $request->input('status')) { $q->where('status', $s); }
-        if ($c = $request->integer('category')) { $q->where('category_id', $c); }
-        if ($t = $request->input('tag')) { $q->whereHas('tags', fn ($x) => $x->where('slug', $t)); }
-        if ($text = trim((string) $request->input('q'))) { $q->where(fn ($x) => $x->where('title', 'like', "%{$text}%")->orWhere('slug', 'like', "%{$text}%")); }
+        if ($s = $request->input('status')) {
+            $q->where('status', $s);
+        }
+        if ($c = $request->integer('category')) {
+            $q->where('category_id', $c);
+        }
+        if ($t = $request->input('tag')) {
+            $q->whereHas('tags', fn ($x) => $x->where('slug', $t));
+        }
+        if ($text = trim((string) $request->input('q'))) {
+            $q->where(fn ($x) => $x->where('title', 'like', "%{$text}%")->orWhere('slug', 'like', "%{$text}%"));
+        }
+
         return view('admin.articles.index', ['articles' => $q->paginate(25)->withQueryString(), 'options' => CategoryController::flatOptions(), 'tags' => Tag::orderBy('name')->get()]);
     }
 
-    public function create() { return view('admin.articles.form', ['article' => new Article(['status' => 'draft']), 'tagString' => '']); }
+    public function create()
+    {
+        return view('admin.articles.form', ['article' => new Article(['status' => 'draft']), 'tagString' => '']);
+    }
 
     public function store(ArticleRequest $request)
     {
@@ -34,14 +47,17 @@ class ArticleController extends Controller
             $article->save();
             $this->syncTags($article, $request->input('tags'));
             $this->snapshot($article, $request);
+
             return $article;
         });
+
         return redirect()->route('admin.articles.edit', $article)->with('ok', 'Article created.');
     }
 
     public function edit(Article $article)
     {
         $article->load(['tags', 'revisions.user']);
+
         return view('admin.articles.form', ['article' => $article, 'tagString' => $article->tags->pluck('name')->implode(', ')]);
     }
 
@@ -51,19 +67,23 @@ class ArticleController extends Controller
             $oldPath = $article->path();
             $article->fill($this->attributes($request, $article));
             $article->updated_by = $request->user()->id;
-            if ($article->isDirty('category_id')) { $article->sort_order = (Article::where('category_id', $article->category_id)->max('sort_order') ?? -1) + 1; }
+            if ($article->isDirty('category_id')) {
+                $article->sort_order = (Article::where('category_id', $article->category_id)->max('sort_order') ?? -1) + 1;
+            }
             $article->save();
             $article->unsetRelation('category');
             $resolver->recordRedirects($oldPath, $article->path());
             $this->syncTags($article, $request->input('tags'));
             $this->snapshot($article, $request);
         });
+
         return redirect()->route('admin.articles.edit', $article)->with('ok', 'Saved.');
     }
 
     public function destroy(Article $article)
     {
         $article->delete();
+
         return redirect()->route('admin.articles.index')->with('ok', 'Article deleted.');
     }
 
@@ -73,7 +93,10 @@ class ArticleController extends Controller
         $data['body_html'] = HtmlSanitizer::clean($data['body_html']);
         $data['body_text'] = HtmlSanitizer::toText($data['body_html']);
         $data['excerpt'] = trim((string) ($data['excerpt'] ?? '')) ?: HtmlSanitizer::excerpt($data['body_html']);
-        if ($data['status'] === 'published' && ! $existing?->published_at) { $data['published_at'] = now(); }
+        if ($data['status'] === 'published' && ! $existing?->published_at) {
+            $data['published_at'] = now();
+        }
+
         return $data;
     }
 

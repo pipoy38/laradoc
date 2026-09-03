@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
@@ -10,6 +11,7 @@ class TagController extends Controller
     {
         $tag = Tag::where('slug', $slug)->firstOrFail();
         $articles = $tag->articles()->published()->with('category')->orderBy('title')->get();
+
         return view('front.tag', ['tag' => $tag, 'articles' => $articles]);
     }
 }
