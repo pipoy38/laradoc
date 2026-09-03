@@ -23,6 +23,7 @@ it('is admin only', fn () => $this->actingAs(User::factory()->create())->get('/a
 
 it('rejects unsafe url schemes but allows safe ones', function () {
     $this->post('/admin/menu', ['label' => 'Bad', 'url' => 'javascript:alert(1)'])->assertSessionHasErrors('url');
+    $this->post('/admin/menu', ['label' => 'Relative', 'url' => '//evil.example'])->assertSessionHasErrors('url');
     $this->post('/admin/menu', ['label' => 'Path', 'url' => '/docs'])->assertSessionDoesntHaveErrors('url');
     $this->post('/admin/menu', ['label' => 'Site', 'url' => 'https://example.com'])->assertSessionDoesntHaveErrors('url');
 });

@@ -64,3 +64,37 @@ it('keeps src but drops srcset when srcset contains a data: image (unsupported d
     $out = HtmlSanitizer::clean('<img src="data:image/png;base64,iVBORw0KGgo=" srcset="data:image/png;base64,iVBORw0KGgo= 1x">');
     expect($out)->toContain('src="data:image/png;base64,iVBORw0KGgo="')->not->toContain('srcset');
 });
+
+it('strips svg animation vectors that can rewrite attributes to javascript urls over time', function () {
+    $out = HtmlSanitizer::clean('<svg><a><set attributeName="href" to="javascript:alert(3)"/><text>x</text></a></svg>');
+    expect($out)->not->toContain('<set');
+
+    $out = HtmlSanitizer::clean('<svg><a><animate attributeName="href" values="javascript:alert(1)"/></a></svg>');
+    expect($out)->not->toContain('<animate');
+
+    $out = HtmlSanitizer::clean('<svg><animateTransform attributeName="transform"/></svg>');
+    expect($out)->not->toContain('<animatetransform');
+
+    $out = HtmlSanitizer::clean('<svg><animateMotion/></svg>');
+    expect($out)->not->toContain('<animatemotion');
+
+    $out = HtmlSanitizer::clean('<svg><use href="evil.svg#x"/></svg>');
+    expect($out)->not->toContain('<use');
+
+    $out = HtmlSanitizer::clean('<svg><foreignObject><script>alert(1)</script></foreignObject></svg>');
+    expect($out)->not->toContain('<foreignobject')->not->toContain('<script');
+});
+
+it('drops a style attribute that hides a full-page overlay or an external/executable reference', function () {
+    expect(HtmlSanitizer::clean('<p style="position:fixed;top:0">x</p>'))->not->toContain('style');
+    expect(HtmlSanitizer::clean('<p style="POSITION: ABSOLUTE; left:0">x</p>'))->not->toContain('style');
+    expect(HtmlSanitizer::clean('<p style="background:url(javascript:alert(1))">x</p>'))->not->toContain('style');
+    expect(HtmlSanitizer::clean('<p style="width:expression(alert(1))">x</p>'))->not->toContain('style');
+    expect(HtmlSanitizer::clean('<p style="behavior:url(x.htc)">x</p>'))->not->toContain('style');
+    expect(HtmlSanitizer::clean('<p style="-moz-binding:url(x.xml)">x</p>'))->not->toContain('style');
+});
+
+it('keeps a safe style attribute such as text alignment', function () {
+    $out = HtmlSanitizer::clean('<p style="text-align:center">x</p>');
+    expect($out)->toContain('style="text-align:center"');
+});

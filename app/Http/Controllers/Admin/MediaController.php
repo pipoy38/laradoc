@@ -16,11 +16,24 @@ class MediaController extends Controller
         return view('admin.media.index', ['media' => Media::with('uploader')->latest()->paginate(40)]);
     }
 
+    /**
+     * Extension is derived from the sniffed MIME type, never from the client-supplied
+     * filename. A file named "shell.php.html" that is actually a JPEG must be stored as
+     * ".jpg" — trusting the original filename would let a disguised script land in a
+     * publicly-served directory under an executable-looking extension.
+     */
+    private const MIME_EXTENSIONS = [
+        'image/jpeg' => 'jpg',
+        'image/png' => 'png',
+        'image/gif' => 'gif',
+        'image/webp' => 'webp',
+    ];
+
     public function upload(Request $request)
     {
         $request->validate(['file' => 'required|file|max:5120|mimes:jpg,jpeg,png,gif,webp|mimetypes:image/jpeg,image/png,image/gif,image/webp']);
         $file = $request->file('file');
-        $ext = strtolower($file->getClientOriginalExtension() ?: $file->extension());
+        $ext = self::MIME_EXTENSIONS[$file->getMimeType()] ?? abort(422);
         $dir = 'media/'.now()->format('Y/m');
         $name = Str::random(16).'.'.$ext;
         $path = $file->storeAs($dir, $name, 'public');

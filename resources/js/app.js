@@ -52,3 +52,5 @@ document.querySelectorAll('.prose-doc table').forEach((t) => {
     const w = document.createElement('div'); w.className = 'table-wrap';
     t.parentNode.insertBefore(w, t); w.appendChild(t);
 });
+// Defer offscreen article images
+document.querySelectorAll('.prose-doc img').forEach((i) => { i.loading = 'lazy'; });

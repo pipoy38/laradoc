@@ -56,6 +56,19 @@ git pull
 `deploy.sh` installs dependencies, runs migrations, re-links storage and rebuilds the config/route/view
 caches. It's safe to re-run.
 
+## Going live
+
+Before pointing real traffic at an install, check:
+
+- `APP_ENV=production` and `APP_DEBUG=false` in `.env` (these are already the defaults in
+  `.env.example`; don't flip them back for a live site — `APP_DEBUG=true` leaks stack traces).
+- `APP_URL` is set to the real `https://` URL of the site.
+- `SESSION_SECURE_COOKIE=true` in `.env` once the site is served over https.
+- `storage/` and `bootstrap/cache/` are writable by the web server user.
+- `php artisan db:seed` is **not** part of install — `wiki:install` seeds the sample article itself
+  (see Quick start above); running `db:seed` is only for optionally re-adding the sample content later.
+- Run `./deploy.sh` after every `git pull` to pick up migrations and rebuild caches.
+
 ## Admin URL
 
 The admin area lives at `/admin` by default. You can change this to something less guessable from
@@ -104,13 +117,19 @@ The media library accepts `jpg`, `png`, `gif` and `webp` images only. SVG upload
 design (an SVG can carry executable script); convert logos and icons to PNG before uploading them in
 **Settings › Branding**.
 
+**Security:** uploaded files are re-typed by their sniffed MIME type, not by the extension in the
+client-supplied filename — a file named `shell.php.html` that is actually a JPEG is stored as `.jpg`.
+The client-supplied filename is only ever used for display (`original_name`) and is never used to
+choose the extension the file is stored under.
+
 ## Roles
 
 | Role   | Can do |
 |--------|--------|
 | admin  | Everything: articles, categories, media, menu, users and settings. |
-| editor | Create and edit articles, categories, media and menu. No access to users or settings. |
+| editor | Create and edit articles, categories, tags, media and their own profile. No access to the menu, users or settings. |
 
 ## License
 
-MIT.
+Laradoc's own code is MIT. It bundles two third-party libraries under their own licences: the
+TinyMCE rich text editor (GPL-2.0-or-later) and highlight.js (BSD-3-Clause).

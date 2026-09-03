@@ -10,6 +10,14 @@ class HtmlSanitizer
 
     private const URL_ATTRS = ['href', 'src', 'xlink:href', 'action', 'formaction', 'poster', 'data', 'srcset'];
 
+    /**
+     * `style` is otherwise kept (TinyMCE emits alignment/width styles on tables and images),
+     * but these value patterns are always hostile: fixed/absolute positioning can build a
+     * full-page overlay (clickjacking), url()/-moz-binding can load external/executable
+     * content, and expression()/behavior: are old IE script vectors.
+     */
+    private const DANGEROUS_STYLE = '/position\s*:\s*(fixed|absolute)|url\s*\(|expression\s*\(|behavior\s*:|-moz-binding/i';
+
     public static function clean(string $html): string
     {
         if (trim($html) === '') {
@@ -17,7 +25,13 @@ class HtmlSanitizer
         }
         $doc = self::load($html);
         $xpath = new \DOMXPath($doc);
-        foreach (['script', 'object', 'embed', 'style', 'form', 'input', 'button', 'meta', 'link', 'base'] as $tag) {
+        // DOMDocument lowercases tag names, so match lowercase here. SVG's <animate>,
+        // <animateTransform>, <animateMotion> and <set> can rewrite an attribute (including
+        // href) to a javascript: URL over time, bypassing a one-time attribute check; <use>
+        // can pull in external/hostile content by reference; <foreignObject> can smuggle
+        // arbitrary (non-SVG) markup, including <script>, inside an otherwise-safe <svg>.
+        foreach (['script', 'object', 'embed', 'style', 'form', 'input', 'button', 'meta', 'link', 'base',
+            'animate', 'animatetransform', 'animatemotion', 'set', 'use', 'foreignobject'] as $tag) {
             foreach (iterator_to_array($doc->getElementsByTagName($tag)) as $el) {
                 $el->parentNode?->removeChild($el);
             }
@@ -37,6 +51,11 @@ class HtmlSanitizer
             $name = strtolower($attr->nodeName);
             $value = trim($attr->nodeValue ?? '');
             if (str_starts_with($name, 'on')) {
+                $attr->ownerElement?->removeAttribute($attr->nodeName);
+
+                continue;
+            }
+            if ($name === 'style' && preg_match(self::DANGEROUS_STYLE, $value)) {
                 $attr->ownerElement?->removeAttribute($attr->nodeName);
 
                 continue;

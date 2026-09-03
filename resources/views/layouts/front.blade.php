@@ -51,7 +51,7 @@
     </aside>
   </div>
   @endisset
-  <main class="min-w-0 flex-1">{{ $slot }}</main>
+  <main class="min-w-0 max-w-[760px] flex-1">{{ $slot }}</main>
   @isset($aside)<aside class="hidden w-[220px] shrink-0 lg:block" aria-label="On this page">{{ $aside }}</aside>@endisset
 </div>
 <footer class="border-t px-4 py-6 text-center text-sm" style="border-color:var(--rule-2);color:var(--ink-3)">

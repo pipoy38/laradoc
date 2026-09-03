@@ -95,7 +95,7 @@ class SampleContentSeeder extends Seeder
               <thead><tr><th>Role</th><th>Can do</th></tr></thead>
               <tbody>
                 <tr><td>admin</td><td>Everything: manage articles, categories, media, menu, users and settings.</td></tr>
-                <tr><td>editor</td><td>Create and edit articles, categories, media and menu; no access to users or settings.</td></tr>
+                <tr><td>editor</td><td>Create and edit articles, categories, tags, media and their own profile; no access to the menu, users or settings.</td></tr>
               </tbody>
             </table>
 

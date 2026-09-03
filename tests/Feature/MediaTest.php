@@ -46,3 +46,38 @@ it('lists, edits alt text and deletes, refusing deletes for files in use', funct
     expect(Media::count())->toBe(0);
     Storage::disk('public')->assertMissing($m->disk_path);
 });
+
+it('refuses to delete the current favicon', function () {
+    $m = Media::factory()->create(['uploaded_by' => auth()->id()]);
+    Storage::disk('public')->put($m->disk_path, 'x');
+    app(Settings::class)->set('favicon_media_id', (string) $m->id);
+    $this->delete("/admin/media/{$m->id}")->assertSessionHas('err');
+    expect(Media::count())->toBe(1);
+    Storage::disk('public')->assertExists($m->disk_path);
+});
+
+it('uploads via the non-JSON form path and redirects to the media index with a flash', function () {
+    $r = $this->post('/admin/media/upload', ['file' => UploadedFile::fake()->image('shot.png', 10, 10)]);
+    $r->assertRedirect('/admin/media')->assertSessionHas('ok');
+    expect(Media::count())->toBe(1);
+});
+
+/**
+ * Wraps a genuine image's temp file in a new UploadedFile that declares a misleading
+ * client filename and Content-Type — simulating an attacker who sends a real image's
+ * bytes with a dangerous-looking name. getMimeType() always sniffs the real bytes (it
+ * ignores the constructor's declared $mimeType), so this exercises the actual server-side
+ * MIME sniff exactly as a real malicious request would.
+ */
+dataset('disguised images', [
+    'html-named' => ['shell.html', 'text/html'],
+    'svg-named' => ['logo.svg', 'image/svg+xml'],
+]);
+
+it('stores an upload under an extension derived from its sniffed content, not its filename', function (string $asName, string $declaredMime) {
+    $real = UploadedFile::fake()->image('real.png', 10, 10);
+    $disguised = new UploadedFile($real->getPathname(), $asName, $declaredMime, null, true);
+    $r = $this->postJson('/admin/media/upload', ['file' => $disguised]);
+    $r->assertCreated();
+    expect(Media::first()->disk_path)->toEndWith('.png');
+})->with('disguised images');

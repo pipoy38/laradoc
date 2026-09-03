@@ -1,6 +1,6 @@
 <x-layouts.admin title="Dashboard">
-<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-  @foreach(['articles' => 'Articles', 'published' => 'Published', 'drafts' => 'Drafts', 'categories' => 'Categories'] as $k => $label)
+<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+  @foreach(['articles' => 'Articles', 'published' => 'Published', 'drafts' => 'Drafts', 'categories' => 'Categories', 'users' => 'Users'] as $k => $label)
     <div class="card p-4"><div class="text-sm" style="color:var(--ink-3)">{{ $label }}</div><div class="text-3xl font-semibold tabular-nums">{{ $counts[$k] }}</div></div>
   @endforeach
 </div>

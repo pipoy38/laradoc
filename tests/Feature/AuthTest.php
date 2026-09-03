@@ -29,8 +29,15 @@ it('redirects guests and logs out', function () {
 });
 
 it('blocks editors from admin-only routes', function () {
-    $this->actingAs(User::factory()->create(['role' => 'editor']))->get('/admin/users')->assertForbidden();
-    $this->actingAs(User::factory()->admin()->create())->get('/admin/users')->assertOk();
+    $editor = $this->actingAs(User::factory()->create(['role' => 'editor']));
+    $editor->get('/admin/users')->assertForbidden();
+    $editor->get('/admin/settings')->assertForbidden();
+    $editor->get('/admin/menu')->assertForbidden();
+
+    $admin = $this->actingAs(User::factory()->admin()->create());
+    $admin->get('/admin/users')->assertOk();
+    $admin->get('/admin/settings')->assertOk();
+    $admin->get('/admin/menu')->assertOk();
 });
 
 it('sends a password reset link', function () {

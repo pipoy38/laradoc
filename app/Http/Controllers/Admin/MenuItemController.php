@@ -12,7 +12,10 @@ class MenuItemController extends Controller
     {
         return [
             'label' => 'required|string|max:60',
-            'url' => ['required', 'string', 'max:500', 'regex:#^(https?://|/|\#|mailto:)#i'],
+            // `/(?!/)` requires the path to start with a single slash, not a double slash —
+            // "//evil.example" is a protocol-relative URL (browsers resolve it against the
+            // current scheme), not a safe same-site path, so it must not match here.
+            'url' => ['required', 'string', 'max:500', 'regex:#^(https?://|/(?!/)|\#|mailto:)#i'],
             'new_tab' => 'nullable|boolean',
         ];
     }
