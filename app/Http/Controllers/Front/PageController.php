@@ -31,7 +31,7 @@ class PageController extends Controller
             abort(404);
         }
         if ($hit['type'] === 'category') {
-            $category = $hit['category']->load(['children' => fn ($q) => $q->withCount('articles')]);
+            $category = $hit['category']->load(['children' => fn ($q) => $q->withCount(['articles' => fn ($q) => $q->published()])]);
             return view('front.category', ['category' => $category, 'articles' => $category->articles()->published()->get(), 'crumbs' => $category->ancestors()]);
         }
         $article = $hit['article']->load(['category', 'tags', 'editor', 'creator', 'ogImage']);

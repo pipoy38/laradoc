@@ -12,4 +12,4 @@
 <meta property="og:url" content="{{ $canonical }}">
 @if($image)<meta property="og:image" content="{{ $image }}">@endif
 <meta name="twitter:card" content="{{ $image ? 'summary_large_image' : 'summary' }}">
-@if($jsonld)<script type="application/ld+json">{!! json_encode($jsonld, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>@endif
+@if($jsonld)<script type="application/ld+json">{!! json_encode($jsonld, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) !!}</script>@endif

@@ -20,7 +20,8 @@ it('renders the home page with categories and recent articles', function () {
 });
 
 it('renders a category page', function () {
-    $this->get('/guides')->assertOk()->assertSee('Install')->assertSee('/guides/install', false);
+    $this->get('/guides')->assertOk()->assertSee('Install')->assertSee('/guides/install', false)
+        ->assertSee('2 articles')->assertDontSee('3 articles');
     $this->get('/guides/install')->assertOk()->assertSee('Linux setup')->assertSee('Windows setup')->assertDontSee('Secret');
 });
 
@@ -51,4 +52,11 @@ it('follows path redirects and 404s otherwise', function () {
     $this->get('/old/path')->assertRedirect(url('/guides/install/linux'))->assertStatus(301);
     expect(PathRedirect::first()->hits)->toBe(1);
     $this->get('/nope/nothing')->assertNotFound()->assertSee('Search');
+});
+
+it('hex-escapes tags in the json-ld so a hostile title cannot close the script tag', function () {
+    Article::factory()->create(['title' => 'Bad </script><b>x', 'slug' => 'bad', 'category_id' => $this->child->id]);
+    $this->get('/guides/install/bad')->assertOk()
+        ->assertDontSee('"headline":"Bad </script>', false)
+        ->assertSee('</script>', false);
 });
