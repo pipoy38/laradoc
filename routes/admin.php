@@ -1,6 +1,9 @@
 <?php
+use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\PasswordResetController;
+use App\Http\Controllers\Admin\RevisionController;
+use App\Http\Controllers\Admin\TagController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
@@ -17,5 +20,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
     Route::resource('categories', \App\Http\Controllers\Admin\CategoryController::class)->except('show');
     Route::post('categories/{category}/move', [\App\Http\Controllers\Admin\CategoryController::class, 'move'])->name('categories.move');
+    Route::resource('articles', ArticleController::class)->except('show');
+    Route::get('articles/{article}/revisions/{revision}', [RevisionController::class, 'show'])->name('articles.revisions.show');
+    Route::post('articles/{article}/revisions/{revision}/restore', [RevisionController::class, 'restore'])->name('articles.revisions.restore');
+    Route::resource('tags', TagController::class)->except('show');
     Route::get('users', fn () => 'users')->name('users.index')->middleware('role:admin'); // replaced in Task 8
 });

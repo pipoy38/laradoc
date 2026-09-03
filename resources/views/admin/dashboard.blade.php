@@ -8,13 +8,13 @@
   <section class="card p-4"><h2 class="mb-3 font-semibold">Recent edits</h2>
     @forelse($revisions as $r)
       <div class="flex items-baseline justify-between gap-3 border-b py-2 text-sm last:border-0" style="border-color:var(--rule)">
-        @if(Route::has('admin.articles.edit'))<a href="{{ admin_route('articles.edit', $r->article) }}">{{ $r->title }}</a>@else{{ $r->title }}@endif
+        <a href="{{ admin_route('articles.edit', $r->article) }}">{{ $r->title }}</a>
         <span class="shrink-0 text-xs" style="color:var(--ink-3)">{{ $r->user?->name ?? 'Deleted user' }} · {{ $r->created_at->diffForHumans() }}</span>
       </div>
-    @empty<p class="text-sm" style="color:var(--ink-3)">No edits yet. @if(Route::has('admin.articles.create'))<a href="{{ admin_route('articles.create') }}">Write the first article.</a>@endif</p>@endforelse
+    @empty<p class="text-sm" style="color:var(--ink-3)">No edits yet. <a href="{{ admin_route('articles.create') }}">Write the first article.</a></p>@endforelse
   </section>
   <section class="card p-4"><h2 class="mb-3 font-semibold">Drafts waiting</h2>
-    @forelse($drafts as $d)<div class="border-b py-2 text-sm last:border-0" style="border-color:var(--rule)">@if(Route::has('admin.articles.edit'))<a href="{{ admin_route('articles.edit', $d) }}">{{ $d->title }}</a>@else{{ $d->title }}@endif</div>
+    @forelse($drafts as $d)<div class="border-b py-2 text-sm last:border-0" style="border-color:var(--rule)"><a href="{{ admin_route('articles.edit', $d) }}">{{ $d->title }}</a></div>
     @empty<p class="text-sm" style="color:var(--ink-3)">Nothing in draft.</p>@endforelse
   </section>
 </div>
