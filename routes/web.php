@@ -1,10 +1,18 @@
 <?php
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\PageController;
+use App\Http\Controllers\Front\SearchController;
+use App\Http\Controllers\Front\SitemapController;
+use App\Http\Controllers\Front\TagController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class)->name('home');
-// search, tags, sitemap, robots and api routes are added in Task 11 ABOVE the catch-all
+
+Route::get('/search', [SearchController::class, 'page'])->name('search');
+Route::get('/api/search', [SearchController::class, 'api'])->middleware('throttle:60,1')->name('api.search');
+Route::get('/tags/{slug}', [TagController::class, 'show'])->name('tags.show');
+Route::get('/sitemap.xml', [SitemapController::class, 'sitemap'])->name('sitemap');
+Route::get('/robots.txt', [SitemapController::class, 'robots'])->name('robots');
 //
 // This is registered as a fallback route (not a plain wildcard) because the admin route
 // group is added to the router AFTER routes/web.php finishes loading (bootstrap/app.php
