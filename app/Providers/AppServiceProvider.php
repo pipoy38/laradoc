@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use App\Support\Settings;
+use Illuminate\Auth\Notifications\ResetPassword;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -20,6 +22,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        Blade::anonymousComponentPath(resource_path('views'));
+
+        ResetPassword::createUrlUsing(fn ($user, string $token) => route('admin.password.reset', ['token' => $token, 'email' => $user->email]));
     }
 }
