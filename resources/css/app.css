@@ -39,7 +39,9 @@
   .btn:hover { border-color: var(--brand); }
   .btn-primary { background: var(--brand-deep); border-color: var(--brand-deep); color: #fff; }
   .btn-primary:hover { filter: brightness(1.08); }
+  [data-theme=dark] .btn-primary { color: #0b1228; }
   .btn-danger { background: var(--bad); border-color: var(--bad); color: #fff; }
+  [data-theme=dark] .btn-danger { color: #0b1228; }
   .btn-ghost { background: transparent; border-color: transparent; }
   .field { @apply block mb-4; }
   .field > label, .label { @apply block text-sm font-medium mb-1; color: var(--ink-2); }

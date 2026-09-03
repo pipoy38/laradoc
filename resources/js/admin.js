@@ -35,6 +35,7 @@ window.initEditor = function (selector, uploadUrl, csrf) {
         content_style: (dark ? contentDarkCss : contentCss) + ' body{font-family:system-ui,sans-serif;max-width:none;padding:1rem}',
         plugins: 'link image lists table code codesample fullscreen autoresize searchreplace anchor',
         toolbar: 'undo redo | blocks | bold italic underline strikethrough | link image | blockquote bullist numlist | table codesample hr | code fullscreen',
+        toolbar_mode: 'wrap',
         block_formats: 'Paragraph=p; Heading 2=h2; Heading 3=h3; Heading 4=h4; Preformatted=pre',
         menubar: false, branding: false, promotion: false, min_height: 480, autoresize_bottom_margin: 24,
         convert_urls: false, relative_urls: false, link_default_target: '', link_title: false,

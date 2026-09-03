@@ -20,10 +20,10 @@ class WikiInstall extends Command
     {
         Artisan::call('migrate', ['--force' => true], $this->output);
         if (User::count() === 0) {
-            $name = $this->option('name') ?: env('ADMIN_NAME') ?: $this->ask('Admin display name', 'Administrator');
-            $username = $this->option('username') ?: env('ADMIN_USERNAME') ?: $this->ask('Admin username', 'admin');
-            $email = $this->option('email') ?: env('ADMIN_EMAIL') ?: $this->ask('Admin email');
-            $password = $this->option('password') ?: env('ADMIN_PASSWORD') ?: $this->secret('Admin password (min 8 chars)');
+            $name = $this->option('name') ?: $this->adminEnv('ADMIN_NAME') ?: $this->ask('Admin display name', 'Administrator');
+            $username = $this->option('username') ?: $this->adminEnv('ADMIN_USERNAME') ?: $this->ask('Admin username', 'admin');
+            $email = $this->option('email') ?: $this->adminEnv('ADMIN_EMAIL') ?: $this->ask('Admin email');
+            $password = $this->option('password') ?: $this->adminEnv('ADMIN_PASSWORD') ?: $this->secret('Admin password (min 8 chars)');
             if (! $email || strlen((string) $password) < 8) {
                 $this->error('Email and a password of at least 8 characters are required.');
 
@@ -48,5 +48,15 @@ class WikiInstall extends Command
         $this->info('Done. Admin URL: /'.AdminPrefix::current());
 
         return self::SUCCESS;
+    }
+
+    /**
+     * env() reads from the cached config once `config:cache` has run, at which point
+     * environment lookups outside the original config files return null. Fall back to
+     * getenv()/$_ENV so ADMIN_* still works non-interactively after config:cache.
+     */
+    private function adminEnv(string $key): ?string
+    {
+        return env($key) ?: (getenv($key) ?: null) ?: ($_ENV[$key] ?? null);
     }
 }

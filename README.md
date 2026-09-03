@@ -32,6 +32,8 @@ php artisan wiki:install --name="Admin" --username=admin --email=you@example.com
 # or set ADMIN_NAME / ADMIN_USERNAME / ADMIN_EMAIL / ADMIN_PASSWORD in .env and run without options
 ```
 
+The `ADMIN_*` variables are read from the environment, so they also work after `config:cache`.
+
 It's safe to re-run: once an admin user and the sample article exist, `wiki:install` skips creating
 them again and only re-links storage.
 

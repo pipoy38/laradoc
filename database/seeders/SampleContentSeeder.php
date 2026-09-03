@@ -66,13 +66,14 @@ class SampleContentSeeder extends Seeder
 
             <h2>Categories</h2>
             <p>Categories can be nested to build a sidebar tree. Create them under <strong>Categories</strong> in the
-            admin area; each one has a name, a URL slug, an optional icon and description, and a sort order you can
-            drag to reorder. A category with articles or sub-categories in it can't be deleted until it's empty.</p>
+            admin area; each one has a name, a URL slug, an optional icon and description, and you can reorder
+            siblings with the &uarr;/&darr; buttons next to each row. A category with articles or sub-categories in
+            it can't be deleted until it's empty.</p>
 
             <h2>Revisions</h2>
             <p>Every time you save an article, Laradoc keeps a snapshot: who saved it, when, and an optional change
-            note. Open an article and switch to the <strong>Revisions</strong> tab to see the history and restore an
-            older version if you need to undo a mistake.</p>
+            note. Open an article and switch to the <strong>History</strong> tab to see past versions and restore an
+            older one if you need to undo a mistake.</p>
 
             <h2>SEO fields</h2>
             <p>Each article has optional SEO fields &mdash; SEO title, meta description, canonical URL and a
@@ -86,8 +87,9 @@ class SampleContentSeeder extends Seeder
 
             <h2>Menu, users and roles</h2>
             <p>The top navigation menu is managed under <strong>Menu</strong>, where you can add links to categories,
-            articles or external URLs and drag them into order. Under <strong>Users</strong>, an admin can invite
-            more accounts and assign a role:</p>
+            articles or external URLs and reorder them with the same &uarr;/&darr; buttons. Under
+            <strong>Users</strong>, an admin can create more accounts directly &mdash; there's no invitation email;
+            you set the new account's password yourself and assign a role:</p>
 
             <table>
               <thead><tr><th>Role</th><th>Can do</th></tr></thead>
