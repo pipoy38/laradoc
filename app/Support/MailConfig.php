@@ -18,9 +18,11 @@ class MailConfig
             $mailer = $s->get('mail_mailer', 'log');
             config(['mail.default' => $mailer]);
             if ($mailer === 'smtp') {
+                $encryptionSetting = $s->get('mail_encryption', 'tls');
                 config(['mail.mailers.smtp.host' => $s->get('mail_host'), 'mail.mailers.smtp.port' => (int) $s->get('mail_port', 587),
                     'mail.mailers.smtp.username' => $s->get('mail_username'), 'mail.mailers.smtp.password' => $s->get('mail_password'),
-                    'mail.mailers.smtp.encryption' => $s->get('mail_encryption') ?: null, 'mail.mailers.smtp.scheme' => $s->get('mail_encryption') === 'ssl' ? 'smtps' : null]);
+                    'mail.mailers.smtp.encryption' => $encryptionSetting === 'tls' ? 'tls' : null,
+                    'mail.mailers.smtp.scheme' => $encryptionSetting === 'ssl' ? 'smtps' : null]);
             }
             if ($from = $s->get('mail_from_address')) { config(['mail.from.address' => $from, 'mail.from.name' => $s->get('mail_from_name', $s->get('site_name'))]); }
         } catch (\Throwable) { /* DB not ready */ }

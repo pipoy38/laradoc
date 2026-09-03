@@ -72,7 +72,7 @@
             @php $enc = old('mail_encryption', $s->get('mail_encryption', 'tls')); @endphp
             <option value="tls" @selected($enc === 'tls')>TLS</option>
             <option value="ssl" @selected($enc === 'ssl')>SSL</option>
-            <option value="" @selected($enc === '' || $enc === null)>None</option>
+            <option value="none" @selected($enc === 'none')>None</option>
           </select>
         </div>
       </div>

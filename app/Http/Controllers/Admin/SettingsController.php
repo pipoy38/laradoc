@@ -35,7 +35,7 @@ class SettingsController extends Controller
                 break;
             case 'email':
                 $data = $request->validate(['mail_mailer' => ['required', Rule::in(['smtp', 'sendmail', 'log'])], 'mail_host' => 'nullable|string|max:255', 'mail_port' => 'nullable|integer|between:1,65535',
-                    'mail_username' => 'nullable|string|max:255', 'mail_password' => 'nullable|string|max:255', 'mail_encryption' => ['nullable', Rule::in(['tls', 'ssl', ''])],
+                    'mail_username' => 'nullable|string|max:255', 'mail_password' => 'nullable|string|max:255', 'mail_encryption' => ['required', Rule::in(['tls', 'ssl', 'none'])],
                     'mail_from_address' => 'nullable|email|max:255', 'mail_from_name' => 'nullable|string|max:80']);
                 if (($data['mail_password'] ?? '') === '') { unset($data['mail_password']); }
                 $settings->setMany($data);

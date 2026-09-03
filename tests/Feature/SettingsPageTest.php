@@ -25,6 +25,14 @@ it('saves email settings, applies them to mail config and sends a test', functio
     Mail::assertSent(TestMail::class, fn ($m) => $m->hasTo(auth()->user()->email));
 });
 
+it('supports explicitly disabling smtp encryption', function () {
+    $this->put('/admin/settings', ['section' => 'email', 'mail_mailer' => 'smtp', 'mail_host' => 'h', 'mail_port' => 587, 'mail_username' => 'u', 'mail_password' => 'p', 'mail_encryption' => 'none', 'mail_from_address' => 'a@b.c', 'mail_from_name' => 'X'])->assertRedirect();
+    expect(setting('mail_encryption'))->toBe('none');
+    $this->get('/admin/settings') // triggers provider on a fresh request
+        ->assertSee('value="none" selected', false);
+    expect(config('mail.mailers.smtp.encryption'))->toBeNull();
+});
+
 it('keeps the stored mail password when the field is left blank', function () {
     app(\App\Support\Settings::class)->set('mail_password', 'keep-me');
     $this->put('/admin/settings', ['section' => 'email', 'mail_mailer' => 'smtp', 'mail_host' => 'h', 'mail_port' => 587, 'mail_username' => 'u', 'mail_password' => '', 'mail_encryption' => 'tls', 'mail_from_address' => 'a@b.c', 'mail_from_name' => 'X']);

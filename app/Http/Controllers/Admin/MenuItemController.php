@@ -7,20 +7,32 @@ use Illuminate\Http\Request;
 
 class MenuItemController extends Controller
 {
-    private function rules(): array { return ['label' => 'required|string|max:60', 'url' => 'required|string|max:500', 'new_tab' => 'nullable|boolean']; }
+    private function rules(): array
+    {
+        return [
+            'label' => 'required|string|max:60',
+            'url' => ['required', 'string', 'max:500', 'regex:#^(https?://|/|\#|mailto:)#i'],
+            'new_tab' => 'nullable|boolean',
+        ];
+    }
+
+    private function messages(): array
+    {
+        return ['url.regex' => 'Use a full http(s) URL, a path starting with /, an anchor, or a mailto: link.'];
+    }
 
     public function index() { return view('admin.menu.index', ['items' => MenuItem::orderBy('sort_order')->get()]); }
 
     public function store(Request $request)
     {
-        $data = $request->validate($this->rules());
+        $data = $request->validate($this->rules(), $this->messages());
         MenuItem::create($data + ['new_tab' => $request->boolean('new_tab'), 'sort_order' => (MenuItem::max('sort_order') ?? -1) + 1]);
         return redirect()->route('admin.menu.index')->with('ok', 'Menu item added.');
     }
 
     public function update(Request $request, MenuItem $menu)
     {
-        $menu->update($request->validate($this->rules()) + ['new_tab' => $request->boolean('new_tab')]);
+        $menu->update($request->validate($this->rules(), $this->messages()) + ['new_tab' => $request->boolean('new_tab')]);
         return redirect()->route('admin.menu.index')->with('ok', 'Menu item saved.');
     }
 

@@ -19,3 +19,9 @@ it('manages menu items and reorders them', function () {
 });
 
 it('is admin only', fn () => $this->actingAs(User::factory()->create())->get('/admin/menu')->assertForbidden());
+
+it('rejects unsafe url schemes but allows safe ones', function () {
+    $this->post('/admin/menu', ['label' => 'Bad', 'url' => 'javascript:alert(1)'])->assertSessionHasErrors('url');
+    $this->post('/admin/menu', ['label' => 'Path', 'url' => '/docs'])->assertSessionDoesntHaveErrors('url');
+    $this->post('/admin/menu', ['label' => 'Site', 'url' => 'https://example.com'])->assertSessionDoesntHaveErrors('url');
+});
