@@ -21,6 +21,11 @@ it('rejects non-images and oversized files', function () {
     $this->postJson('/admin/media/upload', ['file' => UploadedFile::fake()->image('big.jpg')->size(6000)])->assertStatus(422);
 });
 
+it('rejects svg uploads', function () {
+    $this->postJson('/admin/media/upload', ['file' => UploadedFile::fake()->createWithContent('logo.svg', '<svg xmlns="http://www.w3.org/2000/svg" onload="alert(1)"/>')])->assertStatus(422);
+    expect(Media::count())->toBe(0);
+});
+
 it('lists, edits alt text and deletes, refusing deletes for files in use', function () {
     $m = Media::factory()->create(['uploaded_by' => auth()->id()]);
     Storage::disk('public')->put($m->disk_path, 'x');

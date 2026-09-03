@@ -17,20 +17,14 @@ class MediaController extends Controller
 
     public function upload(Request $request)
     {
-        $request->validate(['file' => 'required|file|max:5120|mimes:jpg,jpeg,png,gif,webp,svg|mimetypes:image/jpeg,image/png,image/gif,image/webp,image/svg+xml']);
+        $request->validate(['file' => 'required|file|max:5120|mimes:jpg,jpeg,png,gif,webp|mimetypes:image/jpeg,image/png,image/gif,image/webp']);
         $file = $request->file('file');
         $ext = strtolower($file->getClientOriginalExtension() ?: $file->extension());
         $dir = 'media/'.now()->format('Y/m');
         $name = Str::random(16).'.'.$ext;
-        if ($ext === 'svg') {
-            $svg = preg_replace(['/<script\b[^>]*>.*?<\/script>/is', '/<foreignObject\b[^>]*>.*?<\/foreignObject>/is', '/\son\w+="[^"]*"/i'], '', file_get_contents($file->getRealPath()));
-            Storage::disk('public')->put("$dir/$name", $svg);
-            [$w, $h] = [null, null];
-        } else {
-            $path = $file->storeAs($dir, $name, 'public');
-            $size = @getimagesize(Storage::disk('public')->path($path));
-            [$w, $h] = $size ? [$size[0], $size[1]] : [null, null];
-        }
+        $path = $file->storeAs($dir, $name, 'public');
+        $size = @getimagesize(Storage::disk('public')->path($path));
+        [$w, $h] = $size ? [$size[0], $size[1]] : [null, null];
         $media = Media::create(['disk_path' => "$dir/$name", 'original_name' => $file->getClientOriginalName(), 'mime' => $file->getMimeType(), 'size' => $file->getSize(),
             'width' => $w, 'height' => $h, 'uploaded_by' => $request->user()->id]);
         if ($request->expectsJson()) { return response()->json(['location' => $media->url(), 'id' => $media->id], 201); }

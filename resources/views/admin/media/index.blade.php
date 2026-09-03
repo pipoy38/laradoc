@@ -1,7 +1,7 @@
 <x-layouts.admin title="Media">
 <form method="post" action="{{ admin_route('media.upload') }}" enctype="multipart/form-data" class="card mb-4 flex flex-wrap items-center gap-3 p-4">@csrf
-  <label for="file" class="text-sm">Upload image</label><input id="file" type="file" name="file" accept="image/*" required class="text-sm"><button class="btn btn-primary">Upload</button>
-  <span class="hint ml-auto">jpg, png, gif, webp, svg · max 5 MB</span>
+  <label for="file" class="text-sm">Upload image</label><input id="file" type="file" name="file" accept="image/png,image/jpeg,image/gif,image/webp" required class="text-sm"><button class="btn btn-primary">Upload</button>
+  <span class="hint ml-auto">jpg, png, gif, webp · max 5 MB</span>
 </form>
 <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 @forelse($media as $m)
