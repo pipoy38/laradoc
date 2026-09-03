@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\MediaController;
 use App\Http\Controllers\Admin\PasswordResetController;
 use App\Http\Controllers\Admin\RevisionController;
 use App\Http\Controllers\Admin\TagController;
@@ -24,5 +25,9 @@ Route::middleware('auth')->group(function () {
     Route::get('articles/{article}/revisions/{revision}', [RevisionController::class, 'show'])->name('articles.revisions.show');
     Route::post('articles/{article}/revisions/{revision}/restore', [RevisionController::class, 'restore'])->name('articles.revisions.restore');
     Route::resource('tags', TagController::class)->except('show');
+    Route::get('media', [MediaController::class, 'index'])->name('media.index');
+    Route::post('media/upload', [MediaController::class, 'upload'])->name('media.upload');
+    Route::patch('media/{media}', [MediaController::class, 'update'])->name('media.update');
+    Route::delete('media/{media}', [MediaController::class, 'destroy'])->name('media.destroy');
     Route::get('users', fn () => 'users')->name('users.index')->middleware('role:admin'); // replaced in Task 8
 });

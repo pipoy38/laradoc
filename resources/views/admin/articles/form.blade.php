@@ -1,7 +1,7 @@
 <x-layouts.admin :title="$article->exists ? 'Edit article' : 'New article'">
 <form method="post" action="{{ $article->exists ? admin_route('articles.update', $article) : admin_route('articles.store') }}"
       x-data="{ tab: 'content', title: @js(old('title', $article->title)), slug: @js(old('slug', $article->slug)), touched: {{ $article->exists ? 'true' : 'false' }}, seoTitle: @js(old('seo_title', $article->seo_title)), metaDesc: @js(old('meta_description', $article->meta_description)) }"
-      x-init="window.initEditor('#body_html', @js(\Illuminate\Support\Facades\Route::has('admin.media.upload') ? admin_route('media.upload') : ''), @js(csrf_token()))">
+      x-init="window.initEditor('#body_html', @js(admin_route('media.upload')), @js(csrf_token()))">
   @csrf @if($article->exists)@method('put')@endif
   <div class="mb-4 flex flex-wrap items-center gap-2">
     <input name="title" class="input text-lg font-semibold" placeholder="Article title" x-model="title" @input="if(!touched) slug = title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')" required aria-label="Title">
