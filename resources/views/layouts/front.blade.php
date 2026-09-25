@@ -12,7 +12,7 @@
 </head>
 <body class="flex min-h-dvh flex-col">
 <header class="sticky top-0 z-30 border-b" style="background:var(--sheet);border-color:var(--rule-2)">
-  <div class="mx-auto flex max-w-[1400px] items-center gap-3 px-4 py-2">
+  <div class="mx-auto flex max-w-[1964px] items-center gap-3 px-4 py-2">
     <button type="button" class="btn btn-ghost md:hidden" aria-label="Open navigation" @click="$dispatch('open-sidebar')" x-data>☰</button>
     <a href="{{ url('/') }}" class="flex items-center gap-2 font-semibold no-underline" style="color:var(--ink)">
       @if(setting('logo_media_id') && ($logo = \App\Models\Media::find(setting('logo_media_id'))))
@@ -41,7 +41,7 @@
     </div>
   </div>
 </header>
-<div class="mx-auto flex w-full max-w-[1400px] flex-1 gap-8 px-4 py-6">
+<div class="mx-auto flex w-full max-w-[1964px] flex-1 gap-8 px-4 py-6">
   @isset($sidebar)
   <div x-data="{ open: false }" @open-sidebar.window="open = true" @keydown.escape.window="open = false">
     <div x-show="open" x-cloak class="fixed inset-0 z-40 bg-black/40 md:hidden" @click="open = false"></div>
@@ -51,7 +51,7 @@
     </aside>
   </div>
   @endisset
-  <main class="min-w-0 max-w-[760px] flex-1">{{ $slot }}</main>
+  <main class="min-w-0 max-w-[1400px] flex-1">{{ $slot }}</main>
   @isset($aside)<aside class="hidden w-[220px] shrink-0 lg:block" aria-label="On this page">{{ $aside }}</aside>@endisset
 </div>
 <footer class="border-t px-4 py-6 text-center text-sm" style="border-color:var(--rule-2);color:var(--ink-3)">
