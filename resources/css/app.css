@@ -77,6 +77,12 @@
   .prose-doc th, .prose-doc td { @apply border px-3 py-2; border-color: var(--rule-2); }
   .prose-doc th { background: var(--rule); }
   .prose-doc hr { border-color: var(--rule-2); }
+  .prose-doc p.lead { font-size: 1.125rem; color: var(--ink-2); }
+  /* Document-control footer (quality-documentation-manager): number, version, applies-to, reviewed, owner */
+  .prose-doc .doc-control { margin-top: 3rem; padding-top: 1rem; border-top: 1px dashed var(--rule-2); }
+  .prose-doc .doc-control table { width: auto; font-size: .75rem; color: var(--ink-3); border-collapse: collapse; }
+  .prose-doc .doc-control th, .prose-doc .doc-control td { border: 0; padding: .1rem 1rem .1rem 0; background: none; text-align: left; font-weight: 500; }
+  .prose-doc .doc-control th { color: var(--ink-3); }
 
   /* Sidebar tree */
   .tree a { @apply block rounded-md px-2 py-1.5 text-sm; color: var(--ink-2); }

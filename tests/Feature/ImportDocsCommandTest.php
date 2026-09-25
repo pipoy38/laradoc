@@ -153,3 +153,23 @@ it('fails fast with no partial writes on invalid JSON', function () {
     expect(Category::whereNull('parent_id')->where('slug', '!=', 'getting-started')->count())->toBe(0)
         ->and(Article::count())->toBe(1); // only the untouched sample article
 });
+
+it('purges the whole site first with --purge and reads shots from --shots', function () {
+    $old = docsJobDir('<p>Old body</p>');
+    $this->artisan('wiki:import-docs', ['dir' => $old, '--replace-sample' => true])->assertExitCode(0);
+    $oldMediaPath = null;
+    expect(Article::count())->toBe(2);
+
+    // A second job whose images live in a custom sub-directory.
+    $new = docsJobDir('<p>New body <img src="{{shot:a.png}}" alt="new shot"></p>');
+    rename("$new/erp-shots", "$new/shots");
+    $this->artisan('wiki:import-docs', ['dir' => $new, '--purge' => true, '--shots' => 'shots'])
+        ->expectsOutputToContain('Purged')
+        ->assertExitCode(0);
+
+    expect(Article::count())->toBe(2)
+        ->and(Article::where('slug', 'first-article')->value('body_html'))->toContain('New body')->toContain('/storage/media/')
+        ->and(Media::count())->toBe(1)
+        ->and(Category::count())->toBe(2)
+        ->and(ArticleRevision::count())->toBe(2);
+});

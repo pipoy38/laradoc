@@ -5,9 +5,11 @@ namespace App\Console\Commands;
 use App\Models\Article;
 use App\Models\Category;
 use App\Models\Media;
+use App\Models\PathRedirect;
 use App\Models\Tag;
 use App\Models\User;
 use App\Support\HtmlSanitizer;
+use App\Support\Settings;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -17,7 +19,9 @@ class WikiImportDocs extends Command
 {
     protected $signature = 'wiki:import-docs {dir : Path to the docs job directory (containing content/ and erp-shots/)}
         {--order= : Comma-separated root category slugs, in display order}
-        {--replace-sample : Delete the seeded getting-started/welcome sample article before importing}';
+        {--replace-sample : Delete the seeded getting-started/welcome sample article before importing}
+        {--shots= : Sub-directory of the job directory holding the PNGs (default erp-shots)}
+        {--purge : Delete every existing article, category, tag and media row (and media files) before importing}';
 
     protected $description = 'Bulk-import documentation categories and articles from a docs-job export';
 
@@ -30,7 +34,7 @@ class WikiImportDocs extends Command
     {
         $dir = rtrim((string) $this->argument('dir'), '/');
         $contentDir = "$dir/content";
-        $shotsDir = "$dir/erp-shots";
+        $shotsDir = $dir.'/'.($this->option('shots') ?: 'erp-shots');
 
         if (! is_dir($contentDir)) {
             $this->error("Content directory not found: $contentDir");
@@ -67,6 +71,10 @@ class WikiImportDocs extends Command
             'media_created' => 0, 'media_reused' => 0, 'media_updated' => 0,
             'images_dropped' => 0, 'missing_shots' => [],
         ];
+
+        if ($this->option('purge')) {
+            $this->purgeExisting();
+        }
 
         if ($this->option('replace-sample')) {
             $sample = Article::whereHas('category', fn ($q) => $q->where('slug', 'getting-started')->whereNull('parent_id'))
@@ -318,5 +326,24 @@ class WikiImportDocs extends Command
         if ($missing !== []) {
             $this->warn('Referenced but missing shot files: '.implode(', ', $missing));
         }
+    }
+
+    /** Remove every article, category, tag and media row so the import is the whole site. */
+    private function purgeExisting(): void
+    {
+        $counts = ['articles' => Article::count(), 'categories' => Category::count(), 'media' => Media::count()];
+        DB::transaction(function () {
+            Article::query()->each(fn (Article $a) => $a->delete());
+            Tag::query()->delete();
+            Media::query()->each(function (Media $m) {
+                Storage::disk('public')->delete($m->disk_path);
+                $m->delete();
+            });
+            // children before parents; parent_id is nullOnDelete so order only matters for tidiness
+            Category::query()->orderByDesc('parent_id')->each(fn (Category $c) => $c->delete());
+            PathRedirect::query()->delete();
+        });
+        app(Settings::class)->setMany(['logo_media_id' => null, 'favicon_media_id' => null]);
+        $this->line(sprintf('Purged %d articles, %d categories, %d media files.', $counts['articles'], $counts['categories'], $counts['media']));
     }
 }
