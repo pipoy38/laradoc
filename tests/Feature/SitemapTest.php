@@ -10,5 +10,6 @@ it('lists published pages in the sitemap and serves robots', function () {
     Article::factory()->create(['slug' => 'hidden', 'noindex' => true, 'category_id' => $c->id]);
     $this->get('/sitemap.xml')->assertOk()->assertHeader('content-type', 'application/xml')
         ->assertSee(url('/g/yes'))->assertSee(url('/g'))->assertDontSee(url('/g/no'))->assertDontSee(url('/g/hidden'));
-    $this->get('/robots.txt')->assertOk()->assertSee('Sitemap: '.url('/sitemap.xml'))->assertSee('Disallow: /admin');
+    $this->get('/robots.txt')->assertOk()->assertSee('Sitemap: '.url('/sitemap.xml'))->assertSee('Disallow: /api/')
+        ->assertDontSee('Disallow: /admin'); // the hidden admin prefix must never be revealed here
 });

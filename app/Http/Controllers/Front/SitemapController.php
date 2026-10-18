@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Front;
 use App\Http\Controllers\Controller;
 use App\Models\Article;
 use App\Models\Category;
-use App\Support\AdminPrefix;
 use Carbon\Carbon;
 
 class SitemapController extends Controller
@@ -29,6 +28,9 @@ class SitemapController extends Controller
 
     public function robots()
     {
-        return response("User-agent: *\nDisallow: /".AdminPrefix::current()."\nDisallow: /api/\nAllow: /\nSitemap: ".url('/sitemap.xml')."\n", 200, ['Content-Type' => 'text/plain']);
+        // The admin prefix is deliberately NOT listed: robots.txt is public, and a Disallow line
+        // would reveal the hidden admin address. Admin pages send noindex themselves and nothing
+        // on the public site links to them, so crawlers never find them anyway.
+        return response("User-agent: *\nDisallow: /api/\nAllow: /\nSitemap: ".url('/sitemap.xml')."\n", 200, ['Content-Type' => 'text/plain']);
     }
 }
