@@ -13,7 +13,7 @@
 <aside class="fixed inset-y-0 left-0 z-40 w-60 border-r p-4 transition-transform md:static md:translate-x-0" :class="nav ? 'translate-x-0' : '-translate-x-full'" style="background:var(--sheet);border-color:var(--rule-2)">
   <a href="{{ admin_route('dashboard') }}" class="mb-6 block font-semibold no-underline" style="color:var(--ink)">{{ setting('site_name', 'Laradoc') }}</a>
   <nav class="admin-nav space-y-1" aria-label="Admin">
-    @php $links = [['dashboard','Dashboard','admin.dashboard',null],['articles.index','Articles','admin.articles.*',null],['categories.index','Categories','admin.categories.*',null],['tags.index','Tags','admin.tags.*',null],['media.index','Media','admin.media.*',null],['menu.index','Menu','admin.menu.*','admin'],['users.index','Users','admin.users.*','admin'],['settings.edit','Settings','admin.settings.*','admin']]; @endphp
+    @php $links = [['dashboard','Dashboard','admin.dashboard',null],['articles.index','Articles','admin.articles.*',null],['categories.index','Categories','admin.categories.*',null],['tags.index','Tags','admin.tags.*',null],['media.index','Media','admin.media.*',null],['menu.index','Menu','admin.menu.*','admin'],['users.index','Users','admin.users.*','admin'],['settings.edit','Settings','admin.settings.*','admin'],['transfer.index','Transfer','admin.transfer.*','admin']]; @endphp
     @foreach($links as [$name,$label,$pattern,$role])
       @if(\Illuminate\Support\Facades\Route::has("admin.$name") && (!$role || auth()->user()->role === $role))
         <a href="{{ admin_route($name) }}" class="{{ request()->routeIs($pattern) ? 'active' : '' }}">{{ $label }}</a>

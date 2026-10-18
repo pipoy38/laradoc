@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\RevisionController;
 use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\Admin\TransferController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -48,5 +49,8 @@ Route::middleware('auth')->group(function () {
         Route::get('settings', [SettingsController::class, 'edit'])->name('settings.edit');
         Route::put('settings', [SettingsController::class, 'update'])->name('settings.update');
         Route::post('settings/test-mail', [SettingsController::class, 'testMail'])->name('settings.test_mail');
+        Route::get('transfer', [TransferController::class, 'index'])->name('transfer.index');
+        Route::post('transfer/export', [TransferController::class, 'export'])->name('transfer.export');
+        Route::post('transfer/import', [TransferController::class, 'import'])->name('transfer.import');
     });
 });

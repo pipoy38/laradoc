@@ -8,12 +8,11 @@ use App\Models\Media;
 use App\Models\PathRedirect;
 use App\Models\Tag;
 use App\Models\User;
-use App\Support\HtmlSanitizer;
 use App\Support\Settings;
+use App\Support\Transfer\DocsImporter;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 
 class WikiImportDocs extends Command
 {
@@ -27,11 +26,12 @@ class WikiImportDocs extends Command
 
     private const DEFAULT_ROOT_ORDER = ['getting-started', 'shopee', 'lazada', 'tiktok-shop', 'working-in-the-erp'];
 
-    /** @var array<string, Media> Cache of shot filename => Media row, valid for the whole run. */
-    private array $mediaCache = [];
+    private DocsImporter $importer;
 
     public function handle(): int
     {
+        $this->importer = new DocsImporter;
+
         $dir = rtrim((string) $this->argument('dir'), '/');
         $contentDir = "$dir/content";
         $shotsDir = $dir.'/'.($this->option('shots') ?: 'erp-shots');
@@ -65,12 +65,7 @@ class WikiImportDocs extends Command
 
         $adminId = User::where('role', 'admin')->oldest('id')->value('id');
 
-        $stats = [
-            'categories_created' => 0, 'categories_updated' => 0,
-            'articles_created' => 0, 'articles_updated' => 0, 'articles_unchanged' => 0,
-            'media_created' => 0, 'media_reused' => 0, 'media_updated' => 0,
-            'images_dropped' => 0, 'missing_shots' => [],
-        ];
+        $stats = DocsImporter::emptyStats();
 
         if ($this->option('purge')) {
             $this->purgeExisting();
@@ -86,9 +81,7 @@ class WikiImportDocs extends Command
 
         foreach ($decoded as ['file' => $file, 'data' => $data]) {
             try {
-                DB::transaction(function () use ($data, $shotsDir, $adminId, $rootOrder, &$stats) {
-                    $this->importFile($data, $shotsDir, $adminId, $rootOrder, $stats);
-                });
+                $this->importFile($data, $shotsDir, $adminId, $rootOrder, $stats);
             } catch (\Throwable $e) {
                 $this->error("Failed importing $file: ".$e->getMessage());
 
@@ -122,190 +115,21 @@ class WikiImportDocs extends Command
         return $final->flip()->all();
     }
 
+    /** Convert one docs-job file to the importer's tree format (root order from --order, children by position). */
     private function importFile(array $data, string $shotsDir, ?int $adminId, array $rootOrder, array &$stats): void
     {
-        $categoryData = $data['category'];
-        $rootSlug = $categoryData['slug'];
-        $root = $this->upsertCategory(
-            name: $categoryData['name'],
-            slug: $rootSlug,
-            description: $categoryData['description'] ?? null,
-            icon: $categoryData['icon'] ?? null,
-            parentId: null,
-            sortOrder: $rootOrder[$rootSlug] ?? 0,
-            stats: $stats,
-        );
+        $root = $data['category'];
+        $root['sort_order'] = $rootOrder[$root['slug']] ?? 0;
+        $root['children'] = collect($root['children'] ?? [])->values()
+            ->map(fn ($child, $i) => ['icon' => null, 'sort_order' => $i] + $child)->all();
 
-        $categoriesByPath = [$rootSlug => $root];
-        foreach (($categoryData['children'] ?? []) as $i => $child) {
-            $childCategory = $this->upsertCategory(
-                name: $child['name'],
-                slug: $child['slug'],
-                description: $child['description'] ?? null,
-                icon: null,
-                parentId: $root->id,
-                sortOrder: $i,
-                stats: $stats,
-            );
-            $categoriesByPath["$rootSlug/{$child['slug']}"] = $childCategory;
+        $json = json_encode(['categories' => [$root], 'articles' => $data['articles'] ?? []]);
+        $resolve = fn (string $name) => is_file("$shotsDir/$name") ? "$shotsDir/$name" : null;
+
+        $fileStats = $this->importer->import($json, $resolve, $adminId, 'Imported from docs-job');
+        foreach ($fileStats as $key => $value) {
+            $stats[$key] += $value;
         }
-
-        foreach (($data['articles'] ?? []) as $art) {
-            $path = $art['category_path'];
-            if (! isset($categoriesByPath[$path])) {
-                throw new \RuntimeException("Article '{$art['slug']}' references unknown category_path '$path'");
-            }
-            $this->upsertArticle($art, $categoriesByPath[$path], $shotsDir, $adminId, $stats);
-        }
-    }
-
-    private function upsertCategory(string $name, string $slug, ?string $description, ?string $icon, ?int $parentId, int $sortOrder, array &$stats): Category
-    {
-        $category = Category::where('slug', $slug)->where('parent_id', $parentId)->first();
-        $attrs = ['name' => $name, 'description' => $description, 'icon' => $icon, 'sort_order' => $sortOrder];
-
-        if ($category) {
-            $category->update($attrs);
-            $stats['categories_updated']++;
-        } else {
-            $category = Category::create($attrs + ['slug' => $slug, 'parent_id' => $parentId]);
-            $stats['categories_created']++;
-        }
-
-        return $category;
-    }
-
-    private function upsertArticle(array $art, Category $category, string $shotsDir, ?int $adminId, array &$stats): void
-    {
-        $body = $this->processShots($art['body_html'], $shotsDir, $adminId, $stats);
-        $cleanBody = HtmlSanitizer::clean($body);
-        $excerpt = trim((string) ($art['excerpt'] ?? '')) !== '' ? $art['excerpt'] : HtmlSanitizer::excerpt($cleanBody);
-        $bodyText = HtmlSanitizer::toText($cleanBody);
-
-        // Identity is (category_id, slug) only. Slugs such as "common-errors" legitimately
-        // repeat across channel categories, so a bare-slug fallback would move articles
-        // between categories instead of creating them.
-        $article = Article::where('category_id', $category->id)->where('slug', $art['slug'])->first();
-        $isNew = $article === null;
-
-        $attrs = [
-            'category_id' => $category->id,
-            'title' => $art['title'],
-            'excerpt' => $excerpt,
-            'body_html' => $cleanBody,
-            'body_text' => $bodyText,
-            'status' => 'published',
-            'sort_order' => $art['sort_order'] ?? 0,
-            'seo_title' => $art['seo_title'] ?? null,
-            'meta_description' => $art['meta_description'] ?? null,
-            'updated_by' => $adminId,
-        ];
-
-        if ($isNew) {
-            $attrs['slug'] = $art['slug'];
-            $attrs['created_by'] = $adminId;
-            $attrs['published_at'] = now();
-            $article = Article::create($attrs);
-            $stats['articles_created']++;
-            $this->createRevision($article, $adminId, 'Imported from docs-job');
-        } else {
-            $contentFields = ['title', 'body_html', 'excerpt', 'seo_title', 'meta_description'];
-            $contentChanged = collect($contentFields)->contains(fn ($f) => $attrs[$f] !== $article->$f);
-            $anyChanged = collect($attrs)->contains(fn ($v, $k) => $v !== $article->$k);
-            if (is_null($article->published_at)) {
-                $attrs['published_at'] = now();
-                $anyChanged = true;
-            }
-
-            if ($anyChanged) {
-                $article->update($attrs);
-                $stats['articles_updated']++;
-            } else {
-                $stats['articles_unchanged']++;
-            }
-            if ($contentChanged) {
-                $this->createRevision($article, $adminId, 'Re-imported');
-            }
-        }
-
-        $tagIds = collect($art['tags'] ?? [])->map(function (string $tagName) {
-            return Tag::firstOrCreate(['slug' => Str::slug($tagName)], ['name' => $tagName])->id;
-        });
-        $article->tags()->sync($tagIds);
-    }
-
-    private function createRevision(Article $article, ?int $adminId, string $note): void
-    {
-        $article->revisions()->create([
-            'user_id' => $adminId,
-            'title' => $article->title,
-            'body_html' => $article->body_html,
-            'excerpt' => $article->excerpt,
-            'seo_title' => $article->seo_title,
-            'meta_description' => $article->meta_description,
-            'change_note' => $note,
-            'created_at' => now(),
-        ]);
-    }
-
-    /** Replace `{{shot:NAME.png}}` image tags with real media URLs, dropping ones whose file is missing. */
-    private function processShots(string $body, string $shotsDir, ?int $adminId, array &$stats): string
-    {
-        return preg_replace_callback('/<img\b[^>]*>/i', function (array $m) use ($shotsDir, $adminId, &$stats) {
-            $tag = $m[0];
-            if (! preg_match('/\bsrc="\{\{shot:([^"}]+\.png)\}\}"/i', $tag, $sm)) {
-                return $tag;
-            }
-            $name = $sm[1];
-            $path = "$shotsDir/$name";
-            if (! is_file($path)) {
-                $stats['missing_shots'][$name] = true;
-                $stats['images_dropped']++;
-
-                return '';
-            }
-            $alt = null;
-            if (preg_match('/\balt="([^"]*)"/i', $tag, $am)) {
-                $alt = html_entity_decode($am[1], ENT_QUOTES | ENT_HTML5, 'UTF-8');
-            }
-            $media = $this->mediaFor($name, $path, $alt, $adminId, $stats);
-
-            return str_replace('{{shot:'.$name.'}}', $media->url(), $tag);
-        }, $body) ?? $body;
-    }
-
-    private function mediaFor(string $name, string $path, ?string $alt, ?int $adminId, array &$stats): Media
-    {
-        if (isset($this->mediaCache[$name])) {
-            return $this->mediaCache[$name];
-        }
-
-        $bytes = file_get_contents($path);
-        $size = @getimagesize($path);
-        [$width, $height] = $size ? [$size[0], $size[1]] : [null, null];
-
-        $media = Media::where('original_name', $name)->first();
-        if ($media) {
-            $current = Storage::disk('public')->exists($media->disk_path) ? Storage::disk('public')->get($media->disk_path) : null;
-            if ($current === null || md5($current) !== md5($bytes)) {
-                Storage::disk('public')->put($media->disk_path, $bytes);
-                $media->update(['mime' => 'image/png', 'size' => strlen($bytes), 'width' => $width, 'height' => $height]);
-                $stats['media_updated']++;
-            } else {
-                $stats['media_reused']++;
-            }
-        } else {
-            $diskDir = 'media/'.now()->format('Y/m');
-            $diskPath = $diskDir.'/'.Str::random(16).'.png';
-            Storage::disk('public')->put($diskPath, $bytes);
-            $media = Media::create([
-                'disk_path' => $diskPath, 'original_name' => $name, 'mime' => 'image/png', 'size' => strlen($bytes),
-                'width' => $width, 'height' => $height, 'alt' => $alt, 'uploaded_by' => $adminId,
-            ]);
-            $stats['media_created']++;
-        }
-
-        return $this->mediaCache[$name] = $media;
     }
 
     private function printSummary(array $stats): void

@@ -56,6 +56,14 @@ git pull
 `deploy.sh` installs dependencies, runs migrations, re-links storage and rebuilds the config/route/view
 caches. It's safe to re-run.
 
+### Moving content between sites
+
+Use Admin → Transfer. *Export* downloads one zip with every category, article (status, tags, SEO fields)
+and the images they use; *Import* uploads such a zip into another install. Articles and categories are
+matched by their address (slug) and updated, nothing is deleted, and each imported article gets a fresh
+revision. Users, settings, redirects and revision history are not included. For bulk imports from a docs
+folder the `php artisan wiki:import-docs <dir>` command still exists.
+
 ## Going live
 
 Before pointing real traffic at an install, check:
