@@ -14,7 +14,7 @@ XML sitemap and SEO metadata.
 ## Quick start
 
 ```bash
-git clone <this repo>
+git clone https://github.com/pipoy38/laradoc.git laradoc
 cd laradoc
 composer install --no-dev --optimize-autoloader
 cp .env.example .env
