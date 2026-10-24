@@ -17,6 +17,11 @@ import skinCss from 'tinymce/skins/ui/oxide/skin.min.css?inline';
 import skinDarkCss from 'tinymce/skins/ui/oxide-dark/skin.min.css?inline';
 import contentCss from 'tinymce/skins/content/default/content.min.css?inline';
 import contentDarkCss from 'tinymce/skins/content/dark/content.min.css?inline';
+// The skin's own CONTENT stylesheet (not the content theme above): it styles the editor's in-body
+// UI, chiefly the image/table resize handles. With content_css:false it has to be inlined by hand,
+// otherwise the handles render as unstyled divs and images cannot be resized.
+import contentUiCss from 'tinymce/skins/ui/oxide/content.min.css?inline';
+import contentUiDarkCss from 'tinymce/skins/ui/oxide-dark/content.min.css?inline';
 
 window.Alpine = Alpine;
 
@@ -32,7 +37,7 @@ window.initEditor = function (selector, uploadUrl, csrf) {
     const dark = document.documentElement.dataset.theme === 'dark';
     return tinymce.init({
         selector, license_key: 'gpl', skin: false, content_css: false,
-        content_style: (dark ? contentDarkCss : contentCss) + ' body{font-family:system-ui,sans-serif;max-width:none;padding:1rem}',
+        content_style: (dark ? contentUiDarkCss + contentDarkCss : contentUiCss + contentCss) + ' body{font-family:system-ui,sans-serif;max-width:none;padding:1rem}',
         plugins: 'link image lists table code codesample fullscreen autoresize searchreplace anchor',
         toolbar: 'undo redo | blocks | bold italic underline strikethrough codeformat | link image | blockquote bullist numlist | table codesample hr | code fullscreen',
         toolbar_mode: 'wrap',
